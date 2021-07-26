@@ -22,7 +22,7 @@ Got a data set you'd like us to explore? Provided it's a public data set and can
 In this week's episode, Lju and Alexander explore a National Basketball Association (NBA) dataset, from https://fivethirtyeight.com/[FiveThirtyEight^]. Catch-up on the episode now!
 
 .catch-up video
-[caption="Week 1 ",link=https://www.youtube.com/watch?v=_tuea3bsrPA]
+[caption="Week 1 ",link=https://www.youtube.com/watch?v=_tuea3bsrPA^]
 image::https://i.ytimg.com/vi/_tuea3bsrPA/maxresdefault.jpg[]
 
 === Key links 

@@ -1,2 +1,140 @@
-# discoveraurafree
-A repo with cypher and examples from the Discover Neo4j Aura Free Twitch stream
+= Discover Neo4j Aura Free with Lju and Alex
+
+====
+*_More drama than a cat video! ((C) Mike on Twitch chat)_*
+====
+
+A repo with cypher and examples from the Discover Neo4j Aura Free Twitch stream. All streams will roughly follow the following format:
+
+* Review a data set
+* Decide what questions to ask from it
+* Put together an initial data model
+* Load the data into Neo4j Aura Free and query!
+
+Got a data set you'd like us to explore? Provided it's a public data set and can be accessed from a URI, let us know! Either raise an issue on the repo, or tweet @ellazal or @alexandererdl.
+
+=== Previous episodes:
+
+<<Week 1 - The NBA data set>>
+
+== Week 1 - The NBA data set
+
+In this week's episode, Lju and Alexander explore a National Basketball Association (NBA) dataset, from https://fivethirtyeight.com/[FiveThirtyEight^]. Catch-up on the episode now!
+
+.Week 1 stream catch-up video
+video::_tuea3bsrPA[youtube]
+
+=== Key links 
+
+* https://dev.neo4j.com/aura[Neo4j Aura landing page^]
+* https://github.com/fivethirtyeight/data/blob/master/nba-elo/nbaallelo.csv[Github repo for the NBA data^]
+* https://raw.githubusercontent.com/fivethirtyeight/data/master/nba-elo/nbaallelo.csv[Raw CSV^]
+* https://arrows.app[Arrows app^]
+* https://arrows.app/#/import/json=eyJncmFwaCI6eyJub2RlcyI6W3siaWQiOiJuMCIsInBvc2l0aW9uIjp7IngiOi0xNzEsInkiOi02Ny42MDAwMDIyODg4MTgzNn0sImNhcHRpb24iOiIiLCJsYWJlbHMiOlsiVGVhbSJdLCJwcm9wZXJ0aWVzIjp7ImNvZGUiOiIiLCJuYW1lIjoiIn0sInN0eWxlIjp7fX0seyJpZCI6Im4xIiwicG9zaXRpb24iOnsieCI6MzI0LjUsInkiOi02Ny42MDAwMDIyODg4MTgzNn0sImNhcHRpb24iOiIiLCJsYWJlbHMiOlsiTWF0Y2giXSwicHJvcGVydGllcyI6eyJpZCI6IiIsImRhdGUiOiIiLCJ2ZW51ZSI6IiJ9LCJzdHlsZSI6e319XSwicmVsYXRpb25zaGlwcyI6W3siaWQiOiJuMCIsImZyb21JZCI6Im4wIiwidG9JZCI6Im4xIiwidHlwZSI6IlBMQVlFRF9JTiIsInByb3BlcnRpZXMiOnsicG9pbnRzIjoiIiwic3RhcnRFbG8iOiIiLCJlbmRFbG8iOiIifSwic3R5bGUiOnt9fV0sInN0eWxlIjp7Im5vZGUtY29sb3IiOiIjZmZmZmZmIiwiYm9yZGVyLXdpZHRoIjo0LCJib3JkZXItY29sb3IiOiIjMDAwMDAwIiwicmFkaXVzIjo1MCwibm9kZS1wYWRkaW5nIjo1LCJub2RlLW1hcmdpbiI6Miwib3V0c2lkZS1wb3NpdGlvbiI6ImF1dG8iLCJjYXB0aW9uLXBvc2l0aW9uIjoiaW5zaWRlIiwiY2FwdGlvbi1tYXgtd2lkdGgiOjIwMCwiY2FwdGlvbi1jb2xvciI6IiMwMDAwMDAiLCJjYXB0aW9uLWZvbnQtc2l6ZSI6NTAsImNhcHRpb24tZm9udC13ZWlnaHQiOiJub3JtYWwiLCJsYWJlbC1wb3NpdGlvbiI6Imluc2lkZSIsImxhYmVsLWNvbG9yIjoiIzAwMDAwMCIsImxhYmVsLWJhY2tncm91bmQtY29sb3IiOiIjZmZmZmZmIiwibGFiZWwtYm9yZGVyLWNvbG9yIjoiIzAwMDAwMCIsImxhYmVsLWJvcmRlci13aWR0aCI6NCwibGFiZWwtZm9udC1zaXplIjo0MCwibGFiZWwtcGFkZGluZyI6NSwibGFiZWwtbWFyZ2luIjo0LCJkaXJlY3Rpb25hbGl0eSI6ImRpcmVjdGVkIiwiZGV0YWlsLXBvc2l0aW9uIjoiaW5saW5lIiwiZGV0YWlsLW9yaWVudGF0aW9uIjoicGFyYWxsZWwiLCJhcnJvdy13aWR0aCI6NSwiYXJyb3ctY29sb3IiOiIjMDAwMDAwIiwibWFyZ2luLXN0YXJ0Ijo1LCJtYXJnaW4tZW5kIjo1LCJtYXJnaW4tcGVlciI6MjAsImF0dGFjaG1lbnQtc3RhcnQiOiJub3JtYWwiLCJhdHRhY2htZW50LWVuZCI6Im5vcm1hbCIsInR5cGUtY29sb3IiOiIjMDAwMDAwIiwidHlwZS1iYWNrZ3JvdW5kLWNvbG9yIjoiI2ZmZmZmZiIsInR5cGUtYm9yZGVyLWNvbG9yIjoiIzAwMDAwMCIsInR5cGUtYm9yZGVyLXdpZHRoIjowLCJ0eXBlLWZvbnQtc2l6ZSI6MTYsInR5cGUtcGFkZGluZyI6NSwicHJvcGVydHktcG9zaXRpb24iOiJvdXRzaWRlIiwicHJvcGVydHktY29sb3IiOiIjMDAwMDAwIiwicHJvcGVydHktZm9udC1zaXplIjoxNiwicHJvcGVydHktZm9udC13ZWlnaHQiOiJub3JtYWwifX0sImRpYWdyYW1OYW1lIjoiTkJBIEdyYXBoIn0=[Data model from the session^]
+
+==== The data set
+
+This week we explored a https://en.wikipedia.org/wiki/National_Basketball_Association[NBA^] data set. The data consisted of teams and all of their matches, along with points scored, match dates and location, as well as pre and post match https://en.wikipedia.org/wiki/Elo_rating_system[Elo ratings^].
+
+image::img\img_repo.png[]
+
+==== The questions
+
+The following questions for the data set came up during the stream:
+
+* Historical results between two teams
+* The teams with the biggest Elo rating difference
+* Find out home/away matches
+* Can we predict results based on past experiencees?
+
+==== The data model
+
+You can view and play with the data model in Arrows App https://arrows.app/#/import/json=eyJncmFwaCI6eyJub2RlcyI6W3siaWQiOiJuMCIsInBvc2l0aW9uIjp7IngiOi0xNzEsInkiOi02Ny42MDAwMDIyODg4MTgzNn0sImNhcHRpb24iOiIiLCJsYWJlbHMiOlsiVGVhbSJdLCJwcm9wZXJ0aWVzIjp7ImNvZGUiOiIiLCJuYW1lIjoiIn0sInN0eWxlIjp7fX0seyJpZCI6Im4xIiwicG9zaXRpb24iOnsieCI6MzI0LjUsInkiOi02Ny42MDAwMDIyODg4MTgzNn0sImNhcHRpb24iOiIiLCJsYWJlbHMiOlsiTWF0Y2giXSwicHJvcGVydGllcyI6eyJpZCI6IiIsImRhdGUiOiIiLCJ2ZW51ZSI6IiJ9LCJzdHlsZSI6e319XSwicmVsYXRpb25zaGlwcyI6W3siaWQiOiJuMCIsImZyb21JZCI6Im4wIiwidG9JZCI6Im4xIiwidHlwZSI6IlBMQVlFRF9JTiIsInByb3BlcnRpZXMiOnsicG9pbnRzIjoiIiwic3RhcnRFbG8iOiIiLCJlbmRFbG8iOiIifSwic3R5bGUiOnt9fV0sInN0eWxlIjp7Im5vZGUtY29sb3IiOiIjZmZmZmZmIiwiYm9yZGVyLXdpZHRoIjo0LCJib3JkZXItY29sb3IiOiIjMDAwMDAwIiwicmFkaXVzIjo1MCwibm9kZS1wYWRkaW5nIjo1LCJub2RlLW1hcmdpbiI6Miwib3V0c2lkZS1wb3NpdGlvbiI6ImF1dG8iLCJjYXB0aW9uLXBvc2l0aW9uIjoiaW5zaWRlIiwiY2FwdGlvbi1tYXgtd2lkdGgiOjIwMCwiY2FwdGlvbi1jb2xvciI6IiMwMDAwMDAiLCJjYXB0aW9uLWZvbnQtc2l6ZSI6NTAsImNhcHRpb24tZm9udC13ZWlnaHQiOiJub3JtYWwiLCJsYWJlbC1wb3NpdGlvbiI6Imluc2lkZSIsImxhYmVsLWNvbG9yIjoiIzAwMDAwMCIsImxhYmVsLWJhY2tncm91bmQtY29sb3IiOiIjZmZmZmZmIiwibGFiZWwtYm9yZGVyLWNvbG9yIjoiIzAwMDAwMCIsImxhYmVsLWJvcmRlci13aWR0aCI6NCwibGFiZWwtZm9udC1zaXplIjo0MCwibGFiZWwtcGFkZGluZyI6NSwibGFiZWwtbWFyZ2luIjo0LCJkaXJlY3Rpb25hbGl0eSI6ImRpcmVjdGVkIiwiZGV0YWlsLXBvc2l0aW9uIjoiaW5saW5lIiwiZGV0YWlsLW9yaWVudGF0aW9uIjoicGFyYWxsZWwiLCJhcnJvdy13aWR0aCI6NSwiYXJyb3ctY29sb3IiOiIjMDAwMDAwIiwibWFyZ2luLXN0YXJ0Ijo1LCJtYXJnaW4tZW5kIjo1LCJtYXJnaW4tcGVlciI6MjAsImF0dGFjaG1lbnQtc3RhcnQiOiJub3JtYWwiLCJhdHRhY2htZW50LWVuZCI6Im5vcm1hbCIsInR5cGUtY29sb3IiOiIjMDAwMDAwIiwidHlwZS1iYWNrZ3JvdW5kLWNvbG9yIjoiI2ZmZmZmZiIsInR5cGUtYm9yZGVyLWNvbG9yIjoiIzAwMDAwMCIsInR5cGUtYm9yZGVyLXdpZHRoIjowLCJ0eXBlLWZvbnQtc2l6ZSI6MTYsInR5cGUtcGFkZGluZyI6NSwicHJvcGVydHktcG9zaXRpb24iOiJvdXRzaWRlIiwicHJvcGVydHktY29sb3IiOiIjMDAwMDAwIiwicHJvcGVydHktZm9udC1zaXplIjoxNiwicHJvcGVydHktZm9udC13ZWlnaHQiOiJub3JtYWwifX0sImRpYWdyYW1OYW1lIjoiTkJBIEdyYXBoIn0=[here^].
+
+.The NBA data model we used in the stream
+image::img\NBAGraph.png[]
+
+One of the questions that came up was rather than using the above model, why didn't we choose using `PLAYED_IN_AWAY` and `PLAYED_IN_HOME` relationship types instead. This is an option too - and if primarily the questions you are asking are around home/away matches, then this would give a slightly faster performance.
+
+To keep the data model as simple as possible, we decided to keep the relationship between `Team` and `Match` generic for now. We'll give an example query of how to bring back Home/Away teams shortly.
+
+==== Loading the data
+
+One thing to bear about the data is the use of `_iscopy` property - you will spot that the rows 'repeat', but they are reflecting the view point of each of the teams, i.e. the home team as the primary team in the row, and the away team as the primary team. As a result, we can safely skip `_iscopy=1` when loading the data.
+
+image::img\img_data.png[]
+
+To load the data into the database, we use the following query:
+
+====
+[source,cypher]
+LOAD CSV WITH HEADERS FROM "https://raw.githubusercontent.com/fivethirtyeight/data/master/nba-elo/nbaallelo.csv" AS row
+//skipping doubles, also Aura Free limit of 50k nodes, ~ 100 teams
+WITH row LIMIT 99900 WHERE row._iscopy="0"
+MERGE (ht:Team {code:row.team_id})
+    ON CREATE SET ht.name = row.fran_id
+MERGE (at:Team {code:row.opp_id})
+    ON CREATE SET at.name = row.opp_fran
+CREATE (m:Match {id:row.game_id, venue:right(row.game_id, 3), date:row.date_game})
+WITH ht, at, m, row.pts AS hpoints, row.opp_pts AS apoints, 
+    row.elo_i AS hse, row.elo_n AS hee, row.opp_elo_i AS ase, 
+    row.opp_elo_n AS aee
+CREATE (ht)-[:PLAYED_IN {points:hpoints, startElo:hse, endElo:hee}]->(m)
+CREATE (at)-[:PLAYED_IN {points:apoints, startElo:ase, endElo:aee}]->(m)
+====
+
+NOTE: When using `LOAD CSV`, integers and floats may be treated as strings. As a result, don't forget to check, especially if you get unexpected results, e.g. `row._iscopy="0"` versus `row._iscopy=0`
+
+==== Querying the data
+
+Some of you may have spotted that all of our numerical data is being stored as strings. Whilst we could have sorted that at the load stage, we can also quickly handle it now. We're going to change points to integers, and Elo ratings to floats, found as properties in the `PLAYED_IN` relationships:
+
+====
+[source,cypher]
+MATCH ()-[r:PLAYED_IN]->()
+SET r.points = tointeger(r.points)
+SET r.startElo = tofloat(r.startElo)
+SET r.endElo = tofloat(r.endElo)
+====
+
+*Question 1 - Historical results between two teams*
+
+====
+[source,cypher]
+//Look at the Huskies/Knicks rivalries
+//Using the Match ID for the ISO 'format' date
+MATCH (t1:Team {code:"TRH"})
+MATCH (t2:Team {code:"NYK"})
+MATCH (t1)-[r1]->(m)<-[r2]-(t2)
+//Using the Match ID for the ISO 'format' date
+RETURN left(m.id, size(m.id)-4) AS Date, t1.name, t2.name, 
+    r1.points > r2.points AS `Huskies won`, m.venue ORDER BY Date
+====
+
+*Question 2 - The teams with the biggest Elo rating difference*
+
+====
+[source,cypher]
+MATCH (t:Team)-[r]->(m)
+WITH t.name AS name, min(r.endElo) AS lowestElo, max(r.endElo) AS highestElo
+WITH name, lowestElo, highestElo, highestElo - lowestElo AS diffElo
+RETURN name, lowestElo, highestElo, diffElo ORDER BY diffElo DESC
+====
+
+*Question 3 - Find out home/away matches*
+
+====
+[source,cypher]
+MATCH (t:Team {name:"Sixers"})-[r:PLAYED_IN]->(m:Match)<-[r2:PLAYED_IN]-(opp:Team)
+//match venue to team code for home matches, or <> for away matches
+WHERE m.venue = t.code
+RETURN left(m.id, size(m.id)-4) AS Date, opp.name AS `Played Home Against`,
+    r.points + " - " + r2.points AS `Score`
+====
+
+*Question 4 - Can we predict results based on past experiences?*
+
+====
+[source,cypher]
+We'll come back to you on this one! Watch this space :)
+====

@@ -11,11 +11,13 @@ A repo with cypher and examples from the Discover Neo4j Aura Free Twitch stream.
 * Put together an initial data model
 * Load the data into Neo4j Aura Free and query!
 
-Got a data set you'd like us to explore? Provided it's a public data set and can be accessed from a URI, let us know! Either raise an issue on the repo, or tweet @ellazal or @alexandererdl.
+Got a data set you'd like us to explore? Provided it's a public data set and can be accessed from a URI, let us know! Either raise an issue on the repo, or tweet @ellazal or @alexandererdl on Twitter.
 
 === Previous episodes:
 
 <<Week 1 - The NBA data set>>
+
+<<Week 2 - The Board Game Geek data set>>
 
 == Week 1 - The NBA data set
 
@@ -138,4 +140,131 @@ RETURN left(m.id, size(m.id)-4) AS Date, opp.name AS `Played Home Against`,
 ====
 [source,cypher]
 We'll come back to you on this one! Watch this space :)
+====
+
+
+== Week 2 - The Board Game Geek data set
+
+In this week's episode, Lju and Alexander explore a scraped data set from Board Game Geek, from https://github.com/ThaWeatherman/scrapers/blob/b8757711296703356891f8f4e7757de6698a6b5b/boardgamegeek/games.csv[Sean Beck's Github repository^]. Catch-up on the episode now!
+
+
+.catch-up video
+[caption="Week 1 ",link=https://www.youtube.com/watch?v=0X1dmTO0RZQ^]
+image::https://i.ytimg.com/vi/0X1dmTO0RZQ/maxresdefault.jpg[]
+
+=== Key links 
+
+* https://dev.neo4j.com/aura[Neo4j Aura landing page^]
+* https://github.com/ThaWeatherman/scrapers/blob/b8757711296703356891f8f4e7757de6698a6b5b/boardgamegeek/games.csv[Github repo for the Board Game Geek data^]
+* https://raw.githubusercontent.com/ThaWeatherman/scrapers/b8757711296703356891f8f4e7757de6698a6b5b/boardgamegeek/games.csv[Raw CSV^]
+* https://arrows.app[Arrows app^]
+* https://arrows.app/#/import/json=eyJncmFwaCI6eyJub2RlcyI6W3siaWQiOiJuMCIsInBvc2l0aW9uIjp7IngiOi0xNzcsInkiOi0xNTZ9LCJjYXB0aW9uIjoiIiwibGFiZWxzIjpbIkdhbWUiXSwicHJvcGVydGllcyI6eyJpZCI6IiIsIm5hbWUiOiIiLCJyYXRpbmciOiIiLCJwbGF5aW5nVGltZSI6IiIsIndlaWdodCI6IiJ9LCJzdHlsZSI6e319LHsiaWQiOiJuMSIsInBvc2l0aW9uIjp7IngiOjE2NiwieSI6LTE1Nn0sImNhcHRpb24iOiIiLCJsYWJlbHMiOlsiUGxheWVyQ291bnQiXSwicHJvcGVydGllcyI6eyJ2YWx1ZSI6IiJ9LCJzdHlsZSI6e319XSwicmVsYXRpb25zaGlwcyI6W3siaWQiOiJuMCIsImZyb21JZCI6Im4wIiwidG9JZCI6Im4xIiwidHlwZSI6Ik1BWF9QTEFZRVIiLCJwcm9wZXJ0aWVzIjp7fSwic3R5bGUiOnt9fSx7ImlkIjoibjEiLCJmcm9tSWQiOiJuMCIsInRvSWQiOiJuMSIsInR5cGUiOiJNSU5fUExBWUVSIiwicHJvcGVydGllcyI6e30sInN0eWxlIjp7fX1dLCJzdHlsZSI6eyJub2RlLWNvbG9yIjoiI2ZmZmZmZiIsImJvcmRlci13aWR0aCI6NCwiYm9yZGVyLWNvbG9yIjoiIzAwMDAwMCIsInJhZGl1cyI6NTAsIm5vZGUtcGFkZGluZyI6NSwibm9kZS1tYXJnaW4iOjIsIm91dHNpZGUtcG9zaXRpb24iOiJhdXRvIiwiY2FwdGlvbi1wb3NpdGlvbiI6Imluc2lkZSIsImNhcHRpb24tbWF4LXdpZHRoIjoyMDAsImNhcHRpb24tY29sb3IiOiIjMDAwMDAwIiwiY2FwdGlvbi1mb250LXNpemUiOjUwLCJjYXB0aW9uLWZvbnQtd2VpZ2h0Ijoibm9ybWFsIiwibGFiZWwtcG9zaXRpb24iOiJpbnNpZGUiLCJsYWJlbC1jb2xvciI6IiMwMDAwMDAiLCJsYWJlbC1iYWNrZ3JvdW5kLWNvbG9yIjoiI2ZmZmZmZiIsImxhYmVsLWJvcmRlci1jb2xvciI6IiMwMDAwMDAiLCJsYWJlbC1ib3JkZXItd2lkdGgiOjQsImxhYmVsLWZvbnQtc2l6ZSI6NDAsImxhYmVsLXBhZGRpbmciOjUsImxhYmVsLW1hcmdpbiI6NCwiZGlyZWN0aW9uYWxpdHkiOiJkaXJlY3RlZCIsImRldGFpbC1wb3NpdGlvbiI6ImlubGluZSIsImRldGFpbC1vcmllbnRhdGlvbiI6InBhcmFsbGVsIiwiYXJyb3ctd2lkdGgiOjUsImFycm93LWNvbG9yIjoiIzAwMDAwMCIsIm1hcmdpbi1zdGFydCI6NSwibWFyZ2luLWVuZCI6NSwibWFyZ2luLXBlZXIiOjIwLCJhdHRhY2htZW50LXN0YXJ0Ijoibm9ybWFsIiwiYXR0YWNobWVudC1lbmQiOiJub3JtYWwiLCJ0eXBlLWNvbG9yIjoiIzAwMDAwMCIsInR5cGUtYmFja2dyb3VuZC1jb2xvciI6IiNmZmZmZmYiLCJ0eXBlLWJvcmRlci1jb2xvciI6IiMwMDAwMDAiLCJ0eXBlLWJvcmRlci13aWR0aCI6MCwidHlwZS1mb250LXNpemUiOjE2LCJ0eXBlLXBhZGRpbmciOjUsInByb3BlcnR5LXBvc2l0aW9uIjoib3V0c2lkZSIsInByb3BlcnR5LWNvbG9yIjoiIzAwMDAwMCIsInByb3BlcnR5LWZvbnQtc2l6ZSI6MTYsInByb3BlcnR5LWZvbnQtd2VpZ2h0Ijoibm9ybWFsIn19LCJkaWFncmFtTmFtZSI6IkJvYXJkIEdhbWUgR2VlayJ9[Data model from the session^]
+
+==== The data set
+
+This week we explored a scraped dataset from https://boardgamegeek.com/browse/boardgame[Board Game Geek^]. The data consisted of games, ratings, complexity ratings, number of players, playing time, and so forth.
+
+As we're keen to continue with the theme of 'no download', Alexander managed to locate a cut of data on https://github.com/ThaWeatherman/scrapers/blob/b8757711296703356891f8f4e7757de6698a6b5b/boardgamegeek/games.csv[Sean Beck's public Github repository^], which we use in this session.
+
+image::img\bb_csv.png[]
+
+==== The questions
+
+The following questions for the data set came up during the stream:
+
+* What are the top rated games and what they are called?
+* What games that are most popular?
+* What games are available for x players with complexity of y?
+* What games can I play with x friends which require at least y minutes?
+
+=== The data model
+
+You can view and play with the data model in Arrows App https://arrows.app/#/import/json=eyJncmFwaCI6eyJub2RlcyI6W3siaWQiOiJuMCIsInBvc2l0aW9uIjp7IngiOi0xNzcsInkiOi0xNTZ9LCJjYXB0aW9uIjoiIiwibGFiZWxzIjpbIkdhbWUiXSwicHJvcGVydGllcyI6eyJpZCI6IiIsIm5hbWUiOiIiLCJyYXRpbmciOiIiLCJwbGF5aW5nVGltZSI6IiIsIndlaWdodCI6IiJ9LCJzdHlsZSI6e319LHsiaWQiOiJuMSIsInBvc2l0aW9uIjp7IngiOjE2NiwieSI6LTE1Nn0sImNhcHRpb24iOiIiLCJsYWJlbHMiOlsiUGxheWVyQ291bnQiXSwicHJvcGVydGllcyI6eyJ2YWx1ZSI6IiJ9LCJzdHlsZSI6e319XSwicmVsYXRpb25zaGlwcyI6W3siaWQiOiJuMCIsImZyb21JZCI6Im4wIiwidG9JZCI6Im4xIiwidHlwZSI6Ik1BWF9QTEFZRVIiLCJwcm9wZXJ0aWVzIjp7fSwic3R5bGUiOnt9fSx7ImlkIjoibjEiLCJmcm9tSWQiOiJuMCIsInRvSWQiOiJuMSIsInR5cGUiOiJNSU5fUExBWUVSIiwicHJvcGVydGllcyI6e30sInN0eWxlIjp7fX1dLCJzdHlsZSI6eyJub2RlLWNvbG9yIjoiI2ZmZmZmZiIsImJvcmRlci13aWR0aCI6NCwiYm9yZGVyLWNvbG9yIjoiIzAwMDAwMCIsInJhZGl1cyI6NTAsIm5vZGUtcGFkZGluZyI6NSwibm9kZS1tYXJnaW4iOjIsIm91dHNpZGUtcG9zaXRpb24iOiJhdXRvIiwiY2FwdGlvbi1wb3NpdGlvbiI6Imluc2lkZSIsImNhcHRpb24tbWF4LXdpZHRoIjoyMDAsImNhcHRpb24tY29sb3IiOiIjMDAwMDAwIiwiY2FwdGlvbi1mb250LXNpemUiOjUwLCJjYXB0aW9uLWZvbnQtd2VpZ2h0Ijoibm9ybWFsIiwibGFiZWwtcG9zaXRpb24iOiJpbnNpZGUiLCJsYWJlbC1jb2xvciI6IiMwMDAwMDAiLCJsYWJlbC1iYWNrZ3JvdW5kLWNvbG9yIjoiI2ZmZmZmZiIsImxhYmVsLWJvcmRlci1jb2xvciI6IiMwMDAwMDAiLCJsYWJlbC1ib3JkZXItd2lkdGgiOjQsImxhYmVsLWZvbnQtc2l6ZSI6NDAsImxhYmVsLXBhZGRpbmciOjUsImxhYmVsLW1hcmdpbiI6NCwiZGlyZWN0aW9uYWxpdHkiOiJkaXJlY3RlZCIsImRldGFpbC1wb3NpdGlvbiI6ImlubGluZSIsImRldGFpbC1vcmllbnRhdGlvbiI6InBhcmFsbGVsIiwiYXJyb3ctd2lkdGgiOjUsImFycm93LWNvbG9yIjoiIzAwMDAwMCIsIm1hcmdpbi1zdGFydCI6NSwibWFyZ2luLWVuZCI6NSwibWFyZ2luLXBlZXIiOjIwLCJhdHRhY2htZW50LXN0YXJ0Ijoibm9ybWFsIiwiYXR0YWNobWVudC1lbmQiOiJub3JtYWwiLCJ0eXBlLWNvbG9yIjoiIzAwMDAwMCIsInR5cGUtYmFja2dyb3VuZC1jb2xvciI6IiNmZmZmZmYiLCJ0eXBlLWJvcmRlci1jb2xvciI6IiMwMDAwMDAiLCJ0eXBlLWJvcmRlci13aWR0aCI6MCwidHlwZS1mb250LXNpemUiOjE2LCJ0eXBlLXBhZGRpbmciOjUsInByb3BlcnR5LXBvc2l0aW9uIjoib3V0c2lkZSIsInByb3BlcnR5LWNvbG9yIjoiIzAwMDAwMCIsInByb3BlcnR5LWZvbnQtc2l6ZSI6MTYsInByb3BlcnR5LWZvbnQtd2VpZ2h0Ijoibm9ybWFsIn19LCJkaWFncmFtTmFtZSI6IkJvYXJkIEdhbWUgR2VlayJ9[here^].
+
+.The Board Game Geek model we used in the stream
+
+image:img\bbgmodel.png[]
+
+Based on the questions we're looking to answer, we're interested in the following fields in the CSV:
+
+* Game name and id
+* Rating
+* Min and max playeers
+* Game playing time
+* Game complexity/weight
+* Number of users who rated the game (we forgot to add this in the stream! We will revisit this data set and add it accordingly)
+
+This was a bumper session for modelling decisions! Based on the questions, we could have easily just had a single `Game` node, with all the mentioned fields as properties. There are a couple of issues with this:
+
+* Firstly, it wouldn't be a very graphy graph! We'd have a lot of lonely nodes :)
+* Secondly, we need to think about what questions we are asking - we've got questions that ask about games based on number of players - and as a general rule of thumb when thinking if something is a node/relationship/property - if we use something a lot, it's probably going to be a node
+
+In the end, as we are interested in games around player count, as well as identifying that player count are discrete values, this is what lead to the chosen model. This is by no means a complete job! We still need to think about playing time, weight and rating, and we may well decide that those shouldn't live on `Game`. But for brevity, we ran with this model during the session.
+
+==== Loading the data
+
+To load the data into the database, we use the following query:
+
+====
+[source,cypher]
+LOAD CSV WITH HEADERS FROM "https://raw.githubusercontent.com/ThaWeatherman/scrapers/b8757711296703356891f8f4e7757de6698a6b5b/boardgamegeek/games.csv" AS ROW
+WITH ROW WHERE tointeger(row.playingtime) > 9 
+    AND tointeger(row.playingtime) <61
+CREATE (g:Game {name:row.name, weight:tofloat(row.average_weight), 
+    rating:tofloat(row.average_rating), 
+    playingTime:tointeger(row.playingtime), id:row.id})
+MERGE (pmin:PlayerCount {value:tointeger(row.minplayers)})
+MERGE (pmax:PlayerCount {value:tointeger(row.maxplayers)})
+WITH g, pmin, pmax
+CREATE (g)-[:HAS_MIN_PLAYERS]->(pmin)
+CREATE (g)-[:HAS_MAX_PLAYERS]->(pmax)
+====
+
+Bearing in mind the 50k node limit in Aura Free, we decided to limit the games loaded based on playing time of between 10 and 60 minutes.
+
+==== Querying the data
+
+Whereas last week we cast strings to integers and floats after we loaded the data, this week, we did it whilst loading the data. You can see what we did in the load query.
+
+*Question 1 - What are the top rated games and what they are called?*
+
+====
+[source,cypher]
+MATCH (g:Game)
+RETURN g.name, g.rating 
+    ORDER BY g.rating DESC LIMIT 10
+====
+
+*Question 2 - What games that are most popular?*
+
+We forgot to load the data for this, so we'll come back to this in a future episode! You are, of course, welcome to import the data (field name: `users_rated`) and have a go yourself!
+
+*Question 3 - What games are available for x players with complexity of y?*
+
+====
+[source,cypher]
+WITH 4 AS complexity, 3 AS min, 5 AS max
+MATCH (g:Game)-[:HAS_MIN_PLAYERS]->(pcmin:PlayerCount),
+(g)-[:HAS_MAX_PLAYERS]->(pcmax:PlayerCount)
+WHERE g.weight >= complexity AND pcmin.value <= max 
+    AND pcmax.value >= min
+RETURN g.name AS name, g.weight AS complexity, 
+    [pcmin.value, pcmax.value] AS `player range` 
+    ORDER BY complexity
+====
+
+NOTE: We've corrected the query as it was flagged that the query put together on the stream would miss certain games!
+
+*Question 4 - What games can I play with x friends which require at least y minutes?*
+
+====
+[source,cypher]
+WITH 30 AS playingTime, 2 AS min, 2 AS max
+MATCH (g:Game)-[:HAS_MIN_PLAYERS]->(pcmin:PlayerCount),
+(g)-[:HAS_MAX_PLAYERS]->(pcmax:PlayerCount)
+WHERE g.playingTime >= playingTime AND pcmin.value <= max 
+    AND pcmax.value >= min
+RETURN g.name AS name, g.playingTime AS `playing time`, 
+    [pcmin.value, pcmax.value] AS `player range` 
+    ORDER BY `playing time`
 ====

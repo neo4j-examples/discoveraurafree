@@ -4,7 +4,7 @@
 *_More drama than a cat video! ((C) Mike on Twitch chat)_*
 ====
 
-A repo with cypher and examples from the Discover *Neo4j Aura Free* [https://twitch.tv/neo4j^]Twitch stream. All streams will roughly follow the following format:
+A repo with cypher and examples from the Discover *Neo4j Aura Free* https://twitch.tv/neo4j[Twitch stream^]. All streams will roughly follow the following format:
 
 * Review a data set
 * Decide what questions to ask from it
@@ -16,7 +16,7 @@ Got a data set you'd like us to explore? Provided it's a public data set and can
 == Join us live for the stream!
 
 Every Monday: 8am UTC | 9am BST | 10am CEST | 1:30pm IST | 4pm SGT
-https://twitch.tv/neo4j^[On Twitch^]
+https://twitch.tv/neo4j[On Twitch^]
 
 Following along? Don't forget to get your https://dev.neo4j.com/aura[*Free* Neo4j Aura instance^] up and running.
 

@@ -9,7 +9,7 @@ A repo with cypher and examples from the Discover *Neo4j Aura Free* https://twit
 * Review a data set
 * Decide what questions to ask from it
 * Put together an initial data model
-* Load the data into Neo4j Aura Free and query!
+* Load the data into https://dev.neo4j.com/discover-aura[Neo4j Aura Free^] and query!
 
 Got a data set you'd like us to explore? Provided it's a public data set and can be accessed from a URI, let us know! Either raise an issue on the repo, or tweet @ellazal or @alexandererdl on Twitter.
 
@@ -18,7 +18,7 @@ Got a data set you'd like us to explore? Provided it's a public data set and can
 Every Monday: 8am UTC | 9am BST | 10am CEST | 1:30pm IST | 4pm SGT
 https://twitch.tv/neo4j[On Twitch^]
 
-Following along? Don't forget to get your https://dev.neo4j.com/aura[*Free* Neo4j Aura instance^] up and running.
+Following along? Don't forget to get your https://dev.neo4j.com/discover-aura[*Free* Neo4j Aura instance^] up and running.
 
 === Previous episodes:
 
@@ -36,7 +36,7 @@ image::https://i.ytimg.com/vi/_tuea3bsrPA/maxresdefault.jpg[]
 
 === Key links 
 
-* https://dev.neo4j.com/aura[Neo4j Aura landing page^]
+* https://dev.neo4j.com/discover-aura[Neo4j Aura landing page^]
 * https://github.com/fivethirtyeight/data/blob/master/nba-elo/nbaallelo.csv[Github repo for the NBA data^]
 * https://raw.githubusercontent.com/fivethirtyeight/data/master/nba-elo/nbaallelo.csv[Raw CSV^]
 * https://arrows.app[Arrows app^]
@@ -161,7 +161,7 @@ image::https://i.ytimg.com/vi/0X1dmTO0RZQ/maxresdefault.jpg[]
 
 === Key links 
 
-* https://dev.neo4j.com/aura[Neo4j Aura landing page^]
+* https://dev.neo4j.com/discover-aura[Neo4j Aura landing page^]
 * https://github.com/ThaWeatherman/scrapers/blob/b8757711296703356891f8f4e7757de6698a6b5b/boardgamegeek/games.csv[Github repo for the Board Game Geek data^]
 * https://raw.githubusercontent.com/ThaWeatherman/scrapers/b8757711296703356891f8f4e7757de6698a6b5b/boardgamegeek/games.csv[Raw CSV^]
 * https://arrows.app[Arrows app^]

@@ -26,6 +26,8 @@ Following along? Don't forget to get your https://dev.neo4j.com/discover-aura[*F
 
 <<Week 2 - The Board Game Geek data set>>
 
+<<Week 3 - The Caruana - Carlsen Chess Game data set>>
+
 == Week 1 - The NBA data set
 
 In this week's episode, Lju and Alexander explore a National Basketball Association (NBA) dataset, from https://fivethirtyeight.com/[FiveThirtyEight^]. Catch-up on the episode now!
@@ -275,3 +277,161 @@ RETURN g.name AS name, g.playingTime AS `playing time`,
     [pcmin.value, pcmax.value] AS `player range` 
     ORDER BY `playing time`
 ====
+
+== Week 3 - The Carauana - Carlsen Chess Game data set
+
+
+In this week's episode, Lju explores data from a Carauana - Carlsen chess game, from  and Alexander explore a National Basketball Association (NBA) dataset, from https://https://github.com/zq99/[Zaid Qureshi's Github repository^]. Catch-up on the episode now!
+
+A big shoutout to BennuFire who keeps asking those awesome questions!
+
+.catch-up video
+[caption="Week 3 ",link=https://youtu.be/vkTQpOr2BNc^]
+image::https://i.ytimg.com/vi/vkTQpOr2BNc/maxresdefault.jpg[]
+
+=== Key links 
+
+* https://dev.neo4j.com/discover-aura[Neo4j Aura landing page^]
+* https://github.com/zq99/pgn2data/blob/master/samples/caruana_carlsen_2018_moves.csv[Github repo for the game data^]
+* https://raw.githubusercontent.com/zq99/pgn2data/master/samples/caruana_carlsen_2018_moves.csv[Raw CSV^]
+* https://arrows.app[Arrows app^]
+* https://arrows.app/#/import/json=eyJncmFwaCI6eyJub2RlcyI6W3siaWQiOiJuMCIsInBvc2l0aW9uIjp7IngiOi05MC43NjcxMjg1NjUzNjQ4MywieSI6LTI0MX0sImNhcHRpb24iOiIiLCJsYWJlbHMiOlsiUG9zaXRpb24iXSwicHJvcGVydGllcyI6eyJmZW4iOiIifSwic3R5bGUiOnt9fSx7ImlkIjoibjEiLCJwb3NpdGlvbiI6eyJ4Ijo0MTcuNjQ0NDI2NzAwNjMwNSwieSI6LTI0MX0sImNhcHRpb24iOiIiLCJsYWJlbHMiOlsiTW92ZSJdLCJwcm9wZXJ0aWVzIjp7Im5vIjoiIiwibW92ZSI6IiIsImNvbG91ciI6IiJ9LCJzdHlsZSI6e319LHsiaWQiOiJuMiIsInBvc2l0aW9uIjp7IngiOjIxNS44MTE5OTY1MDgzODM2NiwieSI6LTY3Ljg4MDkwNzgyMDI0MDA1fSwiY2FwdGlvbiI6IiIsImxhYmVscyI6WyJQaWVjZSJdLCJwcm9wZXJ0aWVzIjp7InR5cGUiOiIifSwic3R5bGUiOnt9fSx7ImlkIjoibjMiLCJwb3NpdGlvbiI6eyJ4Ijo1MTcuNjQ0NDI2NzAwNjMwNCwieSI6MzIuMTE5MDkyMTc5NzU5OTQ2fSwiY2FwdGlvbiI6IiIsImxhYmVscyI6WyJQb3NpdGlvbiJdLCJwcm9wZXJ0aWVzIjp7ImZlbiI6IiJ9LCJzdHlsZSI6e319LHsiaWQiOiJuNCIsInBvc2l0aW9uIjp7IngiOjEwMjYuMDU1OTgxOTY2NjI1NywieSI6MzIuMTE5MDkyMTc5NzU5OTQ2fSwiY2FwdGlvbiI6IiIsImxhYmVscyI6WyJNb3ZlIl0sInByb3BlcnRpZXMiOnsibm8iOiIiLCJtb3ZlIjoiIiwiY29sb3VyIjoiIn0sInN0eWxlIjp7fX0seyJpZCI6Im41IiwicG9zaXRpb24iOnsieCI6NzcxLjg1MDIwNDMzMzYyODEsInkiOjIzMS41OTQyNDU3NzE1NzU2M30sImNhcHRpb24iOiIiLCJsYWJlbHMiOlsiUGllY2UiXSwicHJvcGVydGllcyI6eyJ0eXBlIjoiIiwibG9jYXRpb24iOiIifSwic3R5bGUiOnt9fV0sInJlbGF0aW9uc2hpcHMiOlt7ImlkIjoibjEiLCJmcm9tSWQiOiJuMSIsInRvSWQiOiJuMiIsInR5cGUiOiJJTlZPTFZFUyIsInByb3BlcnRpZXMiOnt9LCJzdHlsZSI6e319LHsiaWQiOiJuMiIsImZyb21JZCI6Im4yIiwidG9JZCI6Im4wIiwidHlwZSI6IlJFU1VMVFNfSU4iLCJwcm9wZXJ0aWVzIjp7fSwic3R5bGUiOnt9fSx7ImlkIjoibjMiLCJmcm9tSWQiOiJuMSIsInRvSWQiOiJuMCIsInR5cGUiOiJSRVNVTFRFRF9JTiIsInByb3BlcnRpZXMiOnt9LCJzdHlsZSI6e319LHsiaWQiOiJuNCIsImZyb21JZCI6Im40IiwidG9JZCI6Im41IiwidHlwZSI6IklOVk9MVkVTIiwicHJvcGVydGllcyI6e30sInN0eWxlIjp7fX0seyJpZCI6Im41IiwiZnJvbUlkIjoibjUiLCJ0b0lkIjoibjMiLCJ0eXBlIjoiUkVTVUxUU19JTiIsInByb3BlcnRpZXMiOnt9LCJzdHlsZSI6e319LHsiaWQiOiJuNiIsImZyb21JZCI6Im40IiwidG9JZCI6Im4zIiwidHlwZSI6IlJFU1VMVEVEX0lOIiwicHJvcGVydGllcyI6e30sInN0eWxlIjp7fX1dLCJzdHlsZSI6eyJub2RlLWNvbG9yIjoiI2ZmZmZmZiIsImJvcmRlci13aWR0aCI6NCwiYm9yZGVyLWNvbG9yIjoiIzAwMDAwMCIsInJhZGl1cyI6NTAsIm5vZGUtcGFkZGluZyI6NSwibm9kZS1tYXJnaW4iOjIsIm91dHNpZGUtcG9zaXRpb24iOiJhdXRvIiwiY2FwdGlvbi1wb3NpdGlvbiI6Imluc2lkZSIsImNhcHRpb24tbWF4LXdpZHRoIjoyMDAsImNhcHRpb24tY29sb3IiOiIjMDAwMDAwIiwiY2FwdGlvbi1mb250LXNpemUiOjUwLCJjYXB0aW9uLWZvbnQtd2VpZ2h0Ijoibm9ybWFsIiwibGFiZWwtcG9zaXRpb24iOiJpbnNpZGUiLCJsYWJlbC1jb2xvciI6IiMwMDAwMDAiLCJsYWJlbC1iYWNrZ3JvdW5kLWNvbG9yIjoiI2ZmZmZmZiIsImxhYmVsLWJvcmRlci1jb2xvciI6IiMwMDAwMDAiLCJsYWJlbC1ib3JkZXItd2lkdGgiOjQsImxhYmVsLWZvbnQtc2l6ZSI6NDAsImxhYmVsLXBhZGRpbmciOjUsImxhYmVsLW1hcmdpbiI6NCwiZGlyZWN0aW9uYWxpdHkiOiJkaXJlY3RlZCIsImRldGFpbC1wb3NpdGlvbiI6ImlubGluZSIsImRldGFpbC1vcmllbnRhdGlvbiI6InBhcmFsbGVsIiwiYXJyb3ctd2lkdGgiOjUsImFycm93LWNvbG9yIjoiIzAwMDAwMCIsIm1hcmdpbi1zdGFydCI6NSwibWFyZ2luLWVuZCI6NSwibWFyZ2luLXBlZXIiOjIwLCJhdHRhY2htZW50LXN0YXJ0Ijoibm9ybWFsIiwiYXR0YWNobWVudC1lbmQiOiJub3JtYWwiLCJ0eXBlLWNvbG9yIjoiIzAwMDAwMCIsInR5cGUtYmFja2dyb3VuZC1jb2xvciI6IiNmZmZmZmYiLCJ0eXBlLWJvcmRlci1jb2xvciI6IiMwMDAwMDAiLCJ0eXBlLWJvcmRlci13aWR0aCI6MCwidHlwZS1mb250LXNpemUiOjE2LCJ0eXBlLXBhZGRpbmciOjUsInByb3BlcnR5LXBvc2l0aW9uIjoib3V0c2lkZSIsInByb3BlcnR5LWNvbG9yIjoiIzAwMDAwMCIsInByb3BlcnR5LWZvbnQtc2l6ZSI6MTYsInByb3BlcnR5LWZvbnQtd2VpZ2h0Ijoibm9ybWFsIn19LCJkaWFncmFtTmFtZSI6IkNhcmF1YW5hIC0gQ2FybHNlbiBnYW1lIn0=[Data model from the session^]
+
+==== The data set
+
+This week we explored generated data based on the first round of the https://en.wikipedia.org/wiki/World_Chess_Championship_2018[Carlsen - Caruana World Championship Match from 2018^]. The data consisted of the moves, https://en.wikipedia.org/wiki/Forsyth%E2%80%93Edwards_Notation[FEN^] positions after each move, which piece moved, and so forth. 
+
+image::img\zq99chessrepo.png[]
+
+==== The questions
+
+The following questions for the data set came up during the stream:
+
+* How many times did the same position repeat?
+* What was the most commonly used piece overall?
+* What is the most popular destination square on the board?
+* What was the most commonly used individual piece, and what moves did it play?
+
+==== The data model
+
+You can view and play with the data model in Arrows App https://arrows.app/#/import/json=eyJncmFwaCI6eyJub2RlcyI6W3siaWQiOiJuMCIsInBvc2l0aW9uIjp7IngiOi05MC43NjcxMjg1NjUzNjQ4MywieSI6LTI0MX0sImNhcHRpb24iOiIiLCJsYWJlbHMiOlsiUG9zaXRpb24iXSwicHJvcGVydGllcyI6eyJmZW4iOiIifSwic3R5bGUiOnt9fSx7ImlkIjoibjEiLCJwb3NpdGlvbiI6eyJ4Ijo0MTcuNjQ0NDI2NzAwNjMwNSwieSI6LTI0MX0sImNhcHRpb24iOiIiLCJsYWJlbHMiOlsiTW92ZSJdLCJwcm9wZXJ0aWVzIjp7Im5vIjoiIiwibW92ZSI6IiIsImNvbG91ciI6IiJ9LCJzdHlsZSI6e319LHsiaWQiOiJuMiIsInBvc2l0aW9uIjp7IngiOjIxNS44MTE5OTY1MDgzODM2NiwieSI6LTY3Ljg4MDkwNzgyMDI0MDA1fSwiY2FwdGlvbiI6IiIsImxhYmVscyI6WyJQaWVjZSJdLCJwcm9wZXJ0aWVzIjp7InR5cGUiOiIifSwic3R5bGUiOnt9fSx7ImlkIjoibjMiLCJwb3NpdGlvbiI6eyJ4Ijo1MTcuNjQ0NDI2NzAwNjMwNCwieSI6MzIuMTE5MDkyMTc5NzU5OTQ2fSwiY2FwdGlvbiI6IiIsImxhYmVscyI6WyJQb3NpdGlvbiJdLCJwcm9wZXJ0aWVzIjp7ImZlbiI6IiJ9LCJzdHlsZSI6e319LHsiaWQiOiJuNCIsInBvc2l0aW9uIjp7IngiOjEwMjYuMDU1OTgxOTY2NjI1NywieSI6MzIuMTE5MDkyMTc5NzU5OTQ2fSwiY2FwdGlvbiI6IiIsImxhYmVscyI6WyJNb3ZlIl0sInByb3BlcnRpZXMiOnsibm8iOiIiLCJtb3ZlIjoiIiwiY29sb3VyIjoiIn0sInN0eWxlIjp7fX0seyJpZCI6Im41IiwicG9zaXRpb24iOnsieCI6NzcxLjg1MDIwNDMzMzYyODEsInkiOjIzMS41OTQyNDU3NzE1NzU2M30sImNhcHRpb24iOiIiLCJsYWJlbHMiOlsiUGllY2UiXSwicHJvcGVydGllcyI6eyJ0eXBlIjoiIiwibG9jYXRpb24iOiIifSwic3R5bGUiOnt9fV0sInJlbGF0aW9uc2hpcHMiOlt7ImlkIjoibjEiLCJmcm9tSWQiOiJuMSIsInRvSWQiOiJuMiIsInR5cGUiOiJJTlZPTFZFUyIsInByb3BlcnRpZXMiOnt9LCJzdHlsZSI6e319LHsiaWQiOiJuMiIsImZyb21JZCI6Im4yIiwidG9JZCI6Im4wIiwidHlwZSI6IlJFU1VMVFNfSU4iLCJwcm9wZXJ0aWVzIjp7fSwic3R5bGUiOnt9fSx7ImlkIjoibjMiLCJmcm9tSWQiOiJuMSIsInRvSWQiOiJuMCIsInR5cGUiOiJSRVNVTFRFRF9JTiIsInByb3BlcnRpZXMiOnt9LCJzdHlsZSI6e319LHsiaWQiOiJuNCIsImZyb21JZCI6Im40IiwidG9JZCI6Im41IiwidHlwZSI6IklOVk9MVkVTIiwicHJvcGVydGllcyI6e30sInN0eWxlIjp7fX0seyJpZCI6Im41IiwiZnJvbUlkIjoibjUiLCJ0b0lkIjoibjMiLCJ0eXBlIjoiUkVTVUxUU19JTiIsInByb3BlcnRpZXMiOnt9LCJzdHlsZSI6e319LHsiaWQiOiJuNiIsImZyb21JZCI6Im40IiwidG9JZCI6Im4zIiwidHlwZSI6IlJFU1VMVEVEX0lOIiwicHJvcGVydGllcyI6e30sInN0eWxlIjp7fX1dLCJzdHlsZSI6eyJub2RlLWNvbG9yIjoiI2ZmZmZmZiIsImJvcmRlci13aWR0aCI6NCwiYm9yZGVyLWNvbG9yIjoiIzAwMDAwMCIsInJhZGl1cyI6NTAsIm5vZGUtcGFkZGluZyI6NSwibm9kZS1tYXJnaW4iOjIsIm91dHNpZGUtcG9zaXRpb24iOiJhdXRvIiwiY2FwdGlvbi1wb3NpdGlvbiI6Imluc2lkZSIsImNhcHRpb24tbWF4LXdpZHRoIjoyMDAsImNhcHRpb24tY29sb3IiOiIjMDAwMDAwIiwiY2FwdGlvbi1mb250LXNpemUiOjUwLCJjYXB0aW9uLWZvbnQtd2VpZ2h0Ijoibm9ybWFsIiwibGFiZWwtcG9zaXRpb24iOiJpbnNpZGUiLCJsYWJlbC1jb2xvciI6IiMwMDAwMDAiLCJsYWJlbC1iYWNrZ3JvdW5kLWNvbG9yIjoiI2ZmZmZmZiIsImxhYmVsLWJvcmRlci1jb2xvciI6IiMwMDAwMDAiLCJsYWJlbC1ib3JkZXItd2lkdGgiOjQsImxhYmVsLWZvbnQtc2l6ZSI6NDAsImxhYmVsLXBhZGRpbmciOjUsImxhYmVsLW1hcmdpbiI6NCwiZGlyZWN0aW9uYWxpdHkiOiJkaXJlY3RlZCIsImRldGFpbC1wb3NpdGlvbiI6ImlubGluZSIsImRldGFpbC1vcmllbnRhdGlvbiI6InBhcmFsbGVsIiwiYXJyb3ctd2lkdGgiOjUsImFycm93LWNvbG9yIjoiIzAwMDAwMCIsIm1hcmdpbi1zdGFydCI6NSwibWFyZ2luLWVuZCI6NSwibWFyZ2luLXBlZXIiOjIwLCJhdHRhY2htZW50LXN0YXJ0Ijoibm9ybWFsIiwiYXR0YWNobWVudC1lbmQiOiJub3JtYWwiLCJ0eXBlLWNvbG9yIjoiIzAwMDAwMCIsInR5cGUtYmFja2dyb3VuZC1jb2xvciI6IiNmZmZmZmYiLCJ0eXBlLWJvcmRlci1jb2xvciI6IiMwMDAwMDAiLCJ0eXBlLWJvcmRlci13aWR0aCI6MCwidHlwZS1mb250LXNpemUiOjE2LCJ0eXBlLXBhZGRpbmciOjUsInByb3BlcnR5LXBvc2l0aW9uIjoib3V0c2lkZSIsInByb3BlcnR5LWNvbG9yIjoiIzAwMDAwMCIsInByb3BlcnR5LWZvbnQtc2l6ZSI6MTYsInByb3BlcnR5LWZvbnQtd2VpZ2h0Ijoibm9ybWFsIn19LCJkaWFncmFtTmFtZSI6IkNhcmF1YW5hIC0gQ2FybHNlbiBnYW1lIn0=[here^].
+
+.The NBA data model we used in the stream
+image::img\chessmodel.png[]
+
+==== Loading the data
+
+In the CSV we were looking at, there were two move fields:
+* `move_no` is the 'half move' number, i.e. 1 for White's first move, 2 for Black's, etc.
+* `move_no_pair` is the actual move of the game, i.e. White and Black each move for a complete move. This is the field we use for move number.
+
+To load the data into the database, we use the following query:
+
+====
+[source,cypher]
+LOAD CSV WITH HEADERS FROM "https://raw.githubusercontent.com/zq99/pgn2data/master/samples/caruana_carlsen_2018_moves.csv" AS row
+MERGE (p:Position {fen:row.fen})
+CREATE (m:Move {move:row.move, colour:row.color, no:tointeger(row.move_no_pair), piece:row.piece})
+CREATE (m)-[:RESULTS_IN]->(p);
+====
+
+NOTE: When using `LOAD CSV`, integers and floats may be treated as strings. As a result, don't forget to check, especially if you get unexpected results
+
+This will load in our `Position` and `Move` nodes. The following step is going to create our (individual) `Piece` labels.
+
+====
+[source,cypher]
+CALL apoc.periodic.commit(
+    "MATCH (m:Move) WHERE EXISTS(m.piece) 
+    //strange Cypher issue going on - so we're casting the property to string
+    WITH m, m.move+'' AS move LIMIT $limit
+    MATCH (m)-->(pos)
+    MERGE (piece:Piece {location:left(move,2), type:m.piece, colour:m.colour})
+        SET piece.location = right(move,2)
+    WITH m, pos, piece
+    CREATE (piece)-[:RESULTS_IN]->(pos)
+    CREATE (m)-[:INVOLVES]->(piece)
+    REMOVE m.piece
+    RETURN count(*)",
+    {limit:1}
+)
+====
+
+We are using https://neo4j.com/labs/apoc/4.1/overview/apoc.periodic/apoc.periodic.commit/[`apoc.periodic.commit`^] to make sure we step through one by one the `Move` nodes to get move and piece information, so that we can use this to create our `Piece` node. A little 'fudge' we're using to make sure we're tracking individual pieces is by always checking what square they were originally on, and then update their `location` to their destination square.
+
+Something to be aware of, we are not taking account of what happens when a player castles (The rook moves as well as the king! Although we only ever record the king moving...), and pawn captures via en passant. We can worry about that another day!
+
+==== Querying the data
+
+* How many times did the same position repeat?
+* What was the most commonly used piece overall?
+* What is the most popular destination square on the board?
+* What was the most commonly used individual piece, and what moves did it play?
+
+*Question 1 - How many times did the same position repeat?*
+
+====
+[source,cypher]
+MATCH (m:Move)-[:RESULTS_IN]->(pos:Position)
+WITH pos, collect(m) AS moves WHERE size(moves) > 1
+RETURN pos.fen, size(moves) AS size ORDER BY size DESC
+====
+
+*Question 2 - What was the most commonly used piece overall*
+
+====
+[source,cypher]
+MATCH (m:Move)-->(p:Piece)
+WITH p.type AS type, collect(m) AS moves
+RETURN type, size(moves) AS size ORDER BY size DESC
+====
+
+*Question 3 - What is the most popular destination square on the board*
+
+====
+[source,cypher]
+MATCH (m:Move)
+WITH right(m.move,2) AS destination
+RETURN destination, count(destination) AS count 
+    ORDER BY count DESC
+====
+
+*Question 4 - What was the most commonly used individual piece, and what moves did it play?*
+
+Hat-tip to BennuFire for this one! Don't forget - we've not handled castling or en passant (or promotions for that matter!).
+
+====
+[source,cypher]
+MATCH (m:Move)-->(p:Piece)
+WITH p, {No:m.no,Move:m.move} AS moves ORDER BY m.no
+WITH p, collect(moves) AS moves
+RETURN p.type, p.colour, moves, size(moves) AS count ORDER BY count DESC
+====
+
+Bonus query, generate a move path for each piece. First of all, we're going to use [this example^] from the knowledge base to allow us to create a link between the moves associated with a piece:
+
+====
+[source,cypher]
+MATCH (m:Move)-->(p:Piece)
+WITH p, m ORDER BY m.no
+WITH p, collect(m) AS moves
+FOREACH (i in range(0, size(moves) - 2) |
+ FOREACH (node1 in [moves[i]] |
+  FOREACH (node2 in [moves[i+1]] |
+   CREATE (node1)-[:NEXT_MOVE {colour:node1.colour}]->(node2))))
+====
+
+Now, if we want to see the chain of moves associated by individual piece, we use the following query (just looking for knights for now...):
+
+====
+[source,cypher]
+MATCH (m1:Move)-[r1:INVOLVES]->(p:Piece {type:'N'})
+WHERE NOT ()-[:NEXT_MOVE]->(m1:Move)
+WITH m1, p, r1
+MATCH (m1)-[r2:NEXT_MOVE* 0..100 {colour:p.colour}]->(m:Move)
+RETURN  *
+====
+
+You may need to remove 'connect resulting nodes' in your settings to create the same image below.
+
+image::img\chessmovechain.png[]

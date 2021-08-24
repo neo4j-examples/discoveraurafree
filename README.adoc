@@ -618,7 +618,7 @@ RETURN tg.slug, collect(t.name)
 
 We can take this much further, and start looking at intersections of tags - e.g. do we see the same tags commonly appearing together. Watch this space!
 
-== Week 5 - Rest areas across New York State data set
+== Week 5 - Rest areas across New York state data set
 
 In this week's episode, Lju and Alexander explore data on rest areas across New York State, from https://catalog.data.gov/dataset/rest-areas-across-ny[the U.S. Government open data site^]. Catch-up on the episode now!
 

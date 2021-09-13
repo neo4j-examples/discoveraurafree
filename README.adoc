@@ -880,16 +880,25 @@ create constraint if not exists on (t:Topic) assert t.id is unique;
 .Load Data
 [source,cypher]
 ----
-load csv with headers from "https://github.com/neo4j-examples/discoveraurafree/raw/main/data/wom-btw-2021.csv" 
-as row
+LOAD CSV WITH HEADERS FROM 
+"https://github.com/neo4j-examples/discoveraurafree/raw/main/data/wom-btw-2021.csv" 
+AS row
 
-merge  (p:Party {id:toInteger(row.`Partei: Nr.`)}) on create set p.text = row.`Partei: Name`, p.name = row.`Partei: Kurzbezeichnung`
-merge (t:Topic {id:toInteger(row.`These: Nr.`)}) on create set t.name = row.`These: Titel`, t.text = row.`These: These`
+MERGE  (p:Party {id:toInteger(row.`Partei: Nr.`)}) 
+ON CREATE SET p.text = row.`Partei: Name`, p.name = row.`Partei: Kurzbezeichnung`
+MERGE (t:Topic {id:toInteger(row.`These: Nr.`)}) 
+ON CREATE SET t.name = row.`These: Titel`, t.text = row.`These: These`
 
-merge (p)-[pos:POSITION]->(t) on create set pos.text = row.`Position: Begründung`,
-pos.weight = case row.`Position: Position` when "stimme nicht zu" then 0.0 when "stimme zu" then 1.0 when "neutral" then 0.5 end
+MERGE (p)-[pos:POSITION]->(t) 
+ON CREATE SET pos.text = row.`Position: Begründung`,
+pos.weight = 
+CASE row.`Position: Position` 
+  WHEN "stimme nicht zu" THEN 0.0 
+  WHEN "stimme zu" THEN 1.0 
+  WHEN "neutral" THEN 0.5 
+END
 
-return count(*);
+RETURN count(*);
 ----
 
 === Exploration
@@ -899,7 +908,9 @@ We can just visualize the Data by querying with Neo4j Browser or Neo4j Bloom (wh
 .top 5 parties, same positions
 [source,cypher]
 ----
-MATCH (p:Partei)-[r:POSITION]->(t) where p.id <= 5 and t.id <10 and r.weight = 1 RETURN *;
+MATCH (p:Party)-[r:POSITION]->(t) 
+WHERE p.id <= 6 AND t.id <10 AND r.weight = 1 
+RETURN *;
 ----
 
 We can also compute the similarity (distance) between parties, similar to ratings of movies by the sum or avg of weight distances.
@@ -907,8 +918,11 @@ We can also compute the similarity (distance) between parties, similar to rating
 .similarity (distance)
 [source,cypher]
 ----
-match (p1:Partei)-[r1:POSITION]->(t:These)<-[r2:POSITION]-(p2:Partei) where id(p1)>id(p2)
-return p1.name,p2.name, sum(abs(r1.weight-r2.weight)) as sim order by sim asc;
+MATCH (p1:Party)-[r1:POSITION]->(t:Topic)<-[r2:POSITION]-(p2:Party) 
+WHERE id(p1)>id(p2)
+RETURN p1.name,p2.name, sum(abs(r1.weight-r2.weight)) AS sum,
+avg(abs(r1.weight-r2.weight)) AS avg
+ORDER BY sum ASC;
 ----
 
 We can turn that similarity (distance) when it's below a certain threshhold into a relationship:
@@ -916,10 +930,11 @@ We can turn that similarity (distance) when it's below a certain threshhold into
 .similarity relationship
 [source,cypher]
 ----
-match (p1:Partei)-[r1:POSITION]->(t:These)<-[r2:POSITION]-(p2:Partei) where id(p1)>id(p2)
-with p1, p2, sum(abs(r1.weight-r2.weight)) as sim 
-where sim < 10 
-MERGE (p1)-[s:SIMILAR]-(p2) SET s.weight = sim;
+MATCH (p1:Party)-[r1:POSITION]->(t:Topic)<-[r2:POSITION]-(p2:Party) 
+WHERE id(p1)>id(p2)
+WITH p1, p2, avg(abs(r1.weight-r2.weight)) AS dist
+WHERE dist < 0.3
+MERGE (p1)-[s:SIMILAR]-(p2) SET s.weight = 1-dist;
 ----
 
 

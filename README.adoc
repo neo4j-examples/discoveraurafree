@@ -1,4 +1,4 @@
-= Discover Neo4j Aura Free with Lju and Alex
+= Discover Neo4j Aura Free Live Stream
 
 ====
 *_More drama than a cat video! ((C) Mike on Twitch chat)_*
@@ -11,7 +11,7 @@ A repo with cypher and examples from the Discover *Neo4j Aura Free* https://twit
 * Put together an initial data model
 * Load the data into https://dev.neo4j.com/discover-aura[Neo4j Aura Free^] and query!
 
-Got a data set you'd like us to explore? Provided it's a public data set and can be accessed from a URI, let us know! Either raise an issue on the repo, or tweet @ellazal or @alexandererdl on Twitter.
+Got a data set you'd like us to explore? Provided it's a public data set and can be accessed from a URI, let us know! Either raise an issue on the repo, or tweet @ellazal or @alexandererdl or @mesirii on Twitter.
 
 == Join us live for the stream!
 
@@ -33,6 +33,8 @@ Following along? Don't forget to get your https://dev.neo4j.com/discover-aura[*F
 <<Week 5 - Rest areas across New York state data set>>
 
 <<Week 6 - New Zealand credit card spend data set>>
+
+<<Week 7 - Jungle of German Election Landscape>>
 
 
 == Week 1 - The NBA data set
@@ -824,3 +826,103 @@ RETURN d.value AS Date, col[0][1] AS Spend, col[0][0] AS Category
 
 [TIP]
 When using multiple values as part of an `ORDER BY`, you will need to specify each time the order, either ascending (leave blank as is by default) or descending with `DESC`
+
+
+== Week 7 - Jungle of German Election Landscape
+
+=== Graph-Analysis Wahl-O-Mat Bundestagswahl 2021
+
+For every German Election the "Wahl-O-Mat" offers an interactive tool to compare your views on a number of topics/theses with the polical parties up for election.
+
+You can try the interactive comparison at: https://www.wahl-o-mat.de
+
+=== Source Data
+
+The data can be https://www.bpb.de/politik/wahlen/wahl-o-mat/bundestagswahl-2021/337541/download[downloaded from the site^], the zip-file contains an excel sheet, that we can export as a CSV.
+
+Our analysis is only for educational and scientific use.
+
+====
+Die Bundeszentrale für politische Bildung ist Urheber des nachfolgend veröffentlichten "Wahl-O-Mat-Datensatzes". Die Veröffentlichung des Datensatzes dient lediglich dem Zugang zu den in ihm enthaltenen Informationen. Jede Nutzung des Datensatzes, egal welcher Art, wird untersagt. Die Schranken des Urheberrechts durch gesetzlich erlaubte Nutzung bleiben hiervon unberührt.
+
+Eine Ausnahme gilt nur für die Analyse des Datensatzes zu wissenschaftlichen oder journalistischen Zwecken sowie für die Veröffentlichung der Ergebnisse dieser Analyse. Dabei muss jederzeit klar erkennbar sein, dass die Bundeszentrale für politische Bildung nicht Urheber dieser Analyse ist.
+====
+
+== Graph Database
+
+We're loading and exploring our data in https://console.neo4j.io[Neo4j Aura Free^].
+
+=== Data Model
+
+== Data Model
+
+The data model is pretty straightforward, we create a node for `Party` and `Topic` each and store the stance of the party as a weight on `POSITION` releationhip, where 
+
+* disagree is 0.0
+* neutral is 0.5
+* agree is 1.0
+
+image::img/election-party-topic.png[]
+
+=== Data Import
+
+The CSV can be loaded directly into the Database using LOAD CSV and this script:
+
+.Create Indexes
+[source,cypher]
+----
+create index on :Party(name);
+create index on :Topic(name);
+create constraint if not exists on (p:Party) assert p.id is unique;
+create constraint if not exists on (t:Topic) assert t.id is unique;
+----
+
+.Load Data
+[source,cypher]
+----
+load csv with headers from "https://github.com/neo4j-examples/discoveraurafree/raw/main/data/wom-btw-2021.csv" 
+as row
+
+merge  (p:Party {id:toInteger(row.`Partei: Nr.`)}) on create set p.text = row.`Partei: Name`, p.name = row.`Partei: Kurzbezeichnung`
+merge (t:Topic {id:toInteger(row.`These: Nr.`)}) on create set t.name = row.`These: Titel`, t.text = row.`These: These`
+
+merge (p)-[pos:POSITION]->(t) on create set pos.text = row.`Position: Begründung`,
+pos.weight = case row.`Position: Position` when "stimme nicht zu" then 0.0 when "stimme zu" then 1.0 when "neutral" then 0.5 end
+
+return count(*);
+----
+
+=== Exploration
+
+We can just visualize the Data by querying with Neo4j Browser or Neo4j Bloom (where we can style the results based on attributes).
+
+.top 5 parties, same positions
+[source,cypher]
+----
+MATCH (p:Partei)-[r:POSITION]->(t) where p.id <= 5 and t.id <10 and r.weight = 1 RETURN *;
+----
+
+We can also compute the similarity (distance) between parties, similar to ratings of movies by the sum or avg of weight distances.
+
+.similarity (distance)
+[source,cypher]
+----
+match (p1:Partei)-[r1:POSITION]->(t:These)<-[r2:POSITION]-(p2:Partei) where id(p1)>id(p2)
+return p1.name,p2.name, sum(abs(r1.weight-r2.weight)) as sim order by sim asc;
+----
+
+We can turn that similarity (distance) when it's below a certain threshhold into a relationship:
+
+.similarity relationship
+[source,cypher]
+----
+match (p1:Partei)-[r1:POSITION]->(t:These)<-[r2:POSITION]-(p2:Partei) where id(p1)>id(p2)
+with p1, p2, sum(abs(r1.weight-r2.weight)) as sim 
+where sim < 10 
+MERGE (p1)-[s:SIMILAR]-(p2) SET s.weight = sim;
+----
+
+
+=== Similar Analyses
+
+* https://www.dkriesel.com/blog/2021/0903_wahl-o-mat-auswertung_bundestagswahl_2021[Wahl-O-Mat-Exploration Bundestagswahl 2021: Party Landscape by D.Kriesel^]

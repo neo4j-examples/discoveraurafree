@@ -1042,15 +1042,19 @@ This week we want to explore the https://www.gdeltproject.org/[GDelt project^], 
 
 For our needs their API is good enough but if you want to go deeper there is much more to be found.
 
-API page: https://blog.gdeltproject.org/gdelt-geo-2-0-api-debuts/
-JSON API: https://api.gdeltproject.org/api/v2/geo/geo?query=elections&MODE=adm1&format=geojson&TIMESPAN=1d&GEORES=0 
-CSV API: https://api.gdeltproject.org/api/v2/geo/geo?query=elections&MODE=country&format=csv&TIMESPAN=7d&GEORES=0
+* API page: https://blog.gdeltproject.org/gdelt-geo-2-0-api-debuts/
+* JSON API: https://api.gdeltproject.org/api/v2/geo/geo?query=elections&MODE=adm1&format=geojson&TIMESPAN=1d&GEORES=0 
+* CSV API: https://api.gdeltproject.org/api/v2/geo/geo?query=elections&MODE=country&format=csv&TIMESPAN=7d&GEORES=0
 
 We'll be using the CSV endpoint to get news for a certain topic with geolocation and country.
 
 We could also use the JSON result but it returns a bit less data.
 
-Data Model: TBD
+=== Data Model
+
+TBD
+
+=== Data Import
 
 .Exploring the data
 [source,cypher]
@@ -1077,3 +1081,7 @@ MERGE (c:Country {name:row.Location}) ON CREATE SET c.location = n.location
 MERGE (n)-[:FROM_COUNTRY]->(c)
 MERGE (t)-[r:RESULTS]->(c) SET r.count=toInteger(row.LocationResultCount)
 ----
+
+=== Data Exploration 
+
+TBD

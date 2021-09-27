@@ -1073,7 +1073,7 @@ LOAD CSV WITH HEADERS FROM "https://api.gdeltproject.org/api/v2/geo/geo?query="+
 MERGE (t:Topic {name:topic})
 
 MERGE (n:News {url:row.URL})
-ON CREATE SET ntitle=row.Title, n.location=point({latitude:toFloat(row.Latitude), longitude:toFloat(row.Longitude)}), n.image=row.ImageURL
+ON CREATE SET n.title=row.Title, n.location=point({latitude:toFloat(row.Latitude), longitude:toFloat(row.Longitude)}), n.image=row.ImageURL
 
 MERGE (n))-[:TOPIC]->(t)
 

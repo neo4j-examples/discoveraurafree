@@ -38,6 +38,8 @@ Following along? Don't forget to get your https://dev.neo4j.com/discover-aura[*F
 
 <<Week 8 - StackOverflow>>
 
+<<Week 9 - GDelt Project>>
+
 == Week 1 - The NBA data set
 
 In this week's episode, Lju and Alexander explore a National Basketball Association (NBA) dataset, from https://fivethirtyeight.com/[FiveThirtyEight^]. Catch-up on the episode now!
@@ -1034,4 +1036,44 @@ For our second question we also had to import answers and the people posting the
 The recording https://youtu.be/arjywFPvf80?t=722[is here^]
 
 
+== Week 9 - GDelt Project
 
+This week we want to explore the https://www.gdeltproject.org/[GDelt project^], which collects and analyses global news from hundreds of sources and makes them available in many formats.
+
+For our needs their API is good enough but if you want to go deeper there is much more to be found.
+
+API page: https://blog.gdeltproject.org/gdelt-geo-2-0-api-debuts/
+JSON API: https://api.gdeltproject.org/api/v2/geo/geo?query=elections&MODE=adm1&format=geojson&TIMESPAN=1d&GEORES=0 
+CSV API: https://api.gdeltproject.org/api/v2/geo/geo?query=elections&MODE=country&format=csv&TIMESPAN=7d&GEORES=0
+
+We'll be using the CSV endpoint to get news for a certain topic with geolocation and country.
+
+We could also use the JSON result but it returns a bit less data.
+
+Data Model: TBD
+
+.Exploring the data
+[source,cypher]
+----
+WITH "elections" AS topic
+LOAD CSV WITH HEADERS FROM "https://api.gdeltproject.org/api/v2/geo/geo?query="+topic+"&MODE=country&format=csv&TIMESPAN=7d&GEORES=0" AS row 
+RETURN row LIMIT 5
+----
+
+.Loading the data
+[source,cypher]
+----
+WITH "elections" AS topic
+LOAD CSV WITH HEADERS FROM "https://api.gdeltproject.org/api/v2/geo/geo?query="+topic+"&MODE=country&format=csv&TIMESPAN=7d&GEORES=0" AS row 
+
+MERGE (t:Topic {name:topic})
+
+MERGE (n:News {url:row.URL})
+ON CREATE SET ntitle=row.Title, n.location=point({latitude:toFloat(row.Latitude), longitude:toFloat(row.Longitude)}), n.image=row.ImageURL
+
+MERGE (n))-[:TOPIC]->(t)
+
+MERGE (c:Country {name:row.Location}) ON CREATE SET c.location = n.location
+MERGE (n)-[:FROM_COUNTRY]->(c)
+MERGE (t)-[r:RESULTS]->(c) SET r.count=toInteger(row.LocationResultCount)
+----

@@ -1040,6 +1040,8 @@ The recording https://youtu.be/arjywFPvf80?t=722[is here^]
 
 This week we want to explore the https://www.gdeltproject.org/[GDelt project^], which collects and analyses global news from hundreds of sources and makes them available in many formats.
 
+You can https://www.youtube.com/watch?v=7iONKK8gleM&list=PL9Hl4pk2FsvVZaoIpfsfpdzEXxyUJlAYw&index=8[watch the recording of the GDelt Exploration here^].
+
 For our needs their API is good enough but if you want to go deeper there is much more to be found.
 
 * API page: https://blog.gdeltproject.org/gdelt-geo-2-0-api-debuts/

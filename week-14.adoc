@@ -117,7 +117,7 @@ We have the following Nodes in our models that are connected with appropriate re
 
 Here is our data model which is very similar to the original.
 
-image::img/consumer-complaints.png[]
+image::img/consumer-complaints.png[width=400]
 //image::img/consumer-complaints.svg[]
 
 === Data Import
@@ -319,8 +319,9 @@ MERGE (c)-[:TAGGED]->(t);
 ----
 
 Now we can look at our imported graph model with `call db.schema.visualization();` or better `call apoc.meta.graph` to see the schema of the data we have imported.
+It's great to see how well it fits our model.
 
-image::img/complaints-schema-graph-viz.png[]
+image::img/complaints-schema-graph-viz.png[width=400]
 
 === Exploration
 

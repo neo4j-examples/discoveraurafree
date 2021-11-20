@@ -1,0 +1,7 @@
+== Week 12 - Importing Data from Relational Databases
+
+* Northwind
+* CSV \copy from postgres
+* ETL page
+* ETL Tool
+* Programmatic with jbang

@@ -1,0 +1,181 @@
+== Week 4 - The Resonate music data api
+
+In this week's episode, Lju and Alexander explore some playlist data from https://resonate.is/about/[Resonate^], based on example Cypher queries https://github.com/whatSocks[whatSocks^] has put together. Resonate is a co-ownership music streaming platform. Catch-up on the episode now!
+
+.catch-up video
+[caption="Week 4 ",link=https://youtu.be/t9rZrTxsFQs^]
+image::https://i.ytimg.com/vi/t9rZrTxsFQs/maxresdefault.jpg[]
+
+=== Key links 
+
+* https://dev.neo4j.com/discover-aura[Neo4j Aura landing page^]
+* https://github.com/whatSocks/reso-tag-charts[whatSocks Resonate GitHub repo^]
+* https://arrows.app[Arrows app^]
+* https://arrows.app/#/import/json=eyJncmFwaCI6eyJzdHlsZSI6eyJub2RlLWNvbG9yIjoiI2ZmZmZmZiIsImJvcmRlci13aWR0aCI6NCwiYm9yZGVyLWNvbG9yIjoiIzAwMDAwMCIsInJhZGl1cyI6NTAsIm5vZGUtcGFkZGluZyI6NSwibm9kZS1tYXJnaW4iOjIsIm91dHNpZGUtcG9zaXRpb24iOiJhdXRvIiwiY2FwdGlvbi1wb3NpdGlvbiI6Imluc2lkZSIsImNhcHRpb24tbWF4LXdpZHRoIjoyMDAsImNhcHRpb24tY29sb3IiOiIjMDAwMDAwIiwiY2FwdGlvbi1mb250LXNpemUiOjUwLCJjYXB0aW9uLWZvbnQtd2VpZ2h0Ijoibm9ybWFsIiwibGFiZWwtcG9zaXRpb24iOiJpbnNpZGUiLCJsYWJlbC1jb2xvciI6IiMwMDAwMDAiLCJsYWJlbC1iYWNrZ3JvdW5kLWNvbG9yIjoiI2ZmZmZmZiIsImxhYmVsLWJvcmRlci1jb2xvciI6IiMwMDAwMDAiLCJsYWJlbC1ib3JkZXItd2lkdGgiOjQsImxhYmVsLWZvbnQtc2l6ZSI6NDAsImxhYmVsLXBhZGRpbmciOjUsImxhYmVsLW1hcmdpbiI6NCwiZGlyZWN0aW9uYWxpdHkiOiJkaXJlY3RlZCIsImRldGFpbC1wb3NpdGlvbiI6ImlubGluZSIsImRldGFpbC1vcmllbnRhdGlvbiI6InBhcmFsbGVsIiwiYXJyb3ctd2lkdGgiOjUsImFycm93LWNvbG9yIjoiIzAwMDAwMCIsIm1hcmdpbi1zdGFydCI6NSwibWFyZ2luLWVuZCI6NSwibWFyZ2luLXBlZXIiOjIwLCJhdHRhY2htZW50LXN0YXJ0Ijoibm9ybWFsIiwiYXR0YWNobWVudC1lbmQiOiJub3JtYWwiLCJ0eXBlLWNvbG9yIjoiIzAwMDAwMCIsInR5cGUtYmFja2dyb3VuZC1jb2xvciI6IiNmZmZmZmYiLCJ0eXBlLWJvcmRlci1jb2xvciI6IiMwMDAwMDAiLCJ0eXBlLWJvcmRlci13aWR0aCI6MCwidHlwZS1mb250LXNpemUiOjE2LCJ0eXBlLXBhZGRpbmciOjUsInByb3BlcnR5LXBvc2l0aW9uIjoib3V0c2lkZSIsInByb3BlcnR5LWNvbG9yIjoiIzAwMDAwMCIsInByb3BlcnR5LWZvbnQtc2l6ZSI6MTYsInByb3BlcnR5LWZvbnQtd2VpZ2h0Ijoibm9ybWFsIn0sIm5vZGVzIjpbeyJpZCI6Im4wIiwicG9zaXRpb24iOnsieCI6LTM4OS4wMjU5OTcyODAyMDEzNSwieSI6LTQ1fSwiY2FwdGlvbiI6IiIsInN0eWxlIjp7fSwibGFiZWxzIjpbIlRyYWNrIl0sInByb3BlcnRpZXMiOnsidGl0bGUiOiIiLCJ1dWlkIjoiIiwidGFnc19pbXBvcnRlZCI6IiJ9fSx7ImlkIjoibjEiLCJwb3NpdGlvbiI6eyJ4IjotMjMsInkiOi00NX0sImNhcHRpb24iOiIiLCJzdHlsZSI6e30sImxhYmVscyI6WyJSVXNlciJdLCJwcm9wZXJ0aWVzIjp7InV1aWQiOiIifX0seyJpZCI6Im4yIiwicG9zaXRpb24iOnsieCI6NTg2LjM0NzA0OTQyODg1MjEsInkiOi00NX0sImNhcHRpb24iOiIiLCJzdHlsZSI6e30sImxhYmVscyI6WyJUYWciXSwicHJvcGVydGllcyI6eyJ1dWlkIjoiIn19LHsiaWQiOiJuMyIsInBvc2l0aW9uIjp7IngiOjI2My43MzU0NjMyNzYxMTg5NCwieSI6LTQ1fSwiY2FwdGlvbiI6IiIsInN0eWxlIjp7fSwibGFiZWxzIjpbIlRyYWNrR3JvdXAiXSwicHJvcGVydGllcyI6eyJ0aXRsZSI6IiIsInNsdWciOiIiLCJ0eXBlIjoiIiwidXVpZCI6IiIsInRyYWNrc19pbXBvcnRlZCI6IiJ9fV0sInJlbGF0aW9uc2hpcHMiOlt7ImlkIjoibjAiLCJ0eXBlIjoiQ1JFQVRFRCIsInN0eWxlIjp7fSwicHJvcGVydGllcyI6e30sImZyb21JZCI6Im4xIiwidG9JZCI6Im4wIn0seyJpZCI6Im4xIiwidHlwZSI6Ik9XTlMiLCJzdHlsZSI6e30sInByb3BlcnRpZXMiOnt9LCJmcm9tSWQiOiJuMSIsInRvSWQiOiJuMyJ9LHsiaWQiOiJuMiIsInR5cGUiOiJIQVNfVEFHIiwic3R5bGUiOnt9LCJwcm9wZXJ0aWVzIjp7fSwiZnJvbUlkIjoibjMiLCJ0b0lkIjoibjIifV19LCJkaWFncmFtTmFtZSI6IlJlc29uYXRlIG11c2ljIGRhdGEifQ===[Data model from the session^]
+
+==== The data set
+
+This week we explored data from the https://resonate.is/[Resonate^] music streaming service. We also did something a little differently! Normally, we use https://neo4j.com/developer/guide-import-csv/[LOAD CSV^] to get data into our https://dev.neo4j.com/discover-aura[Neo4j Aura Free tier^] instance. However, this time around, we are access data via a REST API, and take advantage of https://neo4j.com/labs/apoc/4.1/overview/apoc.load/apoc.load.json/[`apoc.load.json`^]. whatSocks has kindly provided an example of how to call the Resonate API in her repo, so that's what we're using this week.
+
+This does mean we're doing things slightly differently, in that the data model has already been defined, so we'll run with that rather than defining our own. This is a very interesting data set, so we'll surely be back, and we'll come up with a new data model then!
+
+Here are some examples of the data we worked with in the session:
+
+* https://api.resonate.coop/v2/trackgroups?type=playlist[Playlist track groups^]
+* https://api.resonate.coop/v2/trackgroups[Track groups^]
+* https://api.resonate.coop/v2/artists[Artists^]
+
+==== The data model
+
+As we mentioned above, we're using the data model already provided by whatSocks. Once the data is loaded, you can view it by using the following command in Neo4j Browser: `CALL db.schema.visualization()`.
+
+For those of you who want to experiment with the model in arrows, you can view it https://arrows.app/#/import/json=eyJncmFwaCI6eyJzdHlsZSI6eyJub2RlLWNvbG9yIjoiI2ZmZmZmZiIsImJvcmRlci13aWR0aCI6NCwiYm9yZGVyLWNvbG9yIjoiIzAwMDAwMCIsInJhZGl1cyI6NTAsIm5vZGUtcGFkZGluZyI6NSwibm9kZS1tYXJnaW4iOjIsIm91dHNpZGUtcG9zaXRpb24iOiJhdXRvIiwiY2FwdGlvbi1wb3NpdGlvbiI6Imluc2lkZSIsImNhcHRpb24tbWF4LXdpZHRoIjoyMDAsImNhcHRpb24tY29sb3IiOiIjMDAwMDAwIiwiY2FwdGlvbi1mb250LXNpemUiOjUwLCJjYXB0aW9uLWZvbnQtd2VpZ2h0Ijoibm9ybWFsIiwibGFiZWwtcG9zaXRpb24iOiJpbnNpZGUiLCJsYWJlbC1jb2xvciI6IiMwMDAwMDAiLCJsYWJlbC1iYWNrZ3JvdW5kLWNvbG9yIjoiI2ZmZmZmZiIsImxhYmVsLWJvcmRlci1jb2xvciI6IiMwMDAwMDAiLCJsYWJlbC1ib3JkZXItd2lkdGgiOjQsImxhYmVsLWZvbnQtc2l6ZSI6NDAsImxhYmVsLXBhZGRpbmciOjUsImxhYmVsLW1hcmdpbiI6NCwiZGlyZWN0aW9uYWxpdHkiOiJkaXJlY3RlZCIsImRldGFpbC1wb3NpdGlvbiI6ImlubGluZSIsImRldGFpbC1vcmllbnRhdGlvbiI6InBhcmFsbGVsIiwiYXJyb3ctd2lkdGgiOjUsImFycm93LWNvbG9yIjoiIzAwMDAwMCIsIm1hcmdpbi1zdGFydCI6NSwibWFyZ2luLWVuZCI6NSwibWFyZ2luLXBlZXIiOjIwLCJhdHRhY2htZW50LXN0YXJ0Ijoibm9ybWFsIiwiYXR0YWNobWVudC1lbmQiOiJub3JtYWwiLCJ0eXBlLWNvbG9yIjoiIzAwMDAwMCIsInR5cGUtYmFja2dyb3VuZC1jb2xvciI6IiNmZmZmZmYiLCJ0eXBlLWJvcmRlci1jb2xvciI6IiMwMDAwMDAiLCJ0eXBlLWJvcmRlci13aWR0aCI6MCwidHlwZS1mb250LXNpemUiOjE2LCJ0eXBlLXBhZGRpbmciOjUsInByb3BlcnR5LXBvc2l0aW9uIjoib3V0c2lkZSIsInByb3BlcnR5LWNvbG9yIjoiIzAwMDAwMCIsInByb3BlcnR5LWZvbnQtc2l6ZSI6MTYsInByb3BlcnR5LWZvbnQtd2VpZ2h0Ijoibm9ybWFsIn0sIm5vZGVzIjpbeyJpZCI6Im4wIiwicG9zaXRpb24iOnsieCI6LTM4OS4wMjU5OTcyODAyMDEzNSwieSI6LTQ1fSwiY2FwdGlvbiI6IiIsInN0eWxlIjp7fSwibGFiZWxzIjpbIlRyYWNrIl0sInByb3BlcnRpZXMiOnsidGl0bGUiOiIiLCJ1dWlkIjoiIiwidGFnc19pbXBvcnRlZCI6IiJ9fSx7ImlkIjoibjEiLCJwb3NpdGlvbiI6eyJ4IjotMjMsInkiOi00NX0sImNhcHRpb24iOiIiLCJzdHlsZSI6e30sImxhYmVscyI6WyJSVXNlciJdLCJwcm9wZXJ0aWVzIjp7InV1aWQiOiIifX0seyJpZCI6Im4yIiwicG9zaXRpb24iOnsieCI6NTg2LjM0NzA0OTQyODg1MjEsInkiOi00NX0sImNhcHRpb24iOiIiLCJzdHlsZSI6e30sImxhYmVscyI6WyJUYWciXSwicHJvcGVydGllcyI6eyJ1dWlkIjoiIn19LHsiaWQiOiJuMyIsInBvc2l0aW9uIjp7IngiOjI2My43MzU0NjMyNzYxMTg5NCwieSI6LTQ1fSwiY2FwdGlvbiI6IiIsInN0eWxlIjp7fSwibGFiZWxzIjpbIlRyYWNrR3JvdXAiXSwicHJvcGVydGllcyI6eyJ0aXRsZSI6IiIsInNsdWciOiIiLCJ0eXBlIjoiIiwidXVpZCI6IiIsInRyYWNrc19pbXBvcnRlZCI6IiJ9fV0sInJlbGF0aW9uc2hpcHMiOlt7ImlkIjoibjAiLCJ0eXBlIjoiQ1JFQVRFRCIsInN0eWxlIjp7fSwicHJvcGVydGllcyI6e30sImZyb21JZCI6Im4xIiwidG9JZCI6Im4wIn0seyJpZCI6Im4xIiwidHlwZSI6Ik9XTlMiLCJzdHlsZSI6e30sInByb3BlcnRpZXMiOnt9LCJmcm9tSWQiOiJuMSIsInRvSWQiOiJuMyJ9LHsiaWQiOiJuMiIsInR5cGUiOiJIQVNfVEFHIiwic3R5bGUiOnt9LCJwcm9wZXJ0aWVzIjp7fSwiZnJvbUlkIjoibjMiLCJ0b0lkIjoibjIifV19LCJkaWFncmFtTmFtZSI6IlJlc29uYXRlIG11c2ljIGRhdGEifQ===[here^].
+
+.The Resonate music platform data model
+image::img\Resonatemodel.png[]
+
+==== The questions
+
+The following questions for the data came up during the stream:
+
+* What tag is most commonly used for a track?
+* What are the most popular songs across playlists (appearing at least twice)?
+* How similar are tags to each other (based on string name!)?
+* What tags appear per track list?
+
+==== Loading the data
+
+Here are the following queries we used from https://github.com/whatSocks/reso-tag-charts[the repo^] to load our data.
+
+Firstly, loading the track groups of type playlist. whatSocks will use the propety `tracks_imported` later as part of a periodic commit as a flag to check what's left to process
+
+[source,cypher]
+----
+WITH 'https://api.resonate.coop/v2/' AS uri
+CALL apoc.load.json(uri + 'trackgroups?type=playlist') // in this example, grabbing listener-generated playlists
+YIELD value
+UNWIND value["data"] AS data
+MERGE (u:RUser {uuid:toString(data["user"]["id"])})
+MERGE (t:TrackGroup {uuid:toString(data["id"])})
+MERGE (u)-[:OWNS]->(t)
+SET t.title = data["title"]
+SET t.type = data["type"]
+SET t.slug = data["slug"]
+SET t.tracks_imported = false
+----
+
+Now add the rest of the TrackGroups
+
+[source,cypher]
+----
+WITH 'https://api.resonate.coop/v2/' AS uri
+CALL apoc.load.json(uri + 'trackgroups') // in this example, grabbing listener-generated playlists
+YIELD value
+UNWIND value["data"] AS data
+MERGE (u:RUser {uuid:toString(data["user"]["id"])})
+MERGE (t:TrackGroup {uuid:toString(data["id"])})
+MERGE (u)-[:OWNS]->(t)
+SET t.title = data["title"]
+SET t.type = data["type"]
+SET t.slug = data["slug"]
+SET t.tracks_imported = false
+----
+
+Now adding the Tracks, using the `tracks_imported` flag
+
+[source,cypher]
+----
+CALL apoc.periodic.commit(
+"MATCH (tg:TrackGroup)
+WHERE NOT tg.tracks_imported 
+SET tg.tracks_imported = true
+WITH tg limit $limit
+WITH 'https://api.resonate.coop/v2/' AS uri, tg.uuid as tg_id
+CALL apoc.load.json(uri + 'trackgroups/' + tg_id )
+yield value
+UNWIND value['data']['items'] AS items
+MERGE (u:RUser {uuid:toString(items['track']['creator_id'])})
+MERGE (track:Track {uuid:toString(items['track']['id'])})
+MERGE (t)-[:HAS_TRACK]->(track)
+MERGE (track)<-[:CREATED]-(u)
+SET track.title = items['track']['title']
+SET track.tags_imported = false
+RETURN count(*)
+",
+{limit:10});
+----
+
+Last but not least, adding the tags
+
+[source,cypher]
+----
+CALL apoc.periodic.commit(
+"
+MATCH (u:RUser)-[:CREATED]->(track:Track)
+WHERE not u.uuid  in ['7212','4315','4414'] // bad data
+AND NOT track.tags_imported
+SET track.tags_imported = true
+WITH u AS artist, u.uuid AS user_id, 
+    count(DISTINCT track) AS tracks,'https://api.resonate.coop/v2/' as uri
+ORDER BY tracks desc
+LIMIT $limit
+CALL apoc.load.json(uri + 'artists/' + user_id + '/releases') // grabbing all
+YIELD value
+UNWIND value['data'] AS data
+UNWIND data['tags'] AS tags
+MERGE (t:TrackGroup {uuid:toString(data['id'])})
+MERGE (user:RUser {uuid:toString(user_id)})-[:OWNS]->(t)
+MERGE (tag:Tag {name:toLower(tags)})
+MERGE (tag)<-[:HAS_TAG]-(t)
+SET tag.uuid=apoc.create.uuid()
+SET t.title = data['title']
+SET t.type = data['type']
+RETURN count(*)
+",
+{limit:10});
+----
+
+==== Querying the data
+
+*Question 1 - What tag is most commonly used for a track?*
+
+[source,cypher]
+----
+MATCH (t:Track)<-[:CREATED]-(:RUser)-[:OWNS]->(tg:TrackGroup)-[:HAS_TAG]->(tag:Tag)
+WITH tag, count(t) AS freq
+RETURN tag.name, freq ORDER BY freq DESC
+----
+
+*Question 2 - What are the most popular songs across playlists (appearing at least twice)?*
+
+[source,cypher]
+----
+MATCH (t:Track)<-[:CREATED]-(:RUser)-[:OWNS]->(tg:TrackGroup)
+WITH t.title AS title, count(tg) AS freq 
+    WHERE freq > 1
+RETURN title, freq ORDER BY freq DESC
+----
+
+*Question 3 - How similar are tags to each other (based on string name!)?*
+
+For this one, we're using the https://neo4j.com/labs/apoc/4.1/misc/text-functions/[APOC text functions^] to help us - in this case, https://en.wikipedia.org/wiki/S%C3%B8rensen%E2%80%93Dice_coefficient[Sorensen Dice Similarity^]: 
+
+[source,cypher]
+----
+MATCH (t1:Tag), (t2:Tag) 
+//use internal node IDs to make sure we don't compare the same node, and compare the same node pairs twice :)
+WHERE id(t1)>id(t2) 
+RETURN t1.name, t2.name, apoc.text.sorensenDiceSimilarity(t1.name, t2.name) AS score 
+    ORDER BY score DESC
+----
+
+*Question 4 - What tags appear per track list?*
+
+[source,cypher]
+----
+MATCH (tg:TrackGroup)-[:HAS_TAG]->(t:Tag)
+RETURN tg.slug, collect(t.name) 
+----
+
+We can take this much further, and start looking at intersections of tags - e.g. do we see the same tags commonly appearing together. Watch this space!
+

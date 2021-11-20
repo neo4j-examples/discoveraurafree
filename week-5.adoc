@@ -1,0 +1,102 @@
+== Week 5 - Rest areas across New York state data set
+
+In this week's episode, Lju and Alexander explore data on rest areas across New York State, from https://catalog.data.gov/dataset/rest-areas-across-ny[the U.S. Government open data site^]. Catch-up on the episode now!
+
+.catch-up video
+[caption="Week 5 ",link=https://www.youtube.com/watch?v=Nb2kUlf-aj4^]
+image::https://i.ytimg.com/vi/Nb2kUlf-aj4/maxresdefault.jpg[]
+
+=== Key links 
+
+* https://dev.neo4j.com/discover-aura[Neo4j Aura landing page^]
+* https://catalog.data.gov/dataset/rest-areas-across-ny[U.S. Government open data site^]
+* https://data.ny.gov/api/views/qebf-4fd8/rows.csv?accessType=DOWNLOAD[Raw CSV^]
+* https://arrows.app[Arrows app^]
+* https://arrows.app/#/import/json=eyJncmFwaCI6eyJzdHlsZSI6eyJub2RlLWNvbG9yIjoiI2ZmZmZmZiIsImJvcmRlci13aWR0aCI6NCwiYm9yZGVyLWNvbG9yIjoiIzAwMDAwMCIsInJhZGl1cyI6NTAsIm5vZGUtcGFkZGluZyI6NSwibm9kZS1tYXJnaW4iOjIsIm91dHNpZGUtcG9zaXRpb24iOiJhdXRvIiwiY2FwdGlvbi1wb3NpdGlvbiI6Imluc2lkZSIsImNhcHRpb24tbWF4LXdpZHRoIjoyMDAsImNhcHRpb24tY29sb3IiOiIjMDAwMDAwIiwiY2FwdGlvbi1mb250LXNpemUiOjUwLCJjYXB0aW9uLWZvbnQtd2VpZ2h0Ijoibm9ybWFsIiwibGFiZWwtcG9zaXRpb24iOiJpbnNpZGUiLCJsYWJlbC1jb2xvciI6IiMwMDAwMDAiLCJsYWJlbC1iYWNrZ3JvdW5kLWNvbG9yIjoiI2ZmZmZmZiIsImxhYmVsLWJvcmRlci1jb2xvciI6IiMwMDAwMDAiLCJsYWJlbC1ib3JkZXItd2lkdGgiOjQsImxhYmVsLWZvbnQtc2l6ZSI6NDAsImxhYmVsLXBhZGRpbmciOjUsImxhYmVsLW1hcmdpbiI6NCwiZGlyZWN0aW9uYWxpdHkiOiJkaXJlY3RlZCIsImRldGFpbC1wb3NpdGlvbiI6ImlubGluZSIsImRldGFpbC1vcmllbnRhdGlvbiI6InBhcmFsbGVsIiwiYXJyb3ctd2lkdGgiOjUsImFycm93LWNvbG9yIjoiIzAwMDAwMCIsIm1hcmdpbi1zdGFydCI6NSwibWFyZ2luLWVuZCI6NSwibWFyZ2luLXBlZXIiOjIwLCJhdHRhY2htZW50LXN0YXJ0Ijoibm9ybWFsIiwiYXR0YWNobWVudC1lbmQiOiJub3JtYWwiLCJ0eXBlLWNvbG9yIjoiIzAwMDAwMCIsInR5cGUtYmFja2dyb3VuZC1jb2xvciI6IiNmZmZmZmYiLCJ0eXBlLWJvcmRlci1jb2xvciI6IiMwMDAwMDAiLCJ0eXBlLWJvcmRlci13aWR0aCI6MCwidHlwZS1mb250LXNpemUiOjE2LCJ0eXBlLXBhZGRpbmciOjUsInByb3BlcnR5LXBvc2l0aW9uIjoib3V0c2lkZSIsInByb3BlcnR5LWNvbG9yIjoiIzAwMDAwMCIsInByb3BlcnR5LWZvbnQtc2l6ZSI6MTYsInByb3BlcnR5LWZvbnQtd2VpZ2h0Ijoibm9ybWFsIn0sIm5vZGVzIjpbeyJpZCI6Im4wIiwicG9zaXRpb24iOnsieCI6LTI2MSwieSI6LTI4NTd9LCJjYXB0aW9uIjoiIiwic3R5bGUiOnt9LCJsYWJlbHMiOlsiUm91dGUiXSwicHJvcGVydGllcyI6eyJuYW1lIjoiIn19LHsiaWQiOiJuMSIsInBvc2l0aW9uIjp7IngiOjE1Ny41LCJ5IjotMjg1N30sImNhcHRpb24iOiIiLCJzdHlsZSI6e30sImxhYmVscyI6WyJSZXN0U3RvcCIsIk9wZW4iXSwicHJvcGVydGllcyI6eyJsb2NhdGlvbiI6IiIsIm5hbWUiOiIiLCJoYW5kaWNhcFNwYWNlcyI6IiIsInRydWNrU3BhY2VzIjoiIiwiY2FyU3BhY2VzIjoiIiwicHVibGljUGhvbmUiOiIifX0seyJpZCI6Im4yIiwicG9zaXRpb24iOnsieCI6LTE3MC4xMDM3MzkzMjQ1NDksInkiOi0yNTk2LjU4MTAyOTkxNDE1MzV9LCJjYXB0aW9uIjoiIiwic3R5bGUiOnt9LCJsYWJlbHMiOlsiQ291bnR5Il0sInByb3BlcnRpZXMiOnsibmFtZSI6IiJ9fV0sInJlbGF0aW9uc2hpcHMiOlt7ImlkIjoibjEiLCJ0eXBlIjoiT05fUk9VVEUiLCJzdHlsZSI6e30sInByb3BlcnRpZXMiOnsiZGlyZWN0aW9uIjoiIn0sImZyb21JZCI6Im4xIiwidG9JZCI6Im4wIn0seyJpZCI6Im4yIiwidHlwZSI6IkJBU0VEX0lOIiwic3R5bGUiOnt9LCJwcm9wZXJ0aWVzIjp7fSwiZnJvbUlkIjoibjEiLCJ0b0lkIjoibjIifV19LCJkaWFncmFtTmFtZSI6IlJlc3QgYXJlYXMgaW4gTmV3IFlvcmsgU3RhdGUifQ==[Data model from the session^]
+
+=== The data set
+
+This week we explored https://catalog.data.gov/dataset/rest-areas-across-ny[rest areas available in New York State^] data, including location, name and facilities available. 
+
+Whilst it's a relatively small data set (some 32 rows!), it is a rather fun data set for us to explore. It also gives us a great opportunity to have a play with https://neo4j.com/docs/cypher-manual/current/functions/spatial/[Neo4j spatial^].
+
+=== The questions
+
+The following questions for the data set came up during the stream:
+
+* If I'm traveling on a certain route in a certain direction, what rest stops are available?
+* What rest areas closest to me has a public phone?
+* What route has the most handicap spaces available?
+
+=== The data model
+
+You can view and play with the data model in Arrows App https://arrows.app/#/import/json=eyJncmFwaCI6eyJzdHlsZSI6eyJub2RlLWNvbG9yIjoiI2ZmZmZmZiIsImJvcmRlci13aWR0aCI6NCwiYm9yZGVyLWNvbG9yIjoiIzAwMDAwMCIsInJhZGl1cyI6NTAsIm5vZGUtcGFkZGluZyI6NSwibm9kZS1tYXJnaW4iOjIsIm91dHNpZGUtcG9zaXRpb24iOiJhdXRvIiwiY2FwdGlvbi1wb3NpdGlvbiI6Imluc2lkZSIsImNhcHRpb24tbWF4LXdpZHRoIjoyMDAsImNhcHRpb24tY29sb3IiOiIjMDAwMDAwIiwiY2FwdGlvbi1mb250LXNpemUiOjUwLCJjYXB0aW9uLWZvbnQtd2VpZ2h0Ijoibm9ybWFsIiwibGFiZWwtcG9zaXRpb24iOiJpbnNpZGUiLCJsYWJlbC1jb2xvciI6IiMwMDAwMDAiLCJsYWJlbC1iYWNrZ3JvdW5kLWNvbG9yIjoiI2ZmZmZmZiIsImxhYmVsLWJvcmRlci1jb2xvciI6IiMwMDAwMDAiLCJsYWJlbC1ib3JkZXItd2lkdGgiOjQsImxhYmVsLWZvbnQtc2l6ZSI6NDAsImxhYmVsLXBhZGRpbmciOjUsImxhYmVsLW1hcmdpbiI6NCwiZGlyZWN0aW9uYWxpdHkiOiJkaXJlY3RlZCIsImRldGFpbC1wb3NpdGlvbiI6ImlubGluZSIsImRldGFpbC1vcmllbnRhdGlvbiI6InBhcmFsbGVsIiwiYXJyb3ctd2lkdGgiOjUsImFycm93LWNvbG9yIjoiIzAwMDAwMCIsIm1hcmdpbi1zdGFydCI6NSwibWFyZ2luLWVuZCI6NSwibWFyZ2luLXBlZXIiOjIwLCJhdHRhY2htZW50LXN0YXJ0Ijoibm9ybWFsIiwiYXR0YWNobWVudC1lbmQiOiJub3JtYWwiLCJ0eXBlLWNvbG9yIjoiIzAwMDAwMCIsInR5cGUtYmFja2dyb3VuZC1jb2xvciI6IiNmZmZmZmYiLCJ0eXBlLWJvcmRlci1jb2xvciI6IiMwMDAwMDAiLCJ0eXBlLWJvcmRlci13aWR0aCI6MCwidHlwZS1mb250LXNpemUiOjE2LCJ0eXBlLXBhZGRpbmciOjUsInByb3BlcnR5LXBvc2l0aW9uIjoib3V0c2lkZSIsInByb3BlcnR5LWNvbG9yIjoiIzAwMDAwMCIsInByb3BlcnR5LWZvbnQtc2l6ZSI6MTYsInByb3BlcnR5LWZvbnQtd2VpZ2h0Ijoibm9ybWFsIn0sIm5vZGVzIjpbeyJpZCI6Im4wIiwicG9zaXRpb24iOnsieCI6LTI2MSwieSI6LTI4NTd9LCJjYXB0aW9uIjoiIiwic3R5bGUiOnt9LCJsYWJlbHMiOlsiUm91dGUiXSwicHJvcGVydGllcyI6eyJuYW1lIjoiIn19LHsiaWQiOiJuMSIsInBvc2l0aW9uIjp7IngiOjE1Ny41LCJ5IjotMjg1N30sImNhcHRpb24iOiIiLCJzdHlsZSI6e30sImxhYmVscyI6WyJSZXN0U3RvcCIsIk9wZW4iXSwicHJvcGVydGllcyI6eyJsb2NhdGlvbiI6IiIsIm5hbWUiOiIiLCJoYW5kaWNhcFNwYWNlcyI6IiIsInRydWNrU3BhY2VzIjoiIiwiY2FyU3BhY2VzIjoiIiwicHVibGljUGhvbmUiOiIifX0seyJpZCI6Im4yIiwicG9zaXRpb24iOnsieCI6LTE3MC4xMDM3MzkzMjQ1NDksInkiOi0yNTk2LjU4MTAyOTkxNDE1MzV9LCJjYXB0aW9uIjoiIiwic3R5bGUiOnt9LCJsYWJlbHMiOlsiQ291bnR5Il0sInByb3BlcnRpZXMiOnsibmFtZSI6IiJ9fV0sInJlbGF0aW9uc2hpcHMiOlt7ImlkIjoibjEiLCJ0eXBlIjoiT05fUk9VVEUiLCJzdHlsZSI6e30sInByb3BlcnRpZXMiOnsiZGlyZWN0aW9uIjoiIn0sImZyb21JZCI6Im4xIiwidG9JZCI6Im4wIn0seyJpZCI6Im4yIiwidHlwZSI6IkJBU0VEX0lOIiwic3R5bGUiOnt9LCJwcm9wZXJ0aWVzIjp7fSwiZnJvbUlkIjoibjEiLCJ0b0lkIjoibjIifV19LCJkaWFncmFtTmFtZSI6IlJlc3QgYXJlYXMgaW4gTmV3IFlvcmsgU3RhdGUifQ==[here^].
+
+We have used more than one label on a node! Looking at the data set, we could see that some rest areas were open, and others were closed. A convenient way to filter out open rest stops is to apply a label - this allows the query engine to quickly filter out nodes without looking at properties.
+
+We've not loaded all of the available properties. By all means, if you wish to do a bit of exploring, please do!
+
+.The rest areas in NY State data model we used in the stream
+image::img\ranys.png[]
+
+=== Loading the data
+
+To load the data into the database, we use the following query:
+
+[source,cypher]
+----
+LOAD CSV WITH HEADERS FROM "https://data.ny.gov/api/views/qebf-4fd8/rows.csv?accessType=DOWNLOAD" AS row
+MERGE (c:County {name:row.County})
+MERGE (r:Route {name:row.Route})
+CREATE (rs:RestStop {name:row.Name, description:tointeger(row.Description), 
+    publicPhone:tointeger(row.`Public Phone`), handicapSpaces:tointeger(row.`Handicapped Spaces`), 
+    truckSpaces:tointeger(row.`Truck Spaces`), carSpaces:tointeger(row.`Car Spaces`), 
+    location:point({latitude:tofloat(row.Latitude), longitude:tofloat(row.Longitude)})})
+CREATE (rs)-[:ON_ROUTE {direction:row.`Travel Direction`}]->(r)
+CREATE (rs)-[:IN_COUNTY]->(c)
+WITH rs, row.Status AS status WHERE status = "Open"
+SET rs:Open
+----
+
+As before, we need to cast lots of the numbers into integers and floats as appropriate! We didn't do this on the live stream, we've made the changes in this write up.
+
+Another interesting thing about this data set, is that we get to use the Neo4j spatial types! You can https://neo4j.com/docs/cypher-manual/current/syntax/spatial/[read more about them here^].
+
+=== Querying the data
+
+*Question 1 -  If I'm traveling on a certain route in a certain direction, what rest stops are available with truck parking?*
+
+[source,cypher]
+----
+WITH 'I-87' as route, 'Southbound' as direction
+MATCH (r:Route{name:route})-[:ON_ROUTE {direction:direction}]-(rs:RestStop:Open)
+WHERE rs.truckSpaces > 0
+RETURN rs.name, rs.truckSpaces,  rs.location.y, rs.location.x ORDER BY rs.location.y DESC
+----
+
+In this query, we are using the https://neo4j.com/docs/cypher-manual/current/functions/spatial/#functions-distance[distance function from Neo4j spatial^].
+
+*Question 2 - What rest areas closest to me has a public phone?*
+
+We quickly discovered that none of the rest areas had public telephones! so we switched it over from telephones to handicap spaces.
+
+Here's the https://goo.gl/maps/4w5yok1x82d4Ckv86[random location in New York state^] we picked as the location to work with.
+
+[source,cypher]
+----
+WITH point({latitude:43.102700,longitude:-75.232339}) as location
+MATCH (rs:RestStop:Open) WHERE rs.handicapSpaces>0
+RETURN rs.name, rs.location.y+","+rs.location.x, distance(rs.location, location) AS dist 
+    ORDER BY dist
+----
+
+*Question 3 - What route has the most handicap spaces available?*
+
+[source,cypher]
+----
+MATCH (rs:RestStop:Open)-[:ON_ROUTE]->(r:Route)
+WHERE rs.handicapSpaces>0
+WITH r, collect(rs) AS stops  ORDER BY size(stops) DESC LIMIT 1
+RETURN r.name AS `Route Name`, size(stops) AS `No. Stops`
+----
+

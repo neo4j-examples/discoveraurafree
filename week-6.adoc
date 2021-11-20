@@ -1,0 +1,101 @@
+== Week 6 - New Zealand credit card spend data set
+
+In this week's episode, Alexander and Lju explore a data set on credit card spending in New Zealand, from the https://www.stats.govt.nz/[New Zealand government statistics website^]. Catch-up on the episode now!
+
+.catch-up video
+[caption="Week 6 ",link=https://youtu.be/_uSlkT9943w^]
+image::https://i.ytimg.com/vi/_uSlkT9943w/maxresdefault.jpg[]
+
+=== Key links 
+
+* https://dev.neo4j.com/discover-aura[Neo4j Aura landing page^]
+* https://catalog.data.gov/dataset/rest-areas-across-ny[New Zealand credit card spend data^]
+* https://data.ny.gov/api/views/qebf-4fd8/rows.csv?accessType=DOWNLOAD[Raw CSV^]
+* https://arrows.app[Arrows app^]
+* https://arrows.app/#/import/json=eyJncmFwaCI6eyJub2RlcyI6W3siaWQiOiJuMCIsInBvc2l0aW9uIjp7IngiOi0xODIsInkiOi02NH0sImNhcHRpb24iOiIiLCJsYWJlbHMiOlsiU2VyaWVzUmVmZXJlbmNlIl0sInByb3BlcnRpZXMiOnsiaWQiOiIiLCJ2YWx1ZSI6IiIsImNhcmRUeXBlIjoiIn0sInN0eWxlIjp7fX0seyJpZCI6Im4xIiwicG9zaXRpb24iOnsieCI6MjQ3LjUwMDAwMDAwMDAwMDA2LCJ5IjotNjR9LCJjYXB0aW9uIjoiIiwibGFiZWxzIjpbIkNhdGVnb3J5Il0sInByb3BlcnRpZXMiOnsidHlwZSI6IiJ9LCJzdHlsZSI6e319LHsiaWQiOiJuMiIsInBvc2l0aW9uIjp7IngiOjEyOC41OTgzNjI4NjMwMjUwNSwieSI6LTM2MC42NDYwOTcyMDQ3NDc4fSwiY2FwdGlvbiI6IiIsImxhYmVscyI6WyJEYXRlIl0sInByb3BlcnRpZXMiOnsidmFsdWUiOiIifSwic3R5bGUiOnt9fV0sInJlbGF0aW9uc2hpcHMiOlt7ImlkIjoibjAiLCJmcm9tSWQiOiJuMCIsInRvSWQiOiJuMSIsInR5cGUiOiJIQVNfQ0FURUdPUlkiLCJwcm9wZXJ0aWVzIjp7fSwic3R5bGUiOnt9fSx7ImlkIjoibjEiLCJmcm9tSWQiOiJuMCIsInRvSWQiOiJuMiIsInR5cGUiOiJIQVNfREFURSIsInByb3BlcnRpZXMiOnt9LCJzdHlsZSI6e319XSwic3R5bGUiOnsibm9kZS1jb2xvciI6IiNmZmZmZmYiLCJib3JkZXItd2lkdGgiOjQsImJvcmRlci1jb2xvciI6IiMwMDAwMDAiLCJyYWRpdXMiOjUwLCJub2RlLXBhZGRpbmciOjUsIm5vZGUtbWFyZ2luIjoyLCJvdXRzaWRlLXBvc2l0aW9uIjoiYXV0byIsImNhcHRpb24tcG9zaXRpb24iOiJpbnNpZGUiLCJjYXB0aW9uLW1heC13aWR0aCI6MjAwLCJjYXB0aW9uLWNvbG9yIjoiIzAwMDAwMCIsImNhcHRpb24tZm9udC1zaXplIjo1MCwiY2FwdGlvbi1mb250LXdlaWdodCI6Im5vcm1hbCIsImxhYmVsLXBvc2l0aW9uIjoiaW5zaWRlIiwibGFiZWwtY29sb3IiOiIjMDAwMDAwIiwibGFiZWwtYmFja2dyb3VuZC1jb2xvciI6IiNmZmZmZmYiLCJsYWJlbC1ib3JkZXItY29sb3IiOiIjMDAwMDAwIiwibGFiZWwtYm9yZGVyLXdpZHRoIjo0LCJsYWJlbC1mb250LXNpemUiOjQwLCJsYWJlbC1wYWRkaW5nIjo1LCJsYWJlbC1tYXJnaW4iOjQsImRpcmVjdGlvbmFsaXR5IjoiZGlyZWN0ZWQiLCJkZXRhaWwtcG9zaXRpb24iOiJpbmxpbmUiLCJkZXRhaWwtb3JpZW50YXRpb24iOiJwYXJhbGxlbCIsImFycm93LXdpZHRoIjo1LCJhcnJvdy1jb2xvciI6IiMwMDAwMDAiLCJtYXJnaW4tc3RhcnQiOjUsIm1hcmdpbi1lbmQiOjUsIm1hcmdpbi1wZWVyIjoyMCwiYXR0YWNobWVudC1zdGFydCI6Im5vcm1hbCIsImF0dGFjaG1lbnQtZW5kIjoibm9ybWFsIiwidHlwZS1jb2xvciI6IiMwMDAwMDAiLCJ0eXBlLWJhY2tncm91bmQtY29sb3IiOiIjZmZmZmZmIiwidHlwZS1ib3JkZXItY29sb3IiOiIjMDAwMDAwIiwidHlwZS1ib3JkZXItd2lkdGgiOjAsInR5cGUtZm9udC1zaXplIjoxNiwidHlwZS1wYWRkaW5nIjo1LCJwcm9wZXJ0eS1wb3NpdGlvbiI6Im91dHNpZGUiLCJwcm9wZXJ0eS1jb2xvciI6IiMwMDAwMDAiLCJwcm9wZXJ0eS1mb250LXNpemUiOjE2LCJwcm9wZXJ0eS1mb250LXdlaWdodCI6Im5vcm1hbCJ9fSwiZGlhZ3JhbU5hbWUiOiJOWiBjcmVkaXQgY2FyZCBzcGVuZCJ9[Data model from the session^]
+
+==== The data set
+
+This week we explored https://www.stats.govt.nz/information-releases/electronic-card-transactions-july-2021[New Zealand credit card spend data^], which had information on amounts, dates and categories involved in the spend.
+
+Unfortunately, we discovered during the stream that the data in the CSV had a couple of issues:
+
+* We were unable to use `LOAD CSV` directly against the compressed file. Usually, this is https://neo4j.com/docs/cypher-manual/current/clauses/load-csv/[handled by Cypher^]
+* It turns out that the data are the stats for populating a chart 🤦
+
+For solving the first problem, we took the executive decision to just upload a decompressed version of the CSV up to a https://raw.githubusercontent.com/lju-lazarevic/misc/main/electronic-card-transactions-july-2021-csv-tables.csv[repo^], so that for those of you following along, you'll be able to run the queries in this write up.
+
+For resolving the second problem, we just shrugged our shoulders and carried on. We can still use that data to answer some questions! Just perhaps not the questions we'd liked to have asked!
+
+==== The questions
+
+* Which per month was highest spend category?
+* Per category, do people spend more on credit or debit cards? - Unfortunately we can't answer this question, based on the data set! Sorry!
+
+==== The data model
+
+You can view and play with the data model in Arrows App https://arrows.app/#/import/json=eyJncmFwaCI6eyJub2RlcyI6W3siaWQiOiJuMCIsInBvc2l0aW9uIjp7IngiOi0xODIsInkiOi02NH0sImNhcHRpb24iOiIiLCJsYWJlbHMiOlsiU2VyaWVzUmVmZXJlbmNlIl0sInByb3BlcnRpZXMiOnsiaWQiOiIiLCJ2YWx1ZSI6IiIsImNhcmRUeXBlIjoiIn0sInN0eWxlIjp7fX0seyJpZCI6Im4xIiwicG9zaXRpb24iOnsieCI6MjQ3LjUwMDAwMDAwMDAwMDA2LCJ5IjotNjR9LCJjYXB0aW9uIjoiIiwibGFiZWxzIjpbIkNhdGVnb3J5Il0sInByb3BlcnRpZXMiOnsidHlwZSI6IiJ9LCJzdHlsZSI6e319LHsiaWQiOiJuMiIsInBvc2l0aW9uIjp7IngiOjEyOC41OTgzNjI4NjMwMjUwNSwieSI6LTM2MC42NDYwOTcyMDQ3NDc4fSwiY2FwdGlvbiI6IiIsImxhYmVscyI6WyJEYXRlIl0sInByb3BlcnRpZXMiOnsidmFsdWUiOiIifSwic3R5bGUiOnt9fV0sInJlbGF0aW9uc2hpcHMiOlt7ImlkIjoibjAiLCJmcm9tSWQiOiJuMCIsInRvSWQiOiJuMSIsInR5cGUiOiJIQVNfQ0FURUdPUlkiLCJwcm9wZXJ0aWVzIjp7fSwic3R5bGUiOnt9fSx7ImlkIjoibjEiLCJmcm9tSWQiOiJuMCIsInRvSWQiOiJuMiIsInR5cGUiOiJIQVNfREFURSIsInByb3BlcnRpZXMiOnt9LCJzdHlsZSI6e319XSwic3R5bGUiOnsibm9kZS1jb2xvciI6IiNmZmZmZmYiLCJib3JkZXItd2lkdGgiOjQsImJvcmRlci1jb2xvciI6IiMwMDAwMDAiLCJyYWRpdXMiOjUwLCJub2RlLXBhZGRpbmciOjUsIm5vZGUtbWFyZ2luIjoyLCJvdXRzaWRlLXBvc2l0aW9uIjoiYXV0byIsImNhcHRpb24tcG9zaXRpb24iOiJpbnNpZGUiLCJjYXB0aW9uLW1heC13aWR0aCI6MjAwLCJjYXB0aW9uLWNvbG9yIjoiIzAwMDAwMCIsImNhcHRpb24tZm9udC1zaXplIjo1MCwiY2FwdGlvbi1mb250LXdlaWdodCI6Im5vcm1hbCIsImxhYmVsLXBvc2l0aW9uIjoiaW5zaWRlIiwibGFiZWwtY29sb3IiOiIjMDAwMDAwIiwibGFiZWwtYmFja2dyb3VuZC1jb2xvciI6IiNmZmZmZmYiLCJsYWJlbC1ib3JkZXItY29sb3IiOiIjMDAwMDAwIiwibGFiZWwtYm9yZGVyLXdpZHRoIjo0LCJsYWJlbC1mb250LXNpemUiOjQwLCJsYWJlbC1wYWRkaW5nIjo1LCJsYWJlbC1tYXJnaW4iOjQsImRpcmVjdGlvbmFsaXR5IjoiZGlyZWN0ZWQiLCJkZXRhaWwtcG9zaXRpb24iOiJpbmxpbmUiLCJkZXRhaWwtb3JpZW50YXRpb24iOiJwYXJhbGxlbCIsImFycm93LXdpZHRoIjo1LCJhcnJvdy1jb2xvciI6IiMwMDAwMDAiLCJtYXJnaW4tc3RhcnQiOjUsIm1hcmdpbi1lbmQiOjUsIm1hcmdpbi1wZWVyIjoyMCwiYXR0YWNobWVudC1zdGFydCI6Im5vcm1hbCIsImF0dGFjaG1lbnQtZW5kIjoibm9ybWFsIiwidHlwZS1jb2xvciI6IiMwMDAwMDAiLCJ0eXBlLWJhY2tncm91bmQtY29sb3IiOiIjZmZmZmZmIiwidHlwZS1ib3JkZXItY29sb3IiOiIjMDAwMDAwIiwidHlwZS1ib3JkZXItd2lkdGgiOjAsInR5cGUtZm9udC1zaXplIjoxNiwidHlwZS1wYWRkaW5nIjo1LCJwcm9wZXJ0eS1wb3NpdGlvbiI6Im91dHNpZGUiLCJwcm9wZXJ0eS1jb2xvciI6IiMwMDAwMDAiLCJwcm9wZXJ0eS1mb250LXNpemUiOjE2LCJwcm9wZXJ0eS1mb250LXdlaWdodCI6Im5vcm1hbCJ9fSwiZGlhZ3JhbU5hbWUiOiJOWiBjcmVkaXQgY2FyZCBzcGVuZCJ9[here^].
+
+Nothing particularly contraversial here, and as always, there are a number of ways to do the model. One stand-out item here, we put `cardType` as a property on `SeriesReference`. We could have potentially done this as a double label as well.
+
+.The New Zealand credit card data model used in the stream
+image::img\nzcc.png[]
+
+==== Loading the data
+
+To load the data into the database, we use the following query:
+
+[source,cypher]
+----
+LOAD CSV WITH HEADERS FROM "https://raw.githubusercontent.com/lju-lazarevic/misc/main/electronic-card-transactions-july-2021-csv-tables.csv" AS row
+WITH row 
+WHERE row.Series_title_1 = "Actual"
+MERGE (c:Category {type:row.Series_title_2})
+MERGE (d:Date {value:row.Period})
+CREATE (s:SeriesReference {id:row.Series_reference, value:tofloat(row.Data_value)})
+CREATE (s)-[:HAS_DATE]->(d)
+CREATE (s)-[:HAS_Category]->(c)
+----
+
+Note that we're only drawing the 'Actual' values from the data. Also, `row.Series_title_2` (fairly safe to say this gives the game away about the data - whoops) has a mix of things, including those category titles we're interested in.
+
+As before, we need to cast lots of the numbers into floats as appropriate!.
+
+==== Querying the data
+
+*Question - Which per month was highest spend category?*
+
+Starting off, let's have a look at what comes back as a category. 
+
+[source,cypher]
+----
+MATCH (d:Date)<--(s)-->(c:Category)
+WHERE s.value IS NOT NULL
+RETURN d.value AS Date, s.value AS Spend, c.type AS Category ORDER BY Date, Category
+----
+
+As well as getting categories of interest, we also get a bunch of other values we're not interested in, such as 'Total spend', etc. We can provide a list of things we're interested in to tweak the above query:
+
+[source,cypher]
+----
+WITH ["Apparel", "Consumables", "Durables", "Fuel", "Hospitality", "Motor vehicles excl. fuel", "Non-retail excl. services", "Services"] AS cats
+MATCH (d:Date)<--(s)-->(c:Category)
+WHERE s.value IS NOT NULL AND c.type IN cats
+RETURN d.value AS Date, s.value AS Spend, c.type AS Category ORDER BY Date, Category
+----
+
+Last but not least, the specific question was to get the top category per month, so let's get that done! We'll do it by using a little trick of ordering and then collecting values into an array, and then pulling the first value to get the 'top' values:
+
+[source,cypher]
+----
+WITH ["Apparel", "Consumables", "Durables", "Fuel", "Hospitality", "Motor vehicles excl. fuel", "Non-retail excl. services", "Services"] AS cats
+MATCH (d:Date)<--(s)-->(c:Category)
+WHERE s.value IS NOT NULL AND c.type IN cats
+WITH d, s, c ORDER BY d.value, s.value desc
+WITH d, collect([c.type, s.value]) as col
+RETURN d.value AS Date, col[0][1] AS Spend, col[0][0] AS Category 
+----
+
+[TIP]
+When using multiple values as part of an `ORDER BY`, you will need to specify each time the order, either ascending (leave blank as is by default) or descending with `DESC`
+

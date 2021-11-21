@@ -5,6 +5,9 @@ It has more than 56k views and people are still referring to it frequently becau
 
 That's why we decided this time in our live-stream to re-enact Nicole's webinar with Neo4j 4.3 and AuraDB Free to give people todays equivalent of that session.
 
+Here is this weeks video: https://youtu.be/dTp6iCMEcng
+
+
 === References
 
 * Consumer Complaints Database: https://catalog.data.gov/dataset/consumer-complaint-database
@@ -42,7 +45,7 @@ xsv search -s 'Date received' '2021-11-' complaints.csv | wc -l
 xsv search -s 'Date received' '2021-11-' complaints.csv > complaints-nov-2021.csv
 ----
 
-The file is also data/complaints-nov-2021.csv[available here^].
+The file is also link:data/complaints-nov-2021.csv[available here^].
 
 ,===
 Date received,Product,Sub-product,Issue,Sub-issue,Consumer complaint narrative,Company public response,Company,State,ZIP code,Tags,Consumer consent provided?,Submitted via,Date sent to company,Company response to consumer,Timely response?,Consumer disputed?,Complaint ID
@@ -66,14 +69,14 @@ RETURN count(*);
 // 12295
 ----
 
-When loading the data via Cypher we get each row RETURNed as a map/dict/hash object that we then can use to create our graph.
-
 .What does the data look like in Cypher
 [source,cypher]
 ----
 LOAD CSV WITH HEADERS FROM "https://git.io/J1m7e" AS row
 RETURN row LIMIT 1;
 ----
+
+When loading the data via Cypher we get each row `RETURN`ed as a map/dict/hash object that we then can use to create our graph.
 
 [source,json]
 ----
@@ -122,7 +125,7 @@ image::img/consumer-complaints.png[width=400]
 
 === Data Import
 
-First we create constraints for our key-properties, the compliant-id and the names for the other entities.
+First we create constraints for our key-properties, the complaint-id and the names for the other entities.
 
 [source,cypher]
 ----
@@ -270,10 +273,10 @@ ORDER BY c DESC LIMIT 5;
 └─────────┴───────────────────────────────────────────┴───┘
 ----
 
-If there is a response, it is coming from the company pointing to the complaint.
+If there is a `Response`, it is coming from the `Company` pointing to the `Complaint`.
 So we need to match both in our pass and then connect the response to the complaint and to the company.
 Additionally we store some properties on the relationship.
-Yes/No/Blank values are converted to boolean just with an expression.
+`Yes/No/Blank` values are converted to boolean just with a boolean expression (value='text').
 For other conditional expressions we can use `CASE`.
 
 .Response
@@ -298,7 +301,7 @@ MERGE (co)-[:ANSWERED]->(res);
 ----
 
 For tags we need to do two things.
-First to split the comma seprated name into its constituent parts.
+First to `split` the comma separated name into its constituent parts.
 Then taking that list, turning it into rows with UNWIND and connect the newly merged Tag nodes to the previously found Complaint.
 
 The `WITH * WHERE ...` is there to filter arbirary data with a `WHERE` clause.
@@ -378,34 +381,26 @@ ORDER BY count DESC;
 MATCH (sub:SubIssue)-[:IN_CATEGORY]->(i:Issue)
 WITH sub, COLLECT(i.name) AS issues
 WHERE size(issues) > 1
-RETURN sub.name, issues;
+RETURN sub.name, issues LIMIT 2;
 ----
 
 ----
 
-╒══════════════════════════════════════════════════╤══════════════════════════════════════════════════╕
-│"sub.name"                                        │"issues"                                          │
-╞══════════════════════════════════════════════════╪══════════════════════════════════════════════════╡
-│"DIFFICULTY SUBMITTING A DISPUTE OR GETTING INFORM│["PROBLEM WITH A CREDIT REPORTING COMPANY'S INVEST│
-│ATION ABOUT A DISPUTE OVER THE PHONE"             │IGATION INTO AN EXISTING PROBLEM","PROBLEM WITH A │
-│                                                  │COMPANY'S INVESTIGATION INTO AN EXISTING ISSUE"]  │
-├──────────────────────────────────────────────────┼──────────────────────────────────────────────────┤
-│"THEIR INVESTIGATION DID NOT FIX AN ERROR ON YOUR │["PROBLEM WITH A CREDIT REPORTING COMPANY'S INVEST│
-│REPORT"                                           │IGATION INTO AN EXISTING PROBLEM","PROBLEM WITH A │
-│                                                  │COMPANY'S INVESTIGATION INTO AN EXISTING ISSUE"]  │
-├──────────────────────────────────────────────────┼──────────────────────────────────────────────────┤
-│"INVESTIGATION TOOK MORE THAN 30 DAYS"            │["PROBLEM WITH A CREDIT REPORTING COMPANY'S INVEST│
-│                                                  │IGATION INTO AN EXISTING PROBLEM","PROBLEM WITH A │
-│                                                  │COMPANY'S INVESTIGATION INTO AN EXISTING ISSUE"]  │
-├──────────────────────────────────────────────────┼──────────────────────────────────────────────────┤
-│"WAS NOT NOTIFIED OF INVESTIGATION STATUS OR RESUL│["PROBLEM WITH A CREDIT REPORTING COMPANY'S INVEST│
-│TS"                                               │IGATION INTO AN EXISTING PROBLEM","PROBLEM WITH A │
-│                                                  │COMPANY'S INVESTIGATION INTO AN EXISTING ISSUE"]  │
-├──────────────────────────────────────────────────┼──────────────────────────────────────────────────┤
-│"CAN'T CLOSE YOUR ACCOUNT"                        │["CLOSING AN ACCOUNT","CLOSING YOUR ACCOUNT"]     │
-├──────────────────────────────────────────────────┼──────────────────────────────────────────────────┤
-│"COMPANY CLOSED YOUR ACCOUNT"                     │["CLOSING AN ACCOUNT","CLOSING YOUR ACCOUNT"]     │
-└──────────────────────────────────────────────────┴──────────────────────────────────────────────────┘
+╒══════════════════════════════╤══════════════════════════════╕
+│"sub.name"                    │"issues"                      │
+╞══════════════════════════════╪══════════════════════════════╡
+│"DIFFICULTY SUBMITTING A DISPU│["PROBLEM WITH A CREDIT REPORT│
+│TE OR GETTING INFORMATION ABOU│ING COMPANY'S INVESTIGATION IN│
+│T A DISPUTE OVER THE PHONE"   │TO AN EXISTING PROBLEM","PROBL│
+│                              │EM WITH A COMPANY'S INVESTIGAT│
+│                              │ION INTO AN EXISTING ISSUE"]  │
+├──────────────────────────────┼──────────────────────────────┤
+│"THEIR INVESTIGATION DID NOT F│["PROBLEM WITH A CREDIT REPORT│
+│IX AN ERROR ON YOUR REPORT"   │ING COMPANY'S INVESTIGATION IN│
+│                              │TO AN EXISTING PROBLEM","PROBL│
+│                              │EM WITH A COMPANY'S INVESTIGAT│
+│                              │ION INTO AN EXISTING ISSUE"]  │
+└──────────────────────────────┴──────────────────────────────┘
 ----
 
 .Product and issues with 'EQUIFAX, INC.'
@@ -421,15 +416,19 @@ ORDER BY count DESC LIMIT 2;
 ----
 
 ----
-╒══════════════════════════════════════════════╤══════════════════════════════════════════════╤═══════╕
-│"product"                                     │"issue"                                       │"count"│
-╞══════════════════════════════════════════════╪══════════════════════════════════════════════╪═══════╡
-│"CREDIT REPORTING, CREDIT REPAIR SERVICES, OR │"PROBLEM WITH A CREDIT REPORTING COMPANY'S INV│2394   │
-│OTHER PERSONAL CONSUMER REPORTS"              │ESTIGATION INTO AN EXISTING PROBLEM"          │       │
-├──────────────────────────────────────────────┼──────────────────────────────────────────────┼───────┤
-│"CREDIT REPORTING, CREDIT REPAIR SERVICES, OR │"INCORRECT INFORMATION ON YOUR REPORT"        │2262   │
-│OTHER PERSONAL CONSUMER REPORTS"              │                                              │       │
-└──────────────────────────────────────────────┴──────────────────────────────────────────────┴───────┘
+╒═══════════════════════╤═══════════════════════╤═══════╕
+│"product"              │"issue"                │"count"│
+╞═══════════════════════╪═══════════════════════╪═══════╡
+│"CREDIT REPORTING, CRED│"PROBLEM WITH A CREDIT │2394   │
+│IT REPAIR SERVICES, OR │REPORTING COMPANY'S INV│       │
+│OTHER PERSONAL CONSUMER│ESTIGATION INTO AN EXIS│       │
+│ REPORTS"              │TING PROBLEM"          │       │
+├───────────────────────┼───────────────────────┼───────┤
+│"CREDIT REPORTING, CRED│"INCORRECT INFORMATION │2262   │
+│IT REPAIR SERVICES, OR │ON YOUR REPORT"        │       │
+│OTHER PERSONAL CONSUMER│                       │       │
+│ REPORTS"              │                       │       │
+└───────────────────────┴───────────────────────┴───────┘
 ----
 
 
@@ -468,17 +467,27 @@ RETURN p.name, r.name, count(*) as c, (count(*)*100)/rCount as percent ORDER BY 
 ----
 
 ----
-╒═══════════════════════════════════════╤═════════════════════════════════╤════╤═════════╕
-│"p.name"                               │"r.name"                         │"c" │"percent"│
-╞═══════════════════════════════════════╪═════════════════════════════════╪════╪═════════╡
-│"CREDIT REPORTING, CREDIT REPAIR SERVIC│"IN PROGRESS"                    │5672│93       │
-│ES, OR OTHER PERSONAL CONSUMER REPORTS"│                                 │    │         │
-├───────────────────────────────────────┼─────────────────────────────────┼────┼─────────┤
-│"CREDIT REPORTING, CREDIT REPAIR SERVIC│"CLOSED WITH EXPLANATION"        │4752│79       │
-│ES, OR OTHER PERSONAL CONSUMER REPORTS"│                                 │    │         │
-├───────────────────────────────────────┼─────────────────────────────────┼────┼─────────┤
-│"CREDIT REPORTING, CREDIT REPAIR SERVIC│"CLOSED WITH NON-MONETARY RELIEF"│135 │70       │
-│ES, OR OTHER PERSONAL CONSUMER REPORTS"│                                 │    │         │
-├───────────────────────────────────────┼─────────────────────────────────┼────┼─────────┤
-│"CREDIT CARD OR PREPAID CARD"          │"CLOSED WITH MONETARY RELIEF"    │16  │45       │
+╒══════════════════════╤══════════════════════╤════╤═════════╕
+│"p.name"              │"r.name"              │"c" │"percent"│
+╞══════════════════════╪══════════════════════╪════╪═════════╡
+│"CREDIT REPORTING, CRE│"IN PROGRESS"         │5672│93       │
+│DIT REPAIR SERVICES, O│                      │    │         │
+│R OTHER PERSONAL CONSU│                      │    │         │
+│MER REPORTS"          │                      │    │         │
+├──────────────────────┼──────────────────────┼────┼─────────┤
+│"CREDIT REPORTING, CRE│"CLOSED WITH EXPLANATI│4752│79       │
+│DIT REPAIR SERVICES, O│ON"                   │    │         │
+│R OTHER PERSONAL CONSU│                      │    │         │
+│MER REPORTS"          │                      │    │         │
+├──────────────────────┼──────────────────────┼────┼─────────┤
+│"CREDIT REPORTING, CRE│"CLOSED WITH NON-MONET│135 │70       │
+│DIT REPAIR SERVICES, O│ARY RELIEF"           │    │         │
+│R OTHER PERSONAL CONSU│                      │    │         │
+│MER REPORTS"          │                      │    │         │
+├──────────────────────┼──────────────────────┼────┼─────────┤
 ----
+
+== Conclusion
+
+This was a fun dataset and a bit more challenging to import. 
+There are lots of possibilities to build analytics and visualizations with the data now that we have it in the graph. Let us know if you found this helpful to explore with us and if you built anything on top of the data.

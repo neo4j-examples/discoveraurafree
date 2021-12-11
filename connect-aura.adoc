@@ -1,0 +1,29 @@
+== Create a Neo4j AuraDB Free Instance
+
+Go to https://dev.neo4j.com/neo4j-aura to register or log into the service (you might need to verify your email address).
+
+image::{img}/aura-create.png[]
+
+After clicking `Create Database` you can create a new *Neo4j AuraDB Free* instance.
+Select a Region close to you and give it a name, e.g. {db-name}.
+
+Choose the "blank database" option as we want to import our data ourselves.
+
+image::{img}/aura-create-free.png[]
+
+On the Credentials popup, make sure to save the password somewhere safe. 
+The default username is always `neo4j`.
+
+image::{img}/aura-credentials.png[]
+
+Then wait 3-5 minutes for your instance to be created.
+
+Afterwards you can connect via the `Open` Button with Neo4j Browser (you'll need the password).
+
+Then also the connection URL: `neo4j+s://xxx.databases.neo4j.io` is available and you can copy it to your credentials as you might need it later.
+
+image::{img}/aura-browser.png[]
+
+If you want to see examples for programmatically connecting to the database go to the "Connect" tab of your instance and pick the language of your choice
+
+image::{img}/aura-connect.png[]

@@ -1,7 +1,257 @@
 == Week 12 - Importing Data from Relational Databases
+:img: img
 
-* Northwind
-* CSV \copy from postgres
-* ETL page
-* ETL Tool
-* Programmatic with jbang
+Many people that start out using Neo4j have existing data in relational databases that they want to import into the graph.
+Either because they want to explore data that they already know and look for new insights and capabilities.
+Or because that's the existing data that is to be migrated to a graph.
+
+In this instalment of "Discover AuraDB Free", we look at a few different way of getting data from relational databases into Neo4j.
+
+If you rather watch the video of our session
+
+To avoid teaching a new dataset we use the well known [Northwind dataset^] that has been around for many years as a common example for relational databases.
+It is a retail dataset with products, categories, orders, customers, shippers, suppliers and employees and their territories and regions.
+
+In a graph context we can use the existing data to compute recommendations based either on purchase behavior (of peer groups) aka collaborative filtering, we can do content based filtering with categories or look at sales efficiencies directly or across the employee hierarchy.
+
+Here are the relational and graph data model for this dataset. 
+You see that the graph model can put away with the join table and models hierarchies directly. 
+
+* TODO Relational Model
+* TODO Graph Model
+
+We want to explore 3 ways of importing the data:
+
+1. Exporting CSV files from Postgres and importing them into Neo4j with `LOAD CSV`
+2. Using the ETL Tool within Neo4j Desktop
+3. Programmatically connecting to the relational database, here with Java and JDCB and writing the results with the Neo4j Driver to the graph.
+
+=== Let's Get Started
+
+:db-name: Northwind
+
+include::connect-aura.adoc[leveloffset=+1]
+
+==== Connect to Postgres
+
+Throughout the session we use a read-only postgres instance on AWS that has the following connection information
+
+* Host: db-examples.cmlvojdj5cci.us-east-1.rds.amazonaws.com
+* Schema: northwind
+* Username: n4examples
+* Password: 36gdOVABr3Ex
+
+We can install the psql utility or use the docker image to run it.
+
+Explore the data:
+
+[source,sql]
+----
+psql -u 
+\dt
+select * from customers limit 5;
+----
+
+
+
+=== Exporting and Importing CSV
+
+First we need to export the data as CSV, we cannot use the `COPY` command from postgres as we don't have admin permissions and cannot write to the filesystem of the server.
+
+But `psql` offer a `\copy` command that does the same and writes to our local filesystem.
+
+[source,shell]
+----
+\copy customers
+----
+
+Now we can take that CSV file and make it available for our Neo4j instance, we can either put it into a public/secret GitHub Gist, upload it to s3 or import it into a google sheet (and then use "Publish to the Web").
+
+NOTE: If you don't have made a copy, you can use our public dataset URL: https://data.neo4j.com/northwind/customers.csv
+
+[opts="headers"]
+,===
+
+,===
+
+So with our public CSV URL we can now use LOAD CSV in Neo4j.
+
+[source,cypher]
+----
+LOAD CSV WITH HEADERS FROM "https://data.neo4j.com/customers.csv" AS row
+MERGE (c:Customer {CustomerID:row.CustomerID})
+ON CREATE SET c += row
+----
+
+1. the `LOAD CSV WITH HEADERS` clause turns all our CVS rows into a stream of maps.
+2. we use the `CustomerID` field to `MERGE` our customer - nodes into the graph
+3. then we `SET` the other properties
+
+We could have renamed each property and also converted the values to integer, float or boolean values.
+
+[source,cypher]
+----
+
+----
+
+
+=== Using the ETL Tool with Neo4j Desktop
+
+Currently the Neo4j ETL Tool still requires the installation of Neo4j Desktop, so if you haven't please go ahead and install it from https://neo4j.com/download
+
+The process of getting started with Neo4j-ETL in Desktop is also describe in [this developer guide^]
+
+Within Desktop you need two things
+
+==== Setup Remote Database
+
+First set up our Neo4j AuraDB as "Remote Database" in neo4j desktop
+
+1. Open or create a new Project
+2. Add a new "Remote Database"
+3. Provide the connection URL
+4. Choose Username/Password
+5. Provide the username and password for the instance
+6. Connect to the Instance
+
+You can then open Neo4j Browser in Desktop and should see your instance running.
+
+==== Install Neo4j-ETL
+
+Then we need to install the "Graph-App" Neo4j-ETL-Tool from the sidebar
+
+1. Click on Graph-App Gallery
+2. Pick the Neo4j-ETL Install, you should be prompted for the installation
+3. After succesful installation, open the Neo4j-ETL app
+
+==== Setup Database connections/selection
+
+Then within the Neo4j-ETL app you do
+
+1. Choose your project
+2. Choose your Neo4j Database
+3. Add a JDBC driver (connection information) for Postgres - Test should be successful
+4. Click on "Start Mapping"
+
+It takes a while but should be successful after a minute at most.
+
+image::{img}/neo4j-etl-setup.png[]
+
+==== Edit the Mapping
+
+After the mapping is loaded, it is shown in a meta-data graph view.
+There you can edit names of node labels, relationship types, or property keys.
+Or you can also choose to skip any of them.
+
+image::{img}/neo4j-etl-mapping.png[]
+
+When you're satisfied with your mapping, you can click the "Save Mapping" Button, that gets you to the import screen.
+
+==== Import from RDBMS to Neo4j
+
+For a remote database you can only choose "Online Import".
+
+You can leave all other settings unchanged they are just for optimizations.
+
+After clicking "Import" it should
+
+1. connect to Neo4j to create the constraints
+2. connect to the RDBMS load the data
+3. write the data to Neo4j
+4. show summary statistics about the import
+
+You can see the logs with the "Open Logs" button.
+
+image::{img}/neo4j-etl-import.png[]
+
+=== Using a Program to import data from the RDBMS (here Java)
+
+For simplicity we just demonstrate how to fetch the contents of a single table and write it to Neo4j.
+
+We use Java with JDBC to connect to Postgres but you can use any language/rdbms-driver/neo4j-driver.
+The principle stays the same.
+
+Here is the generic approach.
+After selecting the data from a table, we send it (in batches) to Neo4j to be inserted with a Cypher statement, where a parameter with a list of rows is turned back into actual rows and then `SET` on newly created nodes.
+
+To not have to set up a full blown project but just a script, we use https://jbang.dev[jbang^] to declare our dependencies (jdbc and neo4j driver) and execute the single file.
+
+TODO image
+
+Here is the annotated code:
+
+export JDBC_URL="jdbc:postgresql://db-examples.cmlvojdj5cci.us-east-1.rds.amazonaws.com/northwind?user=n4examples&password=36gdOVABr3Ex"
+
+[source,java]
+----
+///usr/bin/env jbang "$0" "$@" ; exit $?
+//DEPS org.neo4j.driver:neo4j-java-driver:4.3.
+//DEPS org.postgresql:postgresql:42.2.24
+
+// export JDBC_URL="jdbc:postgresql://db-examples.cmlvojdj5cci.us-east-1.rds.amazonaws.com/northwind?user=n4examples&password=36gdOVABr3Ex"
+// export NEO4J_URL="neo4j+s://xxxx.databases.neo4j.io"
+// export NEO4J_PASSWORD="secret"
+// jbang rdbms2neo4j Customer
+
+import static java.lang.System.*;
+import java.sql.*;
+import java.util.*;
+import org.neo4j.driver.*;
+
+public class rdbms2neo4j {
+
+    static final String INSERT_STATEMENT = "UNWIND $data AS row CREATE (n:`%s`) SET n = row";
+    static final int BATCH_SIZE = 10000;
+
+    public static void main(String... args) throws Exception {
+        String table=args[0];
+        String statement = String.format(INSERT_STATEMENT, table);
+        try (Driver driver = GraphDatabase.driver(getenv("NEO4J_URL"), 
+                             AuthTokens.basic("neo4j",getenv("NEO4J_PASSWORD")));
+             Session session = driver.session();
+             Connection con=DriverManager.getConnection(getenv("JDBC_URL"));
+             Statement stmt=con.createStatement();
+             ResultSet rs=stmt.executeQuery("SELECT * FROM "+table)) {
+                ResultSetMetaData meta=rs.getMetaData();
+                String[] cols=new String[meta.getColumnCount()];
+                for (int c=1;c<=cols.length;c++) 
+                    cols[c-1]=meta.getColumnName(c);
+                List<Map<String,Object>> data = new ArrayList<>();
+                while (rs.next()) {
+                    Map<String,Object> row=new HashMap<>(cols.length);
+                    for (int c=1;c<=cols.length;c++) {
+                        // todo unsupported datatypes like BigDecimal
+                        row.put(cols[c-1], rs.getObject(c)); 
+                    }
+                    data.add(row);
+                    if (data.size() == BATCH_SIZE) {
+                        session.writeTransaction(
+                            tx -> tx.run(statement, Collections.singletonMap("data", data)).consume());
+                        data.clear();
+                    }
+                }
+                if (!data.isEmpty()) {
+                    session.writeTransaction(tx -> 
+                        tx.run(statement, Collections.singletonMap("data", data)).consume());
+                }
+             }
+    }
+}
+----
+
+
+=== Other approaches
+
+There are many other approaches of loading data from relational databases into Neo4j.
+
+Here is an (incomplete) list:
+
+TODO links
+
+* Use Apache Spark to load, transform the relational data and the Neo4j Connector for Apache Spark to write to Neo4j
+* Use a CDC plugin like Debezium to gather changes in your RDMBS, send it to Kafka and use the Neo4j Connector for Apache Kafka to send the data to Neo4j
+* Apache Hop has full support for Neo4j, so you can gather data from any source and write it to Neo4j
+* GraphAware Hume offers complete data orchestration workflows
+* There is an Neo4j integration for Talend
+* Knime has a Neo4j plugin too
+

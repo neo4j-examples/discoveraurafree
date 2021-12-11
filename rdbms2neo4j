@@ -1,0 +1,58 @@
+///usr/bin/env jbang "$0" "$@" ; exit $?
+//DEPS org.neo4j.driver:neo4j-java-driver:4.4.1
+//DEPS org.postgresql:postgresql:42.2.24
+
+// export JDBC_URL="jdbc:postgresql://db-examples.cmlvojdj5cci.us-east-1.rds.amazonaws.com/northwind?user=n4examples&password=36gdOVABr3Ex"
+// export NEO4J_URL="neo4j+s://xxxx.databases.neo4j.io"
+// export NEO4J_PASSWORD="secret"
+// jbang rdbms2neo4j Customer
+
+import static java.lang.System.*;
+import java.sql.*;
+import java.util.*;
+import org.neo4j.driver.*;
+import org.neo4j.driver.summary.*;
+
+public class rdbms2neo4j {
+
+    static final String INSERT_STATEMENT = "UNWIND $data AS row CREATE (n:`%s`) SET n = row";
+    static final int BATCH_SIZE = 10000;
+
+    public static void main(String... args) throws Exception {
+        String table=args[0];
+        String statement = String.format(INSERT_STATEMENT, table);
+        int nodesCreated = 0;
+        try (org.neo4j.driver.Driver driver = GraphDatabase.driver(getenv("NEO4J_URL"), 
+                             AuthTokens.basic("neo4j",getenv("NEO4J_PASSWORD")));
+             Session session = driver.session();
+             Connection con=DriverManager.getConnection(getenv("JDBC_URL"));
+             Statement stmt=con.createStatement();
+             ResultSet rs=stmt.executeQuery("SELECT * FROM "+table)) {
+                ResultSetMetaData meta=rs.getMetaData();
+                String[] cols=new String[meta.getColumnCount()];
+                for (int c=1;c<=cols.length;c++) 
+                    cols[c-1]=meta.getColumnName(c);
+                List<Map<String,Object>> data = new ArrayList<>();
+                while (rs.next()) {
+                    Map<String,Object> row=new HashMap<>(cols.length);
+                    for (int c=1;c<=cols.length;c++) {
+                        // todo unsupported datatypes like BigDecimal
+                        row.put(cols[c-1], rs.getObject(c)); 
+                    }
+                    data.add(row);
+                    if (data.size() == BATCH_SIZE) {
+                        ResultSummary sum = session.writeTransaction(
+                            tx -> tx.run(statement, Collections.singletonMap("data", data)).consume());
+                        nodesCreated += sum.counters().nodesCreated();
+                        data.clear();
+                    }
+                }
+                if (!data.isEmpty()) {
+                    ResultSummary sum = session.writeTransaction(tx -> 
+                        tx.run(statement, Collections.singletonMap("data", data)).consume());
+                    nodesCreated += sum.counters().nodesCreated();
+                    out.println("Nodes created: " + nodesCreated);
+                }
+             }
+    }
+}

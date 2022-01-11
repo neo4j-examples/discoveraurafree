@@ -40,6 +40,7 @@ ifdef::env-github[]
 * link:week-12.adoc[Week 12 - Importing Data from Relational Databases]
 * link:week-13.adoc[Week 13 - Exploring a Kaggle HR Attrition Dataset]
 * link:week-14.adoc[Week 14 - Consumer Complaints Database]
+* link:week-15.adoc[Week 15 - Hamilton Musical Graph]
 endif::[]
 
 ifndef::env-github[]
@@ -60,6 +61,7 @@ include::week-11.adoc[Week 11 - Importing and Querying Kickstarter Projects]
 include::week-12.adoc[Week 12 - Importing Data from Relational Databases]
 include::week-13.adoc[Week 13 - Exploring a Kaggle HR Attrition Dataset]
 include::week-14.adoc[Week 14 - Consumer Complaints Database]
+include::week-15.adoc[Week 15 - Hamilton Musical Graph]
 endif::[]
 
 

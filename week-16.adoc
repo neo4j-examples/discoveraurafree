@@ -129,7 +129,7 @@ Even better is the ability to export both the mapping and the CSV files as a com
 
 You can even use the `?model=url` query parameter to share the data importer with a model-json and/or zip file to be used (see below with Northwind).
 
-Data importer also stores the current mapping data in the browser session, so if you open the app again later, the mapping is still there, you just need to reload the data files.
+Data importer also stores the current mapping data in the browser storage, so if you open the app again later, the mapping is still there, you just need to reload the data files.
 
 ==== Run Import
 
@@ -173,7 +173,7 @@ Some aspects that the data importer doesn't cover can be handled with post-proce
 
 E.g. in our case the `genres` attribute of movies contains a pipe `|` separated list of genre names.
 
-So we can log in to Neo4j Browser and run the following statement to extract Genre nodes and connect the movie to its generes.
+So we can log in to Neo4j Browser and run the following statement to extract Genre nodes and connect the movie to its genres.
 
 [source,cypher]
 ----
@@ -211,9 +211,9 @@ SET m.year = toInteger(m.year)
 
 === Denormalized Movie Dataset
 
-The denormalized dataset, which contains all data in a single file.
+The denormalized dataset, contains all data in a single file.
 
-Usually you get denormalized when a data export from a relational database joined all tables together in one file or a data scientist exported a single data-frame that joined all data together.
+Usually you get denormalized CSV files when a data export from a relational database joined all tables together in one file or a data scientist exported a single data-frame that joined all data together.
 
 The CSV file can be found at https://data.neo4j.com/importing/2-movieData.csv.
 It is the same model as before, just all exported into one file and more data (20MB, 9486 people, 5549 movies, 22057 relationships).

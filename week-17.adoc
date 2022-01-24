@@ -1,0 +1,201 @@
+== Week 17 - Analysing NFT Trades
+:imagesdir: img
+
+This week we used a subset of a published NFT Trades dataset to model, import and analyse in Neo4j AuraDB free.
+
+It all started with a Tweet that I came across one late night about a https://www.nature.com/articles/s41598-021-00053-8#Abs1[research paper on NFT trades^].
+
+https://twitter.com/emollick/status/1465505077083389960
+
+Fortunately the authors als link:https://osf.io/wsnzr/?view_only=319a53cf1bf542bbbe538aba37916537[published the accompanying data^], a whopping 6.1M trades in a CSV format.
+
+I spent a bit of time running the import with the https://data-importer.graphapp.io[data importer tool^] and looking at the data.
+
+https://twitter.com/mesirii/status/1465967623837999108
+
+After sharing the dataset with https://bratanic-tomaz.medium.com/[@Tomaz.Bratanic], he took it even further, cleaning it up and doing a proper analysis that he published on TowardsDataScience. It's a really insightful article, but that still just scratches the surface of the data.
+
+https://towardsdatascience.com/exploring-the-nft-transaction-with-neo4j-cba80ead7e0b
+
+
+=== Dataset
+
+The link:https://osf.io/wsnzr/?view_only=319a53cf1bf542bbbe538aba37916537[full CSV data set^] is too large for the limits of AuraDB Free, 3.8GB uncompressed CSV with 6M rows (it has 7.9M lines due to many descriptions with newlines).
+
+That's why we look at a single day of trades, Jan 1 2021, which has 5119 rows and is 3.6MB large.
+
+If you want to analyse a larger portion of the data, feel free to use an AuraDB Pro instance (paid) or https://neo4j.com/download[Download Neo4j Desktop^].
+
+We used https://github.com/BurntSushi/xsv[`xsv`^] to filter the data down, and published the https://github.com/neo4j-examples/discoveraurafree/blob/main/data/nft_2021-01-01.csv[small CSV file to GitHub^] for you to download.
+
+
+[source,shell]
+----
+xsv search -s 'Datetime_updated' '2021-01-01'  Data_API.csv | xsv count
+    5119
+xsv search -s 'Datetime_updated' '2021-01-01'  Data_API.csv  > nft_2021-01-01.csv
+
+xsv frequency -s Market nft_2021-01-01.csv
+----
+
+[opts=header,%autowidth]
+,===
+field,value,count
+Market,Atomic,3214
+Market,OpenSea,1857
+Market,Cryptokitties,25
+Market,Godsunchained,19
+Market,Decentraland,4
+,===
+
+=== Model
+
+The model is pretty straightforward, with a few small tweaks.
+
+image::nft-model.png[]
+
+We have an `NFT` which is in a `Category` and `Collection`. 
+It is traded in a `Transaction` for this `NFT`, sold by a `Seller`, and bought by a `Buyer`, both of which are also `Trader`.
+
+The unique id's for `NFT` are `ID_token`, for Traders their equivalent `addresses` and for the `Transaction` it's the transaction_hash.
+
+
+=== Data Import
+
+We use the data importer tool for a quick and easy modeling and data import run.
+
+1. Load the CSV
+2. Create the Graph Model
+3. Map the same file time and again to the different nodes and relationships
+
+I labeled the `Buyer` and `Seller` both `Trader` and removed the prefix from `buyer_address` and `buyer_username` field-names, so that they are uniquely created once, no matter the role they have in a transaction.
+
+The other properties we mostly mapped directly to the different nodes (don't forget to select the id-fields!) and for the relationships select the appropriate id-field for each node.
+
+We need to convert the currency fields `Price_USD` and `Price_Crypto` to floatings.
+
+image::nft-transaction-mapping.png[width=400]
+
+After all elements have their blue checkmarks and all the columns in the CSV file are green, you can proceed to the import.
+
+
+=== Neo4j AuraDB Free
+
+Create a new https://neo4j.com/cloud/aura/[Neo4j AuraDB Free^] instance, e.g. called NFT, *make sure to save the password*.
+
+The database takes 2-3 minutes to be provisioned, after it is running you also need the connection URL.
+
+image:aura-create-free.png[width=300]
+image:aura-credentials.png[width=300]
+image:aura-connect.png[width=300]
+
+
+=== Run Import
+
+With the connection information, go back to the data importer and click "Run Import".
+
+Put in the details and click run.
+
+image::data-import-credentials.png[width=300]
+
+Afterwards you'll see the the result overview with the runtime and can look at each import statement.
+
+TODO image?
+
+=== Neo4j Browser and Bloom
+
+In the AuraDB UI you can "Open" your database with Neo4j Browser a Graph Query UI that allows you to run statements, visualize the results as graphs and tables.
+
+This is where we will do our post-processing.
+
+With Neo4j Bloom, you can explore and visualize the data without needing to know Cypher.
+
+For both you will need your saved password to log in.
+
+=== Post Processing
+
+And we need to post convert the `Datetime_updated` and `Datetime_updated_seconds` to datetime format, which the data importer doesn't not support.
+
+[source,cypher]
+----
+MATCH (t:Transaction)
+SET t.Datetime_updated = datetime(replace(t.Datetime_updated,' ','T'))
+SET t.Datetime_updated_seconds = datetime(replace(t.Datetime_updated_seconds,' ','T'));
+----
+
+[source,cypher]
+----
+MATCH (t:Trader)
+WHERE exists { (t)-[:SOLD]->() }
+SET t:Seller;
+
+MATCH (t:Trader)
+WHERE exists { (t)-[:BOUGHT]->() }
+SET t:Buyer;
+----
+
+=== Data Exploration
+
+Let's look at the data at a high level, remember we only imported *one day* of trades, so the whole dataset is much more insightful.
+
+Number and volume of trades
+
+[source,cypher]
+----
+MATCH (t:Transaction)
+RETURN count(*) as count, round(sum(t.Price_USD)) as volumeUSD;
+----
+
+--- TODO ---
+
+
+We will follow Tomaz' blog post, so you can also copy the queries from there and read his analysis.
+
+https://towardsdatascience.com/exploring-the-nft-transaction-with-neo4j-cba80ead7e0b
+
+
+=== Data Visualization
+
+With Neo4j Bloom we can look at the data visually, even the whole dataset of xxxx nodes and yyyy relationships.
+
+You can look at co-buying behavior by entering the phrase.
+
+"Trader Transaction Trader"
+
+image::nft-bloom-trader.png[]
+
+Right click and choose "Clear Scene" to remove the current visualization otherwise it's additive.
+
+You can also look at categories of NFTs with the search phrase "Category NFT".
+
+image::nft-bloom-category.png[]
+
+We can also style the transactions based on volume and cryptocurrency.
+
+Pick the "Transaction" entry in the right side legend and 
+
+image::nft-bloom-style-transaction.png[]
+
+
+=== Conclusion
+
+This only scratches the surface of what you can do with the data, 
+
+* you can query and analyse more, 
+* visualize more intricate relationships 
+* add new data and computed relationships
+* run graph algorithms
+* write apps that allow people to search for and visualize NFT trades
+
+Let us know what you come up with.
+
+Happy graphing
+
+=== Resources
+
+* https://www.nature.com/articles/s41598-021-00053-8#Abs1[research paper on NFT trades^]
+* link:https://osf.io/wsnzr/?view_only=319a53cf1bf542bbbe538aba37916537[published the accompanying data^]
+* https://towardsdatascience.com/exploring-the-nft-transaction-with-neo4j-cba80ead7e0b[TowardsDataScience Article^]
+* https://github.com/neo4j-examples/discoveraurafree[GitHub repository^]
+* https://neo4j.com/video/discover-aura-free-with-fun-datasets/[Other Discover AuraDB Free Videos^]
+* link:https://medium.com/neo4j/search?q=week%201[Other AuraDB Free Medium articles^] 

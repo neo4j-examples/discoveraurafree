@@ -3,17 +3,21 @@
 
 This week we used a subset of a published NFT Trades dataset to model, import and analyse in Neo4j AuraDB free.
 
+If you missed our recording here it is (sorry for the audio issues):
+
+https://www.youtube.com/watch?v=JUF4-zPskhE&t=1s
+
 It all started with a Tweet that I came across one late night about a https://www.nature.com/articles/s41598-021-00053-8#Abs1[research paper on NFT trades^].
 
 https://twitter.com/emollick/status/1465505077083389960
 
-Fortunately the authors als link:https://osf.io/wsnzr/?view_only=319a53cf1bf542bbbe538aba37916537[published the accompanying data^], a whopping 6.1M trades in a CSV format.
+Fortunately the authors also link:https://osf.io/wsnzr/?view_only=319a53cf1bf542bbbe538aba37916537[published the accompanying data^], a whopping 6.1M trades in a CSV format.
 
-I spent a bit of time running the import with the https://data-importer.graphapp.io[data importer tool^] and looking at the data.
+I spent a bit of time running full data import with the https://data-importer.graphapp.io[data importer tool^] and looking at the data.
 
 https://twitter.com/mesirii/status/1465967623837999108
 
-After sharing the dataset with https://bratanic-tomaz.medium.com/[@Tomaz.Bratanic], he took it even further, cleaning it up and doing a proper analysis that he published on TowardsDataScience. It's a really insightful article, but that still just scratches the surface of the data.
+After sharing the dataset with https://bratanic-tomaz.medium.com/[@Tomaz.Bratanic], he took it even further, cleaning it up and doing a proper analysis that he published on TowardsDataScience. It's a really insightful article, but even that still just scratches the surface of the data.
 
 https://towardsdatascience.com/exploring-the-nft-transaction-with-neo4j-cba80ead7e0b
 
@@ -58,11 +62,11 @@ We have an `NFT` which is in a `Category` and `Collection`.
 It is traded in a `Transaction` for this `NFT`, sold by a `Seller`, and bought by a `Buyer`, both of which are also `Trader`.
 
 The unique id's for `NFT` are `ID_token`, for Traders their equivalent `addresses` and for the `Transaction` it's the transaction_hash.
-
+(Actually during the livestream we learned that `Unique_id_collection` is a better fit as `ID_token` has duplicates across markets.)
 
 === Data Import
 
-We use the data importer tool for a quick and easy modeling and data import run.
+We use the https://data-importer.graphapp.io[data importer tool^] for a quick and easy modeling and data import run.
 
 1. Load the CSV
 2. Create the Graph Model
@@ -70,13 +74,13 @@ We use the data importer tool for a quick and easy modeling and data import run.
 
 I labeled the `Buyer` and `Seller` both `Trader` and removed the prefix from `buyer_address` and `buyer_username` field-names, so that they are uniquely created once, no matter the role they have in a transaction.
 
-The other properties we mostly mapped directly to the different nodes (don't forget to select the id-fields!) and for the relationships select the appropriate id-field for each node.
+We mostly mapped the other properties directly to the different nodes (don't forget to select the id-fields!) and for the relationships select the appropriate id-field for each node.
 
-We need to convert the currency fields `Price_USD` and `Price_Crypto` to floatings.
+We need to convert the currency fields `Price_USD` and `Price_Crypto` to floating point numbers.
 
 image::nft-transaction-mapping.png[width=400]
 
-After all elements have their blue checkmarks and all the columns in the CSV file are green, you can proceed to the import.
+After all elements have gotten their blue checkmarks and all the columns in the CSV file are green, you can proceed to the import.
 
 
 === Neo4j AuraDB Free
@@ -100,7 +104,7 @@ image::data-import-credentials.png[width=300]
 
 Afterwards you'll see the the result overview with the runtime and can look at each import statement.
 
-TODO image?
+image::nft-import-results.png[width=500]
 
 === Neo4j Browser and Bloom
 
@@ -108,7 +112,7 @@ In the AuraDB UI you can "Open" your database with Neo4j Browser a Graph Query U
 
 This is where we will do our post-processing.
 
-With Neo4j Bloom, you can explore and visualize the data without needing to know Cypher.
+With https://neo4j.com/product/bloom/[Neo4j Bloom^], you can explore and visualize the data without needing to know Cypher.
 
 For both you will need your saved password to log in.
 
@@ -119,9 +123,14 @@ And we need to post convert the `Datetime_updated` and `Datetime_updated_seconds
 [source,cypher]
 ----
 MATCH (t:Transaction)
-SET t.Datetime_updated = datetime(replace(t.Datetime_updated,' ','T'))
-SET t.Datetime_updated_seconds = datetime(replace(t.Datetime_updated_seconds,' ','T'));
+SET t.Datetime_updated = 
+    datetime(replace(t.Datetime_updated,' ','T'))
+SET t.Datetime_updated_seconds = 
+    datetime(replace(t.Datetime_updated_seconds,' ','T'));
 ----
+
+For `Trader`nodes that have a `SOLD` relationship, we set the `Seller` label, similar for `Buyer`.
+Some Traders will have both.
 
 [source,cypher]
 ----
@@ -146,36 +155,193 @@ MATCH (t:Transaction)
 RETURN count(*) as count, round(sum(t.Price_USD)) as volumeUSD;
 ----
 
---- TODO ---
+Which gives us an impressive half-a-million dollars in trades on New Year's day of 2021 in only 1871 trades.
 
+----
+╒═══════╤═══════════╕
+│"count"│"volumeUSD"│
+╞═══════╪═══════════╡
+│1871   │521768.0   │
+└───────┴───────────┘
+----
 
-We will follow Tomaz' blog post, so you can also copy the queries from there and read his analysis.
+We will follow Tomaz' blog post and only share a few of the queries here, so you can also copy the queries from there and read his analysis.
 
 https://towardsdatascience.com/exploring-the-nft-transaction-with-neo4j-cba80ead7e0b
 
+NFT's sold at the highest price
+
+[source,cypher]
+----
+MATCH (n:NFT)<-[:FOR_NFT]-(t:Transaction)
+WHERE exists(t.Price_USD)
+WITH n, t.Price_USD as price
+ORDER BY price DESC LIMIT 5
+RETURN price, n.ID_token as token_id, n.Image_url_1 as image_url
+----
+
+Pretty impressive prices 65k, 33k, and around 15k for pretty ugly images (if you follow the links).
+
+[opts=header,%autowidth]
+,===
+token_id,image,price
+9368,image:https://lh3.googleusercontent.com/CXzVmMkhtPAKdw3e35FKWQOWJs0YQCp4sYvMq61ntksbKFK-iI1UVSaPbY5O8N-UTCg5JQvnHCXK13szX1eAAqq-[width=50],64944.78375
+6929,image:https://lh3.googleusercontent.com/OA07xRDHLW_9EpaM34B_vPblyglBg8-4EIFi0s_qFxHTSkRDa6F7g518zI3mkUEjw8ZVzhh8z1kmzGjpqb_NBTBq[width=50],33042.4814939175
+123,image:https://lh3.googleusercontent.com/PraNFgE8ci90aHwCGsgGiU7qTGKlBucQpAN55fxmgQFbfk6ztGYwv3yU-HqFwqfhjYEzEhlPvn7awIfml5AavRk[width=50],18335.625
+22,image:https://lh3.googleusercontent.com/XRStsQ13x8583Oc43J9pWKeLwr2m4CKZ8vznu3Rtn7T3C9n-84k0dXUt2OiswennlVaUbJHotyR6KodkKeK6bWVfKA[width=50],16832.10375
+32,image:https://lh3.googleusercontent.com/vWyCA1r8zOV0-484nspnSzUZDlioGfk3zCVEaO0uCwMgBaxYyDdqA8HXYCv2UXHGJSwjfv1p00H91LYjdqxKNO9L_Q[width=50],15401.925
+,===
+
+Traders with the highest transaction counts and volumes
+
+
+[source,cypher]
+----
+MATCH (t:Trader)
+OPTIONAL MATCH (t)-[:BOUGHT]->(bt)
+WITH t, round(sum(bt.Price_USD)) AS boughtVolume, count(*) as buys
+OPTIONAL MATCH (t)-[:SOLD]->(st)
+WITH t, boughtVolume, buys, 
+     round(sum(st.Price_USD)) AS soldVolume, count(*) as sales
+RETURN 
+       t.address AS address,
+       boughtVolume, buys,
+       soldVolume, sales
+ORDER BY buys + sales
+DESC LIMIT 6;
+----
+
+Here we see clearly pure sellers (artists?), buyers and some traders that buy and sell.
+Remember that this is only a single day.
+
+----
+╒════════════~════════╤════════╤══════╤═══════╤═══════╕
+│"address"            │"bought"│"buys"│"sold" │"sales"│
+╞════════════~════════╪════════╪══════╪═══════╪═══════╡
+│"0x327305a79~2b1a8fa"│0.0     │1     │25314.0│253    │
+├────────────~────────┼────────┼──────┼───────┼───────┤
+│"0xab5853ddb~703f5be"│18443.0 │52    │0.0    │1      │
+├────────────~────────┼────────┼──────┼───────┼───────┤
+│"0x95a437e4c~5e25d81"│110.0   │1     │1436.0 │33     │
+├────────────~────────┼────────┼──────┼───────┼───────┤
+│"0x709a911d6~f24aef9"│0.0     │1     │210.0  │25     │
+├────────────~────────┼────────┼──────┼───────┼───────┤
+│"0x75dffacbc~5322c4e"│481.0   │17    │265.0  │5      │
+├────────────~────────┼────────┼──────┼───────┼───────┤
+│"0x68aef8296~e111d0b"│0.0     │1     │264.0  │18     │
+└────────────~────────┴────────┴──────┴───────┴───────┘
+----
+
+We can also compute the highest profit someone made on this day.
+
+[source,cypher]
+----
+MATCH (t:Trader)-[:SOLD]->(st:Transaction)-[:FOR_NFT]->(nft)
+WHERE st.Price_USD > 1000
+MATCH (t)-[:BOUGHT]->(bt:Transaction)-[:FOR_NFT]->(nft)
+WHERE st.Datetime_updated_seconds > bt.Datetime_updated_seconds
+RETURN coalesce(t.username, t.address) as trader, 
+       nft.Image_url_1 as nft, 
+       nft.ID_token AS tokenID,
+       st.Datetime_updated_seconds AS soldTime,
+       round(st.Price_USD) AS soldAmount,
+       bt.Datetime_updated_seconds as boughtTime,
+       round(bt.Price_USD) AS boughtAmount,
+       round(st.Price_USD - bt.Price_USD) AS difference
+ORDER BY difference DESC LIMIT 5
+----
+
+We find only one trader who sold something for more than 1000 USD and they made a nice 4867 USD profit.
+
+*   trader: Korniej
+*   tokenID: 8000067
+*  boughtAmount: 367.0
+*   soldAmount: 5134.0
+*   difference: 4767.0
+*   boughtTime: 2021-01-01T18:58:35Z
+*   soldTime: 2021-01-01T19:47:48Z
+
+For this NFT 
+
+image::https://lh3.googleusercontent.com/p_JHJbmygaR6zXFgilQGab1AnUuWfcpRlnk30WxQxJGbF3ZRYkDswgx3KLDvuTJcMzcMytfguDM6VhX524qsAhDhdyuTiJ3O-9HE[width=200]
+
+Another interesting aspect are traders with self loops, as exemplified by this statement:
+
+[source,cypher]
+----
+MATCH p=(t:Trader)-[:BOUGHT]->()<-[:SOLD]-(t)
+RETURN p LIMIT 10
+----
+
+Or traders that repeatedly occurred in the same transaction:
+
+[source,cypher]
+----
+MATCH p=(t1:Trader)-[:BOUGHT]->()<-[:SOLD]-(t2)
+WITH t1, t2, count(*) as c 
+ORDER BY c DESC 
+LIMIT 5
+RETURN substring(t1.address,0,10) as t1, substring(t2.address,0,10) as t2, c 
+
+----
+
+So on the same day some folks traded several times with each other.
+
+----
+╒════════════╤════════════╤═══╕
+│"t1"        │"t2"        │"c"│
+╞════════════╪════════════╪═══╡
+│"0x7e9e93d7"│"0x68aef829"│16 │
+├────────────┼────────────┼───┤
+│"0xa0f80f5c"│"0x327305a7"│9  │
+├────────────┼────────────┼───┤
+│"0x75dffacb"│"0x327305a7"│8  │
+├────────────┼────────────┼───┤
+│"0x8d09aeac"│"0xfd62e6db"│6  │
+├────────────┼────────────┼───┤
+│"0x010bc884"│"0x6958f5e9"│6  │
+└────────────┴────────────┴───┘
+----
 
 === Data Visualization
 
-With Neo4j Bloom we can look at the data visually, even the whole dataset of xxxx nodes and yyyy relationships.
+With Neo4j Bloom we can look at the data visually, even the whole dataset of 9886 nodes and 19944 relationships.
+
+You can just open Neo4j Bloom from the AuraDB's "Open" button drop-down.
 
 You can look at co-buying behavior by entering the phrase.
 
-"Trader Transaction Trader"
+"Seller Transaction NFT"
 
-image::nft-bloom-trader.png[]
+image::nft-bloom-seller.png[]
 
 Right click and choose "Clear Scene" to remove the current visualization otherwise it's additive.
 
-You can also look at categories of NFTs with the search phrase "Category NFT".
+You can also look at collections of NFTs with the search phrase "Collection NFT".
 
-image::nft-bloom-category.png[]
+image::nft-bloom-collection.png[]
 
 We can also style the transactions based on volume and cryptocurrency.
 
-Pick the "Transaction" entry in the right side legend and 
+Pick the "Transaction" entry in the right side legend and choose "Rule-Based-Styling"
 
-image::nft-bloom-style-transaction.png[]
+* Price_USD
+* Size
+* Range
+* Refresh Range
+* 0.25x to 4x
+* Apply
 
+image::nft-bloom-style-transaction-size.png[]
+
+Then you can do the same for the color by adding another rule, going for
+
+* Market
+* Color
+* Unique Values
+* Apply
+
+image::nft-bloom-style-transaction-color.png[]
 
 === Conclusion
 

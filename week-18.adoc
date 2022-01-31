@@ -1,5 +1,6 @@
 == Week 18 - Discover AuraDB Free - Importing gedcom files and exploring Genealogy/Ancestry data as a graph
 :imagesdir: img
+:dbname: ancestry
 
 Two weeks ago a colleague asked if I could help him importing his personal ancestry data into Neo4j.
 He sent me a gedcom file and I gave it a try.
@@ -180,28 +181,117 @@ Now we can take these CSV files and import them into Neo4j.
 
 === Datamodel
 
+The datamodel is really straightforward, just a `Person` node with the attributes like first, last-name, birth and death-years, sex and id.
+
+Then we have relationships `MOTHER` and `FATHER` to other persons based on the ids.
+
 image::gedcom-model.png[]
+
+include::connect-aura.adoc[leveloffset=+1,img=img]
 
 === Import
 
+As before we use the handy, upcoming https://data-importer.graphapp.io[data importer tool^] for Neo4j to import the data.
+
+1. load the file
+2. create the person node
+3. map properties from the file (except for mother and fatehr)
+4. *select the id as id property*
+5. drag out the relationship and connect it back to the node again to create a "self relationship", name one `FATHER` and one `MOTHER`
+6. map the file again to the relationships from `id` to the ids of `mother` and `father` respectively
+
 image::gedcom-data-importer.png[]
 
-=== Exploration
+Then use the connection URL from your AuraDB Free instance and the password you hopefully saved into the `Run Import` form and click `Run`.
+
+After a few seconds you should see these results.
+For each graph element you can show the constraint creation and the actual import statement, that you could use in your own code.
+
+image::gedcom-import-results.png[]
 
 
-=== Data 
+=== First Exploration with Neo4j Browser
 
+We want to extend the data in the database a bit with additional, inferred information.
 
-=== Visualization
+You can open "Neo4j Browser" from your AuraDB Free instance to execute the statements, you need the password again to log in.
+
+There we can start exploring, by opening the left sidebar and clicking on the relationship-count.
+
+Then we see the graph data and can select one of the existing properties to be displayed as caption.
+
+image::gedcom-browser.png[]
+
+As both last and first names are not conclusive let's combine them into a `name` property, which makes it nicer to display our data.
+
+[source,cypher]
+----
+MATCH (p:Person)
+SET p.name = p.first + ' ' + p.last;
+
+CREATE INDEX ON :Person(name);
+----
+
+So we can pick that for the display and see data.
+
+We can also query our data directly, e.g. if we want to see the "Kennedy" families down to arbitrary relationship depth.
+
+[source,cypher]
+----
+MATCH path=(p:Person)<-[*]-() 
+WHERE p.last = 'Kennedy'
+RETURN path
+----
+
+image::gedcom-browser-kennedy.png[]
+
+=== Visualization with Neo4j Bloom
+
+=== Adding new Relationships
+
 
 
 === Direct Import with Python Driver
 
+Instead of exporting a CSV file we can also directly write the data to Neo4j.
+
+In a copy of our script, we install the `neo4j` driver dependency and add the import for `GraphDatabase`.
+
+The information for the `NEO4J_URI` and `NEO4J_PASSWORD` comes from environment variables that we need to set to our connection details from Neo4j Aura.
+We use that information to create our driver.
+
+Instead of creating and outputting a row list for each individual person and we populate a dict per and add it to a `data` list.
+
+The Cypher statement that we use to create our node data in Neo4j can be directly copied from data importer.
+
+The relationships to the parents are tiny bit more tricky as they might not be there in the data.
+
+So either we could:
+
+* run a double-pass over the data filtering out individuals that have no parents of the current type
+* add a conditional subquery to add the relationship
+* default to an "unknown" Parent and clean up after
+
 https://pypi.org/project/neo4j/
 
-https://gist.github.com/jexp/4d0e56ecd53f5f868eb6dfe9d322ec07#file-gedcom2neo4j-py
+code/file-gedcom2neo4j-py
 
 [source,python]
 ----
-include::https://gist.githubusercontent.com/jexp/4d0e56ecd53f5f868eb6dfe9d322ec07/raw/d9995180d4e1ecbf35dcbcb6d9e6a0d602e67435/gedcom2neo4j.py[]
+include::code/gedcom/gedcom2neo4j.py[]
 ----
+
+One tricky aspect that we ran into in our live-stream was that the ids of people are not unique globally but only per gedcom file. 
+
+So if you import the British Royals into the same database as the American First Families, you get a whole mess.
+It makes then either sense to prefix the id's with the filename that they came from or try to create a more global identifier of - full-name, birthday and birth location but even that might not be unique but could at least be used to merge multiple datasets together.
+
+Another aspect of that uniqueness check could be to check the topologicial context of an individual, i.e. with the same name,birthday,birthplace location, do they also have the same parents and/or the same children.
+
+=== Conclusion
+
+We would love to hear if this was helpful for you to import your GEDCOM files into Neo4j and what insights you found or added in terms of information.
+
+After sharing our experiments internally we learned that actually several of our colleagues had written custom GEDCOM parsers to get their family history into Neo4j.
+
+Happy graphing

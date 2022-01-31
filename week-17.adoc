@@ -83,6 +83,8 @@ image::nft-transaction-mapping.png[width=400]
 After all elements have gotten their blue checkmarks and all the columns in the CSV file are green, you can proceed to the import.
 
 
+If you don't want to draw the model yourself we also have https://github.com/neo4j-examples/discoveraurafree/blob/main/data/data-importer-nft-2021-01-01.zip[prepared a model + CSV archive^] that you can load directly with this https://data-importer.graphapp.io/?model=https://raw.githubusercontent.com/neo4j-examples/discoveraurafree/main/data/data-importer-nft-2021-01-01.zip[link to the data importer^].
+
 === Neo4j AuraDB Free
 
 Create a new https://neo4j.com/cloud/aura/[Neo4j AuraDB Free^] instance, e.g. called NFT, *make sure to save the password*.
@@ -118,7 +120,7 @@ For both you will need your saved password to log in.
 
 === Post Processing
 
-And we need to post convert the `Datetime_updated` and `Datetime_updated_seconds` to datetime format, which the data importer doesn't not support.
+And we need to post convert the `Datetime_updated` and `Datetime_updated_seconds` to datetime format, which the data importer doesn't yet support.
 
 [source,cypher]
 ----

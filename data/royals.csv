@@ -1,0 +1,3011 @@
+first,last,birth,death,gender,id,mother,father
+Victoria,Hanover,1819,1901,F,@I1@,@I138@,@I133@
+Albert Augustus Charles,,1819,1861,M,@I2@,@I140@,@I139@
+Victoria Adelaide Mary,,1840,1901,F,@I3@,@I1@,@I2@
+Edward_VII,Wettin,1841,1910,M,@I4@,@I1@,@I2@
+Alice Maud Mary,,1843,1878,F,@I5@,@I1@,@I2@
+Alfred Ernest Albert,,1844,1900,M,@I6@,@I1@,@I2@
+Helena Augusta Victoria,,1846,1923,F,@I7@,@I1@,@I2@
+Louise Caroline Alberta,,1848,1939,F,@I8@,@I1@,@I2@
+Arthur William Patrick,,1850,1942,M,@I9@,@I1@,@I2@
+Leopold George Duncan,,1853,1884,M,@I10@,@I1@,@I2@
+Beatrice Mary Victoria,,1857,1944,F,@I11@,@I1@,@I2@
+Alexandra of_Denmark "Alix",,1844,1925,F,@I12@,@I226@,@I225@
+Albert Victor Christian,,1864,1892,M,@I13@,@I12@,@I4@
+George_V,Windsor,1865,1936,M,@I14@,@I12@,@I4@
+Louise Victoria Alexandra,,1867,1931,F,@I15@,@I12@,@I4@
+Victoria Alexandra Olga,,1868,1935,F,@I16@,@I12@,@I4@
+Maude Charlotte Mary,,1869,1938,F,@I17@,@I12@,@I4@
+John Alexander,,1871,1871,M,@I18@,@I12@,@I4@
+George Victor of_Waldeck,,1831,1889,M,@I19@
+Frederick_III,,1831,1888,M,@I20@,@I427@,@I412@
+William_II,,1859,1941,M,@I21@,@I3@,@I20@
+Louis_IV of_Hesse,,1837,1892,M,@I22@,@I358@,@I357@
+Helena Frederica of_Waldeck,,1861,1922,F,@I23@,@I1216@,@I19@
+Alice of_Athlone,,1883,1981,F,@I24@,@I23@,@I10@
+Henry Maurice of_Battenberg,,1858,1896,M,@I25@,@I348@,@I347@
+Alexander of_Carisbrooke,,1886,1960,M,@I26@,@I11@,@I25@
+Victoria Eugenie "Ena",,1887,1969,F,@I27@,@I11@,@I25@
+Leopold,,1889,1922,M,@I28@,@I11@,@I25@
+Maurice,,1891,1914,M,@I29@,@I11@,@I25@
+Mary_of_Teck (May),,1867,1953,F,@I30@,@I136@,@I137@
+Edward_VIII,Windsor,1894,1972,M,@I31@,@I30@,@I14@
+George_VI,Windsor,1895,1952,M,@I32@,@I30@,@I14@
+Mary,Windsor,1897,1965,F,@I33@,@I30@,@I14@
+Henry William Frederick,Windsor,1900,1974,M,@I34@,@I30@,@I14@
+George Edward Alexander,Windsor,1902,1942,M,@I35@,@I30@,@I14@
+John Charles Francis,Windsor,1905,1919,M,@I36@,@I30@,@I14@
+Nicholas_II Alexandrovich,Romanov,1868,1918,M,@I37@,@I41@,@I40@
+Victoria Alberta of_Hesse,,1863,1950,F,@I38@,@I5@,@I22@
+Alexandra Fedorovna "Alix",,1872,1918,F,@I39@,@I5@,@I22@
+Alexander_III Alexandrovich,Romanov,1845,1894,M,@I40@,@I45@,@I44@
+Dagmar "Marie" of_Denmark,,1847,1928,F,@I41@,@I226@,@I225@
+Nicholas_I,Romanov,1796,1855,M,@I42@,@I1295@,@I1294@
+Charlotte of_Prussia,,1798,1860,F,@I43@,@I410@,@I162@
+Alexander_II Nicholoevich,Romanov,1818,1881,M,@I44@,@I43@,@I42@
+Marie of_Hesse- Darmstadt,,1824,1880,F,@I45@,@I350@,@I349@
+Olga Nicholovna,Romanov,1895,1918,F,@I46@,@I39@,@I37@
+Tatiana Nicholovna,,1897,1918,F,@I47@,@I39@,@I37@
+Maria Nicholovna,Romanov,1899,1918,F,@I48@,@I39@,@I37@
+Anastasia Nicholovna,Romanov,1901,1918,F,@I49@,@I39@,@I37@
+Alexis Nicolaievich,Romanov,1904,1918,M,@I50@,@I39@,@I37@
+Elizabeth Angela Marguerite,Bowes-Lyon,1900,-1,F,@I51@,@I146@,@I145@
+Elizabeth_II Alexandra Mary,Windsor,1926,-1,F,@I52@,@I51@,@I32@
+Margaret Rose,Windsor,1930,-1,F,@I53@,@I51@,@I32@
+Anthony Charles Robert,Armstrong-Jones,1930,-1,M,@I54@
+David Albert Charles,Armstrong-Jones,1961,-1,M,@I55@,@I53@,@I54@
+Sarah Frances Elizabeth,Armstrong-Jones,1964,-1,F,@I56@,@I53@,@I54@
+Philip,Mountbatten,1921,-1,M,@I57@,@I101@,@I104@
+Charles Philip Arthur,Windsor,1948,-1,M,@I58@,@I52@,@I57@
+Anne Elizabeth Alice,Windsor,1950,-1,F,@I59@,@I52@,@I57@
+Andrew Albert Christian,Windsor,1960,-1,M,@I60@,@I52@,@I57@
+Edward Anthony Richard,Windsor,1964,-1,M,@I61@,@I52@,@I57@
+Mark Anthony Peter,Phillips,1948,-1,M,@I62@,@I2968@
+Peter Mark Andrew,Phillips,1977,-1,M,@I63@,@I59@,@I62@
+Zara Anne Elizabeth,Phillips,1981,-1,F,@I64@,@I59@,@I62@
+Diana Frances,Spencer,1961,-1,F,@I65@,@I93@,@I239@
+Marina of_Greece,,1906,1968,F,@I66@,@I1362@,@I229@
+Edward George Nicholas,Windsor,1935,-1,M,@I67@,@I66@,@I35@
+Henry George Charles,Lascelles,1882,1947,M,@I68@
+Alice Christabel,Montagu-Douglas,1901,-1,F,@I69@,@I1607@,@I803@
+Bessiewallis,Warfield,1896,1986,F,@I70@,@I172@,@I171@
+Charles Haakon_VII,,1872,1957,M,@I71@,@I605@,@I604@
+Henry of_Prussia,,1862,1929,M,@I72@,@I3@,@I20@
+Sigismund,,1864,1866,M,@I73@,@I3@,@I20@
+Victoria,,1866,1929,F,@I74@,@I3@,@I20@
+Waldemar,,1868,1879,M,@I75@,@I3@,@I20@
+Sophie of_Prussia,,1870,1932,F,@I76@,@I3@,@I20@
+Charlotte of_Saxe- Meiningen,,1860,1919,F,@I77@,@I3@,@I20@
+Margarete of_Hesse,,1872,1954,F,@I78@,@I3@,@I20@
+Irene of_Hesse,,1866,1953,F,@I79@,@I5@,@I22@
+Waldemar,,1889,1945,M,@I80@,@I79@,@I72@
+Henry,,1900,1904,M,@I81@,@I79@,@I72@
+Child_#3,,-1,-1,M,@I82@,@I79@,@I72@
+Ernest Louis of_Hesse,,1868,1937,M,@I83@,@I5@,@I22@
+Elizabeth "Ella",,1864,1918,F,@I84@,@I5@,@I22@
+Mary "May",,1874,1878,F,@I85@,@I5@,@I22@
+Frederick,,1870,1873,M,@I86@,@I5@,@I22@
+William Henry Andrew,Windsor,1941,1972,M,@I87@,@I69@,@I34@
+Richard Alexander Walter,Windsor,1944,-1,M,@I88@,@I69@,@I34@
+Birgitte of_Denmark,von_Deurs,1947,-1,F,@I89@
+Alexander Patrick Gregers,,1974,-1,M,@I90@,@I89@,@I88@
+Earl Winfield,Spencer,-1,-1,M,@I91@
+Ernest,Simpson,-1,-1,M,@I92@
+Frances,Burke_Roche,1936,-1,F,@I93@,@I369@,@I368@
+Marie Alexandrovna,,1853,1920,F,@I94@,@I45@,@I44@
+Alfred,,1874,1899,M,@I95@,@I94@,@I6@
+Marie of_Saxe-Coburg and_Gotha,,1875,1938,F,@I96@,@I94@,@I6@
+Victoria Melita of_Edinburgh,,1876,1936,F,@I97@,@I94@,@I6@
+Alexandra,,1878,1942,F,@I98@,@I94@,@I6@
+Beatrice,,1884,1966,F,@I99@,@I94@,@I6@
+Louis of_Battenberg,,1854,1921,M,@I100@,@I348@,@I347@
+Alice of_Battenberg,,1885,1969,F,@I101@,@I38@,@I100@
+George,Mountbatten,1892,1938,M,@I102@,@I38@,@I100@
+Louis of_Burma,Mountbatten,1900,1979,M,@I103@,@I38@,@I100@
+Andrew of_Greece,,1882,1944,M,@I104@,@I228@,@I227@
+Alexander,Duff,1849,1912,M,@I105@
+Alexandra,Windsor,1936,-1,F,@I106@,@I66@,@I35@
+Michael,Windsor,1942,-1,M,@I107@,@I66@,@I35@
+Angus,Ogilvy,1928,-1,M,@I108@
+James Robert Bruce,Ogilvy,1964,-1,M,@I109@,@I106@,@I108@
+Marina Victoria Alexandra,Ogilvy,1966,-1,F,@I110@,@I106@,@I108@
+Katharine,Worsley,1933,-1,F,@I111@,@I981@
+George Philip of_St._Andrews,Windsor,1962,-1,M,@I112@,@I111@,@I67@
+Helen Marina Lucy,Windsor,1964,-1,F,@I113@,@I111@,@I67@
+Nicholas Charles Edward,Windsor,1970,-1,M,@I114@,@I111@,@I67@
+William Arthur Philip,Windsor,1982,-1,M,@I115@,@I65@,@I58@
+Henry Charles Albert,Windsor,1984,-1,M,@I116@,@I65@,@I58@
+(Frederick) Christian Charles,,1831,1917,M,@I117@
+Marie Louise,,1872,1956,F,@I118@,@I7@,@I117@
+Aribert of_Anhalt,,1864,1933,M,@I119@
+Louise Margaret of_Prussia,,1860,1917,F,@I120@,@I200@,@I199@
+Margaret of_Sweden,,1882,1920,F,@I121@,@I120@,@I9@
+Arthur of_Connaught,,1883,1938,M,@I122@,@I120@,@I9@
+Patricia,,1886,1974,F,@I123@,@I120@,@I9@
+Gustav_VI Adolf,,1882,1973,M,@I124@,@I457@,@I456@
+Alexandra,,1891,1959,F,@I125@,@I15@,@I105@
+Alexander,Ramsay,1881,1972,M,@I126@,@I2151@
+Isabella of_France,,1292,1358,F,@I127@,@I2486@,@I1903@
+Issue_Unknown,,-1,-1,M,@I128@
+Charles Edward,,1884,1954,M,@I129@,@I23@,@I10@
+George_III,Hanover,1738,1820,M,@I130@,@I332@,@I323@
+(Sophia) Charlotte,,1744,1818,F,@I131@,@I2148@,@I2147@
+Adolphus of_Cambridge,Hanover,1774,1850,M,@I132@,@I131@,@I130@
+Edward Augustus,Hanover,1767,1820,M,@I133@,@I131@,@I130@
+Augusta of_Hesse-Cassel,,1797,1889,F,@I134@,@I302@,@I301@
+Augusta Caroline,,1822,1916,F,@I135@,@I134@,@I132@
+Mary Adelaide "Fat_Mary",,1833,1897,F,@I136@,@I134@,@I132@
+Francis,,1837,1900,M,@I137@,@I304@,@I303@
+Victoria Mary Louisa,,1786,1861,F,@I138@,@I2614@,@I2448@
+Ernest_I of_Saxe-Coburg- Saalfeld,,1784,1844,M,@I139@,@I2614@,@I2448@
+Louise of_Saxe-Coburg- Altenburg,,1800,1831,F,@I140@
+George_IV,Hanover,1762,1830,M,@I141@,@I131@,@I130@
+Maria Anne,Fitzherbert,1756,1837,F,@I142@
+Caroline Amelia of_Brunswick,,1768,1821,F,@I143@,@I333@,@I1363@
+Charlotte Augusta,Hanover,1796,1817,F,@I144@,@I143@,@I141@
+Claude George,Bowes-Lyon,1855,1944,M,@I145@,@I183@,@I182@
+Cecilia Nina,Cavendish-Bentin,1862,1938,F,@I146@,@I208@,@I207@
+Margarita,Mountbatten,1905,1981,F,@I147@,@I101@,@I104@
+Theodora,Mountbatten,1906,1960,F,@I148@,@I101@,@I104@
+Vladimir,Romanov,1847,1909,M,@I149@,@I45@,@I44@
+Alexis,Romanov,1850,1908,M,@I150@,@I45@,@I44@
+Serge Alexandrovich,Romanov,1857,1905,M,@I151@,@I45@,@I44@
+Paul Alexandrovich,Romanov,1860,1919,M,@I152@,@I45@,@I44@
+George Alexandrovich,Romanov,1871,1899,M,@I153@,@I41@,@I40@
+Xenia,Romanov,1875,1960,F,@I154@,@I41@,@I40@
+Michael "Mischa" Alexandrovich,Romanov,1878,1918,M,@I155@,@I41@,@I40@
+Olga Alexandrovna,Romanov,1882,1960,F,@I156@,@I41@,@I40@
+Marie,Pavlovna,1854,1920,F,@I157@,@I2682@
+Cyril Vladimirovitch,Romanov,1876,1938,M,@I158@,@I157@,@I149@
+Boris,Romanov,1877,1943,M,@I159@,@I157@,@I149@
+Andrei (Andrew) Vladimirovich,Romanov,1879,1956,M,@I160@,@I157@,@I149@
+Mathilde (Maria),Krzesinska,1872,1971,F,@I161@,@I2926@
+Frederick William_III,,1770,1840,M,@I162@,@I556@,@I553@
+Alexandra of_Greece,,1870,1891,F,@I163@,@I228@,@I227@
+Dmitri Pavlovich,Romanov,1891,1941,M,@I164@,@I163@,@I152@
+Nicholas,Romanov,1850,1918,M,@I165@,@I354@,@I353@
+Irina,,1895,-1,F,@I166@,@I154@,@I2675@
+Felix,Yussoupov,1887,-1,M,@I167@
+Sarah Margaret,Ferguson,1959,-1,F,@I168@,@I170@,@I169@
+Ronald Ivor,Ferguson,1931,-1,M,@I169@,@I812@,@I811@
+Susan Mary,Wright,1937,-1,F,@I170@,@I821@,@I820@
+Teackle Wallis,Warfield,-1,-1,M,@I171@
+Alice,Montague,-1,-1,F,@I172@
+Violet Hyacinth,Bowes-Lyon,1882,1893,F,@I173@,@I146@,@I145@
+Mary Frances,Bowes-Lyon,1883,1961,F,@I174@,@I146@,@I145@
+Patrick,Bowes-Lyon,1884,1949,M,@I175@,@I146@,@I145@
+John Herbert,Bowes-Lyon,1886,1930,M,@I176@,@I146@,@I145@
+Alexander Francis,Bowes-Lyon,1887,1911,M,@I177@,@I146@,@I145@
+Fergus,Bowes-Lyon,1889,1915,M,@I178@,@I146@,@I145@
+Rose,Bowes-Lyon,1890,1967,F,@I179@,@I146@,@I145@
+Michael Claude,Bowes-Lyon,1893,1953,M,@I180@,@I146@,@I145@
+David,Bowes-Lyon,1902,1961,M,@I181@,@I146@,@I145@
+Claude,Bowes-Lyon,1824,1904,M,@I182@,@I185@,@I184@
+Frances Dora,Smith,1833,1922,F,@I183@,@I365@,@I364@
+Thomas,Lyon-Bowes,1773,1846,M,@I184@,@I188@,@I187@
+Mary,Carpenter,-1,-1,F,@I185@
+Thomas George,Lyon-Bowes,1822,1865,M,@I186@,@I185@,@I184@
+John,Lyon,1737,1776,M,@I187@
+Mary Eleanor,Bowes,1749,1800,F,@I188@
+John Lyon,Bowes,1769,1820,M,@I189@,@I188@,@I187@
+Andrew Robinson,Stoney,-1,-1,M,@I190@
+,Elphinstone,1869,1955,M,@I191@
+Dorothy Beatrix,Osborne,1888,1946,F,@I192@
+Fenella Stuart-Forbes Trefusis,Hepburn,1889,1966,F,@I193@
+Christian Norah,Dawson-Damer,1890,1959,F,@I194@
+,Granville,1880,1953,M,@I195@
+Elizabeth,Cator,1899,1959,F,@I196@
+Rachel,Clay,1907,-1,F,@I197@
+Jeanne d'Albret of_France,,-1,-1,F,@I198@
+Frederick Charles of_Prussia,,-1,-1,M,@I199@
+Maria Anna of_Anhalt,,-1,-1,F,@I200@
+John,Campbell,1845,1914,M,@I201@
+Frederick,Hanover,1763,1827,M,@I202@,@I131@,@I130@
+William_IV Henry,Hanover,1765,1837,M,@I203@,@I131@,@I130@
+Charlotte Augusta Matilda,Hanover,1766,1828,F,@I204@,@I131@,@I130@
+Ferdinand,,1785,1851,M,@I205@,@I2614@,@I2448@
+Mary,,1799,1860,F,@I206@
+Charles,Cavendish-Bentin,1817,1865,M,@I207@,@I361@,@I360@
+Caroline Louisa,Burnaby,1832,1918,F,@I208@,@I363@,@I362@
+Augusta Sophia,Hanover,1768,1840,F,@I209@,@I131@,@I130@
+Elizabeth,Hanover,1770,1840,F,@I210@,@I131@,@I130@
+Frederick_VI of_Hesse-Homburg,,1769,1829,M,@I211@
+Ernest Augustus_I,Hanover,1771,1851,M,@I212@,@I131@,@I130@
+Augustus Frederick,Hanover,1773,1843,M,@I213@,@I131@,@I130@
+Mary,Hanover,1776,1857,F,@I214@,@I131@,@I130@
+Sophia,Hanover,1777,1848,F,@I215@,@I131@,@I130@
+Octavius,Hanover,1779,1783,M,@I216@,@I131@,@I130@
+Alfred,Hanover,1780,1783,M,@I217@,@I131@,@I130@
+Amelia,Hanover,1783,1810,F,@I218@,@I131@,@I130@
+Adelaide Louisa Theresa,,1792,1849,F,@I219@,@I760@,@I759@
+Charlotte Augusta Louisa,Hanover,1819,1819,F,@I220@,@I219@,@I203@
+Elizabeth Georgiana Adelaide,Hanover,1820,1821,F,@I221@,@I219@,@I203@
+Twin-Boy_1,,1822,1822,M,@I222@,@I219@,@I203@
+Twin-Boy_2,,1822,1822,M,@I223@,@I219@,@I203@
+Marie,,1852,1923,F,@I224@,@I348@,@I347@
+Christian_IX,,1818,1906,M,@I225@,@I346@,@I345@
+Louise of_Hesse-Cassel,,1817,1898,F,@I226@,@I299@,@I298@
+William George_I of_the_Hellenes,Oldenburg,1845,1913,M,@I227@,@I226@,@I225@
+Olga Constantinovna,,1851,1926,F,@I228@,@I354@,@I353@
+Nicholas of_Greece,,1872,1938,M,@I229@,@I228@,@I227@
+Child_6,,1913,-1,M,@I230@,@I76@,@I405@
+Child_5,,-1,-1,M,@I231@,@I76@,@I405@
+Paul_I,Oldenburg,1901,1964,M,@I232@,@I76@,@I405@
+Helen of_Greece,,1896,1982,F,@I233@,@I76@,@I405@
+Alexander_I,Oldenburg,1893,1920,M,@I234@,@I76@,@I405@
+Sumner M.,Kirby,-1,1945,F,@I235@
+Child_2,,-1,-1,M,@I236@,@I1362@,@I229@
+Child_3,,-1,-1,M,@I237@,@I1362@,@I229@
+Louise Alexandra,Mountbatten,1889,1965,F,@I238@,@I38@,@I100@
+Edward John VIII,Spencer,1924,1992,M,@I239@,@I367@,@I366@
+Sarah,Spencer,1955,-1,F,@I240@,@I93@,@I239@
+Jane,Spencer,1957,-1,F,@I241@,@I93@,@I239@
+Charles,Spencer,1964,-1,M,@I242@,@I93@,@I239@
+Raine of_Dartmouth,McCorquodale,1929,-1,F,@I243@,@I806@,@I2984@
+George Earl_of_Harewood,Lascelles,1923,-1,M,@I244@,@I33@,@I68@
+Louise Marie d'Orleans,,1812,1850,F,@I245@,@I1705@,@I2511@
+Ludwig_IX of_Hesse- Darmstadt,,-1,-1,M,@I246@
+Frederick_I of_Wurttemberg,,1754,1816,M,@I247@,@I1068@,@I1067@
+Frederica of_Mecklenburg- Strelitz,,1778,1841,F,@I248@,@I496@,@I564@
+George_V,Hanover,1819,1878,M,@I249@,@I248@,@I212@
+Mary of_Saxe- Altenburg,,1818,1907,F,@I250@
+Ernest Augustus of_Cumberland,Hanover,1845,1923,M,@I251@,@I250@,@I249@
+Frederica,Hanover,1848,1926,F,@I252@,@I250@,@I249@
+Mary,Hanover,1849,1904,F,@I253@,@I250@,@I249@
+Thyra of_Denmark,,1853,1933,F,@I254@,@I226@,@I225@
+Marie Louise,Hanover,1879,1948,F,@I255@,@I254@,@I251@
+George William,Hanover,1880,1912,M,@I256@,@I254@,@I251@
+Alexandra,Hanover,1882,1963,F,@I257@,@I254@,@I251@
+Olga,Hanover,1884,1958,F,@I258@,@I254@,@I251@
+Christian,Hanover,1885,1901,M,@I259@,@I254@,@I251@
+Rene of_Bourbon-Parma,,-1,-1,M,@I260@
+Alfons,Pawel-Rammingen,1843,1932,M,@I261@
+George of_Cambridge,,1819,1904,M,@I262@,@I134@,@I132@
+Sarah (Louisa),Fairbrother,-1,1890,F,@I263@
+George,FitzGeorge,1843,1907,M,@I264@,@I263@,@I262@
+Adolphus,,1846,1922,M,@I265@,@I263@,@I262@
+Agustus,,1847,1933,M,@I266@,@I263@,@I262@
+Rosa,Baring,-1,-1,F,@I267@
+Son_1,,-1,-1,M,@I268@,@I267@,@I264@
+Dau._1,,-1,-1,F,@I269@,@I267@,@I264@
+Dau._2,,-1,-1,F,@I270@,@I267@,@I264@
+Frederick William,,1819,1904,M,@I271@
+Adolphus Frederick_V,,1848,1914,M,@I272@,@I135@,@I271@
+Elisabeth of_Anhalt,,1857,1933,F,@I273@
+Son_1,,-1,-1,M,@I274@,@I273@,@I272@
+Son_2,,-1,-1,M,@I275@,@I273@,@I272@
+Dau._1,,-1,-1,F,@I276@,@I273@,@I272@
+Dau._2,,-1,-1,F,@I277@,@I273@,@I272@
+Adolphus 2nd,,1868,1927,M,@I278@,@I136@,@I137@
+Francis,,1870,1910,M,@I279@,@I136@,@I137@
+Alexander George of_Teck,,1874,1957,M,@I280@,@I136@,@I137@
+Margaret,Grosvenor,1873,1929,F,@I281@
+George of_Cambridge,,1895,-1,M,@I282@,@I281@,@I278@
+Son_2,,-1,-1,M,@I283@,@I281@,@I278@
+Mary,,1897,-1,F,@I284@,@I281@,@I278@
+Helena,,1899,1969,F,@I285@,@I281@,@I278@
+Edward_II,,1284,1327,M,@I286@,@I1262@,@I1261@
+Rupert,,-1,1928,M,@I287@,@I24@,@I280@
+Son_2,,-1,-1,M,@I288@,@I24@,@I280@
+May Cambridge,,1906,-1,F,@I289@,@I24@,@I280@
+William Frederick of_Gloucester,,1776,1834,M,@I290@,@I762@,@I336@
+Gerald,Lascelles,1924,-1,M,@I291@,@I33@,@I68@
+Marion (Maria) Donata,Stein,1926,-1,F,@I292@,@I2983@,@I2982@
+David,Lascelles,1950,-1,M,@I293@,@I292@,@I244@
+James,Lascelles,1953,-1,M,@I294@,@I292@,@I244@
+Jeremy,Lascelles,1955,-1,M,@I295@,@I292@,@I244@
+Angela,Dowding,1919,-1,F,@I296@
+Henry,Lascelles,1953,-1,M,@I297@,@I296@,@I291@
+William of_Hesse-Cassel,,1787,1867,M,@I298@,@I302@,@I301@
+Louise Charlotte of_Denmark,,1789,1864,F,@I299@,@I1644@,@I1643@
+Other_issue,,-1,-1,M,@I300@,@I299@,@I298@
+Frederick of_Hesse-Cassel,,1747,1837,M,@I301@,@I330@,@I1604@
+Caroline of_Nassau- Usingen,,1762,1823,F,@I302@
+Alexander of_Wurttemberg,,1804,1885,M,@I303@,@I485@,@I484@
+Claudine,,1814,1841,F,@I304@
+Claudine,,1836,1894,F,@I305@,@I304@,@I303@
+Amelie,,1838,1893,F,@I306@,@I304@,@I303@
+Paul,von_Hugel,1835,1897,M,@I307@
+Paul,von_Hugel,1872,1912,M,@I308@,@I306@,@I307@
+Ferdinand_I of_Hohenzollern- Sigmaringen,Hohenzollern,1865,1927,M,@I309@,@I1100@,@I1099@
+Christian Victor,,1867,1900,M,@I310@,@I7@,@I117@
+Albert of_Schleswig- Holstein,,1869,1931,M,@I311@,@I7@,@I117@
+Helena Victoria,,1870,1948,F,@I312@,@I7@,@I117@
+Frederick Harold,,1876,1876,M,@I313@,@I7@,@I117@
+Patricia,Tuckwell,1923,-1,F,@I314@
+Mark,Lascelles,1964,-1,M,@I315@,@I314@,@I244@
+Elizabeth Collingwood,Colvin,1924,-1,F,@I316@
+Davina Elizabeth Alice,Windsor,1977,-1,F,@I317@,@I89@,@I88@
+Rose Victoria Birgitte,Windsor,1980,-1,F,@I318@,@I89@,@I88@
+Marie-Christine,von_Reibnitz,1945,-1,F,@I319@
+Frederick,Windsor,1979,-1,M,@I320@,@I319@,@I107@
+George_II,Hanover,1683,1760,M,@I321@,@I342@,@I341@
+Caroline of_Ansbach,,1683,1737,F,@I322@,@I1694@
+Frederick Louis,Hanover,1701,1751,M,@I323@,@I322@,@I321@
+Anne,Hanover,1709,1759,F,@I324@,@I322@,@I321@
+Amelia Sophia Eleanor,Hanover,1711,1786,F,@I325@,@I322@,@I321@
+Caroline Elizabeth,Hanover,1713,1757,F,@I326@,@I322@,@I321@
+Son,,1716,1716,M,@I327@,@I322@,@I321@
+George William,Hanover,1717,1718,M,@I328@,@I322@,@I321@
+William Augustus of_Cumberland,Hanover,1721,1765,M,@I329@,@I322@,@I321@
+Mary,Hanover,1723,1772,F,@I330@,@I322@,@I321@
+Louisa,Hanover,1724,1751,F,@I331@,@I322@,@I321@
+Augusta of_Saxe-Gotha,,1719,1772,F,@I332@,@I2143@,@I2142@
+Augusta,Hanover,1737,1813,F,@I333@,@I332@,@I323@
+Edward Augustus,Hanover,1739,1767,M,@I334@,@I332@,@I323@
+Elizabeth Caroline,Hanover,1741,1759,F,@I335@,@I332@,@I323@
+Edward Henry of_Gloucester,Hanover,1743,1805,M,@I336@,@I332@,@I323@
+Henry Frederick of_Cumberland,Hanover,1745,1790,M,@I337@,@I332@,@I323@
+Louisa Anne,Hanover,1749,1768,F,@I338@,@I332@,@I323@
+Frederick William,Hanover,1750,1765,M,@I339@,@I332@,@I323@
+Caroline Matilda,Hanover,1751,1775,F,@I340@,@I332@,@I323@
+George_I,Hanover,1660,1727,M,@I341@,@I736@,@I758@
+Sophia Dorothea of_Celle,,1666,1726,F,@I342@,@I2141@,@I2140@
+Sophia Dorothea,Hanover,1687,1757,F,@I343@,@I342@,@I341@
+Frederick_V,,1723,1766,M,@I344@,@I1621@,@I1620@
+Frederick William of_Schleswig-,,1785,1831,M,@I345@
+Louise Caroline of_Hesse-Cassel,,1789,1867,F,@I346@,@I1640@,@I1641@
+Alexander of_Hesse and_the_Rhine,,1823,1888,M,@I347@,@I350@,@I349@
+Julia of_Battenberg,von_Hauke,1825,1895,F,@I348@,@I352@,@I351@
+Louis_II of_Hesse and_the_Rhine,,1777,1848,M,@I349@,@I2912@,@I2911@
+Wilhelmina of_Baden,,1788,1836,F,@I350@
+John Maurice,von_Hauke,-1,1830,M,@I351@
+Sophie,la_Fontaine,-1,1831,F,@I352@
+Constantine Nikolaievitch of_Russia,,1827,1892,M,@I353@,@I43@,@I42@
+Elizabeth Alexandra of_Saxe-,,1830,1911,F,@I354@,@I356@,@I355@
+Joseph of_Saxe- Altenburg,,-1,1868,M,@I355@
+Amalie of_Wurttemberg,,-1,1848,F,@I356@,@I485@,@I484@
+Charles of_Hesse,,1809,1877,M,@I357@,@I350@,@I349@
+Elizabeth of_Prussia,,1815,1885,F,@I358@,@I2622@
+Charles William Frederick,Cavendish-Bentwi,-1,1865,M,@I359@
+William Charles Augustus,Cavendish-Bentin,-1,1826,M,@I360@
+Anne,Wellesley,-1,1875,F,@I361@,@I1914@
+Edwyn,Burnaby,-1,1867,M,@I362@
+Anne Caroline,Salisbury,-1,1881,F,@I363@
+Oswald,Smith,-1,1863,M,@I364@
+Henrietta Mildred,Hodgson,-1,-1,F,@I365@
+Albert Edward John,Spencer,1892,1975,M,@I366@,@I397@,@I396@
+Cynthia Elinor Beatrix,Hamilton,1897,1972,F,@I367@,@I385@,@I384@
+Edmund Maurice,Burke_Roche,1885,1955,M,@I368@,@I371@,@I370@
+Ruth Sylvia,Gill,1908,-1,F,@I369@,@I391@,@I390@
+James Boothby,Burke_Roche,1851,1920,M,@I370@,@I379@,@I378@
+Frances Ellen,Work,1857,1947,F,@I371@,@I373@,@I372@
+Frank,Work,1819,1911,M,@I372@,@I377@,@I376@
+Ellen,Wood,1831,1877,F,@I373@,@I375@,@I374@
+John,Wood,-1,1847,M,@I374@
+Ellen,Strong,-1,1863,F,@I375@
+John,Work,-1,-1,M,@I376@
+Sarah,Boude,-1,-1,F,@I377@
+Edmund,Burke_Roche,1815,1874,M,@I378@,@I383@,@I382@
+Elizabeth Caroline,Boothby,1821,1897,F,@I379@,@I381@,@I380@
+James Brownell,Boothby,-1,1850,M,@I380@
+Charlotte,Cunningham,-1,1893,F,@I381@
+Edward,Roche,-1,1855,M,@I382@
+Margaret Honoria,Curtain,-1,1862,F,@I383@
+James Albert Edward,Hamilton,1869,1953,M,@I384@,@I387@,@I386@
+Rosalind Cecilia Caroline,Bingham,1869,1958,F,@I385@,@I389@,@I388@
+James,Hamilton,1838,1913,M,@I386@,@I787@,@I788@
+Mary Anna,Curzon-Howe,1848,1929,F,@I387@,@I786@,@I785@
+George,Bingham,1830,1914,M,@I388@,@I790@,@I789@
+Cecilia Catherine,Gordon-Lennox,1838,1910,F,@I389@,@I791@,@I792@
+William Smith,Gill,1865,1957,M,@I390@,@I393@,@I392@
+Ruth,Littlejohn,1879,1964,F,@I391@,@I395@,@I394@
+Alexander Ogston,Gill,1833,1908,M,@I392@,@I794@,@I793@
+Barbara Smith,Marr,1843,-1,F,@I393@,@I796@,@I795@
+David,Littlejohn,1841,1924,M,@I394@,@I798@,@I797@
+Jane,Crombie,1843,1917,F,@I395@,@I800@,@I799@
+Charles Robert,Spencer,1857,1922,M,@I396@,@I399@,@I398@
+Margaret,Baring,1868,1906,F,@I397@,@I401@,@I400@
+Frederick,Spencer,1798,1857,M,@I398@,@I782@,@I781@
+Adelaide Horatia Elizabeth,Seymour,1825,1877,F,@I399@,@I780@,@I779@
+Edward Charles,Baring,1828,1897,M,@I400@,@I784@,@I783@
+Louisa Emily Charlotte,Bulteel,1839,1892,F,@I401@,@I778@,@I777@
+Augusta of_Schleswig- Holstein-,,1858,1921,F,@I402@
+Bernard of_Saxe- Meiningen,,1851,1928,M,@I403@
+Adolphus of_Schaumburg- Lippe,,1859,1916,M,@I404@
+Constantine_I,Oldenburg,1868,1923,M,@I405@,@I228@,@I227@
+Frederick Charles of_Hesse,,1868,1940,M,@I406@
+Victoria of_Schleswig- Holstein,,-1,-1,F,@I407@
+Irene,Denison,1890,1956,F,@I408@,@I2161@
+Alfonso_XIII,,1886,1941,M,@I409@,@I682@,@I683@
+Louise of_Mecklenburg- Strelitz,,1776,1810,F,@I410@
+Frederick William_IV,,1795,1861,M,@I411@,@I410@,@I162@
+William_I of_Germany,,1797,1888,M,@I412@,@I410@,@I162@
+Frederica,,1799,1800,F,@I413@,@I410@,@I162@
+Charles,,1801,1883,M,@I414@,@I410@,@I162@
+Charles,,1766,1806,M,@I415@
+Ferdinand,,1804,1806,M,@I416@,@I410@,@I162@
+Charlemagne,,742,814,M,@I417@,@I2610@,@I2609@
+Albert of_Prussia,,1809,1872,M,@I418@,@I410@,@I162@
+Hermine of_Reuss,,1887,1947,F,@I419@
+William,,1882,-1,M,@I420@,@I402@,@I21@
+Eitel Frederick,,1883,-1,M,@I421@,@I402@,@I21@
+Adalbert,,1884,1948,M,@I422@,@I402@,@I21@
+Augustus William,,1887,1949,M,@I423@,@I402@,@I21@
+Oscar,,1888,1958,M,@I424@,@I402@,@I21@
+Joachim,,1890,1920,M,@I425@,@I402@,@I21@
+Victoria Louise of_Prussia,,1892,1980,F,@I426@,@I402@,@I21@
+Augusta of_Saxe-Weimar,,1811,1890,F,@I427@
+Louise,,1828,1923,F,@I428@,@I427@,@I412@
+Frederick of_Baden,,1826,1907,M,@I429@
+Alphonso of_Cavadonga,,1907,1938,M,@I430@,@I27@,@I409@
+Don Jamie,,-1,-1,M,@I431@,@I27@,@I409@
+Don Juan of_Spain,,1913,-1,M,@I432@,@I27@,@I409@
+Beatrice,,1909,-1,F,@I433@,@I27@,@I409@
+Maria de_las_Mercedes of_Bourbon,,1910,-1,F,@I434@,@I2637@,@I2636@
+Juan Carlos,,1938,-1,M,@I435@,@I434@,@I432@
+Marie (Mignon),Hohenzollern,1900,1961,F,@I436@,@I96@,@I309@
+Elizabeth of_Romania,Hohenzollern,1894,1956,F,@I437@,@I96@,@I309@
+Carol_II,Hohenzollern,1893,1953,M,@I438@,@I96@,@I309@
+George_II,Oldenburg,1890,1947,M,@I439@,@I76@,@I405@
+Alexander_I of_Yugoslavia,,1888,1934,M,@I440@,@I2531@,@I2530@
+Sophia of_Greece,Oldenburg,1938,-1,F,@I441@,@I470@,@I232@
+Helen,,1963,-1,F,@I442@,@I441@,@I435@
+Christine,,1965,-1,F,@I443@,@I441@,@I435@
+Philip of_Asturias,,1968,-1,M,@I444@,@I441@,@I435@
+Gustav Adolf,,1906,1947,M,@I445@,@I121@,@I124@
+Erik of_Vastmanland,,1889,1918,M,@I446@,@I457@,@I456@
+Sigvard Oscar Fredrik,,1907,-1,M,@I447@,@I121@,@I124@
+Bertil Gustaf Oscar,,1912,-1,M,@I448@,@I121@,@I124@
+Carl Johan Arthur,,1916,-1,M,@I449@,@I121@,@I124@
+Olav_V,,1903,1991,M,@I450@,@I17@,@I71@
+Martha of_Sweden,,1901,1954,F,@I451@,@I598@,@I597@
+Harald,,1937,-1,M,@I452@,@I451@,@I450@
+Sonja,Haraldsen,1937,-1,F,@I453@,@I2705@
+Martha Louise,,1971,-1,F,@I454@,@I453@,@I452@
+Haakon of_Norway,Magnus,1973,-1,M,@I455@,@I453@,@I452@
+Gustav_V,,1858,1950,M,@I456@,@I459@,@I458@
+Victoria of_Baden,,1862,1930,F,@I457@
+Oscar_II,,1829,1907,M,@I458@,@I1614@,@I1613@
+Sophia,,1836,1913,F,@I459@,@I579@,@I578@
+Eleonore of_Solms- Hohensolms-Lich,,1871,1937,F,@I460@
+George Donatus of_Hesse,,1906,1937,M,@I461@,@I460@,@I83@
+Louis,,1908,1968,M,@I462@,@I460@,@I83@
+Cecilie of_Greece,Mountbatten,1911,1937,F,@I463@,@I101@,@I104@
+Margaret,Campbell-Geddes,1913,-1,F,@I464@,@I2632@
+Christopher,Oldenburg,1888,1940,M,@I465@,@I228@,@I227@
+George,Oldenburg,1869,1957,M,@I466@,@I228@,@I227@
+Olga,,-1,-1,F,@I467@,@I228@,@I227@
+Michael,Hohenzollern,1921,-1,M,@I468@,@I233@,@I438@
+Anne of_Bourbon-Parma,,1923,-1,F,@I469@,@I1054@,@I260@
+Frederica of_Hanover,Hanover,1917,1981,F,@I470@,@I426@,@I552@
+Constantine_II,Oldenburg,1940,-1,M,@I471@,@I470@,@I232@
+Anne-Marie of_Denmark,,1946,-1,F,@I472@,@I1059@,@I608@
+Aspasia,Manos,1896,1972,F,@I473@,@I1066@,@I1065@
+Alexandra of_Greece,,1921,-1,F,@I474@,@I473@,@I234@
+Peter_II of_Yugoslavia,,1923,1970,M,@I475@,@I436@,@I440@
+Sophia,,1914,-1,F,@I476@,@I101@,@I104@
+Gottfried of_Hohenlohe- Lagenburg,,1897,1960,M,@I477@
+Five_children,,-1,-1,M,@I478@,@I147@,@I477@
+Berthold of_Baden,,1906,1963,M,@I479@
+Four_Children,,-1,-1,M,@I480@,@I148@,@I479@
+Christopher of_Hesse,,1901,1944,M,@I481@
+George William of_Hanover,,1915,-1,M,@I482@
+Eight_children,,-1,-1,M,@I483@,@I476@,@I482@
+Ludwig of_Wurttemberg,,-1,-1,M,@I484@
+Henriette,,-1,-1,F,@I485@,@I575@,@I574@
+Alexander of_Bulgaria,,1857,1893,M,@I486@,@I348@,@I347@
+Francis Joseph,,1861,1924,M,@I487@,@I348@,@I347@
+Gustav Ernst of_Erbach-Schonb,,1840,1908,M,@I488@
+Johanna,Loisinger,1865,1951,F,@I489@,@I2623@
+Anna of_Montenegro Princess,,-1,-1,F,@I490@
+Alexandra Alexandrovna,Romanov,1842,1849,F,@I491@,@I45@,@I44@
+Nicholas Alexandrovich,Romanov,1843,1865,M,@I492@,@I45@,@I44@
+Louis_III of_Hesse,,1806,1877,M,@I493@,@I350@,@I349@
+Edwina,Ashley,1901,1960,F,@I494@,@I2160@
+Mathilde,,1813,1862,F,@I495@,@I1142@,@I1138@
+Frederica of_Hesse- Darmstadt,,-1,-1,F,@I496@
+Henry,,1838,1900,M,@I497@,@I358@,@I357@
+William,,1845,1900,M,@I498@,@I358@,@I357@
+Anna,,1843,1865,F,@I499@,@I358@,@I357@
+Patricia,Mountbatten,1924,-1,F,@I500@,@I494@,@I103@
+Pamela,Mountbatten,1929,-1,F,@I501@,@I494@,@I103@
+Nadejda,,1896,1963,F,@I502@,@I1354@,@I155@
+Tatiana Elizabeth,Mountbatten,1917,-1,F,@I503@,@I502@,@I102@
+David of_Milford_Haven,Mountbatten,1919,1970,M,@I504@,@I502@,@I102@
+John Knatchbull,Ulick,1918,-1,M,@I505@
+Five_children,,-1,-1,M,@I506@,@I500@,@I505@
+David,Hicks,1928,-1,M,@I507@
+Two_Children,,-1,-1,M,@I508@,@I501@,@I507@
+Iris,Mountbatten,1920,-1,F,@I509@,@I408@,@I26@
+Auguste,von_Harrach,1800,1873,F,@I510@
+Daughter Stillborn,,-1,-1,F,@I511@,@I410@,@I162@
+Frederick,,1833,1834,M,@I512@,@I1029@,@I653@
+Rosalie of_Hohenau,von_Rauch,1820,1879,F,@I513@
+Himiltude,,-1,-1,F,@I514@
+Paul Frederick,,1800,1842,M,@I515@
+Marie of_Saxe-Weimar- Eisenach,,1808,1877,F,@I516@
+Caroline of_Zweibrucken,,-1,-1,F,@I517@
+Cecilie of_Mecklenburg- Schwerin,,1886,1954,F,@I518@
+William,,1906,1940,M,@I519@,@I518@,@I420@
+Louis Ferdinand of_Prussia,,1907,-1,M,@I520@,@I518@,@I420@
+Hubertus,,1909,1950,M,@I521@,@I518@,@I420@
+Frederick,,1911,1966,M,@I522@,@I518@,@I420@
+Alexandrine,,1915,1980,F,@I523@,@I518@,@I420@
+Cecilie,,1917,1975,F,@I524@,@I518@,@I420@
+Dorothea,von_Salviati,1907,1972,F,@I525@
+Dau._1,,-1,-1,F,@I526@,@I525@,@I519@
+Dau._2,,-1,-1,F,@I527@,@I525@,@I519@
+Kira of_Russia,,1909,1967,F,@I528@,@I97@,@I158@
+Louis_XIII,,1601,1643,M,@I529@,@I741@,@I740@
+Joanna of_Austria,,-1,-1,F,@I530@
+Francesco_I of_Tuscany Italy,,-1,-1,M,@I531@
+Alice de_Courtenay,,-1,-1,F,@I532@
+Aymer of_Angouleme,Taillefer,-1,-1,M,@I533@
+Dau._2,,-1,-1,F,@I534@,@I528@,@I520@
+Dau._3,,-1,-1,F,@I535@,@I528@,@I520@
+Maria-Anna,von_Humboldt,1916,-1,F,@I536@
+Magdalene,Reuss,1920,-1,F,@I537@
+Dau._1,,-1,-1,F,@I538@,@I537@,@I521@
+Dau._2,,-1,-1,F,@I539@,@I537@,@I521@
+Brigid,Guinness,1920,-1,F,@I540@
+Son_1,,-1,-1,M,@I541@,@I540@,@I522@
+Son_2,,-1,-1,M,@I542@,@I540@,@I522@
+Son_3,,-1,-1,M,@I543@,@I540@,@I522@
+Dau._1,,-1,-1,F,@I544@,@I540@,@I522@
+Dau._2,,-1,-1,F,@I545@,@I540@,@I522@
+Clyde,Harris,-1,-1,M,@I546@
+Sophie Charlotte,,1879,1964,F,@I547@
+Adelheid of_Saxe- Meiningen,,1891,1971,F,@I548@
+Alexandra of_Schleswig-,,1887,1957,F,@I549@
+Ina Maria,von_Bassewitz,1888,1973,F,@I550@
+Marie Auguste of_Anhalt,,1898,1983,F,@I551@
+Ernest Augustus of_Brunswick,Hanover,1887,1953,M,@I552@,@I254@,@I251@
+Frederick William_II,,1744,1797,M,@I553@,@I569@,@I568@
+Elizabeth Christine of_Brunswick,,1746,1840,F,@I554@
+Frederica Charlotte of_Prussia,,1767,1820,F,@I555@,@I554@,@I553@
+Frederica of_Hesse- Darmstadt,,1751,1805,F,@I556@,@I517@,@I246@
+Christine,,1772,1773,F,@I557@,@I556@,@I553@
+Louis,,1773,1796,M,@I558@,@I556@,@I553@
+Wilhelmina,,1774,1837,F,@I559@,@I556@,@I553@
+Son Stillborn,,-1,-1,M,@I560@,@I556@,@I553@
+Augusta,,1780,1841,F,@I561@,@I556@,@I553@
+Charles,,1781,1846,M,@I562@,@I556@,@I553@
+William,,1783,1851,M,@I563@,@I556@,@I553@
+Charles of_Mecklenburg- Strelitz,,-1,-1,M,@I564@
+William_I of_Netherlands,,1772,1843,M,@I565@,@I651@,@I650@
+William_II of_Hesse,,-1,-1,M,@I566@
+Maria Anna of_Hesse,,1785,1846,F,@I567@
+Augustus William,,1722,1758,M,@I568@,@I343@,@I761@
+Louise of_Brunswick,,1722,1780,F,@I569@
+Frederick Henry Charles,,1747,1767,M,@I570@,@I569@,@I568@
+Wilhelmine,,1751,1820,F,@I571@,@I569@,@I568@
+George Charles Emil,,1758,1759,M,@I572@,@I569@,@I568@
+William_V of_Orange,,-1,-1,M,@I573@
+Charles Christian of_Nassau-Weilb,,1735,1788,M,@I574@
+Caroline,,1743,1787,F,@I575@,@I324@,@I618@
+Friedrich Wilhelm of_Nassau-Weilb,,-1,-1,M,@I576@,@I575@,@I574@
+Unknown,,-1,-1,F,@I577@
+Wilhelm of_Nassau,,-1,-1,M,@I578@,@I577@,@I576@
+Unknown,,-1,-1,F,@I579@
+Adolphe of_Luxembourg,,-1,-1,M,@I580@,@I579@,@I578@
+Unknown,,-1,-1,F,@I581@
+Guillaume_IV of_Luxembourg,,-1,-1,M,@I582@,@I581@,@I580@
+Unknown,,-1,-1,F,@I583@
+Charlotte of_Luxembourg,,-1,-1,F,@I584@,@I583@,@I582@
+Unknown,,-1,-1,M,@I585@
+Jean of_Luxembourg,,-1,-1,M,@I586@,@I584@,@I585@
+Marie-Josephe de_Saxe,,-1,-1,F,@I587@
+Vladimir Cyrilovitch,Romanov,1917,-1,M,@I588@,@I97@,@I158@
+Leonide Bagration- Moukhransky,,1914,-1,F,@I589@,@I2683@
+Gaston,,1608,1660,M,@I590@,@I741@,@I740@
+James,,1908,1975,M,@I591@,@I27@,@I409@
+Dona_Maria of_Bourbon,,1937,-1,F,@I592@,@I434@,@I432@
+Margarite,,1939,-1,F,@I593@,@I434@,@I432@
+Alphonso,,1941,1956,M,@I594@,@I434@,@I432@
+Maria,,-1,-1,F,@I595@,@I485@,@I484@
+Isabella,Marshal,1200,1240,F,@I596@,@I1883@
+Charles of_Sweden,,1861,1951,M,@I597@,@I459@,@I458@
+Ingeborg of_Denmark,,1878,1958,F,@I598@,@I605@,@I604@
+Astrid of_Sweden,,1905,1935,F,@I599@,@I598@,@I597@
+Leopold_III,,1901,1983,M,@I600@,@I1119@,@I1118@
+Baudouin_I of_the_Belgians,,1930,-1,M,@I601@,@I599@,@I600@
+Sibylla of_Saxe-Coburg,,1908,1971,F,@I602@
+Carl_XVI Gustav,,1946,-1,M,@I603@,@I602@,@I445@
+Frederick_VIII,,1843,1912,M,@I604@,@I226@,@I225@
+Louise of_Sweden,,1851,1926,F,@I605@,@I1028@,@I1027@
+Christian_X,,1870,1947,M,@I606@,@I605@,@I604@
+Alexandrine of_Mecklenburg- Schwerin,,1879,1952,F,@I607@,@I2696@,@I2695@
+Frederick_IX,,1899,1972,M,@I608@,@I607@,@I606@
+Alexia,Oldenburg,1965,-1,M,@I609@,@I472@,@I471@
+Mergrethe_II,,1940,-1,F,@I610@,@I1059@,@I608@
+Johann Georg_II of_Anhalt-Dessau,,-1,1693,M,@I611@
+Unknown,,-1,-1,F,@I612@
+Leopold_I of_Anhalt-Dessau,,-1,-1,M,@I613@,@I612@,@I611@
+Henriette Amalie,,-1,-1,F,@I614@,@I612@,@I611@
+Heinrich Kasimir of_Nassau-Dietz,,-1,-1,M,@I615@
+John William of_Orange,Friso,1686,1711,M,@I616@,@I614@,@I615@
+Mary Louise,,1688,1765,F,@I617@
+William_IV of_Orange,,1711,1751,M,@I618@,@I617@,@I616@
+Charlotte Amalia,,1710,1777,F,@I619@,@I617@,@I616@
+Friedrich of_Baden-Durlach,,1703,1732,M,@I620@
+Karl Friedrich of_Baden,,-1,-1,M,@I621@,@I619@,@I620@
+Unknown,,-1,-1,F,@I622@
+Karl Ludwig of_Baden,,-1,-1,M,@I623@,@I622@,@I621@
+Unknown,,-1,-1,F,@I624@
+Karl of_Baden,,-1,-1,M,@I625@,@I624@,@I623@
+Caroline of_Baden,,1776,1841,F,@I626@,@I624@,@I623@
+Unknown,,-1,-1,F,@I627@
+Marie,,-1,-1,F,@I628@,@I627@,@I625@
+William Alexander of_Hamilton,,-1,-1,M,@I629@
+Mary,,-1,-1,F,@I630@,@I628@,@I629@
+Albert_I of_Monaco,,-1,-1,M,@I631@
+Louis_II of_Monaco,,-1,-1,M,@I632@,@I630@,@I631@
+Unknown,,-1,-1,F,@I633@
+Charlotte,,-1,-1,F,@I634@,@I633@,@I632@
+Pierre,de_Polignac,-1,-1,M,@I635@
+Rainier_III of_Monaco,,-1,-1,M,@I636@,@I634@,@I635@
+Maximilian_I Joseph,Wittelsbach,1756,1825,M,@I637@
+Sophie (twin),Wittelsbach,1805,1872,F,@I638@,@I626@,@I637@
+Franz Karl of_Austria,,-1,-1,M,@I639@
+Otto,,-1,-1,M,@I640@,@I647@,@I646@
+Elisabeth Amalia,,-1,-1,F,@I641@,@I647@,@I646@
+Unknown,,-1,-1,F,@I642@
+Karl_I of_Austria,,-1,-1,M,@I643@,@I642@,@I640@
+Unknown,,-1,-1,F,@I644@
+Otto of_Austria,,-1,-1,M,@I645@,@I644@,@I643@
+Karl Ludwig,,-1,-1,M,@I646@,@I638@,@I639@
+Unknown,,-1,-1,F,@I647@
+Aloys of_Liechtenstein,,-1,-1,M,@I648@
+Franz_Joseph_II of_Liechtenstein,,-1,-1,M,@I649@,@I641@,@I648@
+William_V of_Orange,,1748,1806,M,@I650@,@I324@,@I618@
+Wilhelmina,,1751,1820,F,@I651@
+William_II of_Netherlands,,1792,1849,M,@I652@,@I559@,@I565@
+Frederik of_Netherlands,,1797,1881,M,@I653@,@I559@,@I565@
+Anna Pavlovna,,1795,1865,F,@I654@,@I1295@,@I1294@
+William_III of_Netherlands,,1817,1890,M,@I655@,@I654@,@I652@
+Emma of_Netherlands,,1858,1934,F,@I656@,@I1216@,@I19@
+Wilhelmina of_Netherlands,,1880,1962,F,@I657@,@I656@,@I655@
+Henry of_Mecklenburg,,1876,1934,M,@I658@,@I1214@,@I1213@
+Juliana of_Netherlands,,1909,-1,F,@I659@,@I657@,@I658@
+Bernhard of_Lippe- Biesterfeld,,1911,-1,M,@I660@
+Beatrix of_Netherlands,,1938,-1,F,@I661@,@I659@,@I660@
+Unknown,,-1,-1,F,@I662@
+Leopold_II of_Anhalt-Dessau,,-1,-1,M,@I663@,@I662@,@I613@
+Unknown,,-1,-1,F,@I664@
+Agnes,,-1,-1,F,@I665@,@I664@,@I663@
+Johann,Just,-1,-1,M,@I666@
+Agnes,,-1,-1,F,@I667@,@I665@,@I666@
+Ernst von_Seherr-Thoss,,-1,-1,M,@I668@
+Hermann von_Seherr-Thoss,,-1,-1,M,@I669@,@I667@,@I668@
+Unknown,,-1,-1,F,@I670@
+Marguerite,,-1,-1,F,@I671@,@I670@,@I669@
+Lajos Apponyi_de Nagy-Appony,,-1,-1,M,@I672@
+Cyula Apponyi_de Nagy-Appony,,-1,-1,M,@I673@,@I671@,@I672@
+Unknown,,-1,-1,F,@I674@
+Geraldine,,-1,-1,F,@I675@,@I674@,@I673@
+Zog_I of_Albania,,-1,-1,M,@I676@
+Leka_I of_Albania,,-1,-1,M,@I677@,@I675@,@I676@
+Karl of_Austria,,-1,-1,M,@I678@
+Henriette,,-1,-1,F,@I679@
+Karl Ferdinand,,-1,-1,M,@I680@,@I679@,@I678@
+Unknown,,-1,-1,F,@I681@
+Maria Cristina of_Austria,,1858,1929,F,@I682@,@I681@,@I680@
+Alfonso_XII,,1857,1885,M,@I683@,@I1244@,@I1245@
+Joseph of_Austria,,-1,-1,M,@I684@
+Elisabeth of_Austria,,-1,-1,F,@I685@,@I595@,@I684@
+Ferdinand of_Austria-Este,,-1,-1,M,@I686@
+Maria Theresa,,1849,1919,F,@I687@,@I685@,@I686@
+Ludwig_III,Wittelsbach,1845,1921,M,@I688@,@I1179@,@I1150@
+Rupprecht of_Bavaria,,1869,1955,M,@I689@,@I687@,@I688@
+Maria Gabriele of_Bavaria,,1878,1912,F,@I690@,@I1202@,@I1197@
+Albrecht (Albert),,1905,-1,M,@I691@,@I690@,@I689@
+George of_Denmark,,1653,1708,M,@I692@,@I1631@,@I1630@
+Anne,Stuart,1665,1714,F,@I693@,@I707@,@I706@
+Daughter,,1684,1684,F,@I694@,@I693@,@I692@
+Mary,,1685,1687,F,@I695@,@I693@,@I692@
+Anne Sophia,,1686,1687,F,@I696@,@I693@,@I692@
+Son,,1687,1687,M,@I697@,@I693@,@I692@
+William of_Gloucester,,1689,1700,M,@I698@,@I693@,@I692@
+Mary,,1690,1690,F,@I699@,@I693@,@I692@
+George,,1692,1692,M,@I700@,@I693@,@I692@
+Daughter,,1693,1693,F,@I701@,@I693@,@I692@
+Daughter,,1696,1696,F,@I702@,@I693@,@I692@
+Son,,1696,1696,M,@I703@,@I693@,@I692@
+Son,,1698,1698,M,@I704@,@I693@,@I692@
+Daughter,,1700,1700,F,@I705@,@I693@,@I692@
+James_II,Stuart,1633,1701,M,@I706@,@I739@,@I730@
+Anne,Hyde,-1,1671,F,@I707@,@I2127@
+Charles of_Cambridge,,1660,1661,M,@I708@,@I707@,@I706@
+Mary_II,,1662,1694,F,@I709@,@I707@,@I706@
+James of_Cambridge,,1663,1667,M,@I710@,@I707@,@I706@
+Charles,,1666,1667,M,@I711@,@I707@,@I706@
+Edgar of_Cambridge,,1667,1669,M,@I712@,@I707@,@I706@
+Henrietta,,1669,1669,F,@I713@,@I707@,@I706@
+Catherine,,1671,1671,F,@I714@,@I707@,@I706@
+Mary Beatrice of_Modena,,1658,1718,F,@I715@,@I756@,@I755@
+Catherine Laura,Stuart,-1,1675,F,@I716@,@I715@,@I706@
+Charles of_Cambridge,Stuart,1677,1677,M,@I717@,@I715@,@I706@
+Charlotte Maria,Stuart,1682,1682,F,@I718@,@I715@,@I706@
+James Francis Edward,Stuart,1688,1766,M,@I719@,@I715@,@I706@
+Louisa Maria Theresa,Stuart,1692,1712,F,@I720@,@I715@,@I706@
+Maria Casimire Clementina,Sobieska,1702,1735,F,@I721@,@I2137@
+Charles Edward Louis,Stuart,1720,1788,M,@I722@,@I721@,@I719@
+Henry Benedict Thomas,Stuart,1725,1807,M,@I723@,@I721@,@I719@
+Louise Maximilienne Caroline,,1752,1824,F,@I724@,@I2139@
+James_I,Stuart,1566,1625,M,@I725@,@I1247@,@I1249@
+Anne of_Denmark,,1574,1619,F,@I726@,@I738@,@I737@
+Henry Frederick,Stuart,1594,1612,M,@I727@,@I726@,@I725@
+Elizabeth,Stuart,1596,1662,F,@I728@,@I726@,@I725@
+Margaret,Stuart,1598,1600,F,@I729@,@I726@,@I725@
+Charles_I,Stuart,1600,1649,M,@I730@,@I726@,@I725@
+Robert,Stuart,1602,1602,M,@I731@,@I726@,@I725@
+Son,,1603,1603,M,@I732@,@I726@,@I725@
+Mary,Stuart,1605,1607,F,@I733@,@I726@,@I725@
+Sophia,Stuart,1606,1606,F,@I734@,@I726@,@I725@
+Frederick_V of_Palatinate,,1596,1632,M,@I735@
+Sophia,Hanover,1630,1714,F,@I736@,@I728@,@I735@
+Frederick_II of_Denmark and_Norway,,1534,1588,M,@I737@,@I1633@,@I1632@
+Sophia of_Mecklenburg- Gustrow,,1557,1631,F,@I738@
+Henrietta Maria of_France,,1609,1669,F,@I739@,@I741@,@I740@
+Henry_IV the_Great,,1553,1610,M,@I740@,@I198@,@I1215@
+Marie,de'_Medici,1573,1642,F,@I741@,@I530@,@I531@
+Charles James,Stuart,1629,1629,M,@I742@,@I739@,@I730@
+Charles_II,Stuart,1630,1685,M,@I743@,@I739@,@I730@
+Mary,Stuart,1631,1660,F,@I744@,@I739@,@I730@
+Elizabeth,Stuart,1635,1650,F,@I745@,@I739@,@I730@
+Anne,Stuart,1637,1640,F,@I746@,@I739@,@I730@
+Catherine,Stuart,1639,1639,F,@I747@,@I739@,@I730@
+Henry of_Gloucester,Stuart,1640,1660,M,@I748@,@I739@,@I730@
+Henrietta Anne,Stuart,1644,1670,F,@I749@,@I739@,@I730@
+William_II of_Orange,,1626,1650,M,@I750@
+Philippe of_Orleans,,1641,1701,M,@I751@,@I920@,@I529@
+Catherine of_Braganza,,1638,1705,F,@I752@,@I754@,@I753@
+John_IV the_Fortunate,,1605,1656,M,@I753@
+Luiza Maria,de_Guzman,-1,-1,F,@I754@
+Alfonso_IV,d'Este,-1,-1,M,@I755@
+Laura,Mortinozzi,-1,-1,F,@I756@
+William_III of_Orange,Stuart,1650,1702,M,@I757@,@I744@,@I750@
+Ernest Augustus of_Brunswick,,1629,1698,M,@I758@
+George_I of_Saxe- Meiningen,,-1,-1,M,@I759@
+Louisa Eleonora of_Hohenlohe-,,-1,-1,F,@I760@
+Frederick William_I,,1688,1740,M,@I761@,@I771@,@I772@
+Maria of_Waldegrave,Walpole,-1,1790,F,@I762@,@I2144@
+Anne,Horton,-1,1808,F,@I763@
+Christian_VII,,1749,1808,M,@I764@,@I331@,@I344@
+Charles Louis,,-1,1680,M,@I765@,@I728@,@I735@
+Rupert of_Cumberland,,1619,1682,M,@I766@,@I728@,@I735@
+Maurice,,-1,1654,M,@I767@,@I728@,@I735@
+Edward,,-1,-1,M,@I768@,@I728@,@I735@
+Charlotte,Landgrave,-1,-1,F,@I769@,@I2120@
+Ernest Augustus,,-1,-1,M,@I770@,@I736@,@I758@
+Sophia Charlotte,,1668,1705,F,@I771@,@I736@,@I758@
+Frederick_I,,1657,1713,M,@I772@
+Henry_VII,Tudor,1457,1509,M,@I773@,@I1255@,@I1254@
+Elizabeth of_York,,1466,1503,F,@I774@,@I998@,@I991@
+Arthur,Tudor,1486,1502,M,@I775@,@I774@,@I773@
+Margaret,Tudor,1489,1541,F,@I776@,@I774@,@I773@
+John Crocker,Bulteel,-1,1843,M,@I777@
+Elizabeth,Grey,-1,1880,F,@I778@
+Horace Beauchamp,Seymour,1791,1856,M,@I779@,@I2302@,@I2301@
+Elizabeth Malet,Palk,-1,1827,F,@I780@
+George John,Spencer,1758,1834,M,@I781@,@I1292@,@I1291@
+Lavinia,Bingham,-1,1831,F,@I782@,@I1729@
+Henry,Baring,-1,1848,M,@I783@
+Cecilia Anne,Windham,-1,1874,F,@I784@
+,,-1,1870,M,@I785@
+Anne,Gore,-1,1877,F,@I786@
+Louisa Jane,Russell,-1,1905,F,@I787@,@I1722@
+,,-1,1885,M,@I788@
+George Charles,Bingham,1800,1888,M,@I789@,@I1728@
+Anne,Brudenell,-1,1877,F,@I790@
+Caroline,Paget,-1,1874,F,@I791@
+Charles Lennox of_Richmond,,1791,1860,M,@I792@,@I1716@
+David,Gill,-1,-1,M,@I793@
+Sarah,Ogston,-1,-1,F,@I794@
+William Smith,Marr,-1,1898,M,@I795@
+Helen,Bean,-1,1852,F,@I796@
+William,Littlejohn,-1,1888,M,@I797@
+Janet,Bentley,-1,1848,F,@I798@
+James,Crombie,-1,1878,M,@I799@
+Katherine Scott,Forbes,-1,1893,F,@I800@
+Gabriella Marina Alexandra,Windsor,1981,-1,F,@I801@,@I319@,@I107@
+Thomas,Troubridge,-1,-1,M,@I802@
+John_Charles of_Buccleuch VII,,-1,-1,M,@I803@
+Peter,Shand-Kydde,-1,-1,M,@I804@
+Unknown,,-1,-1,F,@I805@
+Barbara,Cartland,1900,-1,F,@I806@,@I2996@,@I2995@
+Robert,Fellowes,1941,-1,M,@I807@,@I810@
+Laura Jane,Fellowes,1980,-1,F,@I808@,@I241@,@I807@
+Neil,McCorquodale,1951,-1,M,@I809@
+William,Fellowes,-1,-1,M,@I810@
+Andrew,Ferguson,1899,1966,M,@I811@,@I2947@,@I814@
+Marian -Scott,Montagu-Douglas-,1980,-1,F,@I812@,@I2946@
+John Andrew,Ferguson,-1,-1,M,@I813@,@I812@,@I811@
+Algernon Francis,Ferguson,1867,1943,M,@I814@,@I815@
+John,Ferguson,-1,-1,M,@I815@,@I817@,@I816@
+Thomas,Ferguson,-1,-1,M,@I816@,@I818@
+Emma,Benyon,-1,-1,F,@I817@
+John,Ferguson,-1,-1,M,@I818@,@I819@
+James,Ferguson,-1,1789,M,@I819@
+Fitzherbert,Wright,1905,1975,M,@I820@,@I2937@,@I2936@
+Doreen,Wingfield,1904,-1,F,@I821@,@I2933@
+Jane Louisa,Ferguson,1957,-1,F,@I822@,@I170@,@I169@
+Hector,Barrantes,1939,1990,M,@I823@
+Louise,,-1,1967,F,@I824@
+Alex,Makim,1951,-1,M,@I825@
+Seamus,Makim,1980,-1,M,@I826@,@I822@,@I825@
+Beatrice Elizabeth Mary,Windsor,1988,-1,F,@I827@,@I168@,@I60@
+Henry_VIII,Tudor,1491,1547,M,@I828@,@I774@,@I773@
+Elizabeth,Tudor,1492,1495,F,@I829@,@I774@,@I773@
+Mary,Tudor,1496,1533,F,@I830@,@I774@,@I773@
+Edmund,Tudor,1499,1500,M,@I831@,@I774@,@I773@
+Katherine,Tudor,1503,1503,F,@I832@,@I774@,@I773@
+Catherine of_Aragon,,1485,1536,F,@I833@,@I841@,@I840@
+James_IV,,1473,1513,M,@I834@,@I1469@,@I1252@
+James_V,,1512,1542,M,@I835@,@I776@,@I834@
+Archibald,Douglas,-1,1557,M,@I836@
+Henry,Stewart,-1,1551,M,@I837@
+Louis_XII,,1462,1515,M,@I838@,@I2546@,@I1260@
+Charles,Brandon,-1,1545,M,@I839@
+Ferdinand_V,,1452,1516,M,@I840@
+Isabella,,1451,1504,F,@I841@,@I2443@,@I2442@
+Daughter,Tudor,1510,1510,F,@I842@,@I833@,@I828@
+Henry_(1),Tudor,1511,1511,M,@I843@,@I833@,@I828@
+Henry_(2),Tudor,1513,1513,M,@I844@,@I833@,@I828@
+Son,Tudor,1514,1514,M,@I845@,@I833@,@I828@
+Mary_I,Tudor,1516,1558,F,@I846@,@I833@,@I828@
+Daughter,Tudor,1518,1518,F,@I847@,@I833@,@I828@
+Anne,Boleyn,1501,1536,F,@I848@,@I2337@,@I2099@
+Elizabeth_I,Tudor,1533,1603,F,@I849@,@I848@,@I828@
+Son,Tudor,1536,1536,M,@I850@,@I848@,@I828@
+Jane,Seymour,1505,1537,F,@I851@,@I861@,@I860@
+Edward_VI,Tudor,1537,1553,M,@I852@,@I851@,@I828@
+Anne of_Cleves,,1515,1557,F,@I853@,@I855@,@I854@
+John_III,,-1,-1,M,@I854@
+Marie of_Julich,,-1,-1,F,@I855@
+Catherine,Howard,1520,1542,F,@I856@,@I858@,@I857@
+Edmund,Howard,-1,1513,M,@I857@,@I2342@,@I2341@
+Joyce,Culpeper,-1,-1,F,@I858@
+Catherine,Parr,1512,1548,F,@I859@,@I866@,@I865@
+John,Seymour,-1,-1,M,@I860@
+Margery,Wentworth,-1,-1,F,@I861@
+Edward,Borough,-1,1533,M,@I862@
+John,Nevill,-1,1543,M,@I863@
+Thomas,Seymour,-1,-1,M,@I864@
+Thomas of_Kendal,Parr,-1,-1,M,@I865@
+Maud,Green,-1,-1,F,@I866@
+Daughter,Seymour,1548,1548,F,@I867@,@I859@,@I864@
+Jane,Grey,1537,1554,F,@I868@,@I1427@,@I1430@
+Guildford,Dudley,-1,1554,M,@I869@,@I2311@,@I2310@
+Philip_II,,1527,1598,M,@I870@,@I872@,@I871@
+Charles_V,,1500,1558,M,@I871@,@I2100@,@I2885@
+Isabella of_Portugal,,1503,1539,F,@I872@
+Simon,de_Montfort,-1,1265,M,@I873@
+Tomislav of_Yugoslavia,,1928,-1,M,@I874@,@I436@,@I440@
+Andrej of_Yugoslavia,,1929,-1,M,@I875@,@I436@,@I440@
+William,Marshal,-1,1231,M,@I876@
+Alexander,,1945,-1,M,@I877@,@I474@,@I475@
+Dona_Maria da_Gloria,,-1,-1,F,@I878@
+Peter of_Yugoslavia,,1980,-1,M,@I879@,@I878@,@I877@
+Philip of_Yugoslavia,,1982,-1,M,@I880@,@I878@,@I877@
+Alexander of_Yugoslavia,,1982,-1,M,@I881@,@I878@,@I877@
+Alice,Scholastica,-1,-1,F,@I882@
+Nikolas K.,George,1958,-1,M,@I883@,@I882@,@I874@
+Katarina K.,George,1959,-1,F,@I884@,@I882@,@I874@
+Linda,Bonney,-1,-1,F,@I885@
+George K.,George,1984,-1,M,@I886@,@I885@,@I874@
+Christina of_Hesse,,-1,-1,F,@I887@
+Tatiana Maria,,1957,-1,F,@I888@,@I887@,@I875@
+Christopher K.,George,1960,-1,M,@I889@,@I887@,@I875@
+Kira Melita of_Leiningen,,1930,-1,F,@I890@,@I895@,@I902@
+Vladimir K.,George,1964,-1,M,@I891@,@I890@,@I875@
+Dimitrye K.,George,1965,-1,M,@I892@,@I890@,@I875@
+Mitsi,,-1,-1,F,@I893@
+Louis,,-1,1765,M,@I894@,@I1423@,@I1422@
+Maria of_Russia,,1907,1951,F,@I895@,@I97@,@I158@
+Elizabeth of_France,,1602,1644,F,@I896@,@I741@,@I740@
+Charles_X,,1757,1836,M,@I897@,@I587@,@I894@
+Louis_XVIII,,1755,1824,M,@I898@,@I587@,@I894@
+Maria of_Russia,,1953,-1,F,@I899@,@I589@,@I588@
+Franz Wilhelm of_Prussia,,1943,-1,M,@I900@
+George of_Russia,,1981,-1,M,@I901@,@I899@,@I900@
+Karl of_Leiningen,,1898,1946,M,@I902@
+Emich of_Leiningen,,1926,-1,M,@I903@,@I895@,@I902@
+Karl of_Leiningen,,1928,-1,M,@I904@,@I895@,@I902@
+Margarita,,1932,-1,F,@I905@,@I895@,@I902@
+Mechtilde,,1936,-1,F,@I906@,@I895@,@I902@
+Friedrich of_Leiningen,,1938,-1,M,@I907@,@I895@,@I902@
+Eilika of_Oldenberg,,-1,-1,F,@I908@
+Melita,,1951,-1,F,@I909@,@I908@,@I903@
+Karl,,1952,-1,M,@I910@,@I908@,@I903@
+Andreas,,1955,-1,M,@I911@,@I908@,@I903@
+Stephanie,,1958,-1,F,@I912@,@I908@,@I903@
+Margarite of_Hohenloche- Ochringen,,-1,-1,F,@I913@
+Alexandra of_Hanover,,-1,-1,F,@I914@
+Ferdinand,,1982,-1,M,@I915@,@I914@,@I911@
+Karl,Bauscher,-1,-1,M,@I916@
+Ulf,Bauscher,1963,-1,M,@I917@,@I906@,@I916@
+Berthold,Bauscher,1965,-1,M,@I918@,@I906@,@I916@
+Johan,Bauscher,1971,-1,M,@I919@,@I906@,@I916@
+Anne of_Austria,,1601,1666,F,@I920@,@I1017@,@I2132@
+Friedrich Wilhelm of_Prussia,,1939,-1,M,@I921@,@I528@,@I520@
+Michael of_Prussia,,1939,-1,M,@I922@,@I528@,@I520@
+Marie-Cecile of_Prussia,,1942,-1,F,@I923@,@I528@,@I520@
+Louis Ferdinand of_Prussia,,1944,1977,M,@I924@,@I528@,@I520@
+Christian Sigismund of_Prussia,,1946,-1,M,@I925@,@I528@,@I520@
+Nina zu_Reventlow,,-1,-1,F,@I926@
+Daughter,,-1,-1,F,@I927@,@I926@,@I925@
+Donata of_Castell- Rudenhausen,,-1,-1,F,@I928@
+Georg Friedrich,,1976,-1,M,@I929@,@I928@,@I924@
+Corneilie-Cecile,,1978,-1,F,@I930@,@I928@,@I924@
+Jutta,Jorn,-1,-1,F,@I931@
+Micaela,,1967,-1,M,@I932@,@I931@,@I922@
+Nataly,,1970,-1,F,@I933@,@I931@,@I922@
+Waltraud,Freydag,-1,-1,F,@I934@
+Philip,,1968,-1,M,@I935@,@I934@,@I921@
+Ehrengard,von_Reden,-1,-1,F,@I936@
+Friedrich,,1979,-1,M,@I937@,@I936@,@I921@
+Viktoria,,1982,-1,F,@I938@,@I936@,@I921@
+Joachim,,1984,-1,M,@I939@,@I936@,@I921@
+Margaret,Messenger,-1,-1,F,@I940@
+Emily,,1976,-1,F,@I941@,@I940@,@I293@
+Benjamin,,1978,-1,M,@I942@,@I940@,@I293@
+Alexander,Lascelles,1980,-1,M,@I943@,@I940@,@I293@
+Edward,Lascelles,1982,-1,M,@I944@,@I940@,@I293@
+Fredericka Ann,Duhrrson,-1,-1,F,@I945@
+Sophie,Lascelles,1973,-1,F,@I946@,@I945@,@I294@
+Rowan,Lascelles,1977,-1,M,@I947@,@I945@,@I294@
+Julie,Bayliss,-1,-1,F,@I948@
+Thomas,Lascelles,1982,-1,M,@I949@,@I948@,@I295@
+Ellen,Lascelles,1984,-1,F,@I950@,@I948@,@I295@
+Marie Louise,,1662,1689,F,@I951@,@I749@,@I751@
+Maud,Carnegie,1893,1945,F,@I952@,@I15@,@I105@
+Charles of_Southesk,,1893,-1,M,@I953@
+James George Alexander,Carnegie,1929,-1,M,@I954@,@I952@,@I953@
+Caroline,Dewar,-1,-1,F,@I955@
+Alexandra,Carnegie,1959,-1,F,@I956@,@I955@,@I954@
+David Charles,Carnegie,1961,-1,M,@I957@,@I955@,@I954@
+Ragnhild Alexandra,,1930,-1,F,@I958@,@I451@,@I450@
+Astrid Maud Ingeborg,,1932,-1,F,@I959@,@I451@,@I450@
+Johan Martin,Ferner,1927,-1,M,@I960@
+Cathrine,Ferner,1962,-1,F,@I961@,@I959@,@I960@
+Benedickte,Ferner,1963,-1,M,@I962@,@I959@,@I960@
+Alexander,Ferner,1965,-1,M,@I963@,@I959@,@I960@
+Elisabeth,Ferner,1969,-1,F,@I964@,@I959@,@I960@
+Carl Christian,Ferner,1972,-1,M,@I965@,@I959@,@I960@
+Erling,Lorentzen,-1,-1,M,@I966@
+Haakon,Lorentzen,-1,-1,M,@I967@,@I958@,@I966@
+Ingeborg,Lorentzen,-1,-1,F,@I968@,@I958@,@I966@
+Ragnhild Alexandra,Lorentzen,1968,-1,F,@I969@,@I958@,@I966@
+Anne of_Bourbon-Parma,,-1,-1,F,@I970@
+Joana Maria Valentina,Lambrino,1898,1953,F,@I971@,@I1056@,@I1055@
+Margarita of_Romania,,1949,-1,F,@I972@,@I469@,@I468@
+Helen of_Romania,,1950,-1,F,@I973@,@I469@,@I468@
+Irina,,1953,-1,F,@I974@,@I469@,@I468@
+Sophie,,1957,-1,F,@I975@,@I469@,@I468@
+Maria,,1964,-1,F,@I976@,@I469@,@I468@
+Robin,Medforth-Mills,-1,-1,M,@I977@
+Nicholas,Medforth-Mills,1985,-1,M,@I978@,@I973@,@I977@
+John,Kreuger,-1,-1,M,@I979@
+Michael,Kreuger,1985,-1,M,@I980@,@I974@,@I979@
+William,Worsley,-1,-1,M,@I981@
+Martin,Lascelles,1963,-1,M,@I982@,@I316@,@I291@
+Alexandra,Morton,-1,-1,F,@I983@
+Richard_III,,1452,1485,M,@I984@,@I989@,@I988@
+Anne,Nevill,1456,1485,F,@I985@,@I1339@,@I987@
+Edward,,1473,1484,M,@I986@,@I985@,@I984@
+Richard,Neville,-1,1471,M,@I987@,@I1342@
+Richard,Plantagenet,-1,1460,M,@I988@,@I1024@,@I1023@
+Cicely,Nevill,-1,1495,F,@I989@,@I1331@,@I990@
+Ralph of_Westmoreland 1st,,-1,-1,M,@I990@
+Edward_IV,,1442,1483,M,@I991@,@I989@,@I988@
+Edmund,,-1,1460,M,@I992@,@I989@,@I988@
+George,,-1,-1,M,@I993@,@I989@,@I988@
+Anne,,-1,1476,F,@I994@,@I989@,@I988@
+Elizabeth,,-1,1503,F,@I995@,@I989@,@I988@
+Margaret,,-1,-1,F,@I996@,@I989@,@I988@
+Ursula,,-1,-1,F,@I997@,@I989@,@I988@
+Elizabeth,Woodville,1437,1492,F,@I998@,@I1327@,@I2271@
+Mary,,1466,1482,F,@I999@,@I998@,@I991@
+Cicely,,1469,1507,F,@I1000@,@I998@,@I991@
+Edward_V,,1470,1483,M,@I1001@,@I998@,@I991@
+Margaret,,1472,1472,F,@I1002@,@I998@,@I991@
+Richard,,1473,1483,M,@I1003@,@I998@,@I991@
+Anne,,1475,1511,F,@I1004@,@I998@,@I991@
+George,,1477,1479,M,@I1005@,@I998@,@I991@
+Catherine,,1479,1527,F,@I1006@,@I998@,@I991@
+Bridget,,1480,1517,F,@I1007@,@I998@,@I991@
+John 1st,Welles,-1,1499,M,@I1008@
+Thomas of_Isle_of_Wight,Kyme,-1,-1,M,@I1009@
+Anne,Mowbray,-1,1481,F,@I1010@
+Thomas 3rd,Howard,-1,-1,M,@I1011@
+William,Courtenay,-1,-1,M,@I1012@
+John,Grey,-1,1461,M,@I1013@
+Son,Grey,1461,-1,M,@I1014@,@I998@,@I1013@
+Son_2,Grey,1461,-1,M,@I1015@,@I998@,@I1013@
+Edward,,1453,1471,M,@I1016@,@I1218@,@I1217@
+Margaret of_Austria,,1584,1611,F,@I1017@,@I2884@
+Edward,,-1,1499,M,@I1018@,@I1340@,@I993@
+Margaret of_Salisbury,,1469,1541,F,@I1019@,@I1340@,@I993@
+Henry,,-1,-1,M,@I1020@
+Thomas,St._Leger,-1,-1,M,@I1021@
+Charles the_Bold,,-1,-1,M,@I1022@
+Richard of_Cambridge,Plantagenet,-1,1415,M,@I1023@,@I1337@,@I1237@
+Anne,Mortimer,-1,-1,F,@I1024@,@I1345@,@I1344@
+Isabel,Plantagenet,-1,1484,F,@I1025@,@I1024@,@I1023@
+Henry 1st,Bourchier,-1,-1,M,@I1026@,@I1603@,@I1602@
+Charles_XV,,1826,1872,M,@I1027@,@I1614@,@I1613@
+Louise,,1828,1871,F,@I1028@,@I1029@,@I653@
+Louisa of_Prussia,,1808,1870,F,@I1029@,@I410@,@I162@
+Ernest Augustus of_Hanover,Hanover,1914,1987,M,@I1030@,@I426@,@I552@
+George William,Hanover,1915,-1,M,@I1031@,@I426@,@I552@
+Mireille,Dutry,1946,-1,F,@I1032@
+Christian,Hanover,1919,1981,M,@I1033@,@I426@,@I552@
+Guelph Henry,Hanover,1923,-1,M,@I1034@,@I426@,@I552@
+Monika of_Solms-Laubach,Hanover,1929,-1,F,@I1035@,@I426@,@I552@
+Alexandra of_Ysenburg_and Budingen,,1938,-1,F,@I1036@
+Sophie of_Greece,,1914,-1,F,@I1037@
+Ortrud of_Schleswig- Holstein,,1925,1980,F,@I1038@
+Marie,Hanover,1952,-1,F,@I1039@,@I1038@,@I1030@
+Ernest Augustus of_Hanover,Hanover,1954,-1,M,@I1040@,@I1038@,@I1030@
+Ludwig Rudolph,Hanover,1955,1989,M,@I1041@,@I1038@,@I1030@
+Olga,Hanover,1958,-1,F,@I1042@,@I1038@,@I1030@
+Alexandra,Hanover,1959,-1,F,@I1043@,@I1038@,@I1030@
+Heinrich Julius,Hanover,1961,-1,M,@I1044@,@I1038@,@I1030@
+Michael,von_Hochberg,-1,-1,M,@I1045@
+Chantal,Hochuli,-1,-1,F,@I1046@
+Ernest Augustus,Hanover,1983,-1,M,@I1047@,@I1046@,@I1040@
+Christian Heinrich,Hanover,1985,-1,M,@I1048@,@I1046@,@I1040@
+Isabella Valsassina,von_Thurn,1962,1989,F,@I1049@
+Otto,Hanover,1988,-1,M,@I1050@,@I1049@,@I1041@
+Andreas of_Leiningen,,-1,-1,M,@I1051@
+Max of_Baden,,-1,-1,M,@I1052@
+Frederick Francis_IV of_Mecklenburg,,-1,-1,M,@I1053@
+Margrethe of_Denmark,,-1,-1,F,@I1054@
+Constantine,Lambrino,-1,-1,M,@I1055@
+Euphrosine,Alcaz,-1,-1,F,@I1056@
+Son,Hohenzollern,-1,-1,M,@I1057@,@I971@,@I438@
+Elena (Magda),Lupescu,1895,1977,F,@I1058@
+Ingrid Victoria of_Sweden,,1910,-1,F,@I1059@,@I121@,@I124@
+Paul of_Sparta,Oldenburg,1967,-1,M,@I1060@,@I472@,@I471@
+Nicholas,Oldenburg,1969,-1,M,@I1061@,@I472@,@I471@
+,Oldenburg,-1,-1,F,@I1062@,@I472@,@I471@
+,Oldenburg,-1,-1,F,@I1063@,@I472@,@I471@
+Irene of_Greece,Oldenburg,1942,-1,F,@I1064@,@I470@,@I232@
+Petros,Manos,-1,-1,M,@I1065@
+Maria,Argyropoulos,-1,-1,F,@I1066@
+Frederick Eugene,Wurttemberg,1732,1797,M,@I1067@
+Frederica of_Brandenburg- Schwedt,,1736,1798,F,@I1068@
+Augusta of_Brunswick,,1764,1788,F,@I1069@
+William_I of_Wurttemberg,Wurttemberg,1781,1864,M,@I1070@,@I1069@,@I247@
+Catherine,Wurttemberg,1783,1835,F,@I1071@,@I1069@,@I247@
+Sophia Dorothea,Wurttemberg,1783,1784,F,@I1072@,@I1069@,@I247@
+Paul,Wurttemberg,1785,1852,M,@I1073@,@I1069@,@I247@
+Charlotte of_Bavaria,Wittelsbach,1792,1873,F,@I1074@,@I1137@,@I637@
+Catherine of_Russia,,1788,1819,F,@I1075@
+Marie,Wurttemberg,1816,1887,F,@I1076@,@I1075@,@I1070@
+Sophie,Wurttemberg,1818,1877,F,@I1077@,@I1075@,@I1070@
+Pauline of_Wurttemberg,,1800,1873,F,@I1078@
+Catherine,Wurttemberg,1821,1898,F,@I1079@,@I1078@,@I1070@
+Charles_I of_Wurttemberg,Wurttemberg,1823,1891,M,@I1080@,@I1078@,@I1070@
+Augusta,Wurttemberg,1826,1898,F,@I1081@,@I1078@,@I1070@
+Olga of_Russia,,1822,1892,F,@I1082@
+Hermann of_Saxe-Weimar,,-1,-1,M,@I1083@
+Charlotte of_Saxe- Hildburghausen,,1787,1847,F,@I1084@
+Charlotte,Wurttemberg,1807,1873,F,@I1085@,@I1084@,@I1073@
+Frederick,Wurttemberg,1808,1870,M,@I1086@,@I1084@,@I1073@
+Paul,Wurttemberg,1809,1810,M,@I1087@,@I1084@,@I1073@
+Pauline,Wurttemberg,1810,1856,F,@I1088@,@I1084@,@I1073@
+August,Wurttemberg,1813,1885,M,@I1089@,@I1084@,@I1073@
+William_II of_Wurttemberg,Wurttemberg,1848,1921,M,@I1090@,@I1079@,@I1086@
+Marie of_Waldeck and_Pyrmont,,1857,1882,F,@I1091@
+Pauline,Wurttemberg,1877,1965,F,@I1092@,@I1091@,@I1090@
+Ulrich,Wurttemberg,1880,1880,M,@I1093@,@I1091@,@I1090@
+Frederick,,-1,-1,M,@I1094@
+Charlotte of_Schaumburg- Lippe,,1864,1946,F,@I1095@
+Nicholas,Hohenzollern,1903,1978,M,@I1096@,@I96@,@I309@
+Ileana,Hohenzollern,1909,-1,F,@I1097@,@I96@,@I309@
+Mircea,Hohenzollern,1913,1916,,@I1098@,@I96@,@I309@
+Leopold of_Hohenzollern,Hohenzollern,1835,1905,M,@I1099@,@I1105@,@I1104@
+Antonia of_Portugal,,1845,1913,F,@I1100@
+William of_Hohenzollern,Hohenzollern,1864,1927,M,@I1101@,@I1100@,@I1099@
+Charles Anthony,Hohenzollern,1868,1919,M,@I1102@,@I1100@,@I1099@
+Josephine of_Belgium,,1872,1958,F,@I1103@,@I1110@,@I1114@
+Charles Anthony,Hohenzollern,1811,1885,M,@I1104@
+Josephine of_Baden,,1813,1900,F,@I1105@
+Stephanie,Hohenzollern,1837,1859,F,@I1106@,@I1105@,@I1104@
+Carol_I of_Romania,Hohenzollern,1839,1914,M,@I1107@,@I1105@,@I1104@
+Anthony,Hohenzollern,1841,1866,M,@I1108@,@I1105@,@I1104@
+Frederick,Hohenzollern,1843,1904,M,@I1109@,@I1105@,@I1104@
+Marie,Hohenzollern,1845,1912,F,@I1110@,@I1105@,@I1104@
+Pedro_V,,-1,-1,M,@I1111@
+Elisabeth of_Wied,,1843,1916,F,@I1112@
+Louise of_Thurn and_Taxis,,-1,-1,F,@I1113@
+Philip of_Flanders,,1837,1905,M,@I1114@,@I245@,@I1696@
+Baudouin,,1869,1891,M,@I1115@,@I1110@,@I1114@
+Henriette (twin),,1870,1948,F,@I1116@,@I1110@,@I1114@
+Josephine (twin),,1870,1871,F,@I1117@,@I1110@,@I1114@
+Albert_I,,1875,1934,M,@I1118@,@I1110@,@I1114@
+Elisabeth of_Bavaria,,1876,1965,F,@I1119@,@I1202@,@I1197@
+Charles of_Belgium,,1903,1983,M,@I1120@,@I1119@,@I1118@
+Marie Jose,,1906,-1,F,@I1121@,@I1119@,@I1118@
+Umberto_II,,1904,1983,M,@I1122@
+Josephine Charlotte,,1927,-1,F,@I1123@,@I599@,@I600@
+Albert,,1934,-1,M,@I1124@,@I599@,@I600@
+Jean of_Luxembourg,,1921,-1,M,@I1125@
+Fabiola de_Mora_y_Aragon,,1928,-1,F,@I1126@
+Paola di_Calabria,Ruffo,1937,-1,F,@I1127@
+Philippe,,1960,-1,M,@I1128@,@I1127@,@I1124@
+Astrid,,1962,-1,F,@I1129@,@I1127@,@I1124@
+Laurent,,1963,-1,M,@I1130@,@I1127@,@I1124@
+Lorenz of_Austria-Este,,1955,-1,M,@I1131@
+Mary Liliane,Baels,1916,-1,F,@I1132@
+Alexandre,,1942,-1,M,@I1133@,@I1132@,@I600@
+Marie Christine,,1951,-1,F,@I1134@,@I1132@,@I600@
+Marie Esmeralda,,1956,-1,F,@I1135@,@I1132@,@I600@
+Paul,Druker,-1,-1,M,@I1136@
+Augusta Wilhelmine of_Hesse-,,1765,1796,F,@I1137@
+Ludwig_I,Wittelsbach,1786,1868,M,@I1138@,@I1137@,@I637@
+Auguste,Wittelsbach,1788,1851,F,@I1139@,@I1137@,@I637@
+Amelia,Wittelsbach,1790,1794,F,@I1140@,@I1137@,@I637@
+Charles,Wittelsbach,1795,1875,M,@I1141@,@I1137@,@I637@
+Therese of_Saxe- Hildburghausen,,1792,1854,F,@I1142@
+Maximilian_II,,1811,1864,M,@I1143@,@I1142@,@I1138@
+Marie of_Prussia,,1825,1889,F,@I1144@
+Ludwig_II,Wittelsbach,1845,1886,M,@I1145@,@I1144@,@I1143@
+Otto_I,Wittelsbach,1848,1916,M,@I1146@,@I1144@,@I1143@
+5sons_1dau,,-1,-1,,@I1147@,@I1370@,@I873@
+Otto_I Friedrich Ludwig,Wittelsbach,1815,1867,M,@I1148@,@I1142@,@I1138@
+Theodolinde,,1816,1817,,@I1149@,@I1142@,@I1138@
+Luitpold,,1821,1912,M,@I1150@,@I1142@,@I1138@
+Adelgunde,,1823,1914,F,@I1151@,@I1142@,@I1138@
+Hildegarde,,1825,1864,F,@I1152@,@I1142@,@I1138@
+Adalbert,,1828,1875,M,@I1153@,@I1142@,@I1138@
+Maximilian,Wittelsbach,1800,1803,M,@I1154@,@I626@,@I637@
+Elizabeth (twin) of_Bavaria,Wittelsbach,1801,1873,F,@I1155@,@I626@,@I637@
+Amelia (twin),Wittelsbach,1801,1877,F,@I1156@,@I626@,@I637@
+Maria (twin),Wittelsbach,1805,1877,F,@I1157@,@I626@,@I637@
+Ludovica (Louise),Wittelsbach,1808,1892,F,@I1158@,@I626@,@I637@
+Maximiliana,Wittelsbach,1810,1821,F,@I1159@,@I626@,@I637@
+Frederick Louis,,1707,1708,M,@I1160@,@I343@,@I761@
+Frederick William,,1710,1711,M,@I1161@,@I343@,@I761@
+Frederick_II the_Great,,1712,1786,M,@I1162@,@I343@,@I761@
+Charlotte Albertine,,1713,1714,F,@I1163@,@I343@,@I761@
+Frederica Louise,,1714,1784,F,@I1164@,@I343@,@I761@
+Philippine Charlotte,,1716,1801,F,@I1165@,@I343@,@I761@
+Louis Charles William,,1717,1719,M,@I1166@,@I343@,@I761@
+Sophia,,1719,1765,F,@I1167@,@I343@,@I761@
+Louise Ulrika,,1720,1782,F,@I1168@,@I343@,@I761@
+Anna Amelia,,1725,1787,F,@I1169@,@I343@,@I761@
+Henry,,1726,1802,M,@I1170@,@I343@,@I761@
+Ferdinand,,1730,1813,M,@I1171@,@I343@,@I761@
+Heinrich_XXII,Reuss,-1,-1,M,@I1172@
+Elizabeth Henrietta of_Hesse-Cassel,,1661,1683,F,@I1173@
+Louise,,1680,1705,F,@I1174@,@I1173@,@I772@
+Frederick_I,,-1,-1,M,@I1175@,@I1173@,@I772@
+Sophia Louise of_Mecklenburg-,,1685,1735,F,@I1176@
+Frederick Augustus,,1685,1686,M,@I1177@,@I771@,@I772@
+Son (stillborn),,-1,-1,M,@I1178@,@I771@,@I772@
+Augusta of_Austria- Tuscany,,1825,1864,F,@I1179@
+Leopold,,1846,1930,M,@I1180@,@I1179@,@I1150@
+Therese,,1850,1925,F,@I1181@,@I1179@,@I1150@
+Amulf,,1852,1907,M,@I1182@,@I1179@,@I1150@
+Luitpold,,1901,1914,M,@I1183@,@I690@,@I689@
+Irmingard,,1902,1903,F,@I1184@,@I690@,@I689@
+Rudolf,,1909,1912,M,@I1185@,@I690@,@I689@
+Antoinette of_Luxembourg,,1899,1954,F,@I1186@
+Henry,,1922,1958,M,@I1187@,@I1186@,@I689@
+Irmingard,,1923,-1,F,@I1188@,@I1186@,@I689@
+Editha,,1924,-1,F,@I1189@,@I1186@,@I689@
+Hilda,,1926,-1,F,@I1190@,@I1186@,@I689@
+Gabriele,,1927,-1,F,@I1191@,@I1186@,@I689@
+Sophie,,1935,-1,F,@I1192@,@I1186@,@I689@
+Maximilian Joseph,,-1,-1,M,@I1193@
+Ludwig,,1831,1920,M,@I1194@,@I1158@,@I1193@
+Helene,,1834,1858,F,@I1195@,@I1158@,@I1193@
+Elizabeth,,1837,1898,F,@I1196@,@I1158@,@I1193@
+Karl Theodor "Gackl",,1839,1909,M,@I1197@,@I1158@,@I1193@
+Maria,,1841,1925,F,@I1198@,@I1158@,@I1193@
+Mathilde,,1843,1925,F,@I1199@,@I1158@,@I1193@
+Sophie,,1847,1897,F,@I1200@,@I1158@,@I1193@
+Maximilian,,1849,1893,M,@I1201@,@I1158@,@I1193@
+Maria Josepha of_Portugal,,1857,1943,F,@I1202@,@I2899@
+Alexander,Zoubkoff,-1,-1,M,@I1203@
+Irene,,1939,-1,F,@I1204@,@I659@,@I660@
+Margaret,,1943,-1,F,@I1205@,@I659@,@I660@
+Mary Christina,,1947,-1,F,@I1206@,@I659@,@I660@
+Claus,von_Amsberg,1926,-1,M,@I1207@,@I1212@,@I1211@
+William Alexander,,1967,-1,M,@I1208@,@I661@,@I1207@
+John Friso,,1968,-1,M,@I1209@,@I661@,@I1207@
+Constantine,,1969,-1,M,@I1210@,@I661@,@I1207@
+Claus,von_Amsberg,-1,-1,M,@I1211@
+Gosta,von_dem_Bussche-,-1,-1,F,@I1212@
+Frederick Francis_II of_Mecklenburg-,,1823,1883,M,@I1213@,@I2654@,@I515@
+Marie of_Schwarzburg- Rudolstadt,,-1,-1,F,@I1214@,@I2652@,@I2651@
+Antoine de_Bourbon of_France,,-1,-1,M,@I1215@
+Helene of_Nassau Henrietta,,1831,1888,F,@I1216@
+Henry_VI,,1421,1471,M,@I1217@,@I1220@,@I1219@
+Margaret of_Anjou,,1429,1482,F,@I1218@,@I2272@
+Henry_V,,1387,1422,M,@I1219@,@I1222@,@I1221@
+Catherine of_Valois,,1401,1437,F,@I1220@,@I2074@,@I2075@
+Henry_IV,,1366,1413,M,@I1221@,@I1243@,@I1236@
+Mary,De_Bohun,-1,1394,F,@I1222@,@I1332@
+Son,,1382,1382,M,@I1223@,@I1222@,@I1221@
+Thomas,,1388,1421,M,@I1224@,@I1222@,@I1221@
+John,,1389,1435,M,@I1225@,@I1222@,@I1221@
+Humphrey of_Gloucester,,1390,1447,M,@I1226@,@I1222@,@I1221@
+Blanche,,1392,1409,F,@I1227@,@I1222@,@I1221@
+Philippa,,1394,1430,F,@I1228@,@I1222@,@I1221@
+Edward_III,,1312,1377,M,@I1229@,@I127@,@I286@
+Philippa of_Hainault,,1311,1369,F,@I1230@,@I2057@
+Edward,,1330,1376,M,@I1231@,@I1230@,@I1229@
+Isabella,,1332,1382,F,@I1232@,@I1230@,@I1229@
+Joan (Joanna),,1335,1348,F,@I1233@,@I1230@,@I1229@
+William of_Hatfield,,1337,1337,M,@I1234@,@I1230@,@I1229@
+Lionel of_Antwerp,,1338,1363,M,@I1235@,@I1230@,@I1229@
+John of_Gaunt,,1340,1399,M,@I1236@,@I1230@,@I1229@
+Edmund of_Langley,,1341,1402,M,@I1237@,@I1230@,@I1229@
+Blanche,,1342,1342,F,@I1238@,@I1230@,@I1229@
+Mary,,1344,-1,F,@I1239@,@I1230@,@I1229@
+Margaret,,1346,1361,F,@I1240@,@I1230@,@I1229@
+William of_Windsor,,1348,1348,M,@I1241@,@I1230@,@I1229@
+Thomas of_Woodstock,,1355,-1,M,@I1242@,@I1230@,@I1229@
+Blanche of_Lancaster,,1341,1369,F,@I1243@,@I1500@,@I1499@
+Isabella_II,,1830,1904,F,@I1244@,@I2874@,@I1246@
+Don_Francisco,de_Asis,1822,1902,M,@I1245@
+Ferdinand_VII,,1784,1833,M,@I1246@,@I2879@,@I2878@
+Mary,Stuart,1542,1587,F,@I1247@,@I1251@,@I835@
+Francis_II,,1544,1560,M,@I1248@,@I2439@,@I2438@
+Henry,Stuart,1545,1567,M,@I1249@,@I1431@,@I1432@
+James,Hepburn,-1,1576,M,@I1250@
+Mary of_Guise,,1515,1560,F,@I1251@,@I1815@
+James_III,,1451,1488,M,@I1252@,@I1467@,@I1466@
+Richard de_Burgh,,-1,-1,M,@I1253@
+Edmund,Tudor,1430,1456,M,@I1254@,@I1220@,@I1352@
+Margaret of_Richmond,Beaufort,-1,1509,F,@I1255@,@I1336@,@I1334@
+John of_Eltham,,1316,1336,M,@I1256@,@I127@,@I286@
+Eleanor,,1318,1355,F,@I1257@,@I127@,@I286@
+Joan of_the_Tower,,1321,1362,F,@I1258@,@I127@,@I286@
+Rainald_II of_Gueldres,,-1,-1,M,@I1259@
+Charles of_Orleans,,1391,1465,M,@I1260@
+Edward_I (Longshanks),,1239,1307,M,@I1261@,@I1282@,@I1281@
+Eleanor of_Castile,,1244,1290,F,@I1262@,@I1746@
+Eleanor,,1264,1297,F,@I1263@,@I1262@,@I1261@
+Joan,,1265,1265,F,@I1264@,@I1262@,@I1261@
+John,,1266,1271,M,@I1265@,@I1262@,@I1261@
+Henry,,1267,1274,M,@I1266@,@I1262@,@I1261@
+Julian (Katherine),,1271,1271,F,@I1267@,@I1262@,@I1261@
+Joan of_Acre,,1272,1307,F,@I1268@,@I1262@,@I1261@
+Alfonso,,1273,1284,M,@I1269@,@I1262@,@I1261@
+Margaret,,1275,1318,F,@I1270@,@I1262@,@I1261@
+Berengaria,,1276,1279,F,@I1271@,@I1262@,@I1261@
+Mary,,1278,1332,F,@I1272@,@I1262@,@I1261@
+Alice,,1279,1291,F,@I1273@,@I1262@,@I1261@
+Elizabeth,,1282,1316,F,@I1274@,@I1262@,@I1261@
+Beatrice,,1286,-1,F,@I1275@,@I1262@,@I1261@
+Blanche,,1290,1290,F,@I1276@,@I1262@,@I1261@
+Marguerite of_France,,1279,1317,F,@I1277@,@I2485@,@I1739@
+Thomas of_Brotherton,,1300,1338,M,@I1278@,@I1277@,@I1261@
+Edmund of_Woodstock,,1301,1330,M,@I1279@,@I1277@,@I1261@
+Eleanor,,1306,1311,F,@I1280@,@I1277@,@I1261@
+Henry_III,,1207,1272,M,@I1281@,@I1366@,@I1364@
+Eleanor of_Provence,,1217,1291,F,@I1282@,@I1881@
+Margaret,,1240,1275,F,@I1283@,@I1282@,@I1281@
+Beatrice,,1242,1275,F,@I1284@,@I1282@,@I1281@
+Edmund Crouchback of_Leicester,,1245,1296,M,@I1285@,@I1282@,@I1281@
+Richard,,1247,1256,M,@I1286@,@I1282@,@I1281@
+John,,1250,1256,M,@I1287@,@I1282@,@I1281@
+Katherine,,1253,1257,F,@I1288@,@I1282@,@I1281@
+William,,1256,1256,M,@I1289@,@I1282@,@I1281@
+Henry,,1256,1257,M,@I1290@,@I1282@,@I1281@
+John,Spencer,1734,1783,M,@I1291@,@I1735@
+Georgiana,Carteret,-1,1780,F,@I1292@
+Henrietta,,1792,1864,F,@I1293@
+Paul_I,Romanov,1754,1801,M,@I1294@,@I1299@,@I1300@
+Maria Feodorovna of_Wurttemberg,,1759,1828,F,@I1295@,@I2690@,@I2689@
+Alexander_I,Romanov,1777,1825,M,@I1296@,@I1295@,@I1294@
+Yelizaveta Alekseyevna of_Baden,,-1,-1,F,@I1297@
+Konstantin,Romanov,1779,-1,M,@I1298@,@I1297@,@I1296@
+Catherine_II the_Great,,1729,1796,F,@I1299@,@I2692@,@I2691@
+Peter_III,Romanov,1728,1762,M,@I1300@,@I1303@,@I1419@
+Peter_I the_Great,Romanov,1672,1725,M,@I1301@,@I1314@,@I1309@
+Catherine_I,,1683,1727,F,@I1302@
+Anna Petrovna,Romanov,1708,1728,F,@I1303@,@I1302@,@I1301@
+Elizabeth Petrovna,Romanov,1709,-1,F,@I1304@,@I1302@,@I1301@
+Yevdokiya Lopukhina,,-1,-1,F,@I1305@
+Alexis,Romanov,1690,1718,M,@I1306@,@I1305@,@I1301@
+Unknown,,-1,-1,F,@I1307@
+Peter_II,Romanov,1715,1730,M,@I1308@,@I1307@,@I1306@
+Alexis_I Michaylovich,Romanov,1629,-1,M,@I1309@,@I1313@,@I1312@
+Maria Miroslavkaya,,-1,1668,F,@I1310@
+Feodor_III (Theodore),Romanov,1662,1682,M,@I1311@,@I1310@,@I1309@
+Mikhail_III Feodorovich,Romanov,1597,1645,M,@I1312@,@I2661@,@I2660@
+Eudoxia,Streshniev,1608,1645,F,@I1313@,@I2659@,@I2658@
+Natalia Narishkina,,1651,1694,F,@I1314@,@I2662@,@I1326@
+Unknown,,-1,-1,F,@I1315@
+Ivan_V,Romanov,1666,1696,M,@I1316@,@I1315@,@I1311@
+Unknown,,-1,-1,F,@I1317@
+Anna Ioannovna,Romanov,1693,1740,F,@I1318@,@I1317@,@I1316@
+Yekaterina of_Mecklenburg,,-1,-1,F,@I1319@,@I1317@,@I1316@
+Unknown,,-1,-1,M,@I1320@
+Anna Leopoldovna of_Brunswick,,-1,-1,F,@I1321@,@I1319@,@I1320@
+Unknown,,-1,-1,M,@I1322@
+Ivan_VI,Romanov,1740,1741,M,@I1323@,@I1321@,@I1322@
+Ivan,Romanov,-1,-1,M,@I1324@,@I1310@,@I1309@
+Sophia,Romanov,1657,-1,F,@I1325@,@I1310@,@I1309@
+Cyril,Naryshkin,1623,1691,M,@I1326@
+Jacquetta of_Luxembourg,,-1,-1,F,@I1327@,@I2270@
+Catherine Swynford,Roet,1350,1403,F,@I1328@,@I2063@
+John Beaufort,,-1,1410,M,@I1329@,@I1328@,@I1236@
+Henry Beaufort,,-1,1447,M,@I1330@,@I1328@,@I1236@
+Joan Beaufort,,-1,-1,F,@I1331@,@I1328@,@I1236@
+Humphrey,De_Bohun,-1,-1,M,@I1332@
+Henry,Beaufort,1401,1418,M,@I1333@,@I1595@,@I1329@
+John,Beaufort,1403,1444,M,@I1334@,@I1595@,@I1329@
+Edmund,Beaufort,-1,1455,M,@I1335@,@I1595@,@I1329@
+Margaret,Beauchamp,-1,-1,F,@I1336@
+Isabella of_Castile,,-1,1393,F,@I1337@,@I2062@
+Edward,,-1,1415,M,@I1338@,@I1337@,@I1237@
+Anne,Beauchamp,-1,-1,F,@I1339@
+Isabel,Nevill,-1,-1,F,@I1340@,@I1339@,@I987@
+Louis_XIV,,1638,1715,M,@I1341@,@I920@,@I529@
+Richard,Nevill,-1,1460,M,@I1342@,@I1331@,@I990@
+Eleanor,De_Bohun,-1,1399,F,@I1343@,@I2069@
+Roger,Mortimer,-1,1398,M,@I1344@,@I1348@,@I1349@
+Eleanor,Holland,-1,1405,F,@I1345@,@I2277@
+Edmund,Mortimer,-1,1425,M,@I1346@,@I1345@,@I1344@
+Violante of_Milan,Visconti,-1,1404,F,@I1347@,@I2060@
+Philippa of_Ulster,,-1,1382,F,@I1348@,@I1418@,@I1235@
+Edmund,Mortimer,-1,1381,M,@I1349@,@I1904@
+Henry,Stafford,-1,1481,M,@I1350@
+Thomas,Stanley,-1,1504,M,@I1351@
+Owen,Tudor,-1,1461,M,@I1352@,@I2174@
+Jasper,Tudor,-1,-1,M,@I1353@,@I1220@,@I1352@
+Natalia,Sheremetevskaya,1880,1952,F,@I1354@
+Maria Pavlovna,Romanov,1890,1958,F,@I1355@,@I163@,@I152@
+Olga,Karnovich,1866,1929,F,@I1356@,@I2927@
+Vladimir,Romanov,1896,1918,M,@I1357@,@I1356@,@I152@
+Natalie,Romanov,1905,-1,F,@I1358@,@I1356@,@I152@
+Irina,Romanov,1908,-1,F,@I1359@,@I1356@,@I152@
+George,Romanov,1910,1931,M,@I1360@,@I1354@,@I155@
+Peter of_Oldenburg,,1868,1924,M,@I1361@
+Helen Vladimirovna of_Russia,Romanov,1882,1957,F,@I1362@,@I157@,@I149@
+Charles of_Brunswick- Wolfenbuttel,,-1,-1,M,@I1363@
+John Lackland,,1167,1216,M,@I1364@,@I1372@,@I1371@
+Isabella De_Clare of_Gloucester,,-1,1217,F,@I1365@,@I1877@
+Isabella of_Angouleme,,1188,1246,F,@I1366@,@I532@,@I533@
+Richard,,1209,1272,M,@I1367@,@I1366@,@I1364@
+Joan,,1210,1238,F,@I1368@,@I1366@,@I1364@
+Isabella,,1214,1241,F,@I1369@,@I1366@,@I1364@
+Eleanor,,1215,1275,F,@I1370@,@I1366@,@I1364@
+Henry_II Curtmantle,,1133,1189,M,@I1371@,@I1395@,@I1405@
+Eleanor of_Aquitaine,,1122,1204,F,@I1372@,@I1868@
+William,,1152,1156,M,@I1373@,@I1372@,@I1371@
+Henry the_Young_King,,1155,1183,M,@I1374@,@I1372@,@I1371@
+Matilda (Maud),,1156,1189,F,@I1375@,@I1372@,@I1371@
+Richard_I Coeur_de_Lion,,1157,1199,M,@I1376@,@I1372@,@I1371@
+Geoffrey,,1158,1186,M,@I1377@,@I1372@,@I1371@
+Eleanor,,1162,1214,F,@I1378@,@I1372@,@I1371@
+Joan,Plantagenet,1165,1199,F,@I1379@,@I1372@,@I1371@
+William_I the_Conqueror,,-1,1087,M,@I1380@,@I1526@,@I1525@
+Matilda of_Flanders,,1031,1083,F,@I1381@,@I1850@
+Robert Curthose,,1054,1134,M,@I1382@,@I1381@,@I1380@
+Richard,,1055,1081,M,@I1383@,@I1381@,@I1380@
+William_II Rufus,,-1,1100,M,@I1384@,@I1381@,@I1380@
+Cecilia of_Holy_Trinity,,-1,1126,F,@I1385@,@I1381@,@I1380@
+Agatha,,-1,-1,F,@I1386@,@I1381@,@I1380@
+Adeliza a_nun,,-1,-1,F,@I1387@,@I1381@,@I1380@
+Adela,,1062,-1,F,@I1388@,@I1381@,@I1380@
+Matilda,,-1,-1,F,@I1389@,@I1381@,@I1380@
+Constance,,1066,1090,F,@I1390@,@I1381@,@I1380@
+Henry_I Beauclerc,,1068,1135,M,@I1391@,@I1381@,@I1380@
+Matilda (Edith) of_Scotland,,-1,1118,F,@I1392@,@I1512@,@I1511@
+Robert of_Gloucester,,-1,1147,M,@I1393@,@I1392@,@I1391@
+William,,1103,1120,M,@I1394@,@I1392@,@I1391@
+Matilda,,-1,1167,F,@I1395@,@I1392@,@I1391@
+Adeliza of_Louvain,,1105,1151,F,@I1396@,@I1859@
+Stephen,,1096,1154,M,@I1397@,@I1388@,@I1517@
+Matilda of_Boulogne,,-1,1152,F,@I1398@,@I1516@,@I1522@
+Baldwin,,1126,1135,M,@I1399@,@I1398@,@I1397@
+Eustace of_Boulongne,,-1,1153,M,@I1400@,@I1398@,@I1397@
+Matilda,,1133,1135,F,@I1401@,@I1398@,@I1397@
+William of_Boulogne,,1134,1159,M,@I1402@,@I1398@,@I1397@
+Mary of_Boulogne,,1136,1182,F,@I1403@,@I1398@,@I1397@
+Henry_V,,1086,1125,M,@I1404@
+Geoffrey_V,Plantagenet,-1,1151,M,@I1405@
+Audrey,Emery,1904,-1,F,@I1406@,@I2928@
+Paul,Romanov,-1,-1,M,@I1407@,@I1406@,@I164@
+William,,1884,1965,M,@I1408@,@I457@,@I456@
+Lennart Gustaf Nicholas,,1909,-1,M,@I1409@,@I1355@,@I1408@
+Joan,,1328,1385,F,@I1410@,@I1505@,@I1279@
+Edward,,1365,1372,M,@I1411@,@I1410@,@I1231@
+Richard_II,,1367,1400,M,@I1412@,@I1410@,@I1231@
+Anne of_Bohemia,,1366,1394,F,@I1413@,@I2291@
+Isabella of_France,,1387,1409,F,@I1414@,@I2074@,@I2075@
+Enguerrand_VII de_Courcy,,-1,1396,M,@I1415@
+Constanza (Constance),,-1,1394,F,@I1416@,@I2062@
+John 2d,Hastings,-1,1375,M,@I1417@
+Elizabeth de_Burgh,,-1,1363,F,@I1418@,@I2059@
+Charles Frederick of_Holstein-,,1700,1739,M,@I1419@
+Marie-Therese of_Spain,,1638,1683,F,@I1420@,@I896@,@I2131@
+Francoise d'Aubigne,,1635,1719,F,@I1421@
+Louis_XV,,1710,1774,M,@I1422@,@I2920@,@I2426@
+Maria of_Poland,Leczinska,1703,1768,F,@I1423@,@I2504@
+Louis_XVI,,1754,1793,M,@I1424@,@I587@,@I894@
+Marie Antoinette of_Austria,,1755,1793,F,@I1425@
+Henry,Brandon,1516,1534,M,@I1426@,@I830@,@I839@
+Frances,Brandon,1517,1559,F,@I1427@,@I830@,@I839@
+Eleanor,Brandon,-1,1547,F,@I1428@,@I830@,@I839@
+Madeleine of_France,,-1,1537,F,@I1429@,@I2440@,@I1816@
+Henry,Grey,-1,1554,M,@I1430@
+Margaret,Douglas,1515,1578,F,@I1431@,@I776@,@I836@
+Matthew,Stuart,1516,1571,M,@I1432@,@I1479@,@I1478@
+Charles,Stuart,-1,1576,M,@I1433@,@I1431@,@I1432@
+Elizabeth,Cavendish,-1,1581,F,@I1434@,@I2101@
+Arabella,Stuart,-1,1615,F,@I1435@,@I1434@,@I1433@
+William,Seymour,-1,1660,M,@I1436@,@I2112@,@I2109@
+Thomas,Beaufort,-1,-1,M,@I1437@,@I1328@,@I1236@
+Franz Josef of_Austria,,1830,1916,M,@I1438@,@I2437@
+Rudolf,,1858,1889,M,@I1439@,@I1196@,@I1438@
+Daughter_1,,-1,-1,F,@I1440@,@I1196@,@I1438@
+Daughter_2,,-1,-1,F,@I1441@,@I1196@,@I1438@
+,,-1,-1,M,@I1442@
+Joan,Holland,-1,1434,F,@I1443@
+Maud,Clifford,-1,-1,F,@I1444@,@I2299@
+Anne,Stafford,-1,-1,F,@I1445@,@I2279@
+Catherine,Woodville,-1,-1,F,@I1446@
+Robert_I,Bruce,1274,1329,M,@I1447@,@I1831@,@I1830@
+Isobel of_Mar,,-1,-1,F,@I1448@,@I1818@
+Margery,Bruce,-1,1316,F,@I1449@,@I1448@,@I1447@
+Elizabeth de_Burgh,,-1,1327,F,@I1450@,@I1829@,@I1253@
+David_II,Bruce,1329,1371,M,@I1451@,@I1450@,@I1447@
+Thored,,-1,-1,M,@I1452@,@I1752@
+Margaret,Drummond,-1,1375,F,@I1453@,@I1841@
+Walter,Stewart,1292,1326,M,@I1454@
+Robert_II,,1316,1390,M,@I1455@,@I1449@,@I1454@
+Elizabeth of_Rowallan,Mure,-1,-1,F,@I1456@,@I1819@
+Robert_III,,-1,-1,M,@I1457@,@I1456@,@I1455@
+Walter,,-1,-1,M,@I1458@,@I1456@,@I1455@
+Robert,,-1,-1,M,@I1459@,@I1456@,@I1455@
+Alexander,,-1,-1,M,@I1460@,@I1456@,@I1455@
+Annabella,,-1,1401,F,@I1461@,@I1825@
+David of_Rothesay,,-1,-1,M,@I1462@,@I1461@,@I1457@
+James_I,,1394,1437,M,@I1463@,@I1461@,@I1457@
+Euphemia of_Ross,,-1,-1,F,@I1464@,@I1820@
+Joan,Beaufort,-1,1445,F,@I1465@,@I1595@,@I1329@
+James_II,,1430,1460,M,@I1466@,@I1465@,@I1463@
+Marie of_Gueldres,,-1,1463,F,@I1467@,@I1826@
+John,,1455,1513,M,@I1468@,@I1828@,@I1827@
+Margaret of_Denmark,,1457,1486,F,@I1469@,@I1828@,@I1827@
+Alexander,,1454,1485,M,@I1470@,@I1467@,@I1466@
+John,,-1,-1,M,@I1471@,@I1467@,@I1466@
+Mary,,-1,-1,F,@I1472@,@I1467@,@I1466@
+Thomas,Boyd,-1,-1,M,@I1473@
+James,Hamilton,1479,-1,M,@I1474@
+Elizabeth,,-1,-1,F,@I1475@,@I1472@,@I1474@
+James,Hamilton,1477,1529,M,@I1476@,@I1472@,@I1474@
+Matthew,Stewart,-1,-1,M,@I1477@
+John,Stewart,-1,-1,M,@I1478@,@I1475@,@I1477@
+Unknown,,-1,-1,F,@I1479@
+John,Stuart,-1,-1,M,@I1480@,@I1479@,@I1478@
+Unknown,,-1,-1,F,@I1481@
+Esme,Stuart,-1,1583,M,@I1482@,@I1481@,@I1480@
+Catherine,Sinclair,-1,-1,F,@I1483@
+John,,1484,1536,M,@I1484@,@I2865@,@I1470@
+Unknown,,-1,-1,F,@I1485@
+Murdoch,,-1,-1,M,@I1486@,@I1485@,@I1459@
+James,Stewart,-1,-1,M,@I1487@
+John,Stewart,-1,-1,M,@I1488@,@I1465@,@I1487@
+James,Stewart,-1,-1,M,@I1489@,@I1465@,@I1487@
+Andrew,Stewart,-1,-1,M,@I1490@,@I1465@,@I1487@
+Janet,Beaton,-1,1522,F,@I1491@
+James,Hamilton,1515,1575,M,@I1492@,@I1491@,@I1476@
+Margaret,Douglas,-1,-1,F,@I1493@
+James,Hamilton,-1,1609,M,@I1494@,@I1493@,@I1492@
+Blanche of_Artois,,-1,1302,F,@I1495@,@I1895@,@I1894@
+Thomas,,-1,-1,M,@I1496@,@I1495@,@I1285@
+Henry,,-1,-1,M,@I1497@,@I1495@,@I1285@
+Maud,Chaworth,-1,-1,F,@I1498@
+Henry,,-1,1361,M,@I1499@,@I1498@,@I1497@
+Isabel,de_Beaumont,-1,-1,F,@I1500@
+Philippa of_Lancaster,,1360,1415,F,@I1501@,@I1243@,@I1236@
+Elizabeth,,1364,1426,F,@I1502@,@I1243@,@I1236@
+John_I,,1357,1433,M,@I1503@
+Alice (Itayls),Hayles,-1,1326,F,@I1504@,@I1898@
+Margaret of_Liddell,Wake,-1,1349,F,@I1505@,@I1901@
+Constance of_Brittany,,-1,1201,F,@I1506@,@I1874@
+Arthur,,1187,1203,M,@I1507@,@I1506@,@I1377@
+Berengaria of_Navarre,,1163,1230,F,@I1508@,@I1872@
+Henry the_Lion,,-1,1195,M,@I1509@
+Margaret of_France,,-1,1198,F,@I1510@,@I1372@,@I1869@
+Malcolm_III Canmore,,-1,1093,M,@I1511@,@I2240@,@I2239@
+St_Margaret,,-1,1093,F,@I1512@,@I1546@,@I1545@
+Edgar,,1074,1107,M,@I1513@,@I1512@,@I1511@
+Alexander_I the_Fierce,,1078,1124,M,@I1514@,@I1512@,@I1511@
+David_I the_Saint,,1080,1153,M,@I1515@,@I1512@,@I1511@
+Mary of_Scotland,,-1,-1,F,@I1516@,@I1512@,@I1511@
+Stephen Henry,,-1,1102,M,@I1517@
+Theobald,,-1,1151,M,@I1518@,@I1388@,@I1517@
+Henry of_Winchester,,-1,-1,M,@I1519@,@I1388@,@I1517@
+Alfonso_VIII,,1155,1214,M,@I1520@,@I1748@
+Matthew of_Alsace,,-1,-1,M,@I1521@,@I1871@
+Eustace_III of_Boulogne,,-1,-1,M,@I1522@
+Isabel de_Warrenne,,-1,-1,F,@I1523@,@I1870@
+Constance of_Toulouse,,-1,-1,F,@I1524@
+Robert the_Devil,,-1,1035,M,@I1525@,@I1528@,@I1527@
+Herleva,,-1,-1,F,@I1526@
+Richard_II of_Normandy,,-1,1026,M,@I1527@,@I1531@,@I1530@
+Judith of_Brittany,,-1,-1,F,@I1528@
+Richard_III of_Normandy,,-1,1028,M,@I1529@,@I1528@,@I1527@
+Richard_I the_Fearless of_Normandy,,-1,996,M,@I1530@
+Gunnor of_Denmark,,-1,-1,F,@I1531@
+Emma of_Normandy,,-1,1052,F,@I1532@,@I1531@,@I1530@
+Ethelred_II the_Unready,,968,1016,M,@I1533@,@I1780@,@I1779@
+Edward the_Confessor,,1002,1066,M,@I1534@,@I1532@,@I1533@
+Edith (Eadgyth),,-1,1075,F,@I1535@,@I1537@,@I1536@
+Godwin,,-1,-1,M,@I1536@
+Gytha,,-1,-1,F,@I1537@
+Harold_II,,1022,1066,M,@I1538@,@I1537@,@I1536@
+Edith Swan-neck (Ealdgyth),,-1,-1,F,@I1539@,@I1774@
+Gytha,,-1,-1,F,@I1540@,@I1539@,@I1538@
+Vladimir of_Kiev,Monomakh,-1,1125,M,@I1541@
+Elfreda (Elfgiva),,-1,-1,F,@I1542@,@I1452@
+Edmund_II Ironside,,-1,1016,M,@I1543@,@I1542@,@I1533@
+Ealdgyth,,-1,-1,F,@I1544@
+Edward,Athling,1016,1057,M,@I1545@,@I1544@,@I1543@
+Agatha,,-1,-1,F,@I1546@,@I1763@
+Edgar,Athling,-1,-1,M,@I1547@,@I1546@,@I1545@
+Canute_II the_Great,,995,1035,M,@I1548@,@I1777@,@I1776@
+Elfgiva of_Northampton,,-1,-1,F,@I1549@,@I1775@
+Harold_I Harefoot,,1015,1040,M,@I1550@,@I1549@,@I1548@
+Sweyn,,-1,1036,M,@I1551@,@I1549@,@I1548@
+Hardicanute,,1018,1042,M,@I1552@,@I1532@,@I1548@
+Herluin of_Conteville,,-1,-1,M,@I1553@
+Odo of_Bayeux,,-1,1097,M,@I1554@,@I1526@,@I1553@
+Robert,,-1,-1,M,@I1555@,@I1526@,@I1553@
+Alan_IV of_Brittany,Fergant,-1,-1,M,@I1556@
+William_II the_Good,,1166,1189,M,@I1557@,@I2467@
+Raymond_VI of_Toulouse,,-1,-1,M,@I1558@
+Nicholas,Koulikovsky,1881,1958,M,@I1559@
+Tikhon,Koulikovsky,1917,-1,M,@I1560@,@I156@,@I1559@
+Goury,Koulikovsky,1919,-1,M,@I1561@,@I156@,@I1559@
+Andrew,,1897,-1,M,@I1562@,@I154@,@I2675@
+Theodore,,1898,-1,M,@I1563@,@I154@,@I2675@
+Nikita,,1900,-1,M,@I1564@,@I154@,@I2675@
+Dimitri,,1901,-1,M,@I1565@,@I154@,@I2675@
+Rostislav,,1902,-1,M,@I1566@,@I154@,@I2675@
+Vassily,,1907,-1,M,@I1567@,@I154@,@I2675@
+Alexander Alexandrovich,Romanov,1869,1870,M,@I1568@,@I41@,@I40@
+Catherine,Yourievska,1847,1922,F,@I1569@
+George,Romanov,1872,1913,M,@I1570@,@I1569@,@I44@
+Olga,Romanov,1874,1925,F,@I1571@,@I1569@,@I44@
+Catherine,Romanov,1878,1959,F,@I1572@,@I1569@,@I44@
+Alexandra,Zarnekau,1883,-1,F,@I1573@
+Alexander Alexandrovich,Romanov,1900,-1,M,@I1574@,@I1573@,@I1570@
+,von_Merenberg,1871,1948,M,@I1575@
+George,,1897,-1,M,@I1576@,@I1571@,@I1575@
+Olga,,1898,-1,F,@I1577@,@I1571@,@I1575@
+Alexander V.,Bariatinsky,1870,1910,M,@I1578@
+Andrei,Bariatinsky,1902,1931,M,@I1579@,@I1572@,@I1578@
+Alexander,Bariatinsky,1905,-1,M,@I1580@,@I1572@,@I1578@
+Serge,Obelensky,1890,-1,M,@I1581@
+Sanchia of_Provence,,1225,1261,F,@I1582@,@I1884@
+Beatrix of_Falkenburg,,1253,1277,F,@I1583@,@I1885@
+Frederick_II of_Germany,,-1,-1,M,@I1584@
+Alexander_III,,1241,1286,M,@I1585@,@I2233@,@I1886@
+John of_Dreux,,-1,-1,M,@I1586@
+Aveline de_Forz,,-1,1274,F,@I1587@,@I1893@
+Gilbert De_Clare,,-1,1295,M,@I1588@
+Ralph de_Monthermer,,-1,1305,M,@I1589@
+John_II,,-1,-1,M,@I1590@
+John_I,,-1,-1,M,@I1591@
+Humphrey De_Bohun,,-1,-1,M,@I1592@
+Mary de_Ros,,-1,-1,F,@I1593@,@I1899@
+John_V,de_Montfort,-1,1399,M,@I1594@
+Margaret,Holland,-1,1439,F,@I1595@,@I1410@,@I2058@
+Anne of_Burgundy,,-1,1432,F,@I1596@,@I2269@
+Jacqueline of_Holland,,-1,-1,F,@I1597@
+Eleanor de_Cobham,,-1,1452,F,@I1598@,@I2268@
+Ludwig_III,,-1,-1,M,@I1599@
+Eric_X of_Pomerania,,-1,-1,M,@I1600@
+Joan of_Navarre,,1370,1437,F,@I1601@,@I2267@
+William,Bourchier,-1,1420,M,@I1602@
+Anne of_Gloucester,,-1,-1,F,@I1603@,@I1343@,@I1242@
+Frederick_II of_Hesse-Cassel,,1720,1785,M,@I1604@
+Elizabeth Christine,,1715,1797,F,@I1605@,@I1606@
+Ferdinand Albert_II of_Brunswick,,1680,1735,M,@I1606@
+Margaret Alice,Bridgeman,-1,-1,F,@I1607@
+William,d'Aubigny,-1,1176,M,@I1608@
+Henri,de_Laborde,1934,-1,M,@I1609@
+Frederick,,1968,-1,M,@I1610@,@I610@,@I1609@
+Joachim,,1969,-1,M,@I1611@,@I610@,@I1609@
+Silvia Renate,Sommerlath,1943,-1,F,@I1612@,@I2445@,@I2444@
+Oscar_I,,1799,1844,M,@I1613@,@I1616@,@I1615@
+Josephine,de_Beauharnais,1807,1876,F,@I1614@,@I2436@,@I2435@
+Charles_XIV John,,1763,1844,M,@I1615@
+Desiree,,1777,1860,F,@I1616@
+Frederick_VI,,1768,1839,M,@I1617@,@I340@,@I764@
+Marie,,1767,1852,F,@I1618@,@I1640@,@I1641@
+Juliana Maria,,1729,1796,F,@I1619@
+Christian_VI,,1699,1746,M,@I1620@,@I1623@,@I1622@
+Sophie Magdalene,,1700,1770,F,@I1621@
+Frederick_IV,,1671,1730,M,@I1622@,@I1626@,@I1625@
+Louise,,1667,1721,F,@I1623@
+Anna Sophie,,1693,1743,F,@I1624@
+Christian_V,,1646,1699,M,@I1625@,@I1631@,@I1630@
+Charlotte Amelia,,1650,1714,F,@I1626@
+Christian_IV,,1577,1648,M,@I1627@,@I738@,@I737@
+Anne Catherine,,1575,1612,F,@I1628@,@I2549@,@I2274@
+Christine of_Schleswig- Holstein,,1598,1658,F,@I1629@
+Frederick_III,,1609,1670,M,@I1630@,@I1628@,@I1627@
+Sophia Amelia,,1628,1685,F,@I1631@
+Christian_III,,1503,1559,M,@I1632@,@I1635@,@I1634@
+Dorothea,,1511,1571,F,@I1633@
+Frederick_I,,1471,1533,M,@I1634@,@I1828@,@I1827@
+Anna,,1487,1547,F,@I1635@
+Sophie,,1498,1568,F,@I1636@
+Christian,,1745,1747,M,@I1637@,@I331@,@I344@
+Sophia Magdalena,,1746,1813,F,@I1638@,@I331@,@I344@
+Caroline,,1747,1820,F,@I1639@,@I331@,@I344@
+Louise,,1750,1831,F,@I1640@,@I331@,@I344@
+Charles of_Hesse-Cassel,,1744,1836,M,@I1641@
+Christian,,1791,1791,M,@I1642@,@I1618@,@I1617@
+Frederick,,1753,1805,M,@I1643@,@I1619@,@I344@
+Sophia Frederica of_Mecklenburg-,,1758,1794,F,@I1644@
+Christian_VIII,,1786,1848,M,@I1645@,@I1644@,@I1643@
+Ferdinand,,1792,1863,M,@I1646@,@I1644@,@I1643@
+Charlotte,,1784,1840,F,@I1647@
+Caroline,,1796,1881,F,@I1648@,@I1653@,@I1654@
+Frederick_VII,,1808,1863,M,@I1649@,@I1647@,@I1645@
+Wilhelmine,,1808,1891,F,@I1650@,@I1618@,@I1617@
+Caroline,,1821,1876,F,@I1651@
+Louise,Rasmussen,1815,1874,F,@I1652@
+Louise Augusta,,1771,1843,F,@I1653@,@I340@,@I764@
+Frederick Christian of_Schleswig-,,1765,1814,M,@I1654@
+Marie Louise,,1792,1793,F,@I1655@,@I1618@,@I1617@
+Caroline,,1793,1881,F,@I1656@,@I1618@,@I1617@
+Louise,,1795,1795,F,@I1657@,@I1618@,@I1617@
+Christian,,1797,1797,M,@I1658@,@I1618@,@I1617@
+Louise Juliane,,1802,1802,F,@I1659@,@I1618@,@I1617@
+Frederica Maria,,1805,1805,F,@I1660@,@I1618@,@I1617@
+Charles,,1813,1878,M,@I1661@
+Maximilian of_Austria,,1832,1867,M,@I1662@
+Valdemar,,1858,1939,M,@I1663@,@I226@,@I225@
+Harold,,1876,1949,M,@I1664@,@I605@,@I604@
+Thyra,,1880,1945,F,@I1665@,@I605@,@I604@
+Gustav,,1887,1944,M,@I1666@,@I605@,@I604@
+Dagmar,,1890,1961,F,@I1667@,@I605@,@I604@
+Jorgen,Castenskiold,1893,-1,M,@I1668@
+Helene of_Schleswig- Holstein,,1888,1962,F,@I1669@
+Caroline Mathilde,,1912,-1,F,@I1670@,@I1669@,@I1664@
+Knud,,1900,1976,M,@I1671@,@I607@,@I606@
+Benedikte,,1944,-1,F,@I1672@,@I1059@,@I608@
+Richard of_Sayn- Wittgenstein-,,1934,-1,M,@I1673@
+Elizabeth,,1935,-1,F,@I1674@,@I1670@,@I1671@
+Ingolf,,1940,-1,M,@I1675@,@I1670@,@I1671@
+Christian,,1942,-1,M,@I1676@,@I1670@,@I1671@
+Anne Dorothy Maltoft-Nielsen,,1947,-1,F,@I1677@
+William,,1840,1879,M,@I1678@,@I1077@,@I655@
+Maurice,,1843,1850,M,@I1679@,@I1077@,@I655@
+Alexander,,1851,1884,M,@I1680@,@I1077@,@I655@
+Charlotte,,1800,1806,F,@I1681@,@I559@,@I565@
+Marianne of_Netherlands,,1810,1883,F,@I1682@,@I559@,@I565@
+William,,1836,1846,M,@I1683@,@I1029@,@I653@
+Marie,,1841,1910,F,@I1684@,@I1029@,@I653@
+William of_Wied,,1845,1907,M,@I1685@
+Carlos Hugo,,1930,-1,M,@I1686@
+Peter,van_Vollenhoven,1939,-1,M,@I1687@
+Jorge,Guillermo,1946,-1,M,@I1688@
+Alexander,,1818,1848,M,@I1689@,@I654@,@I652@
+Henry,,1820,1879,M,@I1690@,@I654@,@I652@
+Ernest,,1822,1822,M,@I1691@,@I654@,@I652@
+Sophie,,1824,1897,F,@I1692@,@I654@,@I652@
+Charles Alexander of_Saxe-Weimar,,1818,1901,M,@I1693@
+John Frederick of_Brandenburg-,,-1,-1,M,@I1694@
+Amalia,,1818,1875,F,@I1695@
+Leopold_I George of_Saxe-Coburg,,1790,1865,M,@I1696@,@I2614@,@I2448@
+Leopold,,1833,1834,M,@I1697@,@I245@,@I1696@
+Leopold_II,,1835,1909,M,@I1698@,@I245@,@I1696@
+Marie Charlotte,,1840,1927,F,@I1699@,@I245@,@I1696@
+Louis Joseph,,1781,1789,M,@I1700@,@I1425@,@I1424@
+Louis_XVII,,1785,1795,M,@I1701@,@I1425@,@I1424@
+Sophie Beatrix,,1786,1787,F,@I1702@,@I1425@,@I1424@
+Marie Therese of_Angouleme,,1778,1851,F,@I1703@,@I1425@,@I1424@
+Pepin the_Hunchback,,-1,811,M,@I1704@,@I514@,@I417@
+Marie Amelie of_Bourbon,,1782,1866,F,@I1705@
+Alexander of_Mar,Ramsay,1919,-1,M,@I1706@,@I123@,@I126@
+Flora Fraser,,1930,-1,F,@I1707@
+Dorothy,Hastings,1899,-1,F,@I1708@
+,,1900,-1,M,@I1709@
+J. E.,Gibbs,1879,1932,M,@I1710@
+Henry Abel,Smith,1900,-1,M,@I1711@
+John,Spencer,1960,1960,M,@I1712@,@I93@,@I239@
+Katharine,Seymour,1900,-1,F,@I1713@,@I385@,@I384@
+James,,1904,1979,M,@I1714@,@I385@,@I384@
+Kathleen,Crichton,1905,-1,F,@I1715@
+Charles Lennox of_Richmond,,1764,1819,M,@I1716@,@I1718@,@I1717@
+George Henry Lennox,,-1,1805,M,@I1717@,@I1719@
+Louisa,Kerr,-1,1830,F,@I1718@,@I1724@
+Charles Lennox of_Richmond,,1701,1750,M,@I1719@,@I1720@
+Charles Lennox of_Richmond,,1672,1723,M,@I1720@
+Anne of_Albemarle,,-1,1789,F,@I1721@,@I1720@
+John,Russell,1766,1839,M,@I1722@,@I1723@
+Elizabeth of_Tavistock,,-1,1768,F,@I1723@,@I1721@
+Caroline of_Lothian,,-1,1778,F,@I1724@,@I1725@
+Frederica of_Holdernesse,,1688,1751,F,@I1725@,@I1727@,@I1726@
+of_Schomberg,,-1,-1,M,@I1726@
+Charlot,,1659,1696,F,@I1727@
+Richard,Bingham,1764,1839,M,@I1728@,@I1729@
+Charles,Bingham,1735,1799,M,@I1729@
+Elizabeth,Poyntz,-1,1851,F,@I1730@
+,Spencer,1835,1910,M,@I1731@,@I1730@,@I398@
+Charlotte,Seymour,-1,1903,F,@I1732@
+Delia Peel,,1889,1981,F,@I1733@,@I397@,@I396@
+Lavinia Annaly,,1899,1955,F,@I1734@,@I397@,@I396@
+John of_Althorp,Spencer,1708,1746,M,@I1735@
+William_IX of_Hesse-Cassel,,-1,-1,M,@I1736@,@I330@,@I1604@
+Ernest_II of_Saxe-Coburg- Saalfeld,,1818,1893,M,@I1737@,@I140@,@I139@
+Marie,,-1,-1,F,@I1738@
+Philip_III the_Bold,,1245,1285,M,@I1739@,@I2482@,@I1740@
+Louis_IX (St._Louis),,1214,1270,M,@I1740@,@I1742@,@I1741@
+Louis_VIII the_Lion,,1187,1226,M,@I1741@,@I2477@,@I2451@
+Blanche of_Castile,,1188,1252,F,@I1742@,@I1891@
+Charles_IV the_Fair,,1294,1328,M,@I1743@,@I2486@,@I1903@
+Edward,,-1,-1,M,@I1744@,@I1504@,@I1278@
+Beatrice,,-1,-1,F,@I1745@
+Ferdinand_III,,1199,1252,M,@I1746@,@I1747@,@I1891@
+Berengaria,,1171,1246,F,@I1747@,@I1378@,@I1520@
+Sancho_III,,1134,1158,M,@I1748@
+Alfonso_X the_Wise,,1226,1284,M,@I1749@,@I1746@
+,Unknown,-1,-1,F,@I1750@
+Sancho_IV,,1258,1296,M,@I1751@,@I1750@,@I1749@
+Gunnor,,-1,-1,M,@I1752@
+Athelstan,,-1,-1,,@I1753@,@I1542@,@I1533@
+Egbert,,-1,1005,M,@I1754@,@I1542@,@I1533@
+Edred,,-1,-1,,@I1755@,@I1542@,@I1533@
+Edwy,,-1,1017,,@I1756@,@I1542@,@I1533@
+Edward,,-1,-1,M,@I1757@,@I1542@,@I1533@
+Edgar,,-1,-1,M,@I1758@,@I1542@,@I1533@
+Edith,,-1,-1,F,@I1759@,@I1542@,@I1533@
+Elgiva,,-1,-1,F,@I1760@,@I1542@,@I1533@
+Wulfhilda,,-1,-1,F,@I1761@,@I1542@,@I1533@
+(Daughter),,-1,-1,F,@I1762@,@I1542@,@I1533@
+Stephen_I,,975,1038,M,@I1763@
+Edmund,,-1,-1,M,@I1764@,@I1544@,@I1543@
+Hedwig,,-1,-1,F,@I1765@,@I1763@
+Christina,,-1,-1,F,@I1766@,@I1546@,@I1545@
+Alfred Athling,,-1,1036,M,@I1767@,@I1532@,@I1533@
+Gunhilda,,-1,1038,F,@I1768@,@I1532@,@I1548@
+Edric of_Mercia,Streona,-1,-1,M,@I1769@
+Uchtred,,-1,-1,M,@I1770@,@I1771@
+Waltheof of Northumberland,,-1,-1,M,@I1771@
+Ulfcytel of_East_Anglia,Snylling,-1,-1,M,@I1772@
+Athelstan,,-1,-1,M,@I1773@
+Alfgar of_Mercia,,-1,-1,M,@I1774@
+Alfhelm of_Northhampton,,-1,-1,M,@I1775@
+Sweyn Forkbeard,,-1,1014,M,@I1776@
+Gunhilda,,-1,-1,F,@I1777@,@I1778@
+Mieczislaw_I of_Poland,,-1,-1,M,@I1778@
+Edgar the_Peaceful,,944,975,M,@I1779@,@I1787@,@I1786@
+Elfrida,,-1,1000,F,@I1780@,@I1785@
+Ethelfleda,,-1,-1,F,@I1781@,@I1783@
+Edward the_Martyr,,-1,-1,M,@I1782@,@I1781@,@I1779@
+Ordmaer,,-1,-1,M,@I1783@
+Edmund,,-1,970,M,@I1784@,@I1780@,@I1779@
+Ordgar of_Devon Ealdorman,,-1,-1,M,@I1785@
+Edmund_I the_Elder,,939,946,M,@I1786@,@I1793@,@I1792@
+St._Elgiva,,-1,-1,F,@I1787@
+Edwy,,-1,-1,M,@I1788@,@I1787@,@I1786@
+Elgiva,,-1,-1,F,@I1789@
+Ethelfleda of_Domerham,,-1,-1,F,@I1790@,@I1791@
+Alfgar of_Wiltshire,,-1,-1,M,@I1791@
+Edward the_Elder,,-1,924,M,@I1792@,@I1965@,@I1964@
+Edgiva,,-1,-1,F,@I1793@
+Edred,,-1,-1,M,@I1794@,@I1793@,@I1792@
+Edburh,,-1,-1,F,@I1795@,@I1793@,@I1792@
+Edgiva,,-1,-1,F,@I1796@,@I1793@,@I1792@
+Louis,,-1,-1,M,@I1797@
+Ecgwyn,,-1,-1,F,@I1798@
+Athelstan,,895,940,M,@I1799@,@I1798@,@I1792@
+Daughter,,-1,-1,F,@I1800@,@I1798@,@I1792@
+Sihtric of Northumberland,,-1,-1,M,@I1801@
+Elfleda,,-1,-1,F,@I1802@
+Ethelwerd,,-1,924,,@I1803@,@I1802@,@I1792@
+Edwin,,-1,-1,M,@I1804@,@I1802@,@I1792@
+Elfleda,,-1,-1,F,@I1805@,@I1802@,@I1792@
+Edgiva,,-1,-1,F,@I1806@,@I1802@,@I1792@
+Ethelhilda,,-1,-1,F,@I1807@,@I1802@,@I1792@
+Edhilda,,-1,-1,F,@I1808@,@I1802@,@I1792@
+Eadgyth (Edith),,-1,-1,F,@I1809@,@I1802@,@I1792@
+Elgiva,,-1,-1,F,@I1810@,@I1802@,@I1792@
+Charles the_Simple,,-1,-1,M,@I1811@
+Hugh the_Great,,-1,-1,M,@I1812@
+Otho_I the_Great,,-1,-1,M,@I1813@
+Boleslaw_II,,-1,-1,M,@I1814@
+Claude,,-1,-1,M,@I1815@
+Francis_I,,1494,1547,M,@I1816@,@I1817@,@I2524@
+Louise of_Savoy,,1476,1531,F,@I1817@
+Donald,,-1,-1,M,@I1818@
+Adam of_Rowallan,Mure,-1,-1,M,@I1819@
+Hugh,,-1,-1,M,@I1820@
+Jean,,-1,-1,F,@I1821@,@I1456@,@I1455@
+John,Keith,-1,-1,M,@I1822@
+John of_Glamis,Lyon,-1,-1,M,@I1823@
+James,Sandilands,-1,-1,M,@I1824@
+John,Drummond,-1,-1,M,@I1825@
+Arnold,,-1,-1,M,@I1826@
+Christian_I,,1426,1481,M,@I1827@
+Dorothea,,1430,1495,F,@I1828@,@I2694@
+,Unknown,-1,-1,F,@I1829@
+Robert,Bruce,-1,1304,M,@I1830@,@I1833@,@I1832@
+Margaret of_Carrick,,-1,-1,F,@I1831@
+Robert,Bruce,-1,1295,M,@I1832@,@I1836@,@I1835@
+Isobel,,-1,1254,F,@I1833@,@I1834@
+Gilbert De_Clare of_Gloucester,,-1,-1,M,@I1834@
+Robert of_Annandale,Bruce,-1,-1,M,@I1835@
+Isobel,,-1,1251,F,@I1836@,@I1838@,@I1837@
+David of_Huntingdon,,-1,1219,M,@I1837@,@I2229@,@I2228@
+Matilda,,-1,1233,F,@I1838@,@I1839@
+Hugh,Keveliock,-1,-1,M,@I1839@
+John,Logie,-1,-1,M,@I1840@
+Malcolm,Drummond,-1,-1,M,@I1841@
+Margaret,,-1,1228,F,@I1842@,@I1838@,@I1837@
+Alan,,-1,-1,M,@I1843@
+Devorguilla,,-1,1290,F,@I1844@,@I1842@,@I1843@
+John,Balliol,-1,-1,M,@I1845@
+John,Balliol,-1,1313,M,@I1846@,@I1844@,@I1845@
+Isobel,,-1,-1,F,@I1847@,@I1848@
+John de_Warenne,,-1,-1,M,@I1848@
+Edward,Balliol,-1,1363,M,@I1849@,@I1847@,@I1846@
+Baldwin_V of_Flanders,,-1,-1,M,@I1850@
+Sybilla,,-1,-1,F,@I1851@,@I1852@
+Geoffrey of_Conversano,,-1,-1,M,@I1852@
+William Clito of_Flanders,,-1,1128,M,@I1853@,@I1851@,@I1382@
+Sybil,,-1,-1,F,@I1854@,@I1855@
+Fulke,,-1,-1,M,@I1855@
+Adelicia,,-1,-1,F,@I1856@,@I1857@
+Reiner of_Montferrat,,-1,-1,M,@I1857@
+Isabella,,-1,-1,F,@I1858@,@I1855@
+Geoffrey Lower_Lorraine,,-1,-1,M,@I1859@
+Matilda,,-1,1120,F,@I1860@,@I1388@,@I1517@
+William,,-1,-1,M,@I1861@,@I1388@,@I1517@
+Agnes,,-1,-1,F,@I1862@,@I1863@
+Giles de_Sulli,,-1,-1,M,@I1863@
+Maud,,-1,-1,F,@I1864@,@I1865@
+Ingelbert of_Carinthia,,-1,-1,M,@I1865@
+Geoffrey_VI of_Anjou,,1134,1158,M,@I1866@,@I1395@,@I1405@
+William,,1136,1164,M,@I1867@,@I1395@,@I1405@
+William_X of_Aquitaine,,1099,1137,M,@I1868@
+Louis_VII the_Younger,,1121,1180,M,@I1869@,@I2453@,@I2452@
+William de_Warenne,,-1,-1,M,@I1870@
+Theodore of_Flanders,,-1,-1,M,@I1871@
+Sancho_VI,,-1,-1,M,@I1872@
+Eleanor,,-1,1241,F,@I1873@,@I1506@,@I1377@
+Conan of_Brittany,,-1,-1,M,@I1874@
+Ranulph,,-1,-1,M,@I1875@
+Guy of_Thouars,,-1,-1,M,@I1876@
+William of_Gloucester,,-1,-1,M,@I1877@
+Geoffrey de_Mandeville,,-1,-1,M,@I1878@
+Hubert de_Burgh,,-1,-1,M,@I1879@
+Hugh de_la_Marche,le_Brun,-1,-1,M,@I1880@
+Raymond of_Provence,,-1,-1,M,@I1881@
+Henry,,-1,1271,M,@I1882@,@I596@,@I1367@
+William of_Pembroke,Marshal,-1,-1,M,@I1883@
+Raymond of_Provence,Berengar,-1,-1,M,@I1884@
+William de_Fauquemont of_Montjoye,,-1,-1,M,@I1885@
+Alexander_II,,1198,1249,M,@I1886@,@I2232@,@I2231@
+Edmund,,-1,1300,M,@I1887@,@I1582@,@I1367@
+Richard,,-1,1296,M,@I1888@,@I1582@,@I1367@
+Margaret,,-1,-1,F,@I1889@,@I1890@
+Richard De_Clare of_Gloucester,,-1,-1,M,@I1890@
+Alfonso_IX,,-1,1230,M,@I1891@
+Lucienne of_Rochefort,,-1,-1,F,@I1892@
+William of_Albemarle,de_Forz,-1,-1,M,@I1893@
+Robert,,-1,-1,M,@I1894@,@I1742@,@I1741@
+,Unknown,-1,-1,F,@I1895@
+Yolande,,-1,-1,F,@I1896@,@I1897@
+Robert_IV,,-1,-1,M,@I1897@
+Roger of_Harwich,Hayles,-1,-1,M,@I1898@
+Piers De_Braose,,-1,-1,M,@I1899@
+Ralph,Cobham,-1,-1,M,@I1900@
+John,,-1,-1,M,@I1901@
+John,Comyn,-1,-1,M,@I1902@
+Philip_IV the_Fair,,1268,1314,M,@I1903@,@I2485@,@I1739@
+Roger,Mortimer,-1,1360,M,@I1904@,@I1905@
+Edmund,Mortimer,-1,-1,M,@I1905@,@I1906@
+Roger,Mortimer,-1,1330,M,@I1906@,@I1907@
+Edmund,Mortimer,-1,-1,M,@I1907@,@I1909@,@I1908@
+Roger,Mortimer,-1,-1,M,@I1908@,@I1911@,@I1910@
+Maud,,-1,-1,F,@I1909@,@I2216@,@I1919@
+Ralph,Mortimer,-1,-1,M,@I1910@
+Gwladus DDU,,-1,-1,F,@I1911@,@I1956@,@I1913@
+Reginald De_Braose,,-1,-1,M,@I1912@,@I1921@,@I1920@
+Llywelyn Fawr the_Great,,-1,-1,M,@I1913@,@I1953@
+Richard,Wellesley,-1,1842,M,@I1914@,@I1916@,@I1915@
+Garret of_Mornington,Wellesley,-1,-1,M,@I1915@
+Anne,Hill,-1,1831,F,@I1916@,@I1918@
+Arthur of_Wellington,Wellesley,-1,-1,M,@I1917@,@I1916@,@I1915@
+Arthur Dungannon,Hill,-1,-1,M,@I1918@,@I2186@
+William,De_Braose,-1,-1,M,@I1919@,@I1912@
+William,De_Braose,-1,-1,M,@I1920@
+Bertha,,-1,-1,F,@I1921@,@I1923@,@I1922@
+Miles of_Gloucester,,-1,-1,M,@I1922@
+Sybil,,-1,-1,F,@I1923@,@I1925@,@I1924@
+Bernard of_Neufmarche,,-1,-1,M,@I1924@
+Nest,,-1,-1,F,@I1925@,@I1927@,@I1926@
+Osbern Fitz Richard,,-1,-1,M,@I1926@
+Nest,,-1,-1,F,@I1927@,@I1539@,@I1928@
+Gruffydd Ap_Llywelyn,,-1,-1,M,@I1928@,@I1931@,@I1930@
+Henry_III,,1017,1056,M,@I1929@
+Llywelyn Ap_Seisyll,,-1,-1,M,@I1930@
+Angharad,,-1,-1,F,@I1931@,@I1934@
+Cynfyn of_Powys,,-1,-1,M,@I1932@
+Bleddyn,,-1,-1,M,@I1933@,@I1931@,@I1932@
+Maredudd,,-1,-1,M,@I1934@,@I1935@
+Owain,,-1,968,M,@I1935@,@I1936@
+Hywel Dda (the_Good),,-1,-1,M,@I1936@,@I1937@
+Cadell,,-1,909,M,@I1937@,@I1938@
+Rhodri Mawr (the_Great),,-1,-1,M,@I1938@
+Anarawd,,-1,-1,M,@I1939@,@I1938@
+Idwal Foel (the_Bald),,-1,942,M,@I1940@,@I1939@
+,Unknown,-1,-1,F,@I1941@
+Iago,,-1,-1,M,@I1942@,@I1941@,@I1940@
+Ieuaf (Levan),,-1,-1,M,@I1943@,@I1941@,@I1940@
+Meurig,,-1,986,M,@I1944@,@I1941@,@I1940@
+Hywel (the_Bad),,-1,-1,M,@I1945@,@I1943@
+Cadwallon,,-1,-1,M,@I1946@,@I1943@
+Cynan,,-1,-1,M,@I1947@,@I1945@
+Idwal,,-1,996,M,@I1948@,@I1944@
+Iago,,-1,-1,M,@I1949@,@I1948@
+Cynan,,-1,-1,M,@I1950@,@I1949@
+Gruffydd Ap_Cynan,,-1,-1,M,@I1951@,@I1950@
+Owain Gwynedd,,-1,-1,M,@I1952@,@I1951@
+Iorwerth Drwyndwn,,-1,-1,M,@I1953@,@I1954@,@I1952@
+,Unknown,-1,-1,F,@I1954@
+Dafydd,,-1,-1,M,@I1955@,@I1954@,@I1952@
+,Unknown,-1,-1,F,@I1956@
+Gruffydd,,-1,-1,M,@I1957@,@I1956@,@I1913@
+Dafydd,,-1,-1,M,@I1958@,@I1956@,@I1913@
+Angharad,,-1,-1,F,@I1959@,@I1956@,@I1913@
+Gwenllian,,-1,-1,F,@I1960@,@I1961@
+Llywelyn Ap_Gruffydd,,-1,-1,M,@I1961@,@I1957@
+Kathryn,,-1,-1,F,@I1962@,@I193@,@I176@
+Norissa,,-1,-1,F,@I1963@,@I193@,@I176@
+Alfred the_Great,,849,899,M,@I1964@,@I1967@,@I1966@
+Ealhswith,,-1,905,F,@I1965@,@I1981@
+Ethelwulf,,-1,858,M,@I1966@,@I1974@,@I1973@
+Osburh,,-1,846,F,@I1967@,@I1976@
+Athelstan,,-1,-1,M,@I1968@,@I1967@,@I1966@
+Ethelbald,,-1,860,M,@I1969@,@I1967@,@I1966@
+Judith,,-1,-1,F,@I1970@
+Ethelbert,,-1,866,M,@I1971@,@I1967@,@I1966@
+Ethelred_I,,-1,871,M,@I1972@,@I1967@,@I1966@
+Egbert,,-1,839,M,@I1973@,@I2054@
+Redburh,,-1,-1,F,@I1974@
+Athelstan,,-1,-1,M,@I1975@,@I1974@,@I1973@
+Oslac,,-1,-1,M,@I1976@
+Ethelswith,,-1,888,F,@I1977@,@I1967@,@I1966@
+Ethelhelm,,-1,-1,M,@I1978@,@I1972@
+Ethelwald,,-1,-1,M,@I1979@,@I1972@
+Burghred,,-1,-1,M,@I1980@
+Ethelred,Mucel,-1,-1,M,@I1981@
+Ethelwerd,,-1,922,M,@I1982@,@I1965@,@I1964@
+Elfwine,,-1,937,M,@I1983@,@I1982@
+Ethelwine,,-1,937,M,@I1984@,@I1982@
+Ethelfleda,,-1,918,F,@I1985@,@I1965@,@I1964@
+Ethelgiva of_Shaftesbury,,-1,-1,F,@I1986@,@I1965@,@I1964@
+Elfrida,,-1,-1,F,@I1987@,@I1965@,@I1964@
+Baldwin_II of_Flanders,,-1,-1,M,@I1988@
+Ethelred of_Mercia,,-1,910,M,@I1989@
+Henry_IV,,1050,1106,M,@I1990@,@I1768@,@I1929@
+Cerdic,,-1,534,M,@I1991@,@I1995@
+Cynric,,-1,560,M,@I1992@,@I1991@
+Ceawlin,,-1,593,M,@I1993@,@I1992@
+Cutha,,-1,584,M,@I1994@,@I1992@
+Elesa,,-1,-1,M,@I1995@,@I1996@
+Elsa,,-1,-1,M,@I1996@,@I1997@
+Gewis,,-1,-1,M,@I1997@,@I1998@
+Wig,,-1,-1,M,@I1998@,@I1999@
+Freawine,,-1,-1,M,@I1999@,@I2000@
+Frithogar,,-1,-1,M,@I2000@,@I2001@
+Brond,,-1,-1,M,@I2001@,@I2002@
+Baeldaeg,,-1,-1,M,@I2002@,@I2003@
+Woden,,-1,-1,M,@I2003@,@I2004@
+Frithuwald,,-1,-1,M,@I2004@,@I2005@
+Frealaf,,-1,-1,M,@I2005@,@I2006@
+Frithuwulf,,-1,-1,M,@I2006@,@I2007@
+Finn,,-1,-1,M,@I2007@,@I2008@
+Godwulf,,-1,-1,M,@I2008@,@I2009@
+Geata,,-1,-1,M,@I2009@,@I2010@
+Taetwa,,-1,-1,M,@I2010@,@I2011@
+Beaw,,-1,-1,M,@I2011@,@I2012@
+Sceldwa,,-1,-1,M,@I2012@,@I2013@
+Heremod,,-1,-1,M,@I2013@,@I2014@
+Itermon,,-1,-1,M,@I2014@,@I2015@
+Hathra,,-1,-1,M,@I2015@,@I2016@
+Hwala,,-1,-1,M,@I2016@,@I2017@
+Bedwig,,-1,-1,M,@I2017@,@I2018@
+Sceaf,,-1,-1,M,@I2018@
+Unknown,,-1,-1,F,@I2019@,@I1995@
+Stuf,,-1,-1,M,@I2020@,@I2019@
+Wihtgar Isle_of_Wight,,-1,544,M,@I2021@,@I2019@
+Ceolric,,-1,597,M,@I2022@,@I1994@
+Ceolwulf,,-1,-1,M,@I2023@,@I1994@
+Cynegils,,-1,-1,M,@I2024@,@I2022@
+Aescwine,,-1,-1,M,@I2025@,@I2026@
+Cenfus,,-1,-1,M,@I2026@,@I2027@
+Cenferth,,-1,-1,M,@I2027@,@I2028@
+Cuthgils,,-1,-1,M,@I2028@,@I2023@
+Cwichelm,,-1,636,M,@I2029@,@I2024@
+Cenwealh,,-1,-1,M,@I2030@,@I2024@
+Centwine,,-1,-1,M,@I2031@,@I2024@
+Cyneburh,,-1,-1,F,@I2032@,@I2024@
+Cuthred,,-1,-1,,@I2033@,@I2029@
+Unknown,,-1,-1,F,@I2034@
+Sexburh,,-1,-1,F,@I2035@
+Oswald of_Northumbria,,-1,-1,M,@I2036@
+Cuthwine,,-1,-1,M,@I2037@,@I1993@
+Chad,,-1,-1,M,@I2038@,@I2037@
+Cynebald,,-1,-1,M,@I2039@,@I2037@
+Cuthwulf (Cutha),,-1,-1,M,@I2040@,@I2037@
+Cenbert,,-1,661,M,@I2041@,@I2038@
+Cedwalla,,-1,689,M,@I2042@,@I2041@
+Mul,,-1,687,M,@I2043@,@I2041@
+Oswald,Atheling,-1,729,M,@I2044@,@I2045@
+Ethelbald,,-1,-1,M,@I2045@,@I2039@
+Ine,,-1,728,M,@I2046@,@I2047@
+Cenred,,-1,-1,M,@I2047@,@I2048@
+Ceolwald,,-1,-1,M,@I2048@,@I2040@
+Ethelburh,,-1,-1,F,@I2049@
+Ingild,,-1,718,M,@I2050@,@I2047@
+Cwenburh of_Wimborne,,-1,-1,F,@I2051@,@I2047@
+Cuthburh,,-1,-1,F,@I2052@,@I2047@
+Aldfrid of_Northumbria,,-1,-1,M,@I2053@
+Ealhmund of_Kent,,-1,786,M,@I2054@,@I2055@
+Eaba,,-1,-1,M,@I2055@,@I2056@
+Eoppa,,-1,-1,M,@I2056@,@I2050@
+William of_Hainault,,-1,-1,M,@I2057@
+Thomas,Holland,-1,-1,M,@I2058@
+William,de_Burgh,-1,-1,M,@I2059@
+Galeazzo,Visconti,-1,-1,M,@I2060@
+Otho of_Montferrat,,-1,-1,M,@I2061@
+Pedro_III of_Castile,,-1,-1,M,@I2062@
+Payne of_Guienne,Roet,-1,-1,M,@I2063@
+Hugh,Swynford,-1,-1,M,@I2064@
+Katherine,,-1,-1,F,@I2065@,@I1416@,@I1236@
+Henry_III,,1379,1406,M,@I2066@,@I2067@
+John_I (Juan),,1358,1390,M,@I2067@,@I2068@
+Henry_II (Enrique),,1333,1379,M,@I2068@
+Humphrey of_Hereford,De_Bohun,-1,-1,M,@I2069@
+Edmund of_Stafford,,-1,-1,M,@I2070@
+Humphrey of_Buckingham,,-1,-1,M,@I2071@,@I1343@,@I1242@
+Joan,,-1,-1,F,@I2072@,@I1343@,@I1242@
+Isabel,,-1,-1,F,@I2073@,@I1343@,@I1242@
+Isabelle of_Bavaria,,1371,1435,F,@I2074@
+Charles_VI the_Beloved,,1368,1422,M,@I2075@,@I2500@,@I2499@
+Robert,Ferrers,-1,-1,M,@I2076@
+Margaret,,-1,-1,F,@I2077@,@I2078@
+Thomas,Neville,-1,-1,M,@I2078@
+Margaret,Beaufort,-1,-1,F,@I2079@,@I1595@,@I1329@
+Thomas,Courtenay,-1,-1,M,@I2080@
+Eleanor,Beauchamp,-1,-1,F,@I2081@,@I2082@
+Richard,Beauchamp,-1,-1,M,@I2082@
+Henry,Beaufort,-1,1463,M,@I2083@,@I2081@,@I1335@
+Edmund,Beaufort,-1,1471,M,@I2084@,@I2081@,@I1335@
+John,Beaufort,-1,1471,M,@I2085@,@I2081@,@I1335@
+Eleanor,Beaufort,-1,-1,F,@I2086@,@I2081@,@I1335@
+Joan,Beaufort,-1,-1,F,@I2087@,@I2081@,@I1335@
+Anne,Beaufort,-1,-1,F,@I2088@,@I2081@,@I1335@
+Margaret,Beaufort,-1,-1,F,@I2089@,@I2081@,@I1335@
+Elizabeth,Beaufort,-1,-1,F,@I2090@,@I2081@,@I1335@
+James of_Wiltshire,Butler,-1,-1,M,@I2091@
+Robert,Spencer,-1,-1,M,@I2092@
+Robert,St._Lawrence,-1,-1,M,@I2093@
+Richard,Fry,-1,-1,M,@I2094@
+William,Paston,-1,-1,M,@I2095@
+Humphrey,,-1,-1,M,@I2096@
+Richard,Darell,-1,-1,M,@I2097@
+Henry Fitz,Lewes,-1,-1,M,@I2098@
+Thomas of_Wiltshire,Boleyn,-1,1536,M,@I2099@
+Joanna the_Mad (Juana),,1479,1555,F,@I2100@,@I841@,@I840@
+William,Cavendish,-1,-1,M,@I2101@
+Frances,Devereux,-1,1674,F,@I2102@,@I2103@
+Robert,Devereux,-1,-1,M,@I2103@
+Henry of_Cumberland,Clifford,-1,1569,M,@I2104@
+Adrian,Stokes,-1,1581,M,@I2105@
+Catherine,Grey,-1,1568,F,@I2106@,@I1427@,@I1430@
+Mary,Grey,-1,1578,F,@I2107@,@I1427@,@I1430@
+Edward,Seymour,-1,-1,M,@I2108@,@I2393@,@I2392@
+Edward Beauchamp,Seymour,-1,1612,M,@I2109@,@I2106@,@I2108@
+Thomas,Seymour,-1,1600,M,@I2110@,@I2106@,@I2108@
+Isabel,Onley,-1,-1,F,@I2111@
+Honora,Rogers,-1,-1,F,@I2112@,@I2113@
+Richard,Rogers,-1,-1,M,@I2113@
+Frederick Henry,,1614,1629,M,@I2114@,@I728@,@I735@
+Philip,,-1,1650,M,@I2115@,@I728@,@I735@
+Elizabeth of_Hervorden,,-1,1680,F,@I2116@,@I728@,@I735@
+Louisa Hollandine of_Maubisson,,-1,1709,F,@I2117@,@I728@,@I735@
+Henrietta Maria,,-1,1651,F,@I2118@,@I728@,@I735@
+Charlotte,,-1,1631,F,@I2119@,@I728@,@I735@
+William of_Hesse,Landgrave,-1,-1,M,@I2120@
+Anne,,-1,-1,F,@I2121@
+Sigismund of_Transylvania,Ragotski,-1,-1,M,@I2122@
+Frederick Augustus,,-1,1690,M,@I2123@,@I736@,@I758@
+Maximilian William,,-1,1726,M,@I2124@,@I736@,@I758@
+Charles Philip,,-1,1690,M,@I2125@,@I736@,@I758@
+Christian,,-1,1703,M,@I2126@,@I736@,@I758@
+Edward,Hyde,-1,-1,M,@I2127@
+Anna Maria,,1669,1728,F,@I2128@,@I749@,@I751@
+Victor Amadeus_II,,1666,1732,M,@I2129@
+Charles_II,,1661,1700,M,@I2130@,@I2416@,@I2131@
+Philip_IV,,1605,1665,M,@I2131@,@I1017@,@I2132@
+Philip_III,,1578,1621,M,@I2132@,@I2135@,@I870@
+Maria of_Portugal,,-1,-1,F,@I2133@
+Elizabeth of_France,,1545,1568,F,@I2134@
+Anne of_Austria,,1549,1580,F,@I2135@
+Don_Carlos,,-1,-1,M,@I2136@,@I2133@,@I870@
+James Louis,Sobieski,-1,-1,M,@I2137@,@I2138@
+John_III,Sobieski,1624,1696,M,@I2138@
+Gustavus Adolphus of_Stolberg-Ged.,,-1,-1,M,@I2139@
+George William of_Brunswick,,-1,1726,M,@I2140@
+Celle,,-1,-1,F,@I2141@
+Frederick_II of_Saxe-Gotha,,-1,-1,M,@I2142@
+Magdalena Augusta of_Anhalt-Zerbst,,-1,-1,F,@I2143@
+Edward,Walpole,-1,-1,M,@I2144@
+James Waldegrave_2nd,,-1,-1,M,@I2145@
+Sophia,,-1,1844,F,@I2146@,@I762@,@I336@
+Charles Louis Frederick,,-1,-1,M,@I2147@
+Elizabeth of_Saxe- Hildburghausen,Albertin,-1,-1,F,@I2148@
+Alfonso,,-1,-1,M,@I2149@
+Ernest of_Hohenlohe- Langenburg,,-1,-1,M,@I2150@
+of_Dalhousie XIII,,-1,-1,M,@I2151@
+Katharine Fraser,,1957,-1,F,@I2152@,@I1707@,@I1706@
+Alice,,1961,-1,F,@I2153@,@I1707@,@I1706@
+Elizabeth,,1963,-1,F,@I2154@,@I1707@,@I1706@
+Alistair Arthur of_Connaught_2nd,,-1,1943,M,@I2155@,@I125@,@I122@
+Romaine,,-1,-1,F,@I2156@
+Janet,Bryce,-1,-1,F,@I2157@
+George of_Milford_Haven,,-1,-1,M,@I2158@,@I2156@,@I504@
+Ivar,,-1,-1,M,@I2159@,@I2156@,@I504@
+of_Mount_Temple,,-1,-1,M,@I2160@
+of_Lodesborough,,-1,-1,M,@I2161@
+J. Keyes-O'Malley,Hamilton,-1,-1,M,@I2162@
+Michael Kelly Bryan,,-1,-1,M,@I2163@
+William Kemp,,-1,-1,M,@I2164@
+Robin Alexander,,-1,-1,M,@I2165@,@I509@,@I2163@
+Maelgwn Fychan,,-1,1257,M,@I2166@
+Eleanor,,-1,-1,F,@I2167@,@I1959@,@I2166@
+Maredudd Ap_Owain,,-1,1265,M,@I2168@
+Owain,,-1,1275,M,@I2169@,@I2167@,@I2168@
+Llywelyn,,-1,1309,M,@I2170@,@I2169@
+Thomas,,-1,1343,M,@I2171@,@I2170@
+Margaret,,-1,-1,F,@I2172@,@I2171@
+Tudor Fychan of_Pemmynydd,,-1,-1,M,@I2173@,@I2175@
+Maredudd (Meredith),Tudor,-1,-1,M,@I2174@,@I2172@,@I2173@
+Goronwy_Ap Tudor,,-1,1331,M,@I2175@,@I2176@
+Tudor Hen,,-1,1311,M,@I2176@,@I2177@
+Goronwy,,-1,-1,M,@I2177@,@I2179@,@I2178@
+Ednyfed Fychan,,-1,-1,M,@I2178@
+Gwenllian,,-1,1236,F,@I2179@,@I2180@
+Rhys_Ap Gruffydd,,-1,1197,M,@I2180@,@I2181@
+Gruffydd,,-1,1137,M,@I2181@,@I2182@
+Rhys_Ap Twedwr,,-1,-1,M,@I2182@,@I2183@
+Tewdwr Mawr the_Great,,-1,-1,M,@I2183@,@I2184@
+Cadell,,-1,-1,M,@I2184@,@I2185@
+Einion,,-1,984,M,@I2185@,@I1935@
+Michael of_Hillsborough,Hill,-1,-1,M,@I2186@,@I2188@,@I2187@
+William,Hill,-1,-1,M,@I2187@
+Eleanor,Boyle,-1,-1,F,@I2188@,@I2190@,@I2189@
+Michael,Boyle,-1,-1,M,@I2189@
+Mary,O'Brien,-1,-1,F,@I2190@,@I2191@
+Dermont,O'Brien,-1,1624,M,@I2191@,@I2192@
+Murrough,O'Brien,-1,1597,M,@I2192@,@I2193@
+Murrough,O'Brien,-1,1573,M,@I2193@,@I2194@
+Dermod,O'Brien,-1,1557,M,@I2194@,@I2195@
+Murrough,,-1,1551,M,@I2195@,@I2196@
+Turlough Don,,-1,-1,M,@I2196@,@I2197@
+Teige An_Chomard,,-1,-1,M,@I2197@,@I2198@
+Turlough Bog the_Soft,,-1,-1,M,@I2198@,@I2199@
+Brian_Catha An_Eanaigh,,-1,-1,M,@I2199@,@I2200@
+Mahon Moinmoy,,-1,-1,M,@I2200@,@I2201@
+Mortogh,,-1,-1,M,@I2201@,@I2202@
+Turlough,,-1,1306,M,@I2202@,@I2203@
+Teige Caeluisce,,-1,-1,M,@I2203@,@I2204@
+Conor Na_Suidane,,-1,-1,M,@I2204@,@I2205@
+Donough Cairbreach,,-1,-1,M,@I2205@,@I2207@,@I2206@
+Donnell More,,-1,1194,M,@I2206@,@I2208@
+Urlachan,,-1,-1,F,@I2207@,@I2221@
+Turlough,,-1,-1,M,@I2208@,@I2209@
+Dermot,,-1,-1,M,@I2209@,@I2210@
+Turough,,-1,-1,M,@I2210@,@I2211@
+Teige (Terence),,-1,1023,M,@I2211@,@I2212@
+Brian Boru,,-1,-1,M,@I2212@
+Dearbforgail,,-1,1080,F,@I2213@,@I2212@
+Dermot,MacMailnamo,-1,1072,M,@I2214@
+Murchad,,-1,1090,M,@I2215@,@I2213@,@I2214@
+Eva,,-1,-1,F,@I2216@,@I2218@,@I2217@
+William,Marshal,-1,-1,M,@I2217@
+Isabel,,-1,-1,F,@I2218@,@I2220@,@I2219@
+Richard (Strongbow),,-1,-1,M,@I2219@
+Aoife (Eva),,-1,-1,F,@I2220@,@I2221@
+Dermot,MacMurrough,-1,1171,M,@I2221@,@I2222@
+Enna,,-1,1126,M,@I2222@,@I2223@
+Donchad,,-1,1126,M,@I2223@,@I2215@
+Sybil,,-1,-1,F,@I2224@,@I1392@,@I1391@
+Ingibiorg,,-1,-1,F,@I2225@,@I2226@
+Finn,Arnasson,-1,-1,M,@I2226@
+Matilda,,-1,1131,F,@I2227@
+Henry of_Huntingdon,,-1,1152,M,@I2228@,@I2227@,@I1515@
+Ada,,-1,-1,F,@I2229@
+Malcolm_IV the_Maiden,,-1,-1,M,@I2230@,@I2229@,@I2228@
+Willaim_I the_Lion,,-1,-1,M,@I2231@,@I2229@,@I2228@
+Ermengarde,,-1,1234,F,@I2232@
+Mary of_Coucy,,-1,-1,F,@I2233@
+Margaret,,-1,1283,F,@I2234@,@I1283@,@I1585@
+Eric,Magnusson,-1,-1,M,@I2235@
+Margaret Maid_of_Norway,,1282,1290,F,@I2236@,@I2234@,@I2235@
+Duncan_II May-Nov,,-1,-1,M,@I2237@,@I2225@,@I1511@
+Ethelreda,,-1,-1,F,@I2238@
+Duncan_I,,-1,-1,M,@I2239@,@I2243@,@I2242@
+Sybil,,-1,-1,F,@I2240@
+Donald_III Bane,,-1,-1,M,@I2241@,@I2240@,@I2239@
+Crinan,,-1,-1,M,@I2242@
+Bethoc,,-1,-1,F,@I2243@,@I2248@
+Gillacomgan,,-1,-1,M,@I2244@
+Gruoch,,-1,-1,F,@I2245@,@I2255@
+Lulach,,-1,-1,M,@I2246@,@I2245@,@I2244@
+Macbeth,,-1,1057,M,@I2247@
+Malcolm_II,,-1,-1,M,@I2248@,@I2249@
+Kenneth_II,,-1,-1,M,@I2249@,@I2250@
+Malcolm_I,,-1,-1,M,@I2250@,@I2251@
+Donald_II,,-1,-1,M,@I2251@,@I2252@
+Constantine_II,,-1,-1,M,@I2252@,@I2261@
+Duff,,-1,-1,M,@I2253@,@I2250@
+Kenneth_III,,-1,-1,M,@I2254@,@I2253@
+Beoedhe,,-1,-1,M,@I2255@,@I2254@
+Constantine_IV,,-1,-1,M,@I2256@,@I2257@
+Colin,,-1,-1,M,@I2257@,@I2258@
+Indulf,,-1,-1,M,@I2258@,@I2259@
+Constantine_III,,-1,-1,M,@I2259@,@I2260@
+Aedh,,-1,-1,M,@I2260@,@I2261@
+Kenneth_I,MacAlpin,-1,-1,M,@I2261@,@I2265@
+Unknown_Dau.,,-1,-1,F,@I2262@,@I2261@
+Run of_Strathclyde,,-1,-1,M,@I2263@
+Eocha,,-1,-1,M,@I2264@,@I2262@,@I2263@
+Alpin,,-1,834,M,@I2265@
+Donald_I,,-1,-1,M,@I2266@,@I2265@
+Charles_II,,-1,-1,M,@I2267@
+Reynald,Cobham,-1,-1,M,@I2268@
+of_Burgandy,,-1,-1,M,@I2269@
+Peter of_Luxemburg,,-1,-1,M,@I2270@
+Richard,Woodville,-1,-1,M,@I2271@
+Rene,,-1,-1,M,@I2272@
+Thomas of_Heton,Grey,-1,-1,M,@I2273@
+Joachim Frederick of_Brandenburg,,-1,-1,M,@I2274@
+Richard,Pole,-1,-1,M,@I2275@
+John,De_La_Pole,-1,-1,M,@I2276@
+Thomas,Holland,-1,-1,M,@I2277@
+Edward,,-1,-1,M,@I2278@
+Edmund,,-1,-1,M,@I2279@
+Roger,Mortimer,-1,1409,M,@I2280@,@I1345@,@I1344@
+Eleanor,Mortimer,-1,-1,F,@I2281@,@I1345@,@I1344@
+Edward,Courtenay,-1,-1,M,@I2282@
+Edmund,Mortimer,-1,1409,M,@I2283@,@I1348@,@I1349@
+Elizabeth,Mortimer,-1,-1,F,@I2284@,@I1348@,@I1349@
+Philippa,Mortimer,-1,1401,F,@I2285@,@I1348@,@I1349@
+Henry (Hotspur),Percy,-1,-1,M,@I2286@
+Thomas,,-1,-1,M,@I2287@
+John,Hastings,-1,-1,M,@I2288@
+Richard,Fitzalan,-1,-1,M,@I2289@
+Thomas of_Basing,Poynings,-1,-1,M,@I2290@
+Charles_IV,,1316,1378,M,@I2291@
+John,Holland,-1,-1,M,@I2292@
+John,Cornwall,-1,-1,M,@I2293@
+Constance,,-1,-1,F,@I2294@,@I1337@,@I1237@
+Thomas of_Gloucester,Despencer,-1,-1,M,@I2295@
+Philippa,,-1,-1,F,@I2296@
+,Fitzwater,-1,-1,M,@I2297@
+John,Golafre,-1,-1,M,@I2298@
+Thomas,Clifford,-1,-1,M,@I2299@
+John,,-1,-1,M,@I2300@
+Hugh,Seymour,1759,1801,M,@I2301@,@I2304@,@I2303@
+Anne Horatia,Waldegrave,-1,1801,F,@I2302@
+Francis of_Hertford I,Seymour,1718,1794,M,@I2303@
+Isabella,,1726,1782,F,@I2304@,@I2306@,@I2305@
+Charles,Fitzroy,1683,1757,M,@I2305@,@I2308@,@I2307@
+Henrietta,Somerset,-1,1726,F,@I2306@
+Henry,Fitzroy,1663,1690,M,@I2307@
+Isabella,Bennett,-1,1723,F,@I2308@
+William of_Northampton,Parr,-1,-1,M,@I2309@,@I866@,@I865@
+John Northumberland,Dudley,-1,1553,M,@I2310@
+Jane,Guildford,-1,-1,F,@I2311@
+John,Dudley,-1,1554,M,@I2312@,@I2311@,@I2310@
+Ambrose,Dudley,-1,1590,M,@I2313@,@I2311@,@I2310@
+Henry,Dudley,-1,-1,M,@I2314@,@I2311@,@I2310@
+Robert of_Leicester,Dudley,-1,1588,M,@I2315@,@I2311@,@I2310@
+Jane,Dudley,-1,-1,F,@I2316@,@I2311@,@I2310@
+Mary,Dudley,-1,1586,F,@I2317@,@I2311@,@I2310@
+Catherine,Dudley,-1,-1,F,@I2318@,@I2311@,@I2310@
+Anne,Seymour,-1,1588,F,@I2319@,@I2393@,@I2392@
+Edward,Unton,-1,-1,M,@I2320@
+Anne,Whorwood,-1,1552,F,@I2321@
+Elizabeth,Talboys,-1,-1,F,@I2322@
+Anne,Russell,-1,1603,F,@I2323@
+John,Dudley,-1,-1,M,@I2324@,@I2321@,@I2313@
+Margaret,Audley,-1,1563,F,@I2325@
+Thomas,Howard,-1,1572,M,@I2326@
+Henry,Seymour,-1,-1,M,@I2327@,@I2393@,@I2392@
+Henry,Sidney,-1,1586,M,@I2328@
+Henry of_Huntington,Hastings,-1,1595,M,@I2329@
+Amy,Robsart,-1,1560,F,@I2330@
+Lettice,Knollys,-1,1634,F,@I2331@,@I2403@,@I2405@
+Henry,Herbert,-1,-1,M,@I2332@
+Thomas,Keyes,-1,1571,M,@I2333@
+Margaret,Clifford,-1,1596,F,@I2334@,@I1428@,@I2104@
+Henry,Stanley,-1,1593,M,@I2335@
+Anne,Dacre,-1,1581,F,@I2336@
+Elizabeth,Howard,-1,1512,F,@I2337@,@I2342@,@I2341@
+George Rochford,Boleyn,-1,1536,M,@I2338@,@I2337@,@I2099@
+Mary,Boleyn,-1,1544,F,@I2339@,@I2337@,@I2099@
+William,Carey,-1,1528,M,@I2340@
+Thomas,Howard,-1,1524,M,@I2341@
+Elizabeth,Tilney,-1,1497,F,@I2342@
+Thomas,Howard,-1,-1,M,@I2343@,@I2342@,@I2341@
+Anne of_York,,-1,1511,F,@I2344@
+Elizabeth,Stafford,-1,1558,F,@I2345@
+Dorothy,Troyes,-1,-1,F,@I2346@
+Agnes,Tilney,-1,1545,F,@I2347@
+William of_Effingham,Howard,-1,1572,M,@I2348@,@I2347@,@I2341@
+Dorothy,Howard,-1,-1,F,@I2349@,@I2347@,@I2341@
+Elizabeth,Howard,-1,1534,F,@I2350@,@I2347@,@I2341@
+Catherine,Broughton,-1,1531,F,@I2351@
+Margaret,Gamage,-1,1535,F,@I2352@
+Edward,Stanley,-1,1572,M,@I2353@
+Henry,Radcliffe,-1,-1,M,@I2354@
+Henry,Howard,-1,1546,M,@I2355@,@I2345@,@I2343@
+Mary,Howard,-1,-1,F,@I2356@,@I2345@,@I2343@
+Thomas,Howard,-1,1582,M,@I2357@,@I2345@,@I2343@
+Frances de_Vere,,-1,1577,F,@I2358@
+Thomas,Howard,-1,1572,M,@I2359@,@I2358@,@I2355@
+Henry of_Northhampton,Howard,-1,1614,M,@I2360@,@I2358@,@I2355@
+Catherine,Howard,-1,1596,F,@I2361@,@I2358@,@I2355@
+Jane,Howard,-1,1593,F,@I2362@,@I2358@,@I2355@
+Margaret,Howard,-1,1592,F,@I2363@,@I2358@,@I2355@
+Henry,Fitzroy,-1,1533,M,@I2364@
+Gertrude,Lyte,-1,-1,F,@I2365@
+Mary,Fitzalan,-1,1557,F,@I2366@
+Philip,Howard,-1,1595,M,@I2367@,@I2366@,@I2359@
+Anne,Dacre,-1,-1,F,@I2368@
+Thomas,Howard,-1,1646,M,@I2369@,@I2368@,@I2367@
+Aletheia,Talbot,-1,1654,F,@I2370@
+Margaret,Audley,-1,1563,F,@I2371@
+Thomas,Howard,-1,1626,M,@I2372@,@I2371@,@I2359@
+Mary,Dacre,-1,1576,F,@I2373@
+Catherine,Knyvett,-1,1633,F,@I2374@
+Theophilus,Howard,-1,1640,M,@I2375@,@I2374@,@I2372@
+Thomas of_Berkshire,Howard,-1,1669,M,@I2376@,@I2374@,@I2372@
+Henry,Howard,-1,-1,M,@I2377@,@I2374@,@I2372@
+Catherine,Howard,-1,1672,F,@I2378@,@I2374@,@I2372@
+Frances,Howard,-1,-1,F,@I2379@,@I2374@,@I2372@
+Elizabeth,Dunbar,-1,-1,F,@I2380@
+Elizabeth,Cecil,-1,-1,F,@I2381@
+Elizabeth,Bassett,-1,1643,F,@I2382@
+William of_Newcastle,Cavendish,-1,-1,M,@I2383@
+William of_Berkshire,Cecil,-1,1668,M,@I2384@
+Robert,Devereux,-1,1646,M,@I2385@
+Robert,Carr,-1,1645,M,@I2386@
+William,Howard,-1,1640,M,@I2387@,@I2371@,@I2359@
+Elizabeth,Dacre,-1,-1,F,@I2388@
+Frances,Howard,-1,1598,F,@I2389@
+Frances,Howard,-1,1639,F,@I2390@
+Ludovic of_Richmond,Stuart,-1,-1,M,@I2391@
+Edward,Seymour,-1,1552,M,@I2392@
+Anne,Stanhope,-1,1587,F,@I2393@
+Henry,Carey,-1,1596,M,@I2394@,@I2339@,@I2340@
+Catherine,Fillol,-1,-1,F,@I2395@
+Edward Beauchamp,Seymour,-1,1618,M,@I2396@,@I2112@,@I2109@
+Francis,Seymour,-1,1664,M,@I2397@,@I2112@,@I2109@
+Honora,Seymour,-1,1620,F,@I2398@,@I2112@,@I2109@
+Anne,Sackville,-1,-1,F,@I2399@
+Edward,Lewes,-1,-1,M,@I2400@
+Frances,Prynne,-1,-1,F,@I2401@
+Catherine,Lee,-1,1700,F,@I2402@
+Catherine,Carey,-1,1568,F,@I2403@,@I2339@,@I2340@
+Anne,Morgan,-1,-1,F,@I2404@
+Francis,Knollys,-1,1596,M,@I2405@
+Henry,Knollys,-1,1583,M,@I2406@,@I2403@,@I2405@
+William,Knollys,-1,1632,M,@I2407@,@I2403@,@I2405@
+Anne,Knollys,-1,-1,F,@I2408@,@I2403@,@I2405@
+Catherine,Knollys,-1,-1,F,@I2409@,@I2403@,@I2405@
+Margaret,Cave,-1,1606,F,@I2410@
+Walter,Devereux,-1,1576,M,@I2411@
+Christopher,Blount,-1,1601,M,@I2412@
+Thomas,Leighton,-1,-1,M,@I2413@
+Gerald,Fitzgerald,-1,1580,M,@I2414@
+Charles,,-1,1685,M,@I2415@,@I769@,@I765@
+Mariana of_Austria,,-1,-1,F,@I2416@,@I2417@,@I2418@
+Maria,,-1,-1,F,@I2417@,@I1017@,@I2132@
+Ferdinand_III,,1608,1657,M,@I2418@,@I2419@
+Ferdinand_II,,1578,1637,M,@I2419@
+Leopold_I,,1640,1705,M,@I2420@,@I2417@,@I2418@
+Margaret Teresa,,1651,1673,F,@I2421@,@I2416@,@I2131@
+Eleanor of_Neuburg,,-1,-1,F,@I2422@
+Louis de_France,,1661,1711,M,@I2423@,@I1420@,@I1341@
+Philip_V,,1683,1746,M,@I2424@,@I2882@,@I2423@
+Isabella Elizabeth,Farnese,1692,1766,F,@I2425@
+Louis,,1682,1712,M,@I2426@,@I2882@,@I2423@
+Maria Antonia,,-1,-1,F,@I2427@,@I2421@,@I2420@
+Maximilian Emmanuel of_Bavaria,,-1,-1,M,@I2428@
+Joseph Ferdinand,,-1,1699,M,@I2429@,@I2427@,@I2428@
+Joseph_I,,1678,1711,M,@I2430@,@I2422@,@I2420@
+Charles_VI,,1685,1740,M,@I2431@,@I2422@,@I2420@
+Maria Theresa,,-1,1780,F,@I2432@,@I2431@
+Francis_I Stephen,,1708,1765,M,@I2433@
+Joseph_II,,1741,1790,M,@I2434@,@I2432@,@I2433@
+Eugene of_Leuchtenberg,de_Beauharnais,-1,-1,M,@I2435@
+Augusta of_Bavaria,,-1,-1,F,@I2436@
+Francis Charles,,1802,1878,M,@I2437@
+Henry_II,,1519,1559,M,@I2438@,@I2440@,@I1816@
+Catherine of_Florence,de_Medici,1519,1589,F,@I2439@
+Claude of_France,,1499,1524,F,@I2440@,@I2548@,@I838@
+Margaret of_Navarre,,-1,-1,F,@I2441@,@I1817@,@I2524@
+John_II (Juan_II),,1405,1454,M,@I2442@
+Isabella of_Portugal,,-1,-1,F,@I2443@
+Walter,Sommerlath,-1,-1,M,@I2444@
+Alice,de_Toledo,-1,-1,F,@I2445@
+Victoria Ingrid Alice,,1977,-1,F,@I2446@,@I1612@,@I603@
+Carl Philip,,1979,-1,M,@I2447@,@I1612@,@I603@
+Francis Frederick of_Saxe-Coburg,,1750,1806,M,@I2448@,@I2898@,@I2897@
+Maria Henrietta,,1836,1902,F,@I2449@,@I2450@
+Joseph of_Austria,,1776,1847,M,@I2450@
+Philip_II Augustus,,1165,1223,M,@I2451@,@I2476@,@I1869@
+Louis_VI the_Fat,,1081,1137,M,@I2452@,@I2455@,@I2454@
+Adelaide of_Savoy,,-1,1154,F,@I2453@
+Philip_I the_Fair,,1052,1108,M,@I2454@,@I2535@,@I2457@
+Bertha of_Holland,,-1,1093,F,@I2455@
+Bertrada de_Montfort,,-1,-1,F,@I2456@
+Henry_I,,1008,1060,M,@I2457@,@I2459@,@I2458@
+Robert_II the_Pious,,970,1031,M,@I2458@,@I2463@
+Constance of_Arles,,-1,1032,F,@I2459@
+Hugh,,1007,1025,M,@I2460@,@I2459@,@I2458@
+Unknown,,-1,-1,F,@I2461@
+Bertha of_Burgundy,,962,-1,F,@I2462@
+Hugh,Capet,938,996,M,@I2463@
+Louis_X the_Headstrong,,1289,1316,M,@I2464@,@I2486@,@I1903@
+Philip_V the_Tall,,1294,1322,M,@I2465@,@I2486@,@I1903@
+John_I,,1316,1316,M,@I2466@,@I2487@,@I2464@
+William_I,,1120,1166,M,@I2467@,@I2468@
+Roger_II,,-1,-1,M,@I2468@
+Philip,,-1,-1,M,@I2469@,@I2453@,@I2452@
+Robert,,-1,-1,M,@I2470@,@I2453@,@I2452@
+Pierre de_Courtenay,,-1,-1,M,@I2471@,@I2453@,@I2452@
+Henry of_Beauvais,,-1,-1,M,@I2472@,@I2453@,@I2452@
+Philip,,-1,-1,M,@I2473@,@I2453@,@I2452@
+Constance of_Toulouse,,-1,-1,F,@I2474@,@I2453@,@I2452@
+Constance of_Castile,,-1,1160,F,@I2475@
+Adele of_Champagne,,-1,1206,F,@I2476@
+Isabella of_Hainault,,-1,1190,F,@I2477@
+Ingeborg,,1175,1236,F,@I2478@
+Agnes of_Meranie,,-1,1201,F,@I2479@
+Philip,Hurepel,-1,-1,M,@I2480@,@I2479@,@I2451@
+Alphonse,,-1,1271,M,@I2481@,@I1742@,@I1741@
+Margaret of_Provence,,1221,1295,F,@I2482@,@I2483@
+Raymond of_Provence,Berenger,-1,-1,M,@I2483@
+Charles of_Anjou,,-1,-1,M,@I2484@,@I1742@,@I1741@
+Mary of_Brabant,,-1,1321,F,@I2485@
+Joan of_Navarre,,1271,1305,F,@I2486@
+Clemence of_Hungary,,1293,1328,F,@I2487@,@I2488@
+Charles_I,,1288,1342,M,@I2488@,@I2489@
+Charles_II,,-1,-1,M,@I2489@
+Joan of_Burgundy,,1293,1329,F,@I2490@
+Blanche of_Burgundy,,1296,1326,F,@I2491@
+Marie of_Luxemburg,,1305,1323,F,@I2492@
+Joan of_Evreux,,-1,1371,F,@I2493@
+Philip_VI of_Valois,,1293,1350,M,@I2494@,@I2495@
+Charles de_Valois,,1270,1325,M,@I2495@
+Joan of_Burgundy,,-1,1349,F,@I2496@
+Blanche of_Navarre,,-1,1398,F,@I2497@
+John_II the_Good,,1319,1364,M,@I2498@,@I2496@,@I2494@
+Charles_V the_Wise,,1337,1380,M,@I2499@,@I2519@,@I2498@
+Joan of_Bourbon,,1338,1378,F,@I2500@
+Louis of_Beaumont,,-1,1407,M,@I2501@,@I2500@,@I2499@
+Catherine,,-1,-1,F,@I2502@,@I2500@,@I2499@
+Isabelle,,1378,1378,F,@I2503@,@I2500@,@I2499@
+Stanislaw,Leczinski,-1,-1,M,@I2504@
+Margaret of_Valois,,1553,1615,F,@I2505@
+Elizabeth,,-1,-1,F,@I2506@,@I587@,@I894@
+Charles,,1686,1714,M,@I2507@,@I2882@,@I2423@
+Clotilde of_Savoy,,-1,1805,F,@I2508@
+of_Angouleme,,1775,-1,,@I2509@,@I2508@,@I897@
+of_Berry,,1778,-1,M,@I2510@,@I2508@,@I897@
+Louis_Philippe_I,,1773,1850,M,@I2511@,@I2514@,@I2513@
+Desideria,,-1,-1,F,@I2512@
+Louis-Philippe Joseph,,-1,1793,M,@I2513@,@I2515@
+Louise Adelaide de_Penthievre,,-1,-1,F,@I2514@
+Louis-Philippe,,-1,1785,M,@I2515@,@I2516@
+Louis of_Orleans,,-1,1752,M,@I2516@,@I2919@,@I2517@
+Philippe Duc_de_Chartes,,1674,1723,M,@I2517@,@I2916@,@I751@
+Philip the_Bold,,-1,1404,M,@I2518@,@I2519@,@I2498@
+Bonne of_Luxemburg,,-1,1349,F,@I2519@
+Joan of_Valois,,-1,-1,F,@I2520@,@I2495@
+Robert of_Artois,,-1,-1,M,@I2521@
+Charles_IX,,1550,1574,M,@I2522@,@I2439@,@I2438@
+Henry_III,,1551,1589,M,@I2523@,@I2439@,@I2438@
+Charles of_Valois,,-1,-1,M,@I2524@,@I2525@
+John of_Valois,,-1,-1,M,@I2525@
+Margaretha of_Sweden,,1934,-1,F,@I2526@,@I602@,@I445@
+Birgitta of_Sweden,,1937,-1,F,@I2527@,@I602@,@I445@
+Desiree of_Sweden,,1938,-1,F,@I2528@,@I602@,@I445@
+Christina Louise Helen,,1943,-1,F,@I2529@,@I602@,@I445@
+Peter_I,,-1,1921,M,@I2530@
+Zorka of_Montenegro,,-1,1889,F,@I2531@
+George,Karageorgeovitch,-1,-1,M,@I2532@,@I2531@,@I2530@
+Robert,,-1,-1,M,@I2533@,@I2459@,@I2458@
+Hugh the_Great of_Vermandois,,-1,-1,M,@I2534@,@I2536@,@I2457@
+Anne of_Kiev,,1024,1066,F,@I2535@
+Matilda of_Germany,,-1,1044,F,@I2536@
+Charles_VII,,1403,1461,M,@I2537@,@I2074@,@I2075@
+Mary of_Anjou,,1404,1463,F,@I2538@,@I2539@
+Yolande of_Aragon,,-1,-1,F,@I2539@
+Louis_XI,,1423,1483,M,@I2540@,@I2538@,@I2537@
+Margaret of_Scotland,,1418,1445,F,@I2541@
+Charlotte of_Savoy,,1445,1483,F,@I2542@
+Charles_VIII,,1490,1498,M,@I2543@,@I2542@,@I2540@
+Anne,,1461,1522,F,@I2544@,@I2542@,@I2540@
+Anne of_Brittany,,1477,1514,F,@I2545@
+Anne of_Cleves,,-1,-1,F,@I2546@
+Joan of_Valois,,1464,1505,F,@I2547@
+Anne of_Brittany,,1476,1514,F,@I2548@
+Catherine of_Brandenburg -Kustrin,,-1,-1,F,@I2549@
+Hildegard,,757,783,F,@I2550@
+Charles,,-1,811,M,@I2551@,@I2550@,@I417@
+Pepin,,777,810,M,@I2552@,@I2550@,@I417@
+Louis_I the_Pious of_Aquitaine,,778,840,M,@I2553@,@I2550@,@I417@
+Berthe,,-1,-1,F,@I2554@,@I2550@,@I417@
+Fastrada,,-1,794,F,@I2555@
+Luitgard,,-1,800,F,@I2556@
+Bertha of_Toulouse,,-1,-1,F,@I2557@
+Irmengard of_Hesbain,,-1,-1,F,@I2558@
+Judith of_Bavaria,,-1,-1,F,@I2559@
+Lothar_I,,795,855,M,@I2560@,@I2558@,@I2553@
+Pepin_I of_Aquitaine,,-1,838,M,@I2561@,@I2558@,@I2553@
+Adelaide,,-1,-1,F,@I2562@,@I2558@,@I2553@
+Louis_II the_German,,805,876,M,@I2563@,@I2558@,@I2553@
+Charles_II the_Bald,,823,877,M,@I2564@,@I2559@,@I2553@
+Bernard,,799,818,M,@I2565@,@I2557@,@I2552@
+Irmengard,,-1,-1,F,@I2566@
+Louis_II le_Jeune,,822,875,M,@I2567@,@I2566@,@I2560@
+Lothar_II of_Lorraine,,826,868,M,@I2568@,@I2566@,@I2560@
+Charles,,-1,863,M,@I2569@,@I2566@,@I2560@
+Pepin_II of_Aquitaine,,-1,870,M,@I2570@,@I2561@
+Emma of_Bavaria,,-1,876,F,@I2571@
+Carloman,,828,880,M,@I2572@,@I2571@,@I2563@
+Louis the_Young,,-1,882,M,@I2573@,@I2571@,@I2563@
+Charles_III the_Fat,,839,887,M,@I2574@,@I2571@,@I2563@
+Ermentrude,,-1,869,F,@I2575@
+Louis_II the_Stammerer,,846,879,M,@I2576@,@I2575@,@I2564@
+Charles of_Aquitaine,,-1,866,M,@I2577@,@I2575@,@I2564@
+Carloman,,-1,876,M,@I2578@,@I2575@,@I2564@
+Judith,,-1,-1,F,@I2579@,@I2575@,@I2564@
+Ansgarde of_Burgundy,,-1,-1,F,@I2580@
+Louis_III,,863,882,M,@I2581@,@I2580@,@I2576@
+Carloman,,-1,884,M,@I2582@,@I2580@,@I2576@
+Adelaide Judith,,-1,-1,F,@I2583@
+Charles_III the_Simple,,879,929,M,@I2584@,@I2583@,@I2576@
+Eadgifu of_England,,902,-1,F,@I2585@
+Engeberge,,-1,-1,F,@I2586@
+Irmengard,,-1,-1,F,@I2587@,@I2586@,@I2567@
+Boso,,-1,887,M,@I2588@
+Louis_III the_Blind,,880,928,M,@I2589@,@I2587@,@I2588@
+Theutberga of_Valois,,-1,-1,F,@I2590@
+Waldrada,,-1,-1,F,@I2591@
+Litwinde,,-1,-1,F,@I2592@
+Arnulf,,863,899,M,@I2593@,@I2592@,@I2572@
+Oda of_Bavaria,,-1,-1,F,@I2594@
+Louis_III the_Child,,893,911,M,@I2595@,@I2594@,@I2593@
+Zwentibold,,-1,900,M,@I2596@,@I2594@,@I2593@
+Hedwige,,-1,-1,F,@I2597@,@I2594@,@I2593@
+Otto of_Saxony,,-1,-1,M,@I2598@
+Henry the_Fowler,,-1,-1,M,@I2599@,@I2597@,@I2598@
+Matilda of_Ringelheim,,-1,-1,F,@I2600@
+Bruno of_Cologne,,-1,-1,M,@I2601@,@I2600@,@I2599@
+Otto_I,,-1,-1,M,@I2602@,@I2600@,@I2599@
+Gerberge,,-1,968,F,@I2603@,@I2600@,@I2599@
+Louis_IV d'Outre-Mer,,920,954,M,@I2604@,@I2585@,@I2584@
+Lothar,,941,986,M,@I2605@,@I2603@,@I2604@
+Charles Lower_Lorraine,,954,986,M,@I2606@,@I2603@,@I2604@
+Louis_V the_Coward,,986,997,M,@I2607@,@I2605@
+Adalberon of_Rheims,,-1,1021,M,@I2608@,@I2605@
+Pepin the_Short,,714,768,M,@I2609@,@I2613@
+Bertha,,-1,783,F,@I2610@
+Carloman,,751,771,M,@I2611@,@I2610@,@I2609@
+Gerberge of_the_Lombard,,-1,-1,F,@I2612@
+Charles,Martel,686,741,M,@I2613@
+Augusta Reuss-Ebersdorf,,1757,1831,F,@I2614@,@I2896@,@I2895@
+Elisabeth of_Austria,,1554,1592,F,@I2615@
+Marie Elisabeth,,1572,1578,F,@I2616@,@I2615@,@I2522@
+Louise of_Lorraine,,1553,1601,F,@I2617@
+Isabelle of_Aragon,,1247,1271,F,@I2618@
+Marguerite of_Burgundy,,1290,1315,F,@I2619@
+Joan of_Boulogne,,1326,1361,F,@I2620@
+Magdalen of_Hochstadten,,1846,1917,F,@I2621@
+William of_Prussia,,-1,-1,M,@I2622@
+John,Loisinger,-1,-1,M,@I2623@
+Francis_II Frederick of_Mecklenburg,,1823,1883,M,@I2624@
+Josephine of_Lichtenberg,,1857,1952,F,@I2625@,@I2626@
+Philip,Bender,-1,-1,M,@I2626@
+Caroline of_Nidda,,1848,1879,F,@I2627@
+Emily of_Dornberg,,1868,1961,F,@I2628@
+Louis,,1931,1937,M,@I2629@,@I463@,@I461@
+Alexander,,1933,1937,M,@I2630@,@I463@,@I461@
+Joanna,,1936,1939,F,@I2631@,@I463@,@I461@
+Auckland L. of_Rolvenden,Geddes,-1,-1,M,@I2632@
+Maria de_las_Mercedes,,1860,1878,F,@I2633@
+Maria de_las_Mercedes,,1880,1904,F,@I2634@,@I682@,@I683@
+Maria Theresa,,1882,1912,F,@I2635@,@I682@,@I683@
+Charles of_Bourbon -Sicily,,1870,1949,M,@I2636@
+Louise,,1882,1952,F,@I2637@
+Louis de_la_Torre,Gomez-Acebo,1934,-1,M,@I2638@
+Carlos Zurita_y_Delgado,,1943,-1,M,@I2639@
+Edelmira,,1906,-1,F,@I2640@
+Martha y_Altazurra,Rocafort,-1,-1,F,@I2641@
+Maria Christina,,1911,-1,F,@I2642@,@I27@,@I409@
+Gonzalo,,1914,1934,M,@I2643@,@I27@,@I409@
+Henry C.,Marone,1895,1968,M,@I2644@
+Alexander of_Civitella- Cessi,Torlonia,1911,-1,M,@I2645@
+Emmanuela de_Dampierre,,1913,-1,F,@I2646@
+Charlotte,Tiedemann,1919,-1,F,@I2647@
+Ferdinand of_Bavaria,,1884,1958,M,@I2648@,@I2650@,@I2649@
+Louis Ferdinand of_Bavaria,,1859,1949,M,@I2649@
+Maria de_la_Paz,,1862,1946,F,@I2650@
+Adolph of_Schwarzburg- Rudolstadt,,1801,1875,M,@I2651@
+Matilda,,1826,1914,F,@I2652@
+Frederica,,1770,1819,F,@I2653@,@I651@,@I650@
+Alexandrine,,1803,1892,F,@I2654@,@I410@,@I162@
+Frederick,,1774,1799,M,@I2655@,@I651@,@I650@
+Amalia,,1830,1872,F,@I2656@
+Mary,,1855,1888,F,@I2657@
+Lucas,Streshniev,-1,1650,M,@I2658@
+Anne,Volkonska,-1,-1,F,@I2659@,@I2924@
+Theodore,,-1,1633,M,@I2660@
+Xenia,,-1,1631,F,@I2661@,@I2922@
+Anne,Leontiev,-1,1706,F,@I2662@,@I2664@,@I2663@
+Leonti,Leontiev,-1,-1,M,@I2663@
+Praskovia,Rayevska,-1,1641,F,@I2664@,@I2923@
+Nicholas,Romanov,1831,1891,M,@I2665@,@I43@,@I42@
+Michael,Romanov,1832,1909,M,@I2666@,@I43@,@I42@
+Alexandra,,1838,1900,F,@I2667@
+Cecily (Olga),,1839,1891,F,@I2668@
+Nicholas,Romanov,1859,1919,M,@I2669@,@I2668@,@I2666@
+Michael,Romanov,1861,1929,M,@I2670@,@I2668@,@I2666@
+Constantine,Romanov,1858,1915,M,@I2671@,@I354@,@I353@
+Sergius,Romanov,1869,1918,M,@I2672@,@I2668@,@I2666@
+Mary,,1876,1940,F,@I2673@,@I228@,@I227@
+George,Romanov,1863,1919,M,@I2674@,@I2668@,@I2666@
+Alexander Mikhailovich (Sandro),Romanov,1866,1933,M,@I2675@,@I2668@,@I2666@
+Sophia of_Nassau,,1868,1927,F,@I2676@
+Dimitri,Romanov,1860,1919,M,@I2677@,@I354@,@I353@
+Nadezhda,Dreyer,1861,1929,F,@I2678@
+Elizabeth,,1865,1929,F,@I2679@,@I2680@
+Maurice of_Saxe- Altenburg,,-1,-1,M,@I2680@
+Artemi,Romanov,1881,1919,M,@I2681@,@I2678@,@I165@
+Frederick Francis_II of_Mecklengb-Sch,,-1,-1,M,@I2682@
+George Bagration- Mukhranski,,-1,-1,M,@I2683@
+Ivan,Romanov,1886,1918,M,@I2684@,@I2679@,@I2671@
+Constantine,Romanov,1891,1918,M,@I2685@,@I2679@,@I2671@
+Igor,Romanov,1894,1918,M,@I2686@,@I2679@,@I2671@
+Helen,,1881,1962,F,@I2687@,@I2688@
+Peter_I,,-1,-1,M,@I2688@
+Frederick Eugene of_Wurttemberg,,1732,1797,M,@I2689@
+Dorothea of_Brandenburg -Schwedt,,1736,1798,F,@I2690@
+Christian Augustus,,1690,1747,M,@I2691@
+Joanna,,1712,1760,F,@I2692@
+Peter,Oldenburg,1908,1980,M,@I2693@,@I2839@,@I466@
+John of_Brandenburg,,-1,-1,M,@I2694@
+Frederick Francis_III Mecklenburg-Schw,,1851,1897,M,@I2695@
+Anastasia,,1860,1922,F,@I2696@
+Louise,,1875,1906,F,@I2697@,@I605@,@I604@
+Frederick of_Schaumburg -Lippe,,1868,1945,M,@I2698@
+Feodora,,1910,1975,F,@I2699@,@I1669@,@I1664@
+Alexandrine Louise,,1914,1962,F,@I2700@,@I1669@,@I1664@
+Gorm,,1919,-1,M,@I2701@,@I1669@,@I1664@
+Oluf of_Rosenborg,,1923,-1,M,@I2702@,@I1669@,@I1664@
+Helen,Dorrit,1926,-1,F,@I2703@
+Inge,Terney,1938,-1,F,@I2704@
+Charles Augustus,Haraldsen,-1,-1,M,@I2705@
+Guelph,Hanover,1947,1981,M,@I2706@,@I1037@,@I1031@
+George,Hanover,1949,-1,M,@I2707@,@I1037@,@I1031@
+Fredericka,Hanover,1954,-1,F,@I2708@,@I1037@,@I1031@
+Wilbeke,von_Gunsteren,1948,-1,F,@I2709@
+Victoria,Bee,1951,-1,F,@I2710@
+Caroline Louise,Hanover,1965,-1,F,@I2711@,@I1032@,@I1033@
+Mireille,Hanover,1971,-1,F,@I2712@,@I1032@,@I1033@
+John Kenneth,Ambler,1924,-1,M,@I2713@
+Sybilla Louise,,1965,-1,F,@I2714@,@I2526@,@I2713@
+Charles Edward,,1966,-1,M,@I2715@,@I2526@,@I2713@
+James Patrick,,1969,-1,M,@I2716@,@I2526@,@I2713@
+Johann Georg of_Hohenzollern,,1932,-1,M,@I2717@
+Carl Christian,,1962,-1,M,@I2718@,@I2527@,@I2717@
+Desiree Margaretha Victoria,,1963,-1,F,@I2719@,@I2527@,@I2717@
+Hubertus Gustaf Adolf,,1966,-1,M,@I2720@,@I2527@,@I2717@
+Nicholas,Silfverschiold,1934,-1,M,@I2721@
+Carl Otto Edmund,,1965,-1,M,@I2722@,@I2528@,@I2721@
+Christina Louise,,1966,-1,F,@I2723@,@I2528@,@I2721@
+Helene Ingeborg,,1968,-1,F,@I2724@,@I2528@,@I2721@
+Tord Gosta,Magnuson,1941,-1,M,@I2725@
+Carl Gustaf Victor,,1975,-1,M,@I2726@,@I2529@,@I2725@
+Tord Oscar Fredrik,,1977,-1,M,@I2727@,@I2529@,@I2725@
+Victor Edmund Lennart,,1980,-1,M,@I2728@,@I2529@,@I2725@
+Madeleine Therese Amelie,,1982,-1,F,@I2729@,@I1612@,@I603@
+Marianne of_Wisborg,Lindberg,1924,-1,F,@I2730@
+Lilian May of_Sweden,Davies,1915,-1,F,@I2731@
+Erika,Patzek,1911,-1,F,@I2732@
+Sonia,Robbert,1909,-1,F,@I2733@
+Elin Kerstin Margareta,Wijkmark,1910,1987,F,@I2734@
+Gunnila Martha Louise,Wachtmeister,1923,-1,F,@I2735@
+Karin Emma Louise,Nissvandt,1911,-1,F,@I2736@
+Sonja Anita Maria,Hauntz,1944,-1,F,@I2737@
+Carl Gustaf Oscar,,1911,-1,M,@I2738@,@I598@,@I597@
+Kristine,Rivelsrud,1932,-1,F,@I2739@
+Michael,,1944,-1,M,@I2740@,@I2733@,@I447@
+Christine,Wellhoefer,1947,-1,F,@I2741@
+Monica,,1948,-1,F,@I2742@,@I2734@,@I449@
+Christian,,1949,-1,M,@I2743@,@I2734@,@I449@
+Johan,Bonde,1950,-1,M,@I2744@
+Birgitta,,1933,-1,F,@I2745@,@I2736@,@I1409@
+Marie Louise,,1935,-1,F,@I2746@,@I2736@,@I1409@
+Jan,,1941,-1,M,@I2747@,@I2736@,@I1409@
+Cecilia,,1944,-1,F,@I2748@,@I2736@,@I1409@
+Friedrich,Straehl,1922,-1,M,@I2749@
+Friedrich,Straehl,1956,-1,M,@I2750@,@I2745@,@I2749@
+Andreas,Straehl,1957,-1,M,@I2751@,@I2745@,@I2749@
+Christina,Straehl,1960,-1,F,@I2752@,@I2745@,@I2749@
+Desiree,Straehl,1961,-1,F,@I2753@,@I2745@,@I2749@
+Stephan,Straehl,1964,-1,M,@I2754@,@I2745@,@I2749@
+Rudolf,Kautz,1930,-1,M,@I2755@
+Heinrich,Kautz,1957,-1,M,@I2756@,@I2746@,@I2755@
+Karin,Kautz,1958,-1,F,@I2757@,@I2746@,@I2755@
+Madeleine,Kautz,1961,-1,F,@I2758@,@I2746@,@I2755@
+Gunilla,Stampe,1941,-1,F,@I2759@
+Anna,Skarne,1944,-1,F,@I2760@
+Sophia,,1968,-1,F,@I2761@,@I2760@,@I2747@
+Annegret,Thomssen,1938,-1,F,@I2762@
+Cecilia,,1971,-1,F,@I2763@,@I2762@,@I2747@
+Maritta,Berg,1953,-1,F,@I2764@
+Son,,1977,-1,M,@I2765@,@I2764@,@I2747@
+Hans-Jorg,Baenkler,1939,-1,M,@I2766@
+Bettina,,1974,-1,F,@I2767@,@I2737@,@I1409@
+Bjorn,,1975,-1,M,@I2768@,@I2737@,@I1409@
+Catherina,,1977,-1,F,@I2769@,@I2737@,@I1409@
+Oscar,,1859,1953,M,@I2770@,@I459@,@I458@
+Eugene,,1865,1947,M,@I2771@,@I459@,@I458@
+Ebba of_Fulkila,Munck,1858,1946,F,@I2772@,@I2778@
+Maria Bernadotte,,1889,1974,F,@I2773@,@I2772@,@I2770@
+Carl Bernadotte,,1890,1977,M,@I2774@,@I2772@,@I2770@
+Sophia Bernadotte of_Wisborg,,1892,1936,F,@I2775@,@I2772@,@I2770@
+Elsa Bernadotte of_Wisborg,,1893,-1,F,@I2776@,@I2772@,@I2770@
+Folke Bernadotte,,1895,1948,M,@I2777@,@I2772@,@I2770@
+Charles of_Fulkila,Munck,-1,-1,M,@I2778@
+Marianne of_Leufsta,de_Geer,1893,-1,F,@I2779@
+Dagmar,,1916,-1,F,@I2780@,@I2779@,@I2774@
+Oscar,,1921,-1,M,@I2781@,@I2779@,@I2774@
+Catharina,,1926,-1,F,@I2782@,@I2779@,@I2774@
+Nils Magnus,von_Arbin,1910,-1,M,@I2783@
+Marianne,von_Arbin,1937,-1,F,@I2784@,@I2780@,@I2783@
+Louise,von_Arbin,1940,-1,F,@I2785@,@I2780@,@I2783@
+Catherine,von_Arbin,1946,-1,F,@I2786@,@I2780@,@I2783@
+Jeanette,von_Arbin,1951,-1,F,@I2787@,@I2780@,@I2783@
+Madeleine,von_Arbin,1955,-1,F,@I2788@,@I2780@,@I2783@
+Miles,Flach,1934,-1,M,@I2789@
+Camilla,Flach,1960,-1,F,@I2790@,@I2784@,@I2789@
+Dick,Bergstrom,1936,-1,M,@I2791@
+Therese,Bergstrom,1963,-1,F,@I2792@,@I2785@,@I2791@
+Michael,Bergstrom,1965,-1,M,@I2793@,@I2785@,@I2791@
+Johan,Ryding,1943,-1,M,@I2794@
+Gustaf,Ryding,1971,-1,M,@I2795@,@I2786@,@I2794@
+Charlotte,Ryding,1974,-1,F,@I2796@,@I2786@,@I2794@
+Esben,Coljach,1947,-1,M,@I2797@
+Ebba,Gyllenkrok,1918,-1,F,@I2798@
+Ebba,,1945,-1,F,@I2799@,@I2798@,@I2781@
+Pontus,Reutersward,1943,-1,M,@I2800@
+Gustaf,Reutersward,1971,-1,M,@I2801@,@I2799@,@I2800@
+Anna,Reutersward,1973,-1,F,@I2802@,@I2799@,@I2800@
+Gertrude,Ollen,1916,-1,F,@I2803@
+Christina,,1951,-1,F,@I2804@,@I2803@,@I2781@
+Peter,Langenskiold,1950,-1,M,@I2805@
+Birgitta,,1953,-1,F,@I2806@,@I2803@,@I2781@
+Carl,,1955,-1,M,@I2807@,@I2803@,@I2781@
+Tore,Nilert,1915,-1,M,@I2808@
+Jan,Nilert,1950,-1,M,@I2809@,@I2782@,@I2808@
+Charlotte,Nilert,1952,-1,F,@I2810@,@I2782@,@I2808@
+Anne Marie,Nilert,1954,-1,F,@I2811@,@I2782@,@I2808@
+Gerty,Borjesson,1910,-1,F,@I2812@
+Claes,,1942,-1,M,@I2813@,@I2812@,@I2774@
+Birgitta,Magnusson,1943,-1,F,@I2814@
+Carl Johann,,1970,-1,M,@I2815@,@I2814@,@I2813@
+Louise,,1973,-1,F,@I2816@,@I2814@,@I2813@
+Carl Marten,Fleetwood,1885,1966,M,@I2817@
+Hugo,Cedergren,1891,1971,M,@I2818@
+Estelle,Manville,1904,-1,F,@I2819@
+Gustaf,,1930,1966,M,@I2820@,@I2819@,@I2777@
+Folke,,1931,-1,M,@I2821@,@I2819@,@I2777@
+Fredrik Oscar,,1934,1934,M,@I2822@,@I2819@,@I2777@
+Bertil,,1925,-1,M,@I2823@,@I2819@,@I2777@
+Christine,Glahns,1932,-1,F,@I2824@
+Anna,,1956,-1,F,@I2825@,@I2824@,@I2821@
+Folke,,1958,-1,M,@I2826@,@I2824@,@I2821@
+Maria,,1962,-1,F,@I2827@,@I2824@,@I2821@
+Gunnar,,1963,-1,M,@I2828@,@I2824@,@I2821@
+Margaretha,,1899,1977,F,@I2829@,@I598@,@I597@
+Axel of_Denmark,,-1,-1,M,@I2830@
+Elsa,von_Rosen,1904,-1,F,@I2831@
+Madeline Bernadotte,,1938,-1,F,@I2832@,@I2831@,@I2738@
+Charles de_Schooten,Ullens,1927,-1,M,@I2833@
+Marie Christine,Ullens,1964,-1,F,@I2834@,@I2832@,@I2833@
+Jean Charles,Ullens,1965,-1,M,@I2835@,@I2832@,@I2833@
+Astrid,Ullens,1970,-1,F,@I2836@,@I2832@,@I2833@
+Sophie,Ullens,1972,-1,F,@I2837@,@I2832@,@I2833@
+Ann,Larsson,1921,-1,F,@I2838@
+Mary,,1882,1962,F,@I2839@,@I2840@
+Roland,Bonaparte,-1,-1,M,@I2840@
+Irene,Ovchinnikov,1904,-1,F,@I2841@
+Eugenia,Oldenburg,1910,-1,F,@I2842@,@I2839@,@I466@
+Dominic,Radziwill,1911,1976,M,@I2843@
+Raymond of_Castel,,1907,-1,M,@I2844@
+Anastasia,Stewart,1883,1923,F,@I2845@
+Francis of_Guise,,1902,1953,F,@I2846@
+Perikles Joannides,,1881,1965,M,@I2847@
+Michael,Oldenburg,1939,-1,M,@I2848@,@I2845@,@I465@
+Marina,Karella,1940,-1,F,@I2849@
+Louise,,1726,1756,F,@I2850@,@I1621@,@I1620@
+Ernest Frederick_III of_Saxe-,,1727,1780,M,@I2851@
+Gustaf_III,,1746,1792,M,@I2852@
+William_I of_Hesse-Cassel,,1743,1821,M,@I2853@
+Charles,,1680,1729,M,@I2854@,@I1626@,@I1625@
+William,,1687,1705,M,@I2855@,@I1626@,@I1625@
+Anne Sophia,,1647,1717,F,@I2856@,@I1631@,@I1630@
+Frederica,,1649,1704,F,@I2857@,@I1631@,@I1630@
+Ulrica,,1656,1693,F,@I2858@,@I1631@,@I1630@
+Charles_XI,,1655,1697,M,@I2859@
+Ulrich,,1578,1624,M,@I2860@,@I738@,@I737@
+Augusta,,1580,1639,F,@I2861@,@I738@,@I737@
+Hedwig,,1581,1641,F,@I2862@,@I738@,@I737@
+Christopher_III,,1416,1448,M,@I2863@
+Christina,,1461,1521,F,@I2864@
+Anne,de_la_Tour,1512,-1,F,@I2865@
+Alexander,,1534,-1,M,@I2866@,@I1483@,@I1470@
+James,,1476,1503,M,@I2867@,@I1469@,@I1252@
+John,,1479,1503,M,@I2868@,@I1469@,@I1252@
+Edward,,-1,1318,M,@I2869@,@I1831@,@I1830@
+Thomas,,-1,1307,M,@I2870@,@I1831@,@I1830@
+Alexander,,-1,1307,M,@I2871@,@I1831@,@I1830@
+Nigel,,-1,1306,M,@I2872@,@I1831@,@I1830@
+Isabel,,1358,-1,F,@I2873@,@I1831@,@I1830@
+Mary Christina of_Sicily,,1806,1878,F,@I2874@
+Antonia of_Sicily,,1784,1806,F,@I2875@
+Isabella of_Portugal,,1797,1818,F,@I2876@
+Mary Josepha,,1803,1829,F,@I2877@
+Charles_IV,,1748,1819,M,@I2878@,@I2881@,@I2880@
+Maria Louisa of_Parma,,1751,1819,F,@I2879@
+Charles_III,,1716,1788,M,@I2880@,@I2425@,@I2424@
+Mary Amalia,,1724,1760,F,@I2881@
+Mary Anne of_Bavaria,,1660,1690,F,@I2882@
+Mary Louise,,1688,1714,F,@I2883@
+Charles,,1540,1590,M,@I2884@
+Philip_I the_Handsome,,1478,1506,M,@I2885@
+Germaine of_Narbonne,,-1,1536,F,@I2886@
+Isabella,,1470,1498,F,@I2887@,@I841@,@I840@
+Mary,,1482,1517,F,@I2888@,@I841@,@I840@
+John,,1478,1497,M,@I2889@,@I841@,@I840@
+Alphonso of_Portugal,,1475,1491,M,@I2890@
+Emanuel,,1469,1521,M,@I2891@
+Margaret,,1480,1530,F,@I2892@
+Philibert_II,,-1,1504,M,@I2893@
+Eleanor,,1498,1558,F,@I2894@,@I2100@,@I2885@
+Henry_XXIV Reuss-Ebersdorf,,1724,1779,M,@I2895@
+Caroline Erbach-Schonberg,,1727,1795,F,@I2896@
+Ernest Frederick of_Saxe-Coburg,,1724,1800,M,@I2897@
+Sophia Antonia of_Brunswick,,1724,1802,F,@I2898@
+Michael of_Portugal,,-1,-1,M,@I2899@
+Emanuel of_Orleans,,1872,1931,M,@I2900@
+Louise,,1858,1924,F,@I2901@,@I2449@,@I1698@
+Stephanie,,1864,1945,F,@I2902@,@I2449@,@I1698@
+Clementine,,1872,1955,F,@I2903@,@I2449@,@I1698@
+Victor,,1862,1926,M,@I2904@
+Rudolph of_Austria,,1858,1889,M,@I2905@
+Elemer,,1863,1946,M,@I2906@
+Philip of_Saxe-Coburg,,1844,1921,M,@I2907@
+Sophia,,1760,1776,F,@I2908@
+Alexandrine of_Baden,,1820,1904,F,@I2909@
+Antoinette (Antonia),Kohary,1797,1862,F,@I2910@
+Louis_I of_Hesse-Darmst.,,1753,1830,M,@I2911@
+Louise of_Hesse-Darmst.,,1761,1829,F,@I2912@
+Marie Christine,,-1,1663,F,@I2913@,@I741@,@I740@
+Marie de_Bourbon,,-1,-1,F,@I2914@
+Ann Marie Louise,,1627,1693,F,@I2915@,@I2914@,@I590@
+Elizabeth Charlotte of_Bavaria,,1652,1722,F,@I2916@
+Elizabeth Charlotte,,1676,-1,F,@I2917@,@I2916@,@I751@
+Leopold Joseph de_Lorraine,,-1,-1,M,@I2918@
+Francoise Marie de_Blois,,1677,1749,F,@I2919@
+Marie Adelaide of_Savoy,,1685,1712,F,@I2920@
+Marie Louise of_Orleans,,1695,1715,F,@I2921@,@I2919@,@I2517@
+Ivan of_Shestov,,-1,-1,M,@I2922@
+Ivan,Rayevski,-1,-1,M,@I2923@
+Constantine,Volkonski,-1,-1,M,@I2924@
+Zenaida,Rashevska,1898,1963,F,@I2925@
+Felix Krzesinski,,-1,-1,M,@I2926@
+Valerian,Karnovich,-1,-1,M,@I2927@
+John,Emery,-1,-1,M,@I2928@
+Susan,Deptford,-1,-1,F,@I2929@
+Andrew,Ferguson,1978,-1,M,@I2930@,@I2929@,@I169@
+Alice,Ferguson,1980,-1,F,@I2931@,@I2929@,@I169@
+Elizabeth (Eliza),Ferguson,1985,-1,F,@I2932@,@I2929@,@I169@
+Mervyn Powerscourt,Wingfield,1880,1947,M,@I2933@,@I2935@,@I2934@
+Mervyn,Wingfield,1836,1904,M,@I2934@
+Julia,Coke,1844,1931,F,@I2935@,@I2953@
+Henry Fitzherbert,Wright,1870,1947,M,@I2936@
+Muriel,Fletcher,1873,1955,F,@I2937@,@I2939@,@I2938@
+Henry,Fletcher,1833,1879,M,@I2938@
+Harriet,Marsham,1838,1886,F,@I2939@,@I2941@,@I2940@
+Charles,Marsham,1808,1874,M,@I2940@
+Margaret -Scott,Montagu-Douglas-,1811,1836,F,@I2941@,@I2942@
+Charles of_Buccleuch,Montagu-Douglas,1772,1819,M,@I2942@,@I2950@
+Walter -Scott of_Buccleuch,Montagu-Douglas-,1806,1884,M,@I2943@,@I2942@
+William -Scott of_Buccleuch,Montagu-Douglas-,1831,1914,M,@I2944@,@I2943@
+Louisa,Hamilton,1836,1912,F,@I2945@
+Herbert -Scott,Montagu-Douglas-,1872,1944,M,@I2946@,@I2945@,@I2944@
+Margaret,Brand,1873,1948,F,@I2947@,@I2948@
+Henry,Brand,1941,1906,M,@I2948@,@I2949@
+Henry,Brand,1814,1892,M,@I2949@
+Henry of_Buccleuch,Scott,1772,1819,M,@I2950@,@I2951@
+Francis,Scott,1721,1750,M,@I2951@,@I2952@
+Francis of_Buccleuch,Scott,1695,1751,M,@I2952@
+Thomas of_Leicester,Coke,1822,1902,M,@I2953@,@I2955@,@I2954@
+Thomas of_Leicester,Coke,1754,1842,M,@I2954@
+Anne,Keppel,1803,1844,F,@I2955@,@I2956@
+William of_Albemarle,Keppel,1724,1772,M,@I2956@
+Richard,,-1,1120,M,@I2957@,@I1392@,@I1391@
+Eugenie Victoria Helena,Windsor,1990,-1,F,@I2958@,@I168@,@I60@
+Ayesha,Makim,1986,-1,F,@I2959@,@I822@,@I825@
+Paul,Mowatt,1962,-1,M,@I2960@
+,Mowatt,1990,-1,F,@I2961@,@I110@,@I2960@
+Victoria,Lockwood,1964,-1,F,@I2962@
+Kitty,,1991,-1,F,@I2963@,@I2962@,@I242@
+Olga,,-1,-1,F,@I2964@,@I1362@,@I229@
+Paul of_Yugoslavia,,-1,-1,M,@I2965@
+Son,,-1,-1,M,@I2966@,@I2964@,@I2965@
+Elizabeth,,-1,-1,F,@I2967@,@I1362@,@I229@
+Peter,Phillips,-1,-1,M,@I2968@
+Sylvana,Tomaselli,1957,-1,F,@I2969@,@I2972@,@I2971@
+John Paul,Jones,-1,-1,M,@I2970@
+Max,Tomaselli,-1,-1,M,@I2971@
+Josiane,Derners,-1,-1,F,@I2972@
+Antoinette,,-1,-1,F,@I2973@,@I2614@,@I2448@
+Sophie,,-1,-1,F,@I2974@,@I2614@,@I2448@
+Julie,,-1,-1,F,@I2975@,@I2614@,@I2448@
+Emich Karl of_Leiningen,,1762,1814,M,@I2976@
+Lucy,Lindsay-Hogg,-1,-1,F,@I2977@
+Frances,Armstrong-Jones,1979,-1,F,@I2978@,@I2977@,@I54@
+Julia,Rawlinson,-1,-1,F,@I2979@
+Athol,Schmith,-1,-1,M,@I2980@
+,Schmith,1943,-1,M,@I2981@,@I314@,@I2980@
+Erwin,Stein,-1,-1,M,@I2982@
+Sophie,,-1,-1,F,@I2983@
+Alexander (Sachie),McCorquodale,1898,-1,M,@I2984@
+Gerald,Legge,-1,-1,M,@I2985@,@I2994@
+Hugh,McCorquodale,-1,-1,M,@I2986@,@I2988@,@I2987@
+Harold,McCorquodale,-1,-1,M,@I2987@
+Gracie,,-1,-1,F,@I2988@
+Ian,McCorquodale,1937,-1,M,@I2989@,@I806@,@I2986@
+,Legge,-1,-1,,@I2990@,@I243@,@I2985@
+,Legge,-1,-1,,@I2991@,@I243@,@I2985@
+,Legge,-1,-1,,@I2992@,@I243@,@I2985@
+,Legge,-1,-1,,@I2993@,@I243@,@I2985@
+Humphrey,Legge,-1,-1,M,@I2994@
+Bertram (Bertie),Cartland,-1,1917,M,@I2995@,@I3008@,@I3007@
+Mary Hamilton (Polly),Scobell,1877,-1,F,@I2996@,@I2999@,@I3002@
+Ronald,Cartland,1907,1940,M,@I2997@,@I2996@,@I2995@
+Anthony (Tony),Cartland,1912,1940,M,@I2998@,@I2996@,@I2995@
+Edith,Palairet,-1,-1,F,@I2999@,@I3000@
+Mary Anne,Hamilton,-1,-1,F,@I3000@,@I3001@
+Andrew,Hamilton,-1,-1,M,@I3001@
+George,Scobell,-1,-1,M,@I3002@
+Melloney,Scobell,-1,-1,F,@I3003@,@I2999@,@I3002@
+,Scobell,-1,1877,M,@I3004@,@I2999@,@I3002@
+Emily,Scobell,-1,-1,F,@I3005@,@I2999@,@I3002@
+John Sanford,Scobell,1879,-1,M,@I3006@,@I2999@,@I3002@
+James,Cartland,-1,-1,M,@I3007@
+Flora,,-1,-1,F,@I3008@
+,Cartland,-1,1911,F,@I3009@,@I2996@,@I2995@
+Glen,McCorquodale,1939,-1,M,@I3010@,@I806@,@I2986@

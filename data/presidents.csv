@@ -1,0 +1,2323 @@
+first,last,birth,death,gender,id,mother,father
+Paul,Stobbe,-1,-1,M,@I2184@,,
+William Jefferson,Clinton,1946,-1,M,@I1@,@I4@,@I3@
+Hillary,Rodham,1947,-1,F,@I2@,@I12@,@I11@
+William Jefferson,Blythe,1918,1946,M,@I3@,@I10@,@I9@
+Virginia Dell,Cassidy,1923,1994,F,@I4@,@I14@,@I13@
+Roger,Clinton,1909,1967,M,@I5@,,
+Donald,Clark,-1,-1,M,@I6@,,
+Jeff,Dwire,-1,1974,M,@I7@,,
+Dick,Kelley,-1,-1,M,@I8@,,
+William Jefferson,Blythe,1884,1935,M,@I9@,@I16@,@I15@
+Lou Birchie,Ayers,1893,1946,F,@I10@,@I18@,@I17@
+Hugh Ellsworth,Rodham,-1,-1,M,@I11@,,
+Dorothy,Howell,-1,-1,F,@I12@,,
+James Eldridge,Cassidy,1898,1957,M,@I13@,@I21@,@I20@
+Edith Valeria,Grisham,1901,1968,F,@I14@,@I23@,@I22@
+Henry Patton Foote,Blythe,1851,1898,M,@I15@,@I25@,@I24@
+Frances Ellen,Hines,1857,1936,F,@I16@,@I28@,@I27@
+Simpson Green,Ayers,1820,1897,M,@I17@,@I30@,@I29@
+Hattie,Hayes,1852,1935,F,@I18@,@I32@,@I31@
+Robert Edward,Ayers,1872,1928,M,@I19@,@I18@,@I17@
+James M,Cassidy,1855,1908,M,@I20@,@I34@,@I33@
+Sarah Louisa,Russell,1858,1945,F,@I21@,@I36@,@I35@
+Lemma Newell,Grisham,1879,1954,M,@I22@,@I38@,@I37@
+Edna Earl,Adams,1878,1952,F,@I23@,@I40@,@I39@
+Thomas Jefferson,Blythe,1829,1907,M,@I24@,@I42@,@I41@
+Esther Elvira,Baum,1825,1865,F,@I25@,@I44@,@I43@
+Elizabeth Melvinia,Hines,1831,1906,F,@I26@,,
+John F.,Hines,1833,1902,M,@I27@,@I46@,@I45@
+Eliza Emily,Lockhart,1832,1904,F,@I28@,@I48@,@I47@
+Asa,Ayers,1790,1826,M,@I29@,,
+Olivia Olive,Vessells,1791,1826,F,@I30@,,
+John,Hayes,1830,-1,M,@I31@,,
+Ann,O'Meara,1825,-1,F,@I32@,,
+George Washington,Cassidy,1829,1886,M,@I33@,@I51@,@I50@
+Nancy Ann Josephine,Snelgrove,1837,1920,F,@I34@,@I53@,@I52@
+William James,Russell,1825,1897,M,@I35@,@I55@,@I54@
+Mary E.,Spradley,1828,1900,F,@I36@,@I57@,@I56@
+James B,Gresham,1843,1915,M,@I37@,@I59@,@I58@
+Hattie Rebecca,Mitchell,1858,1912,F,@I38@,@I61@,@I60@
+Martin Franklin,Adams,1851,1884,M,@I39@,@I63@,@I62@
+Sarah Jane,May,1848,1909,F,@I40@,@I65@,@I64@
+Andrew Jackson,Blythe,1801,1851,M,@I41@,,
+Jane,Patton,1808,1886,F,@I42@,,
+Moses,Baum,1804,1853,M,@I43@,,
+Mary Elizabeth,Farr,1802,1862,F,@I44@,@I2205@,@I2206@
+Elias D J,Hines,-1,1846,M,@I45@,,
+Mary Polly,Wilkinson,1808,-1,F,@I46@,,
+John W,Lockhart,1796,1842,M,@I47@,,
+Martha,Henry,1797,1879,F,@I48@,,
+Levi,Cassidy,1790,-1,M,@I50@,,
+Rachel,_____,1807,1850,F,@I51@,,
+Jesse,Snelgrove,1792,1876,M,@I52@,,
+Elizabeth,Howard,1790,1884,F,@I53@,,
+Simon,Russell,1794,1864,M,@I54@,,
+Nancy,Love,-1,1840,F,@I55@,,
+Warren C,Spradley,1803,1884,M,@I56@,,
+Elseyalcey,Malone,1800,1884,F,@I57@,,
+Moses,Grisham\grissom,1792,1880,M,@I58@,,
+Betsey,Slate,1798,1880,F,@I59@,,
+____,Mitchell,-1,-1,M,@I60@,,
+Martha,_____,1830,-1,F,@I61@,,
+Martin,Adams,1810,1886,M,@I62@,,
+Clarinda,Wilson,1821,1884,F,@I63@,,
+Benjamin,May,1812,-1,M,@I64@,,
+Clara,McBride,1822,-1,F,@I65@,,
+Chelsea,Clinton,1980,-1,F,@I66@,@I2@,@I1@
+Michael,Reagan,1829,-1,M,@I67@,,@I121@
+Catherine,Mulcahy,-1,-1,F,@I68@,,
+John,Reagan,1855,-1,M,@I69@,@I68@,@I67@
+Jennie,Cusick,1857,-1,F,@I70@,@I73@,@I72@
+John Edward,Reagan,1883,1941,M,@I71@,@I70@,@I69@
+Patrick,Cusick,1835,1870,M,@I72@,,
+Sarah,_____,1830,1870,F,@I73@,,
+Andrew,Wilson,-1,-1,M,@I74@,,
+Amelia,Glasgow,-1,-1,F,@I75@,,
+John,Wilson,1812,1879,M,@I76@,@I75@,@I74@
+Jane,Blue,1824,-1,F,@I77@,@I81@,@I80@
+Donald,Blue,-1,-1,M,@I78@,,
+Sarah,McCallum,-1,-1,F,@I79@,,
+Donald,Blue,1799,-1,M,@I80@,@I79@,@I78@
+Catherine,McFarlain,1801,-1,F,@I81@,@I85@,@I84@
+William,McFarlane,-1,-1,M,@I82@,,
+Elizabeth,Allison,-1,-1,F,@I83@,,
+John,McFarlane,-1,-1,M,@I84@,@I83@,@I82@
+Cunningham,Forsyth,-1,-1,F,@I85@,,
+Thomas,Wilson,1844,1909,M,@I86@,@I77@,@I76@
+Mary Ann,Elsey,1843,1900,F,@I87@,@I93@,@I91@
+Nelle Clyde,Wilson,1883,1962,F,@I88@,@I87@,@I86@
+Ronald Wilson,Reagan,1911,2004,M,@I89@,@I88@,@I71@
+Henry,Elsey,1776,1844,M,@I90@,,
+Robert,Elsey,1812,-1,M,@I91@,,@I90@
+John,Baker,-1,-1,M,@I92@,,
+Mary,Baker,1820,-1,F,@I93@,,@I92@
+Samuel,Luckett,-1,-1,M,@I94@,,
+Thomas,Hussey,-1,-1,M,@I95@,,
+Elizabeth,Hussey,-1,-1,F,@I96@,,@I95@
+Samuel,Luckett,1685,-1,M,@I97@,@I96@,@I94@
+Ann,Smoot,-1,-1,F,@I98@,,
+John,Middleton,-1,-1,M,@I99@,,
+Mary,Wheeler,-1,-1,F,@I100@,,
+William,Luckett,1716,1783,M,@I101@,@I98@,@I97@
+Charity,Middleton,1716,-1,F,@I102@,@I100@,@I99@
+Levi,Luckett,1762,1829,M,@I103@,@I102@,@I101@
+Letitia,Peyton,-1,1821,F,@I104@,,
+Alfred Peyton,Luckett,1801,1853,M,@I105@,@I104@,@I103@
+Susan Evaline,Hobbs,1809,1881,F,@I106@,,
+Edward Hobbs,Luckett,1828,1859,M,@I107@,@I106@,@I105@
+Ann Hartley,Murry,-1,-1,F,@I108@,,
+Charles Edward,Luckett,1859,-1,M,@I109@,@I108@,@I107@
+Benjamin,Whitlock,-1,-1,M,@I110@,,
+Elizabeth,_____,-1,-1,F,@I111@,,
+Sarah Frances,Whitlock,1849,-1,F,@I112@,@I111@,@I110@
+Edith Prescott,Luckett,1888,1987,F,@I113@,@I112@,@I109@
+John Newell,Robbins,1859,1917,M,@I114@,,
+Ann Ayers,Francis,1868,1957,F,@I115@,,
+Kenneth Seymour,Robbins,1890,-1,M,@I116@,@I115@,@I114@
+Nancy Anne Frances,Robbins,1921,2016,F,@I117@,@I113@,@I116@
+Loyal Edward,Davis,1896,1982,M,@I118@,@I2334@,@I2335@
+Patricia Ann Davis,Reagan,1952,-1,F,@I119@,@I117@,@I89@
+Ronald Prescott,Reagan,1958,-1,M,@I120@,@I117@,@I89@
+Thomas,O'Regan,-1,-1,M,@I121@,,
+John Neil,Reagan,1909,-1,M,@I122@,@I88@,@I71@
+Sarah Jane,Mayfield,1914,-1,F,@I123@,,
+Maureen Elizabeth,Reagan,1941,-1,F,@I124@,@I123@,@I89@
+Michael Edward,Reagan,1945,-1,M,@I125@,@I123@,@I89@
+Richard,Davis,1926,-1,M,@I126@,@I2337@,@I118@
+Patricia,Herzing,-1,-1,F,@I127@,@I2338@,@I2339@
+Geoffrey,Davis,-1,-1,M,@I128@,@I127@,@I126@
+Anne,Davis,-1,-1,F,@I129@,@I127@,@I126@
+Ruth Elizabeth,Hoffman,-1,-1,F,@I130@,,
+Colleen,Sterns,-1,-1,F,@I131@,,
+Cameron Michael,Reagan,1978,-1,M,@I132@,@I131@,@I125@
+Christine,Reagan,1947,1947,F,@I133@,@I123@,@I89@
+Virginia,Luckett,-1,-1,F,@I134@,@I112@,@I109@
+Audley,Galbraith,-1,-1,M,@I135@,,
+Charlotte,Galbraith,-1,-1,F,@I136@,@I134@,@I135@
+Jim,Ramage,-1,-1,M,@I137@,,
+Nancy,Ramage,-1,-1,F,@I138@,@I136@,@I137@
+Joseph,Luckett,-1,-1,M,@I139@,@I112@,@I109@
+Doria,_____,-1,-1,F,@I140@,,
+Myron,Futterman,-1,-1,M,@I141@,,
+Paul,Grilley,-1,-1,M,@I142@,,
+Dennis,Revell,-1,-1,M,@I143@,,
+Abraham,Smith,1647,1699,M,@I144@,,@I163@
+Thomas,Smith,1672,1731,M,@I145@,@I150@,@I144@
+Anthony,Smith,1723,1810,M,@I146@,@I152@,@I145@
+Judith,Smith,1751,1836,F,@I147@,@I153@,@I146@
+Jacob,Burdg,1783,1862,M,@I148@,@I147@,@I154@
+Oliver,Burdg,1821,1908,M,@I149@,@I156@,@I148@
+Margery,_____,-1,-1,F,@I150@,,
+Alathea,Dayton,-1,1714,F,@I151@,,
+Mary,Allen,1681,-1,F,@I152@,,
+Lydia,Willets,1725,-1,F,@I153@,@I175@,@I174@
+Jacob,Burdg,1743,1797,M,@I154@,@I171@,@I170@
+John,Hank,-1,-1,M,@I155@,,
+Miriam,Matthews,1786,1860,F,@I156@,@I166@,@I165@
+Jane M.,Hemingway,1824,1890,F,@I157@,@I159@,@I158@
+James,Hemingway,1801,1893,M,@I158@,@I161@,@I160@
+Hope,Malmsbury,1804,1865,F,@I159@,@I197@,@I196@
+James,Hemingway,1760,1822,M,@I160@,@I309@,@I308@
+Elizabeth,Armstrong,1757,1837,F,@I161@,@I312@,@I311@
+Abigail,Johnson,-1,1731,F,@I162@,,
+Abraham,Smith,1622,1708,M,@I163@,,
+Isaac,Smith,1656,1745,M,@I164@,,@I163@
+William,Matthews,1755,1844,M,@I165@,@I169@,@I168@
+Ann,Griffith,1754,1792,F,@I166@,@I173@,@I172@
+Sarah Brown,Widow,-1,-1,F,@I167@,,
+Oliver,Matthews,1721,1824,M,@I168@,,
+Hannah,Johns,1727,1791,F,@I169@,,
+Joseph,Burdg,-1,1782,M,@I170@,@I199@,@I198@
+Mary,Harbour,-1,-1,F,@I171@,,
+Isaac,Griffith,1720,-1,M,@I172@,@I244@,@I243@
+Ann,Burson,1720,-1,F,@I173@,,
+Timothy,Willets,1688,-1,M,@I174@,@I177@,@I176@
+Judith,_____,-1,-1,F,@I175@,,
+Hope,Willets,1651,1702,M,@I176@,,
+Mary,Langdon,-1,-1,F,@I177@,,
+Almira Park,Burdg,1849,1943,F,@I178@,@I157@,@I149@
+Franklin,Milhous,1848,1919,M,@I179@,@I195@,@I194@
+Sarah Emily,Armstrong,1850,1877,F,@I180@,,
+Hannah,Milhous,1885,1967,F,@I181@,@I178@,@I179@
+Francis Anthony,Nixon,1878,1956,M,@I182@,@I189@,@I188@
+Richard Milhous,Nixon,1913,1994,M,@I183@,@I181@,@I182@
+Patricia Thelma,Ryan,1912,1992,F,@I184@,@I2221@,@I2222@
+Patricia,Nixon,1946,-1,F,@I185@,@I184@,@I183@
+Julie,Nixon,1948,-1,F,@I186@,@I184@,@I183@
+Dwight David,Eisenhower,1948,1998,M,@I187@,@I1492@,@I1491@
+Samuel Brady,Nixon,1847,1914,M,@I188@,@I191@,@I190@
+Sarah Ann,Wadsworth,1852,1886,F,@I189@,@I193@,@I192@
+George,Nixon,1821,1863,M,@I190@,@I204@,@I203@
+Margaret Ann,Trimmer,1826,1865,F,@I191@,@I208@,@I206@
+Thomas Wiley,Wadsworth,1826,1879,M,@I192@,@I210@,@I209@
+Mary Louise,Moore,1832,1918,F,@I193@,@I212@,@I211@
+Joshua Vickers,Milhous,1820,1893,M,@I194@,@I214@,@I213@
+Elizabeth Price,Griffith,1827,1923,F,@I195@,@I216@,@I215@
+Benjamin,Malmsbury,1779,1854,M,@I196@,,@I313@
+Jane,Cattell,1780,1853,F,@I197@,@I316@,@I315@
+David,Burdg,1703,1781,M,@I198@,,
+Elizabeth,Bowne,-1,-1,F,@I199@,@I201@,@I200@
+William,Bowne,-1,-1,M,@I200@,,@I202@
+Elizabeth,_____,-1,1730,F,@I201@,,
+Samuel,Bowne,-1,-1,M,@I202@,,
+George,Nixon,1784,1860,M,@I203@,@I218@,@I217@
+Hannah,Wilson,1790,1827,F,@I204@,@I220@,@I219@
+Christine,Pence,-1,-1,F,@I205@,,
+Anthony,Trimmer,1781,1841,M,@I206@,@I222@,@I221@
+Jane,Manning,-1,-1,F,@I207@,,
+Margaret,Hunt,1804,1876,F,@I208@,@I224@,@I223@
+Robert,Wadsworth,1785,1867,M,@I209@,@I226@,@I225@
+Elizabeth,Lytle,1794,1831,F,@I210@,@I229@,@I228@
+Joseph Dickinson,Moore,1794,1860,M,@I211@,@I231@,@I230@
+Jane,Brown,1807,1886,F,@I212@,@I233@,@I232@
+William,Milhous,1783,1874,M,@I213@,@I236@,@I235@
+Martha,Vickers,1786,1873,F,@I214@,@I238@,@I237@
+Amos,Griffith,1798,1871,M,@I215@,@I240@,@I239@
+Edith,Price,1801,1873,F,@I216@,@I242@,@I241@
+George,Nixon,1751,1842,M,@I217@,@I251@,@I250@
+Sarah,Seeds,-1,-1,F,@I218@,,
+William,Wilson,1764,1837,M,@I219@,,
+Eleanor,Scothorn,1764,1819,F,@I220@,@I254@,@I252@
+Paul,Trimmer,1750,1825,M,@I221@,@I256@,@I255@
+Jane,McElwain,-1,-1,F,@I222@,@I259@,@I258@
+William,Hunt,-1,-1,M,@I223@,,
+Margaret,_____,-1,-1,F,@I224@,,
+Thomas,Wadsworth,1746,-1,M,@I225@,@I262@,@I261@
+Mary,Wiley,-1,-1,F,@I226@,,@I263@
+Elizabeth,Hayes,-1,-1,F,@I227@,,
+George,Lytle,1759,-1,M,@I228@,@I265@,@I264@
+Elizabeth,McComas,-1,-1,F,@I229@,@I267@,@I266@
+Joseph,Moore,1759,1830,M,@I230@,@I269@,@I268@
+Mary,Clemson,1763,-1,F,@I231@,@I274@,@I273@
+Isaac,Brown,1771,1853,M,@I232@,@I276@,@I275@
+Mary,Clayton,1777,1822,F,@I233@,@I249@,@I248@
+Nelly,Chenowith,-1,-1,F,@I234@,,
+William,Milhous,1738,1826,M,@I235@,@I278@,@I277@
+Hannah,Baldwin,1748,1825,F,@I236@,@I281@,@I279@
+Thomas,Vickers,1757,1829,M,@I237@,@I284@,@I283@
+Jemima,Mendenhall,1757,1851,F,@I238@,@I288@,@I287@
+Jacob,Griffith,1757,1841,M,@I239@,@I290@,@I289@
+Lydia,Hussey,1757,1843,F,@I240@,@I292@,@I291@
+Daniel,Price,1761,1846,M,@I241@,@I294@,@I293@
+Elizabeth,Hussey,1759,1847,F,@I242@,@I297@,@I295@
+Abraham,Griffith,1679,1760,M,@I243@,,@I245@
+Hannah,Lester,1685,-1,F,@I244@,@I247@,@I246@
+Howell,Griffith,-1,1709,M,@I245@,,
+Peter,Lester,-1,-1,M,@I246@,,
+Mary,Duncalf,-1,-1,F,@I247@,,
+Thomas,Clayton,-1,1813,M,@I248@,,
+Mary,_____,-1,-1,F,@I249@,,
+James,Nixon,-1,-1,M,@I250@,,
+Mary,_____,-1,-1,F,@I251@,,
+Nathan,Scothorn,1730,1764,M,@I252@,,
+Mary,Thomas,-1,-1,F,@I253@,,
+Hannah,Twiggs,-1,-1,F,@I254@,,
+Anthony,Trimmer,1724,1754,M,@I255@,,
+Elizabeth Susanna,Houshall,1723,1781,F,@I256@,,
+Moses,McElwain,-1,1760,M,@I258@,,
+Agnes,Miller,-1,-1,F,@I259@,,@I260@
+James,Miller,-1,-1,M,@I260@,,
+Thomas,Wadsworth,-1,-1,M,@I261@,,
+Rebecca,Passmore,-1,-1,F,@I262@,,
+Mathew,Wiley,1730,-1,M,@I263@,,
+Guy,Lytle,-1,1764,M,@I264@,,
+Elizabeth,Webster,-1,-1,F,@I265@,,
+Alexander,McComas,-1,-1,M,@I266@,,
+Deborah,Hartley,-1,-1,F,@I267@,,
+James,Moore,-1,1777,M,@I268@,@I271@,@I270@
+Elizabeth,Dickinson,1739,-1,F,@I269@,,
+James,Moore,-1,1759,M,@I270@,,@I272@
+Susanna,Forster,-1,-1,F,@I271@,,
+James,Moore,-1,-1,M,@I272@,,
+Thomas,Clemson,-1,1785,M,@I273@,,
+Elizabeth,Strode,-1,-1,F,@I274@,,
+Alexander,Brown,-1,1816,M,@I275@,,
+Mary,Bradford,-1,-1,F,@I276@,,
+Thomas,Milhous,1698,1770,M,@I277@,,
+Sarah,Miller,1700,1775,F,@I278@,,
+Joshua,Baldwin,1721,1800,M,@I279@,,
+Sarah,Downing,1725,1745,F,@I280@,,
+Mercy,Brown,1721,1784,F,@I281@,,
+Ann,Meredith,-1,-1,F,@I282@,,
+Thomas,Vickers,1719,1793,M,@I283@,,
+Rebecca,Dillon,-1,-1,F,@I284@,@I286@,@I285@
+Nicholas,Dillon,-1,-1,M,@I285@,,
+Mary,_____,-1,-1,F,@I286@,,
+Joshua,Mendenhall,1727,1816,M,@I287@,@I2245@,@I2246@
+Lydia,Mendenhall,1737,1815,F,@I288@,@I2203@,@I2204@
+William,Griffith,1713,1778,M,@I289@,,
+Esther,Davis,-1,-1,F,@I290@,,
+Record,Hussey,-1,1784,M,@I291@,@I296@,@I295@
+Miriam,Harry,-1,1809,F,@I292@,,
+Samuel,Price,1738,1825,M,@I293@,,
+Ann,Moore,1743,1784,F,@I294@,,
+John,Hussey,1703,1770,M,@I295@,@I299@,@I298@
+Margaret,Record,-1,-1,F,@I296@,,
+Elizabeth,_____,-1,-1,F,@I297@,,
+John,Hussey,1675,1732,M,@I298@,@I301@,@I300@
+Ann,Inskeep,-1,-1,F,@I299@,,
+John,Hussey,1634,1706,M,@I300@,@I303@,@I302@
+Rebecca,Perkins,-1,-1,F,@I301@,,
+Christopher,Hussey,1597,-1,M,@I302@,@I307@,@I306@
+Theodate,Batchiler,1602,1648,F,@I303@,,@I305@
+Ann,Mingay,-1,1680,F,@I304@,,
+Stephen,Batchiler,1561,1659,M,@I305@,,
+John,Hussey,-1,-1,M,@I306@,,
+Mary,Wood,-1,-1,F,@I307@,,
+Isaac,Hemingway,1730,1778,M,@I308@,,
+Elizabeth,Haven,1736,-1,F,@I309@,,
+Israel,Leadbetter,-1,-1,M,@I310@,,
+Ephraim,Armstrong,-1,1788,M,@I311@,,
+Elizabeth,McCulley,-1,-1,F,@I312@,,
+John,Malmsbury,-1,-1,M,@I313@,,@I314@
+John,Mulmsbury,-1,-1,M,@I314@,,
+James,Cattell,1742,1806,M,@I315@,,
+Hope,Gaskill,1743,-1,F,@I316@,,
+Abraham,Lincoln,1809,1865,M,@I317@,@I319@,@I318@
+Thomas,Lincoln,1778,1851,M,@I318@,@I321@,@I320@
+Nancy,Hanks,1784,1818,F,@I319@,@I323@,@I322@
+Abraham,Lincoln,1744,1786,M,@I320@,@I325@,@I324@
+Bathsheba,Herring,1750,1836,F,@I321@,@I327@,@I326@
+James Abraham,Hanks,1759,1810,M,@I322@,@I329@,@I328@
+Lucy,Shipley,1765,1825,F,@I323@,@I331@,@I330@
+John,Lincoln,1716,1788,M,@I324@,@I333@,@I332@
+Rebecca,Flowers,1720,1806,F,@I325@,@I335@,@I334@
+Alexander,Herring,1708,1778,M,@I326@,@I337@,@I336@
+Abigail,Harrison,1710,1780,F,@I327@,@I339@,@I338@
+Joseph,Hanks,1725,1793,M,@I328@,@I341@,@I340@
+Nanny,_____,1728,-1,F,@I329@,,
+Robert,Shipley,-1,-1,M,@I330@,@I343@,@I342@
+Sarah,_____,-1,-1,F,@I331@,,
+Mordecai,Lincoln,1686,1736,M,@I332@,@I345@,@I344@
+Hannah,Salter,-1,1727,F,@I333@,@I347@,@I346@
+Enoch,Flowers,1693,-1,M,@I334@,@I349@,@I348@
+Rebecca,Barnard,-1,-1,F,@I335@,@I351@,@I350@
+Alexander,Herring,-1,1735,M,@I336@,,
+Margaret,_____,-1,1735,F,@I337@,,
+Isaiah,Harrison,1666,1738,M,@I338@,,
+Abigail,Smith,1678,1732,F,@I339@,,
+Luke,Hanks,1686,1757,M,@I340@,@I353@,@I352@
+Elizabeth,_____,1694,-1,F,@I341@,,
+Robert,Shipley,1678,1763,M,@I342@,@I355@,@I354@
+Elizabeth,Stevens,-1,-1,F,@I343@,@I357@,@I356@
+Mordecai,Lincoln,1657,1727,M,@I344@,@I359@,@I358@
+Sarah,Jones,-1,1701,F,@I345@,@I361@,@I360@
+Richard,Salter,-1,1728,M,@I346@,,
+Sarah,Bowne,1669,1714,F,@I347@,@I363@,@I362@
+William,Flower,-1,-1,M,@I348@,,
+Elizabeth,Moris,-1,-1,F,@I349@,,
+Richard,Barnard,-1,1698,M,@I350@,,
+Frances,Lambe,-1,-1,F,@I351@,@I365@,@I364@
+William,Hanks,1650,1704,M,@I352@,@I367@,@I366@
+Sarah,Woodbridge,-1,-1,F,@I353@,,
+Adam,Shipley,1647,1698,M,@I354@,,
+Lois,Howard,1655,1725,F,@I355@,,
+Charles,Stevens,1645,1703,M,@I356@,@I369@,@I368@
+Mary Elizabeth,Connick,1645,1717,F,@I357@,,
+Samuel,Lincoln,1619,1690,M,@I358@,@I371@,@I370@
+Martha,Lyford,1625,1693,F,@I359@,@I373@,@I372@
+Abraham,Jones,1630,1717,M,@I360@,@I375@,@I374@
+Sarah,Whitman,-1,1718,F,@I361@,@I377@,@I376@
+John,Bowne,1630,1683,M,@I362@,@I379@,@I378@
+Lydia,Holmes,-1,1693,F,@I363@,@I381@,@I380@
+Richard,Lambe,-1,-1,M,@I364@,,
+Lucy,Baillie,-1,-1,F,@I365@,,
+Thomas,Hanks,-1,1674,M,@I366@,,
+Elizabeth,_____,-1,-1,F,@I367@,,
+Charles,Stevens,1615,1658,M,@I368@,,
+Susannah,Norwood,1620,-1,F,@I369@,,
+Edward,Lincoln,1575,1638,M,@I370@,@I383@,@I382@
+Bridget,Gilman,-1,-1,F,@I371@,,@I394@
+John,Lyford,-1,1634,M,@I372@,,
+Sarah,_____,-1,-1,F,@I373@,,
+Thomas,Jones,1603,1679,M,@I374@,,
+Ann,Cowdrie,1603,1657,F,@I375@,,
+John,Whitman,1603,1691,M,@I376@,,
+Ruth,Reed,1605,-1,F,@I377@,,
+William,Bowne,-1,1677,M,@I378@,,
+Anne,Laverock,-1,-1,F,@I379@,,
+Obadiah,Holmes,1608,1681,M,@I380@,,
+Katherine,Hyde,-1,-1,F,@I381@,,
+Richard,Lincoln,-1,1619,M,@I382@,@I385@,@I384@
+Elizabeth,Remching,-1,-1,F,@I383@,,
+Robert,Lincoln,-1,1556,M,@I384@,@I388@,@I387@
+Margaret,Alberye,-1,-1,F,@I385@,,
+John,Lincoln,-1,-1,M,@I386@,@I385@,@I384@
+Robert,Lincoln,-1,1543,M,@I387@,,
+_____,Bawdiven,-1,-1,F,@I388@,,
+Mary Ann,Todd,1818,1882,F,@I389@,@I2290@,@I2291@
+Robert Todd,Lincoln,1843,1926,M,@I390@,@I389@,@I317@
+Edward Baker,Lincoln,1846,1850,M,@I391@,@I389@,@I317@
+William Wallace,Lincoln,1850,1862,M,@I392@,@I389@,@I317@
+Thomas Tad,Lincoln,1853,1871,M,@I393@,@I389@,@I317@
+Edward,Gilman,-1,-1,M,@I394@,,
+George,Washington,1732,1799,M,@I395@,@I398@,@I397@
+Martha,Dandridge,1731,1802,F,@I396@,@I2314@,@I2315@
+Augustine,Washington,1693,1743,M,@I397@,@I400@,@I399@
+Mary,Ball,1708,1789,F,@I398@,@I402@,@I401@
+Lawrence,Washington,1659,1697,M,@I399@,@I404@,@I403@
+Mildred,Warner,1670,1701,F,@I400@,@I406@,@I405@
+Joseph,Ball,1649,1711,M,@I401@,@I408@,@I407@
+Mary,Bennett,-1,1720,F,@I402@,,
+John,Washington,1633,1676,M,@I403@,@I410@,@I409@
+Anne,Pope,-1,1667,F,@I404@,@I412@,@I411@
+Augustine,Warner,1642,1681,M,@I405@,@I414@,@I413@
+Mildred,Reade,1643,1686,F,@I406@,@I416@,@I415@
+William,Ball,1614,1680,M,@I407@,,
+Hannah,Atherold,1614,1694,F,@I408@,,
+Lawrence,Washington,1601,1652,M,@I409@,@I418@,@I417@
+Amphyllis,Twigden,-1,-1,F,@I410@,@I420@,@I419@
+Nathaniel,Pope,1603,1659,M,@I411@,,
+Lucy Anne,Fox,1611,1659,F,@I412@,,
+Augustine,Warner,1611,1674,M,@I413@,,
+Mary,Towneley,1614,1662,F,@I414@,@I422@,@I421@
+George,Reade,1608,1674,M,@I415@,@I424@,@I423@
+Elizabeth,Martiau,1625,1696,F,@I416@,@I426@,@I425@
+Lawrence,Washington,1568,1616,M,@I417@,@I428@,@I427@
+Margaret,Butler,1568,1652,F,@I418@,@I430@,@I429@
+John,Twigden,-1,1611,M,@I419@,@I432@,@I431@
+Anne,Dickens,-1,1637,F,@I420@,@I434@,@I433@
+Lawrence,Towneley,-1,1654,M,@I421@,@I436@,@I435@
+Jennet,Halstead,-1,-1,F,@I422@,@I438@,@I437@
+Robert,Reade,1551,1627,M,@I423@,@I440@,@I439@
+Mildred,Windebank,1584,1630,F,@I424@,@I442@,@I441@
+Nicholas,Martiau,1591,1657,M,@I425@,,
+Elizabeth Jane,Page,1593,1640,F,@I426@,,
+Robert,Washington,1544,1620,M,@I427@,@I456@,@I445@
+Elizabeth,Light,-1,1599,F,@I428@,,
+William,Butler,-1,-1,M,@I429@,@I574@,@I573@
+Margaret,Greeke,-1,-1,F,@I430@,,
+Thomas,Twigden,-1,1580,M,@I431@,,
+Amphilis,Watts,-1,1569,F,@I432@,,
+William,Dickens,-1,1582,M,@I433@,,
+Anne,Thornton,-1,-1,F,@I434@,@I1233@,@I1234@
+Lawrence,Towneley,-1,1597,M,@I435@,@I654@,@I653@
+Margaret,Hartley,-1,-1,F,@I436@,,
+John,Halstead,-1,-1,M,@I437@,,
+Mary Elizabeth,Scofield,-1,-1,F,@I438@,,
+Andrew,Reade,-1,-1,M,@I439@,,
+Alice,Cooke,-1,-1,F,@I440@,,
+Thomas,Windebank,-1,1607,M,@I441@,,
+Frances,Dymoke,-1,-1,F,@I442@,@I444@,@I443@
+Edward,Dymoke,-1,-1,M,@I443@,,
+Anne,Talboys,-1,-1,F,@I444@,@I630@,@I629@
+Lawrence,Washington,1500,1583,M,@I445@,@I447@,@I446@
+John,Washington,1478,1528,M,@I446@,@I449@,@I448@
+Margaret,Kytson,-1,-1,F,@I447@,,@I507@
+Robert,Washington,1455,1528,M,@I448@,@I451@,@I450@
+Elizabeth,Westfield,-1,-1,F,@I449@,,
+Robert,Washington,-1,1483,M,@I450@,,@I452@
+Margaret,_____,-1,-1,F,@I451@,,
+John,De Washington,1385,1423,M,@I452@,@I455@,@I454@
+Maldred,,-1,-1,M,@I453@,@I478@,@I477@
+John,De Washington,-1,1408,M,@I454@,@I458@,@I457@
+Joan,De Croft,-1,-1,F,@I455@,,
+Amy,Pargiter,-1,1564,F,@I456@,,
+Robert,De Washington,-1,1348,M,@I457@,@I460@,@I459@
+Agnes Le,Gentyl,-1,-1,F,@I458@,,
+Robert,De Washington,-1,1324,M,@I459@,@I462@,@I461@
+Joan,De Strickland,-1,-1,F,@I460@,,
+William,De Washington,-1,1290,M,@I461@,@I464@,@I463@
+Margaret,De Morville,-1,-1,F,@I462@,,
+Walter,De Washington,1212,1264,M,@I463@,@I466@,@I465@
+Joan,De Whitchester,-1,-1,F,@I464@,,
+William,De Washington,-1,1239,M,@I465@,,@I467@
+Alice,De Lexington,-1,-1,F,@I466@,,
+William,De Hertburn,1180,-1,M,@I467@,,@I469@
+Maldred,,-1,-1,M,@I468@,@I472@,@I453@
+Patric Fitz,Dolfin,-1,-1,M,@I469@,,@I471@
+Uchtred Fitz,Maldred,-1,-1,M,@I470@,,@I468@
+Dolfin Fitz,Uchtred,-1,-1,M,@I471@,,@I470@
+,Ealdgyth,-1,-1,F,@I472@,@I475@,@I474@
+Gospatrick,,-1,-1,M,@I473@,@I472@,@I453@
+Uchtred,,-1,-1,M,@I474@,,
+Elfgifu of,England,-1,-1,F,@I475@,,@I476@
+Ethelred Ii of,England,-1,1016,M,@I476@,,
+Crinan The,Thane,-1,1045,M,@I477@,,
+Bethoc of,Scotland,-1,-1,F,@I478@,,@I479@
+Malcolm Ii of,Scotland,-1,1034,M,@I479@,,
+Duncan of,Scotland,-1,1040,M,@I480@,@I478@,@I477@
+Betty,Washington,1732,1797,F,@I481@,@I398@,@I397@
+Samuel,Washington,1733,1781,M,@I482@,@I398@,@I397@
+John Augustine,Washington,1735,1787,M,@I483@,@I398@,@I397@
+Charles,Washington,1737,1799,M,@I484@,@I398@,@I397@
+Mildred,Washington,1738,1739,F,@I485@,@I398@,@I397@
+Jane,Butler,1698,1728,F,@I486@,,
+Butler,Washington,1715,1729,M,@I487@,@I486@,@I397@
+Lawrence,Washington,1717,1751,M,@I488@,@I486@,@I397@
+Augustine,Washington,1719,-1,M,@I489@,@I486@,@I397@
+Jane,Washington,1721,1734,F,@I490@,@I486@,@I397@
+Daniel Parke,Custis,1711,1757,M,@I491@,@I2316@,@I2317@
+Daniel Parke,Custis,1751,1754,M,@I492@,@I396@,@I491@
+Frances Parke,Custis,1753,1757,F,@I493@,@I396@,@I491@
+John,Custis,1754,1781,M,@I494@,@I396@,@I491@
+Martha Patsy,Custis,1756,1773,F,@I495@,@I396@,@I491@
+Sarah,Warner,-1,-1,F,@I496@,@I414@,@I413@
+Lawrence,Towneley,-1,-1,M,@I497@,,
+Alice,Towneley,-1,-1,F,@I498@,@I496@,@I497@
+John,Grymes,-1,1708,M,@I499@,,
+Charles,Grymes,1697,1753,M,@I500@,@I498@,@I499@
+Frances,Jennings,-1,-1,F,@I501@,,
+Lucy,Grymes,-1,-1,F,@I502@,@I501@,@I500@
+Henry,Lee,1728,1787,M,@I503@,,
+Henry,Lee,1756,1818,M,@I504@,@I502@,@I503@
+Anne Hill,Carter,-1,-1,F,@I505@,,
+Robert E,Lee,-1,-1,M,@I506@,@I505@,@I504@
+Robert,Kytson,-1,-1,M,@I507@,,
+Thomas,Kytson,-1,1540,M,@I508@,,@I507@
+Katherine,Kytson,-1,-1,F,@I509@,,@I508@
+John,Spencer,-1,1585,M,@I510@,,
+John,Spencer,-1,1598,M,@I511@,@I509@,@I510@
+Mary,Catlyn,-1,-1,F,@I512@,,
+Robert,Spencer,-1,1626,M,@I513@,@I512@,@I511@
+Margaret,Willoughby,-1,-1,F,@I514@,,
+William,Spencer,1591,1635,M,@I515@,@I514@,@I513@
+Penelope,Wriothesley,-1,-1,F,@I516@,,
+Henry,Spencer,1619,1642,M,@I517@,@I516@,@I515@
+Dorothy,Sydney,-1,-1,F,@I518@,,
+Robert,Spencer,1639,1701,M,@I519@,@I518@,@I517@
+Anne,Digby,-1,-1,F,@I520@,,
+Charles,Spencer,1675,1722,M,@I521@,@I520@,@I519@
+Anne,Churchill,-1,-1,F,@I522@,@I2182@,@I525@
+Charles,Spencer,,1706,1758,M,@I523@,@I522@,@I521@
+John of Althorp,Spencer,1708,1746,M,@I524@,@I522@,@I521@
+John,Churchill,1650,1722,M,@I525@,,
+Elizabeth,Trevor,-1,-1,F,@I526@,,
+George,Spencer,1738,1817,M,@I527@,@I526@,@I523@
+Caroline,Russell,-1,-1,F,@I528@,,
+George,Spencer,1766,1840,M,@I529@,@I528@,@I527@
+Susan,Stewart,-1,-1,F,@I530@,,
+George,Spencer-Churchill,1793,1857,M,@I531@,@I530@,@I529@
+Jane,Stewart,-1,-1,F,@I532@,,
+John Winston,Spencer-Churchill,1822,1883,M,@I533@,@I532@,@I531@
+Frances Anne Emily,Vane,-1,-1,F,@I534@,,
+Randolph,Churchill,1849,1895,M,@I535@,@I534@,@I533@
+Jennie,Jerome,-1,-1,F,@I536@,,
+Winston S.,Churchill,-1,-1,M,@I537@,@I536@,@I535@
+Georgina Carolina,Carteret,-1,1780,F,@I538@,,
+John,Spencer,1733,1783,M,@I539@,@I538@,@I524@
+Margaret Georgiana,Poyntz,-1,-1,F,@I540@,,
+George John,Spencer,1758,1834,M,@I541@,@I540@,@I539@
+Lavinia,Bingham,-1,1831,F,@I542@,,
+Frederick,Spencer,1798,1857,M,@I543@,@I542@,@I541@
+Adelaide Horatia Elizabeth,Seymour,1825,1877,F,@I544@,,
+Charles Robert,Spencer,1857,1922,M,@I545@,@I544@,@I543@
+Margaret,Baring,-1,-1,F,@I546@,,
+Albert Edward John Vii,Spencer,1892,1975,M,@I547@,@I546@,@I545@
+Cynthia Elinor Beatrix,Hamilton,1897,1972,F,@I548@,,
+Edward John Viii,Spencer,1924,1992,M,@I549@,@I548@,@I547@
+Frances Ruth Burke,Roche,1936,-1,F,@I550@,,
+Diana Frances,Spencer,1961,-1,F,@I551@,@I550@,@I549@
+John,Smith,-1,-1,M,@I552@,,
+Mary,Warner,-1,-1,F,@I553@,@I406@,@I405@
+Mildred,Smith,-1,-1,F,@I554@,@I553@,@I552@
+Robert,Porteus,1679,1758,M,@I555@,,
+Robert,Porteus,1705,1754,M,@I556@,@I554@,@I555@
+Judith,Cockayne,-1,-1,F,@I557@,,
+Mildred,Porteus,1743,1815,F,@I558@,@I557@,@I556@
+Robert,Hodgson,1739,1808,M,@I559@,,
+Robert Hodgson,Very,1773,1844,M,@I560@,@I558@,@I559@
+Mary,Tucker,-1,-1,F,@I561@,,
+Henrietta Mildred,Hodgson,1805,1891,F,@I562@,@I561@,@I560@
+Oswald,Smith,1794,1863,M,@I563@,,
+Frances Dora,Smith,1832,1922,F,@I564@,@I562@,@I563@
+Claude,Bowes-Lyon,1824,1904,M,@I565@,,
+Claude George,Bowes-Lyon,1855,1944,M,@I566@,@I564@,@I565@
+Nina Cecilia,Cavendish-Bentin,1862,1938,F,@I567@,,
+Elizabeth Angela Marguerite,Bowes-Lyon,1900,-1,F,@I568@,@I567@,@I566@
+George Vi,Windsor,1895,1952,M,@I569@,,
+Elizabeth Ii,Windsor,1926,-1,F,@I570@,@I568@,@I569@
+Philip,Mountbatten,1921,-1,M,@I571@,,
+Charles,Windsor,1948,-1,M,@I572@,@I570@,@I571@
+John,Butler,-1,-1,M,@I573@,,
+Margaret,Sutton,-1,-1,F,@I574@,@I646@,@I645@
+Edmund,Sutton,-1,-1,M,@I575@,,
+Joyce,Tiptoft,-1,-1,F,@I576@,@I578@,@I577@
+John,Tiptoft,-1,1443,M,@I577@,,@I579@
+Joyce,Cherlton,-1,1446,F,@I578@,@I591@,@I590@
+Payn,Tybotot,-1,1413,M,@I579@,,@I580@
+John,Tybotot,-1,1367,M,@I580@,@I582@,@I581@
+Payn,Tybotot,-1,1314,M,@I581@,,
+Agnes,De Ros,-1,1328,F,@I582@,,@I583@
+William,De Ros,-1,1316,M,@I583@,@I585@,@I584@
+Robert,De Ros,-1,1285,M,@I584@,@I670@,@I586@
+Isabel,D'aubigny,-1,1301,F,@I585@,,@I588@
+William,De Ros,-1,1264,M,@I586@,@I669@,@I587@
+Robert,De Ros,-1,1226,M,@I587@,,
+William,D'aubigny,-1,1247,M,@I588@,,@I589@
+William,D'aubigny,-1,1236,M,@I589@,,
+Edward,Cherleton,-1,1421,M,@I590@,@I593@,@I592@
+Eleanor,Holand,-1,1405,F,@I591@,@I605@,@I604@
+John,Cherleton,-1,-1,M,@I592@,,
+Joan,De Stafford,-1,-1,F,@I593@,@I595@,@I594@
+Ralph,De Stafford,-1,1372,M,@I594@,,
+Margaret,Audley,-1,1348,F,@I595@,@I597@,@I596@
+Hugh,De Audley,-1,1347,M,@I596@,,
+Margaret,De Clare,-1,1342,F,@I597@,,@I598@
+Gilbert,De Clare,-1,1295,M,@I598@,@I600@,@I599@
+Richard,De Clare,-1,1262,M,@I599@,,@I601@
+Maud,De Lacy,-1,1288,F,@I600@,,@I603@
+Gilbert,De Clare,-1,1230,M,@I601@,,@I602@
+Richard,De Clare,-1,1217,M,@I602@,,
+John,De Lacy,-1,1240,M,@I603@,,
+Thomas,Holand,-1,-1,M,@I604@,@I648@,@I647@
+Alice,Fitzalan,-1,1416,F,@I605@,@I607@,@I606@
+Richard,Fitzalan,-1,1376,M,@I606@,@I609@,@I608@
+Eleanor of,Lancaster,-1,1372,F,@I607@,@I617@,@I616@
+Edmund,Fitzalan,-1,1326,M,@I608@,,
+Alice,De Warrenne,-1,-1,F,@I609@,@I611@,@I610@
+William,De Warrenne,-1,1286,M,@I610@,,
+Joan,De Vere,-1,1293,F,@I611@,,@I612@
+Robert,De Vere,-1,1296,M,@I612@,@I614@,@I613@
+Hugh,De Vere,-1,1263,M,@I613@,,@I615@
+Hawise,De Quincy,-1,-1,F,@I614@,,
+Saher,De Quincy,-1,1221,M,@I615@,,
+Henry of,Lancaster,-1,1345,M,@I616@,,@I626@
+Maud,Chaworth,-1,1322,F,@I617@,@I619@,@I618@
+Patrick,Chaworth,-1,-1,M,@I618@,,
+Isabel,Beauchamp,-1,-1,F,@I619@,@I621@,@I620@
+William,Beauchamp,-1,-1,M,@I620@,,
+Maud,Fitzgeoffrey,-1,-1,F,@I621@,@I623@,@I622@
+John,Fitzgeoffrey,-1,-1,M,@I622@,,
+Isabel,Bigod,-1,1230,F,@I623@,,@I624@
+Hugh,Bigod,-1,1225,M,@I624@,,@I625@
+Roger,Bigod,-1,1221,M,@I625@,,
+Edmund,Crouchback,-1,1296,M,@I626@,,@I627@
+Henry Iii of,England,-1,1272,M,@I627@,,@I628@
+John Lackland of,England,-1,1216,M,@I628@,,
+George,Talboys,-1,-1,M,@I629@,,
+Elizabeth,Gascoigne,-1,-1,F,@I630@,@I632@,@I631@
+William,Gascoigne,-1,-1,M,@I631@,,
+Margaret,Percy,-1,-1,F,@I632@,@I634@,@I633@
+Henry,Percy,-1,-1,M,@I633@,@I636@,@I635@
+Eleanor,Poynings,-1,-1,F,@I634@,,
+Henry,Percy,-1,-1,M,@I635@,@I638@,@I637@
+Eleanor,Neville,-1,-1,F,@I636@,,
+Henry,Percy,-1,-1,M,@I637@,,
+Elizabeth,Mortimer,-1,-1,F,@I638@,@I640@,@I639@
+Edmund,Mortimer,-1,-1,M,@I639@,,
+Philippa,Plantagenet,-1,-1,F,@I640@,@I642@,@I641@
+Lionel of,Antwerp,-1,-1,M,@I641@,@I644@,@I643@
+Elizabeth,De Burgh,-1,-1,F,@I642@,,
+Edward Iii of,England,-1,1377,M,@I643@,,
+Philippa of,Hainault,-1,-1,F,@I644@,,
+John,Sutton,-1,-1,M,@I645@,@I576@,@I575@
+_____,Charroll,-1,-1,F,@I646@,,
+Thomas,Holand,-1,-1,M,@I647@,,
+Joan,Plantagenet,-1,-1,F,@I648@,@I650@,@I649@
+Edmund of,Woodstock,-1,-1,M,@I649@,@I652@,@I651@
+Margaret,Wake,-1,-1,F,@I650@,,
+Edward I of,England,-1,-1,M,@I651@,,
+Margaret of,France,-1,-1,F,@I652@,,
+Lawrence,Towneley,-1,-1,M,@I653@,,@I655@
+Helen,Hesketh,-1,-1,F,@I654@,,
+Henry,Towneley,-1,-1,M,@I655@,,@I656@
+Lawrence,Towneley,-1,-1,M,@I656@,@I658@,@I657@
+John,Towneley,-1,-1,M,@I657@,,
+Isabel,Sherburne,-1,-1,F,@I658@,@I660@,@I659@
+Richard,Sherburne,-1,-1,M,@I659@,@I662@,@I661@
+Matilda,Hamerton,-1,-1,F,@I660@,,
+Richard,Bayley,-1,-1,M,@I661@,@I664@,@I663@
+Agnes,Stanley,-1,-1,F,@I662@,,
+Richard,Bayley,-1,-1,M,@I663@,,
+Margaret,Sherburne,-1,-1,F,@I664@,@I666@,@I665@
+Richard,Sherburne,-1,-1,M,@I665@,,
+Alice,Plumpton,-1,-1,F,@I666@,@I668@,@I667@
+William,Plumpton,-1,-1,M,@I667@,@I672@,@I671@
+Christiana,,-1,-1,F,@I668@,,
+Isabel of,Scotland,-1,-1,F,@I669@,,@I675@
+Lucy,Fitzpiers,-1,-1,F,@I670@,,
+Robert,Plumpton,-1,-1,M,@I671@,,
+Lucy,De Ros,-1,-1,F,@I672@,@I674@,@I673@
+William,De Ros,-1,-1,M,@I673@,@I670@,@I586@
+Eustache,Fitzhugh,-1,-1,F,@I674@,,
+,William,-1,1214,M,@I675@,,
+George Herbert Walker,Bush,1924,2018,M,@I676@,@I691@,@I690@
+Barbara,Pierce,1925,2018,F,@I677@,,
+Richard,Bush,-1,1732,M,@I678@,,
+Mary,Fairbanks,1699,1743,F,@I679@,@I1340@,@I1339@
+Timothy,Bush,1728,1815,M,@I680@,@I679@,@I678@
+Deborah,House,1742,1819,F,@I681@,@I874@,@I877@
+Timothy,Bush,1766,1850,M,@I682@,@I681@,@I680@
+Lydia,Newcomb,1763,1835,F,@I683@,@I866@,@I871@
+Obadiah Newcomb,Bush,1797,1851,M,@I684@,@I683@,@I682@
+Harriet,Smith,1800,1867,F,@I685@,@I859@,@I858@
+James Smith,Bush,1825,1889,M,@I686@,@I685@,@I684@
+Harriet Eleanor,Fay,1829,1924,F,@I687@,@I910@,@I845@
+Samuel Prescott,Bush,1863,1948,M,@I688@,@I687@,@I686@
+Flora,Sheldon,1872,1920,F,@I689@,@I743@,@I742@
+Prescott Sheldon,Bush,1895,1972,M,@I690@,@I689@,@I688@
+Dorothy,Walker,1901,-1,F,@I691@,@I741@,@I740@
+Adam,Holliday,1680,-1,M,@I692@,,
+Jane,MacOmson,1688,-1,F,@I693@,,
+Samuel,Holliday,1710,-1,M,@I694@,@I693@,@I692@
+Janet,Adair,1714,-1,F,@I695@,,
+William,Holliday,1755,-1,M,@I696@,@I695@,@I694@
+Martha,Patton,-1,-1,F,@I697@,,
+Joseph,Holliday,1790,1870,M,@I698@,@I697@,@I696@
+Nancy R.,McCune,-1,-1,F,@I699@,,
+John James,Holliday,1819,1881,M,@I700@,@I699@,@I698@
+Lucretia Green,Foree,-1,-1,F,@I701@,@I882@,@I911@
+Nannie E.,Holliday,1847,1942,F,@I702@,@I701@,@I700@
+John,Field,1730,-1,M,@I703@,,
+Anna,Clark,-1,-1,F,@I704@,,
+Robert E,Field,1745,-1,M,@I705@,@I704@,@I703@
+Sarah J,Green,-1,-1,F,@I706@,,
+John,Field,-1,-1,M,@I707@,@I706@,@I705@
+Sally,Wood,-1,-1,F,@I708@,,@I925@
+Mildred,Field,-1,-1,F,@I709@,@I708@,@I707@
+Isaac,Powell,-1,-1,M,@I710@,,
+Elizabeth,Perdue,-1,-1,F,@I711@,,
+John,Powell,-1,-1,M,@I712@,@I711@,@I710@
+Susanna,Bryan,-1,-1,F,@I713@,,
+Mary,Powell,1763,1841,F,@I714@,@I713@,@I712@
+Samuel,Hastings,-1,-1,M,@I715@,,
+Mary,Hill,-1,-1,F,@I716@,,
+Martha,Hastings,1722,1806,F,@I717@,@I716@,@I715@
+Robert,Stackhouse,1691,-1,M,@I718@,,
+Margaret,Stone,-1,-1,F,@I719@,,
+James,Stackhouse,1725,1759,M,@I720@,@I719@,@I718@
+Amos,Stackhouse,1757,1825,M,@I721@,@I717@,@I720@
+Esther,Stackhouse,1787,1819,F,@I722@,@I714@,@I721@
+Joseph,Keeler,1683,1757,M,@I723@,@I1333@,@I1334@
+Elizabeth,Whitney,1684,1763,F,@I724@,,
+Elijah John,Keeler,1726,1782,M,@I725@,@I724@,@I723@
+Sarah,Northrup,1728,1781,F,@I726@,,
+Rebecca,Keeler,1751,1812,F,@I727@,@I726@,@I725@
+Ebenezer,Hamblen,1682,1735,M,@I728@,,
+Thankful,Hamblen,1688,1768,F,@I729@,,
+Thankful,Hamblen,1715,1768,F,@I730@,@I729@,@I728@
+Samuel,Bangs,1680,1750,M,@I731@,,
+Mary,Hinckley,1678,1740,F,@I732@,@I1359@,@I1358@
+Joseph,Bangs,1712,1757,M,@I733@,@I732@,@I731@
+Lemuel,Bangs,1739,1824,M,@I734@,@I730@,@I733@
+Elijah Keeler,Bangs,1780,1856,M,@I735@,@I727@,@I734@
+Mary Ann,Bangs,1817,1876,F,@I736@,@I722@,@I735@
+Christopher,Mounce,-1,-1,M,@I737@,,
+Martha,_____,-1,-1,F,@I738@,,
+Ann,Mounce,1701,1744,F,@I739@,@I738@,@I737@
+George Herbert,Walker,1875,1953,M,@I740@,@I905@,@I915@
+Lucretia Loulie,Wear,1874,1961,F,@I741@,@I702@,@I900@
+Robert Emmet,Sheldon,1845,1917,M,@I742@,@I920@,@I923@
+Mary Elizabeth,Butler,1850,1897,F,@I743@,@I917@,@I809@
+Thomas Arbuthnot,Mercer,-1,-1,M,@I744@,,
+Elizabeth,Barnes,-1,-1,F,@I745@,,
+Robert,Mercer,1696,1769,M,@I746@,@I745@,@I744@
+Robert,Mercer,1737,1793,M,@I747@,@I739@,@I746@
+John,Mercer,-1,-1,M,@I748@,@I2247@,@I747@
+William,Davis,-1,-1,M,@I749@,,
+Angel,Davis,-1,-1,F,@I750@,,
+Thomas,Davis,1698,1750,M,@I751@,@I750@,@I749@
+Rebecca,Gregory,-1,-1,F,@I752@,,
+Richard,Davis,1745,-1,M,@I753@,@I752@,@I751@
+Rebecca,Davis,-1,-1,F,@I754@,,@I753@
+Harriet,Mercer,1802,1869,F,@I755@,@I754@,@I748@
+Jabez,Wood,1718,-1,M,@I756@,@I1281@,@I1282@
+Joanna,Short,-1,-1,F,@I757@,,
+Joanna,Wood,1750,1813,F,@I758@,@I757@,@I756@
+Jonathan,Horton,1695,1774,M,@I759@,,
+Ann,Millard,1707,1750,F,@I760@,@I1376@,@I1375@
+Thomas,Horton,1698,1732,M,@I762@,,
+Keziah,Carpenter,1696,1763,F,@I763@,@I1319@,@I1318@
+Comfort,Horton,1743,1805,M,@I764@,@I760@,@I759@
+Sarah,Horton,1777,1856,F,@I765@,@I758@,@I764@
+Submit,Horton,-1,1778,F,@I766@,@I763@,@I762@
+James,Wheeler,1696,1753,M,@I767@,@I1258@,@I1257@
+Elizabeth,West,1693,-1,F,@I768@,,
+Jeremiah,Wheeler,1730,1811,M,@I769@,@I768@,@I767@
+Jarvis,Wheeler,1774,1852,M,@I770@,@I766@,@I769@
+Betsey S.,Wheeler,1800,1881,F,@I771@,@I765@,@I770@
+Ephraim,Martin,1675,1733,M,@I772@,,
+Thankful,Bullock,1680,1762,F,@I773@,,
+Lydia,Martin,1718,1798,F,@I774@,@I773@,@I772@
+Mial,Pierce,1691,1786,M,@I775@,@I1311@,@I1310@
+Judith,Round,1687,1743,F,@I776@,,
+Nathan,Pierce,1715,1793,M,@I777@,@I776@,@I775@
+Isaac,Pierce,1763,1849,M,@I778@,@I774@,@I777@
+Anna,Fitch,1763,1809,F,@I779@,,@I780@
+Amos,Fitch,-1,-1,M,@I780@,,
+Henry,Vanderburgh,1716,1787,M,@I781@,,
+Sarah,Van Kleeck,-1,-1,F,@I782@,,
+Susanna,Vanderburgh,-1,-1,F,@I783@,@I782@,@I781@
+Thomas,Newcomb,1691,1761,M,@I784@,,
+Judith,Woodworth,1701,-1,F,@I785@,,
+Judith,Newcomb,1733,1808,F,@I786@,@I785@,@I784@
+Richard,Lewis,-1,-1,M,@I787@,,
+Susannah,Lewis,1761,1822,F,@I788@,@I783@,@I787@
+Gilbert,Livingston,1689,1745,M,@I789@,@I1175@,@I1174@
+Cornelia,Beekman,1692,1741,F,@I790@,@I1363@,@I1362@
+James,Livingston,1728,1790,M,@I791@,@I790@,@I789@
+Gilbert James,Livingston,1758,1833,M,@I792@,@I786@,@I791@
+Judith,Livingston,1785,1858,F,@I793@,@I788@,@I792@
+Samuel,Kingsley,1693,1730,M,@I794@,@I1350@,@I1351@
+Mary,_____,-1,-1,F,@I795@,,
+Silence,Kingsley,1727,-1,F,@I796@,@I795@,@I794@
+Daniel,Herrick,1707,-1,M,@I797@,,
+Elizabeth,Rust,1712,1740,F,@I798@,,
+Samuel,Herrick,1732,1797,M,@I799@,@I798@,@I797@
+Sarah,Herrick,1764,1823,F,@I800@,@I796@,@I799@
+Ephraim,Whiting,1698,1788,M,@I801@,@I1269@,@I1270@
+Abigail,Mason,-1,1748,F,@I802@,,
+Susanna,Whiting,1734,-1,F,@I803@,@I802@,@I801@
+Israel,Butler,1696,1757,M,@I804@,,
+Elizabeth,Blossom,1704,1733,F,@I805@,,
+Benjamin,Butler,1727,1800,M,@I806@,@I805@,@I804@
+Nathaniel,Butler,1761,1829,M,@I807@,@I803@,@I806@
+Samuel Herrick,Butler,1785,1851,M,@I808@,@I800@,@I807@
+Courtland Philip Livingston,Butler,1813,1891,M,@I809@,@I793@,@I808@
+George,Bocher,-1,-1,M,@I810@,,
+Margareth,_____,-1,-1,F,@I811@,,
+Susanna,Bocher,1703,1773,F,@I812@,@I811@,@I810@
+John,Breck,1704,1761,M,@I813@,,
+Margaret,Thomas,1707,1765,F,@I814@,@I1293@,@I1292@
+Abigail,Breck,1732,1819,F,@I815@,@I814@,@I813@
+Theophilus,Lillie,1689,1760,M,@I816@,,
+Hannah,Ruck,1701,1767,F,@I817@,@I962@,@I963@
+John,Lillie,1728,1766,M,@I818@,@I817@,@I816@
+Anna,Lillie,1760,1804,F,@I819@,@I815@,@I818@
+John,Goffe,1679,1748,M,@I820@,,
+Hannah,Sumner,1674,1748,F,@I821@,,
+John,Goffe,1701,1786,M,@I822@,@I821@,@I820@
+Martha,Goffe,-1,1807,F,@I823@,@I2207@,@I822@
+Amos,Howard,1696,-1,M,@I824@,,
+Judith,Wallingford,1698,-1,F,@I825@,,
+Ebenezer,Howard,1730,1783,M,@I826@,@I825@,@I824@
+Samuel,Howard,1752,1797,M,@I827@,@I823@,@I826@
+Harriet,Howard,1782,1847,F,@I828@,@I819@,@I827@
+John,Brigham,1679,1728,M,@I829@,,
+Martha,_____,-1,1733,F,@I830@,,
+Abigail,Brigham,1723,1776,F,@I831@,@I830@,@I829@
+Jonathan,Prescott,1676,1728,M,@I832@,,
+Rebecca,Bulkeley,1680,-1,F,@I833@,@I1148@,@I1147@
+Abel,Prescott,1718,1805,M,@I834@,@I833@,@I832@
+Lucy,Prescott,1757,1792,F,@I835@,@I831@,@I834@
+Samuel,Prescott,-1,-1,M,@I836@,@I831@,@I834@
+Ebenezer,Phillips,1694,1744,M,@I837@,@I1353@,@I1352@
+Mary,Smith,1696,1745,F,@I838@,,
+Joanna,Phillips,1729,1788,F,@I839@,@I838@,@I837@
+John,Fay,1699,1731,M,@I840@,@I1122@,@I1123@
+Hannah,Child,1700,1788,F,@I841@,@I1300@,@I1301@
+Jonathan,Fay,1724,1800,M,@I842@,@I841@,@I840@
+Jonathan,Fay,1751,1811,M,@I843@,@I839@,@I842@
+Samuel Prescott Phillips,Fay,1778,1856,M,@I844@,@I835@,@I843@
+Samuel Howard,Fay,1804,1847,M,@I845@,@I828@,@I844@
+Ephraim,Fellows,1641,1710,M,@I846@,,
+Anne,Cross,1651,1710,F,@I847@,,
+Elizabeth,Fellows,1685,1741,F,@I848@,@I847@,@I846@
+Henry,Stevens,-1,1726,M,@I849@,,
+Elizabeth,Gallup,-1,1736,F,@I850@,,
+Henry,Stevens,1681,1749,M,@I851@,@I850@,@I849@
+Lucy,Stevens,1717,1806,F,@I852@,@I848@,@I851@
+Daniel,Smith,1641,1680,M,@I853@,@I1316@,@I1317@
+Mary,Grant,-1,1681,F,@I854@,,
+John,Smith,1672,1739,M,@I855@,@I854@,@I853@
+Susanna,_____,1669,1746,F,@I856@,,
+Ephraim,Smith,1704,1774,M,@I857@,@I856@,@I855@
+Sanford,Smith,1760,1815,M,@I858@,@I852@,@I857@
+Priscilla,Whipple,1763,1838,F,@I859@,,
+George,Stillman,1654,1727,M,@I860@,,
+Rebecca,Smith,1668,1749,F,@I861@,@I1251@,@I1252@
+Anna,Stillman,1699,1767,F,@I862@,@I861@,@I860@
+John,May,1662,1730,M,@I863@,@I1285@,@I1286@
+Prudence,Bridge,1663,1722,F,@I864@,,
+Hezekiah,May,1696,1783,M,@I865@,@I864@,@I863@
+Elizabeth,May,1730,1789,F,@I866@,@I862@,@I865@
+Simon,Newcomb,1666,1745,M,@I867@,,
+Deborah,Buell,1665,1756,F,@I868@,,
+Obadiah,Newcomb,1695,1761,M,@I869@,@I868@,@I867@
+Abigail,Curtis,1693,1757,F,@I870@,,
+Daniel,Newcomb,1729,1789,M,@I871@,@I870@,@I869@
+Israel,Guild,1689,1766,M,@I872@,,
+Sarah,George,1695,1732,F,@I873@,,
+Deborah,Guild,1715,1783,F,@I874@,@I873@,@I872@
+Nathaniel,House,-1,1763,M,@I875@,,
+Hannah,Davenport,1685,1769,F,@I876@,@I1344@,@I1343@
+John,House,1715,1805,M,@I877@,@I876@,@I875@
+Henry,Dawson,-1,-1,M,@I878@,,
+_____,Sandford,-1,-1,F,@I879@,,
+Samuel,Dawson,-1,-1,M,@I880@,@I879@,@I878@
+_____,Montjoy,-1,-1,F,@I881@,,
+Eliza,Dawson,-1,-1,F,@I882@,@I881@,@I880@
+William,Wood,-1,1824,M,@I883@,,
+Martha,Carter,-1,1807,F,@I884@,,
+Mildred,Wood,-1,-1,F,@I885@,@I884@,@I883@
+Sally,Wood,-1,-1,F,@I887@,,@I883@
+Jeremiah,Yancey,1748,1788,M,@I888@,,
+Margaret,Mullins,-1,-1,F,@I889@,,
+Jechonias,Yancey,-1,-1,M,@I890@,@I889@,@I888@
+David,Yancey,-1,-1,M,@I891@,@I885@,@I890@
+Sarah Armanda,Yancey,1819,1879,F,@I892@,@I709@,@I891@
+Jonathan,Gault,-1,-1,M,@I893@,,
+Elizabeth,Yancey,-1,-1,F,@I894@,@I709@,@I891@
+Jonathan,Weir,1750,1832,M,@I895@,,
+Mary,Rankin,1758,1843,F,@I896@,,
+James Hutchenson,Weir,1789,1832,M,@I897@,@I896@,@I895@
+Elizabeth,Gault,-1,-1,F,@I898@,,@I893@
+William Gault,Wear,1817,1887,M,@I899@,@I898@,@I897@
+James Hutchenson,Wear,1838,1893,M,@I900@,@I892@,@I899@
+Victor Emanuel,Bechi,-1,-1,M,@I901@,,
+Joseph,Beaky,-1,-1,M,@I902@,,@I901@
+Catherine,Shriner,-1,-1,F,@I903@,,
+Joseph Ambrose,Beaky,1818,1858,M,@I904@,@I903@,@I902@
+Martha Adela,Beaky,1841,1906,F,@I905@,@I736@,@I904@
+John,Shellman,1723,1816,M,@I906@,,
+Maria Margareth,Fout,1731,1795,F,@I907@,@I812@,@I924@
+John,Shellman,1756,1838,M,@I908@,@I907@,@I906@
+Clarissa,Montfort,-1,1845,F,@I909@,,
+Susan,Shellman,1808,1887,F,@I910@,@I909@,@I908@
+Peter,Foree,-1,-1,M,@I911@,,
+Thomas,Walker,-1,1799,M,@I912@,,
+Catharine,McLelland,-1,-1,F,@I913@,,
+George E,Walker,1797,1864,M,@I914@,@I913@,@I912@
+David Davis,Walker,1840,1918,M,@I915@,@I755@,@I914@
+Levi,Pierce,1797,1838,M,@I916@,@I779@,@I778@
+Elizabeth Slade,Pierce,1822,1901,F,@I917@,@I771@,@I916@
+James,Uncles,1794,1835,M,@I918@,,
+Elizabeth Betsey,Criswell,-1,-1,F,@I919@,,
+Martha,Uncles,1824,1912,F,@I920@,@I919@,@I918@
+Michael,Sheldon,-1,-1,M,@I921@,,
+Mary,_____,-1,-1,F,@I922@,,
+Thomas H,Sheldon,1818,1854,M,@I923@,@I922@,@I921@
+Baltis Balthazar,Fout,-1,1751,M,@I924@,,
+Jesse,Wood,-1,1824,M,@I925@,,
+Edward I of,England,-1,1307,M,@I926@,,
+Eleanor of,Castile,-1,-1,F,@I927@,,
+Joan,Plantagenet,-1,-1,F,@I928@,@I927@,@I926@
+Gilbert,De Clare,-1,-1,M,@I929@,,
+Eleanor,De Clare,-1,-1,F,@I930@,@I928@,@I929@
+Hugh Le,Despencer,-1,-1,M,@I931@,,
+Isabel Le,Despencer,-1,-1,F,@I932@,@I930@,@I931@
+Richard,Fitzalan,-1,-1,M,@I933@,,
+Isabel,Fitzalan,-1,-1,F,@I934@,@I932@,@I933@
+John Le,Strange,-1,-1,M,@I935@,,
+Ankaret Le,Strange,-1,-1,F,@I936@,@I934@,@I935@
+Richard,Talbot,-1,-1,M,@I937@,,
+Mary,Talbot,-1,-1,F,@I938@,@I936@,@I937@
+Thomas,Greene,-1,-1,M,@I939@,,
+Thomas,Greene,-1,-1,M,@I940@,@I938@,@I939@
+Phillippa,Ferrers,-1,-1,F,@I941@,,
+Elizabeth,Greene,-1,-1,F,@I942@,@I941@,@I940@
+William,Raleigh,-1,-1,M,@I943@,,
+Edward,Raleigh,-1,-1,M,@I944@,@I942@,@I943@
+Margaret,Verney,-1,-1,F,@I945@,,
+Edward,Raleigh,-1,-1,M,@I946@,@I945@,@I944@
+Anne,Chamberlayne,-1,-1,F,@I947@,,
+Bridget,Raleigh,-1,-1,F,@I948@,@I947@,@I946@
+John,Cope,-1,-1,M,@I949@,@I1203@,@I1204@
+Elizabeth,Cope,-1,-1,F,@I950@,@I948@,@I949@
+John,Dryden,-1,-1,M,@I951@,,
+Bridget,Dryden,-1,-1,F,@I952@,@I950@,@I951@
+Francis,Marbury,-1,-1,M,@I953@,,
+Anne,Marbury,-1,-1,F,@I954@,@I952@,@I953@
+William,Hutchinson,-1,-1,M,@I955@,,
+Edward,Hutchinson,-1,-1,M,@I956@,@I954@,@I955@
+Catherine,Hamby,-1,-1,F,@I957@,@I1109@,@I1108@
+Elisha,Hutchinson,-1,-1,M,@I958@,@I957@,@I956@
+Elizabeth,Clarke,-1,-1,F,@I959@,,
+Elisha,Hutchinson,1640,1716,M,@I960@,@I959@,@I958@
+Hannah,Hawkins,-1,-1,F,@I961@,,
+Hannah,Hutchinson,-1,-1,F,@I962@,@I961@,@I960@
+John,Ruck,-1,-1,M,@I963@,,
+Edward Le,Despencer,-1,-1,M,@I964@,@I930@,@I931@
+Anne,Ferrers,-1,-1,F,@I965@,,
+Edward,Despencer,-1,-1,M,@I966@,@I965@,@I964@
+Elizabeth,Burghersh,-1,-1,F,@I967@,,
+Elizabeth,Despencer,-1,-1,F,@I968@,@I967@,@I966@
+John,Fitzalan,-1,-1,M,@I969@,,
+Margaret,Fitzalan,-1,-1,F,@I970@,@I968@,@I969@
+William,De Ros,-1,-1,M,@I971@,,
+Margaret,De Ros,-1,-1,F,@I972@,@I970@,@I971@
+James,Touchet,-1,-1,M,@I973@,,
+Anne,Touchet,-1,-1,F,@I974@,@I972@,@I973@
+Thomas,Sutton,-1,-1,M,@I975@,,
+Isabel,Sutton,-1,-1,F,@I976@,@I974@,@I975@
+Christopher,Southworth,-1,-1,M,@I977@,,
+John,Southworth,-1,-1,M,@I978@,@I976@,@I977@
+Helen,Langton,-1,-1,F,@I979@,,
+Thomas,Southworth,-1,-1,M,@I980@,@I979@,@I978@
+Margery,Boteler,-1,-1,F,@I981@,,
+John,Southworth,-1,-1,M,@I982@,@I981@,@I980@
+Mary,Ashton,-1,-1,F,@I983@,,
+Thomas,Southworth,-1,-1,M,@I984@,@I983@,@I982@
+Rosamond,Lister,-1,-1,F,@I985@,,
+Edward,Southworth,-1,-1,M,@I986@,@I985@,@I984@
+Alice,Carpenter,-1,-1,F,@I987@,,
+Thomas,Southworth,-1,-1,M,@I988@,@I987@,@I986@
+Elizabeth,Reynor,-1,-1,F,@I989@,,
+Elizabeth,Southworth,-1,-1,F,@I990@,@I989@,@I988@
+Joseph,Howland,-1,-1,M,@I991@,,
+Nathaniel,Howland,-1,-1,M,@I992@,@I990@,@I991@
+Martha,Cole,-1,-1,F,@I993@,,
+Nathaniel,Howland,-1,-1,M,@I994@,@I993@,@I992@
+Abigail,Burt,-1,-1,F,@I995@,,
+Joseph,Howland,-1,-1,M,@I996@,@I995@,@I994@
+Lydia,Bill,-1,-1,F,@I997@,,
+Susan,Howland,-1,-1,F,@I998@,@I997@,@I996@
+John,Aspinwall,-1,-1,M,@I999@,@I1026@,@I1027@
+Mary Rebecca,Aspinwall,1809,1886,F,@I1000@,@I998@,@I999@
+Isaac,Roosevelt,1790,1863,M,@I1001@,@I2230@,@I2229@
+Anne,Percy,-1,-1,F,@I1002@,@I634@,@I633@
+Thomas,Hungerford,-1,-1,M,@I1003@,,
+Mary,Hungerford,-1,-1,F,@I1004@,@I1002@,@I1003@
+Edward,Hastings,-1,-1,M,@I1005@,,
+Anne,Hastings,-1,-1,F,@I1006@,@I1004@,@I1005@
+Thomas,Stanley,-1,-1,M,@I1007@,,
+Margaret,Stanley,-1,-1,F,@I1008@,@I1006@,@I1007@
+Robert,Radcliffe,-1,-1,M,@I1009@,,
+Jane,Radcliffe,-1,-1,F,@I1010@,@I1008@,@I1009@
+Anthony,Browne,-1,-1,M,@I1011@,,
+Anthony,Browne,-1,-1,M,@I1012@,@I1010@,@I1011@
+Mary,Dormer,-1,-1,F,@I1013@,,
+Dorothy,Browne,-1,-1,F,@I1014@,@I1013@,@I1012@
+Edmund,Lee,-1,-1,M,@I1015@,,
+Dorothy,Lee,-1,-1,F,@I1016@,@I1014@,@I1015@
+John,Temple,-1,-1,M,@I1017@,@I1246@,@I1245@
+Mary,Temple,-1,-1,F,@I1018@,@I1016@,@I1017@
+Robert,Nelson,-1,-1,M,@I1019@,,
+John,Nelson,-1,-1,M,@I1020@,@I1018@,@I1019@
+Elizabeth,Tailer,-1,-1,F,@I1021@,,
+Rebecca,Nelson,-1,-1,F,@I1022@,@I1021@,@I1020@
+Henry,Lloyd,-1,-1,M,@I1023@,,
+Margaret,Lloyd,-1,-1,F,@I1024@,@I1022@,@I1023@
+William Henry,Smith,-1,-1,M,@I1025@,,
+Rebecca,Smith,-1,-1,F,@I1026@,@I1024@,@I1025@
+John,Aspinwall,-1,-1,M,@I1027@,,
+Elizabeth,Plantagenet,-1,-1,F,@I1028@,@I927@,@I926@
+Humphry,De Bohun,-1,-1,M,@I1029@,,
+William,De Bohun,-1,-1,M,@I1030@,@I1028@,@I1029@
+Elizabeth,Badlesmere,-1,-1,F,@I1031@,,
+Elizabeth,De Bohun,-1,-1,F,@I1032@,@I1031@,@I1030@
+Richard,Fitzalan,-1,-1,M,@I1033@,,@I933@
+Elizabeth,Fitzalan,-1,-1,F,@I1034@,@I1032@,@I1033@
+Robert,Goushill,-1,-1,M,@I1035@,,
+Elizabeth,Goushill,-1,-1,F,@I1036@,@I1034@,@I1035@
+Robert,Wingfield,-1,-1,M,@I1037@,,
+Elizabeth,Wingfield,-1,-1,F,@I1038@,@I1036@,@I1037@
+William,Brandon,-1,-1,M,@I1039@,,
+Eleanor,Brandon,-1,-1,F,@I1040@,@I1038@,@I1039@
+John,Glemham,-1,-1,M,@I1041@,,
+Anne,Glemham,-1,-1,F,@I1042@,@I1040@,@I1041@
+Henry,Pagrave,-1,-1,M,@I1043@,,
+Thomas,Pagrave,-1,-1,M,@I1044@,@I1042@,@I1043@
+Alice,Gunton,-1,-1,F,@I1045@,,
+Edward,Pagrave,-1,-1,M,@I1046@,@I1045@,@I1044@
+Richard,Palgrave,1593,1650,M,@I1047@,,@I1046@
+Anna,Hanningfield,1594,1668,F,@I1048@,,
+Sarah,Palgrave,-1,-1,F,@I1049@,@I1048@,@I1047@
+John,Alcock,-1,-1,M,@I1050@,,
+Joanna,Alcock,-1,-1,F,@I1051@,@I1049@,@I1050@
+Ephraim,Hunt,-1,-1,M,@I1052@,,
+Elizabeth,Hunt,-1,-1,F,@I1053@,@I1051@,@I1052@
+Lemuel,Pope,-1,-1,M,@I1054@,,
+Mercy,Pope,-1,-1,F,@I1055@,@I1053@,@I1054@
+Caleb,Church,-1,-1,M,@I1056@,,
+Joseph,Church,-1,-1,M,@I1057@,@I1055@,@I1056@
+Deborah,Perry,-1,-1,F,@I1058@,,
+Deborah,Church,-1,-1,F,@I1059@,@I1058@,@I1057@
+Warren,Delano,-1,-1,M,@I1060@,,
+Warren,Delano,-1,-1,M,@I1061@,@I1059@,@I1060@
+Catherine Robbins,Lyman,-1,-1,F,@I1062@,@I1116@,@I1117@
+Henry I of,England,-1,1135,M,@I1063@,,
+Elizabeth,_____,-1,-1,F,@I1064@,,@I1063@
+_____,Fergus,-1,-1,M,@I1065@,,
+Uchtred of,Galloway,-1,-1,M,@I1066@,@I1064@,@I1065@
+Gunnild of,Dunbar,-1,-1,F,@I1067@,,
+Roland,Galloway,-1,-1,M,@I1068@,@I1067@,@I1066@
+Eleana,De Morville,-1,-1,F,@I1069@,,
+Alan,Galloway,1400,1420,M,@I1070@,@I1069@,@I1068@
+Helen,De Lacey,1400,1420,F,@I1071@,,
+Helen of,Galloway,-1,-1,F,@I1072@,@I1071@,@I1070@
+Roger,De Quincy,-1,-1,M,@I1073@,,
+Elizabeth,De Quincy,-1,-1,F,@I1074@,@I1072@,@I1073@
+Alexander,Comyn,-1,-1,M,@I1075@,,
+Elizabeth,Comyn,-1,-1,F,@I1076@,@I1074@,@I1075@
+Gilbert,De Umfreville,-1,-1,M,@I1077@,,
+Robert,De Umfreville,-1,-1,M,@I1078@,@I1076@,@I1077@
+Lucy,De Kyme,-1,-1,F,@I1079@,,
+Elizabeth,De Umfreville,-1,-1,F,@I1080@,@I1079@,@I1078@
+Gilbert,De Boroughdon,-1,-1,M,@I1081@,,
+Eleanor,De Boroughdon,-1,-1,F,@I1082@,@I1080@,@I1081@
+Henry,Talboys,-1,-1,M,@I1083@,,
+Walter,Talboys,1351,1417,M,@I1084@,@I1082@,@I1083@
+Margaret,Deincourt,-1,-1,F,@I1085@,,
+John,Talboys,-1,-1,M,@I1086@,@I1085@,@I1084@
+Agnes,Cokefield,-1,-1,F,@I1087@,,
+John,Talboys,-1,-1,M,@I1088@,@I1087@,@I1086@
+Katherine,Cibthorpe,-1,-1,F,@I1089@,,
+Margaret,Talboys,-1,-1,F,@I1090@,@I1089@,@I1088@
+John,Ayscough,-1,-1,M,@I1091@,,
+Elizabeth,Ayscough,-1,-1,F,@I1092@,@I1090@,@I1091@
+William,Booth,-1,-1,M,@I1093@,,
+John,Booth,-1,-1,M,@I1094@,@I1092@,@I1093@
+Joan,Talboys,-1,-1,F,@I1095@,@I1082@,@I1083@
+Andrew,Luttrell,-1,-1,M,@I1096@,,
+Hawise,Luttrell,-1,-1,F,@I1097@,@I1095@,@I1096@
+Godfrey,Hilton,-1,-1,M,@I1098@,,
+Godfrey,Hilton,-1,-1,M,@I1099@,@I1097@,@I1098@
+Margery,_____,-1,-1,F,@I1100@,,
+Elizabeth,Hilton,-1,-1,F,@I1101@,@I1100@,@I1099@
+Richard,Thimbleby,-1,-1,M,@I1102@,,
+Anne,Thimbleby,-1,-1,F,@I1103@,@I1101@,@I1102@
+Eleanor,Booth,-1,-1,F,@I1104@,@I1103@,@I1094@
+Edward,Hamby,-1,-1,M,@I1105@,,
+William,Hamby,-1,-1,M,@I1106@,@I1104@,@I1105@
+Margaret,Blewett,-1,-1,F,@I1107@,,
+Robert,Hamby,-1,-1,M,@I1108@,@I1107@,@I1106@
+Elizabeth,Arnold,-1,-1,F,@I1109@,,
+Edward,Hutchinson,-1,-1,M,@I1110@,@I959@,@I958@
+Lydia,Foster,-1,-1,F,@I1111@,,
+Elizabeth,Hutchinson,-1,-1,F,@I1112@,@I1111@,@I1110@
+Nathaniel,Robbins,-1,-1,M,@I1113@,,
+Edward Hutchinson,Robbins,-1,-1,M,@I1114@,@I1112@,@I1113@
+Elizabeth,Murray,-1,-1,F,@I1115@,,
+Anne Jean,Robbins,-1,-1,F,@I1116@,@I1115@,@I1114@
+Joseph,Lyman,-1,-1,M,@I1117@,,
+Mary,Palgrave,1619,1695,F,@I1118@,@I1048@,@I1047@
+Roger,Wellington,-1,-1,M,@I1119@,,
+Benjamin,Wellington,-1,-1,M,@I1120@,@I1118@,@I1119@
+Elizabeth,Sweetman,-1,-1,F,@I1121@,,
+Elizabeth,Wellington,-1,-1,F,@I1122@,@I1121@,@I1120@
+John,Fay,-1,-1,M,@I1123@,,
+Margaret,De Clare,-1,-1,F,@I1124@,@I928@,@I929@
+Piers,De Gaveston,-1,-1,M,@I1125@,,
+Amy,De Gaveston,-1,-1,F,@I1126@,@I1124@,@I1125@
+John,De Driby,-1,-1,M,@I1127@,,
+Alice,De Driby,-1,-1,F,@I1128@,@I1126@,@I1127@
+Anketil,Malory,-1,-1,M,@I1129@,,
+William,Malory,-1,-1,M,@I1130@,@I1128@,@I1129@
+Margaret,Malory,-1,-1,F,@I1131@,,@I1130@
+Robert,Corbet,-1,-1,M,@I1132@,,
+Mary,Corbet,-1,-1,F,@I1133@,@I1131@,@I1132@
+Robert,Charlton,-1,-1,M,@I1134@,,
+Richard,Charlton,-1,-1,M,@I1135@,@I1133@,@I1134@
+Anne,Mainwaring,-1,-1,F,@I1136@,,
+Anne,Charlton,-1,-1,F,@I1137@,@I1136@,@I1135@
+Randall,Grosvenor,-1,-1,M,@I1138@,,
+Elizabeth,Grosvenor,-1,-1,F,@I1139@,@I1137@,@I1138@
+Thomas,Bulkeley,-1,-1,M,@I1140@,,
+Edward,Bulkeley,-1,1619,M,@I1141@,@I1139@,@I1140@
+Olive,Irby,-1,-1,F,@I1142@,,
+Peter,Bulkeley,-1,-1,M,@I1143@,@I1142@,@I1141@
+Jane,Allen,-1,-1,F,@I1144@,@I1188@,@I1189@
+Edward,Bulkeley,-1,-1,M,@I1145@,@I1144@,@I1143@
+Lucian,_____,-1,-1,F,@I1146@,,
+Peter,Bulkeley,-1,-1,M,@I1147@,@I1146@,@I1145@
+Rebecca,Wheeler,-1,-1,F,@I1148@,,
+Robert Ii of,Scotland,-1,1390,M,@I1149@,,
+Elizabeth,Mure,-1,-1,F,@I1150@,,
+Robert,Stewart,-1,-1,M,@I1151@,@I1150@,@I1149@
+Margaret,Graham,-1,-1,F,@I1152@,,
+Maria,Stewart,-1,-1,F,@I1153@,@I1152@,@I1151@
+William,Abernathy,-1,-1,M,@I1154@,,
+William,Abernathy,-1,-1,M,@I1155@,@I1153@,@I1154@
+Margaret,Borthwick,-1,-1,F,@I1156@,,
+Laurency,Abernathy,-1,-1,M,@I1157@,@I1156@,@I1155@
+Margaret,_____,-1,-1,F,@I1158@,,
+William,Abernathy,-1,-1,M,@I1159@,@I1158@,@I1157@
+_____,Abernathy,-1,-1,F,@I1160@,,@I1159@
+William,Ogstoun,-1,-1,M,@I1161@,,
+Elizabeth,Ogstoun,-1,-1,F,@I1162@,@I1160@,@I1161@
+Adam,Hepburn,-1,-1,M,@I1163@,,
+Elizabeth,Hepburn,-1,-1,F,@I1164@,@I1162@,@I1163@
+Alexander,Livingston,-1,-1,M,@I1165@,,
+Thomas,Livingston,-1,-1,M,@I1166@,@I1164@,@I1165@
+Agnes,Menteith,-1,-1,F,@I1167@,,
+Alexander,Livingston,-1,-1,M,@I1168@,@I1167@,@I1166@
+Marion,Bryson,-1,-1,F,@I1169@,,
+Agnes,Livingston,-1,-1,F,@I1170@,@I1169@,@I1168@
+William,Livingston,-1,-1,M,@I1171@,,
+John,Livingston,1603,1672,M,@I1172@,@I1170@,@I1171@
+Janet,Fleming,-1,-1,F,@I1173@,,
+Robert,Livingston,-1,-1,M,@I1174@,@I1173@,@I1172@
+Alida,Schuyler,-1,-1,F,@I1175@,@I1380@,@I1379@
+John,Boteler,-1,-1,M,@I1176@,,
+Alice,Boteler,-1,-1,F,@I1177@,@I666@,@I1176@
+John,Gerard,-1,-1,M,@I1178@,,
+Constance,Gerard,-1,-1,F,@I1179@,@I1177@,@I1178@
+Alexander,Standish,-1,-1,M,@I1180@,,
+Oliver,Standish,-1,-1,M,@I1181@,@I1179@,@I1180@
+Grace,Standish,-1,-1,F,@I1182@,,@I1181@
+Ralph,Faircloth,-1,-1,M,@I1183@,,
+Lawrence,Faircloth,-1,-1,M,@I1184@,@I1182@,@I1183@
+Elizabeth,_____,-1,-1,F,@I1185@,,
+Thomas,Faircloth,-1,1795,M,@I1186@,@I1185@,@I1184@
+Millicent,Barr,-1,-1,F,@I1187@,,
+Mary,Faircloth,-1,-1,F,@I1188@,@I1187@,@I1186@
+Thomas,Allen,-1,-1,M,@I1189@,,
+Prescott Sheldon,Bush,1922,-1,M,@I1190@,@I691@,@I690@
+Nancy,Bush,1926,-1,F,@I1191@,@I691@,@I690@
+Jonathan James,Bush,1931,-1,M,@I1192@,@I691@,@I690@
+William Trotter,Bush,1938,-1,M,@I1193@,@I691@,@I690@
+George Walker,Bush,1946,-1,M,@I1194@,@I677@,@I676@
+John Ellis,Bush,-1,-1,M,@I1195@,@I677@,@I676@
+Neil Mallon,Bush,-1,-1,M,@I1196@,@I677@,@I676@
+Marvin Pierce,Bush,-1,-1,M,@I1197@,@I677@,@I676@
+Robin,Bush,-1,-1,F,@I1198@,@I677@,@I676@
+Dorothy Walker,Bush,-1,-1,F,@I1199@,@I677@,@I676@
+John,Spencer,-1,-1,M,@I1200@,,
+John,Spencer,-1,-1,M,@I1201@,,@I1200@
+Anne,Empson,-1,-1,F,@I1202@,,
+Jane,Spencer,-1,-1,F,@I1203@,@I1202@,@I1201@
+William,Cope,-1,-1,M,@I1204@,,
+Anthony,Cope,-1,-1,M,@I1205@,@I1203@,@I1204@
+Jane,Crews,-1,-1,F,@I1206@,,
+Edward,Cope,-1,-1,M,@I1207@,@I1206@,@I1205@
+Elizabeth,Mohun,-1,-1,F,@I1208@,,
+Ursula,Cope,-1,-1,F,@I1209@,@I1208@,@I1207@
+John,D'oyly,-1,-1,M,@I1210@,,
+Priscilla,D'oyly,-1,-1,F,@I1211@,@I1209@,@I1210@
+Edward,Goddard,-1,-1,M,@I1212@,,
+Willaim,Goddard,1630,1690,M,@I1213@,@I1211@,@I1212@
+Elizabeth,Miles,-1,-1,F,@I1214@,,
+Josiah,Goddard,-1,-1,M,@I1215@,@I1214@,@I1213@
+Rachel,Davis,-1,-1,F,@I1216@,,
+Rachel,Goddard,-1,-1,F,@I1217@,@I1216@,@I1215@
+Obadiah,Coolidge,-1,-1,M,@I1218@,,
+Josiah,Coolidge,-1,-1,M,@I1219@,@I1217@,@I1218@
+Mary,Jones,-1,-1,F,@I1220@,,
+Capt John,Coolidge,1756,1822,M,@I1221@,@I1220@,@I1219@
+Hannah,Priest,1750,1829,F,@I1222@,,
+Calvin,Coolidge,1780,1853,M,@I1223@,@I1222@,@I1221@
+Sarah,Thompson,1789,1856,F,@I1224@,,
+Calvin Galusha,Coolidge,1815,1878,M,@I1225@,@I1224@,@I1223@
+Sarah Alameda,Brewer,1823,1906,F,@I1226@,,
+Thomas,Spencer,-1,-1,M,@I1227@,,@I1200@
+Margaret,Smith,-1,-1,F,@I1228@,,
+William,Spencer,-1,-1,M,@I1229@,@I1228@,@I1227@
+Agnes,Heritage,-1,-1,F,@I1230@,,
+Julian,Spencer,-1,-1,F,@I1231@,@I1230@,@I1229@
+William,Wilmer,-1,-1,M,@I1232@,,
+Anne,Wilmer,-1,-1,F,@I1233@,@I1231@,@I1232@
+Henry,Thornton,-1,-1,M,@I1234@,,
+William,Spencer,-1,-1,M,@I1235@,,@I1200@
+Elizabeth,Empson,-1,-1,F,@I1236@,,
+John,Spencer,1460,1522,M,@I1237@,@I1236@,@I1235@
+Isabel,Graunt,-1,-1,F,@I1238@,,
+William,Spencer,1496,1532,M,@I1239@,@I1238@,@I1237@
+Susan,Knightley,1498,1532,F,@I1240@,,
+Dorothy,Spencer,1521,1575,F,@I1241@,@I1240@,@I1239@
+Thomas,Spencer,-1,1576,M,@I1242@,@I1230@,@I1229@
+Susan,Spencer,-1,-1,F,@I1243@,@I1241@,@I1242@
+John,Temple,-1,-1,M,@I1244@,,
+Thomas,Temple,-1,-1,M,@I1245@,@I1243@,@I1244@
+Hester,Sandys,-1,-1,F,@I1246@,,
+Robert,Foote,-1,1607,M,@I1247@,,
+Joan,Brooke,-1,-1,F,@I1248@,,
+Nathaniel,Foote,1591,-1,M,@I1249@,@I1248@,@I1247@
+Elizabeth,Deming,-1,-1,F,@I1250@,,
+Rebecca,Foote,-1,-1,F,@I1251@,@I1250@,@I1249@
+Phillip H,Smith,-1,1904,M,@I1252@,@I1303@,@I1302@
+John,Wheeler,1590,1668,M,@I1253@,,
+Agnes,Yeomans,-1,-1,F,@I1254@,,
+Henry,Wheeler,-1,-1,M,@I1255@,@I1254@,@I1253@
+Abigail,Allen,-1,-1,F,@I1256@,,
+James,Wheeler,-1,-1,M,@I1257@,@I1256@,@I1255@
+Grizzell,Squire,-1,-1,F,@I1258@,,
+Thomas,Morse,-1,1566,M,@I1259@,,
+Agnes,Lyncoln,1521,1574,F,@I1260@,,
+Thomas,Morse,-1,-1,M,@I1261@,@I1260@,@I1259@
+Margaret,King,-1,-1,F,@I1262@,,
+Samuel,Morse,1576,1653,M,@I1263@,@I1262@,@I1261@
+Elizabeth,Jasper,-1,-1,F,@I1264@,,
+Mary,Morse,-1,-1,F,@I1265@,@I1264@,@I1263@
+Samuel,Bullen,-1,-1,M,@I1266@,,
+Mary,Bullen,-1,-1,F,@I1267@,@I1265@,@I1266@
+Ephraim,Clark,-1,-1,M,@I1268@,,
+Mary,Clark,-1,-1,F,@I1269@,@I1267@,@I1268@
+Samuel,Whiting,-1,-1,M,@I1270@,,
+Henry,Howland,1566,1635,M,@I1271@,,
+Margaret,_____,1567,1629,F,@I1272@,,
+John,Howland,-1,1671,M,@I1273@,@I1272@,@I1271@
+Elizabeth,Tilley,-1,-1,F,@I1274@,,
+Hope,Howland,-1,-1,F,@I1275@,@I1274@,@I1273@
+John,Chipman,-1,-1,M,@I1276@,,
+Hope,Chipman,-1,-1,F,@I1277@,@I1275@,@I1276@
+John,Huckins,-1,-1,M,@I1278@,,
+Hope,Huckins,-1,-1,F,@I1279@,@I1277@,@I1278@
+Thomas,Nelson,-1,-1,M,@I1280@,,
+Hannah,Nelson,-1,-1,F,@I1281@,@I1279@,@I1280@
+Jabez,Wood,-1,-1,M,@I1282@,@I1371@,@I1370@
+Daniel,Brewer,1600,1646,M,@I1283@,,
+Joanna,Morrill,-1,-1,F,@I1284@,,
+Sarah,Brewer,-1,-1,F,@I1285@,@I1284@,@I1283@
+John,May,-1,-1,M,@I1286@,,
+Edward,Gilman,-1,-1,M,@I1287@,,
+Mary,Gilman,-1,1680,F,@I1288@,,@I1287@
+Nicholas,Jacob,-1,-1,M,@I1289@,,
+Deborah,Jacob,-1,-1,F,@I1290@,@I1288@,@I1289@
+Nathaniel,Thomas,-1,-1,M,@I1291@,,
+William,Thomas,-1,-1,M,@I1292@,@I1290@,@I1291@
+Abigail,Ruck,-1,-1,F,@I1293@,,
+John,Lathrop,1583,1652,M,@I1294@,,
+Hannah,House,-1,-1,F,@I1295@,,
+Thomas,Lathrop,-1,-1,M,@I1296@,@I1295@,@I1294@
+Sarah,Learned,-1,-1,F,@I1297@,,
+Mary,Lathrop,-1,-1,F,@I1298@,@I1297@,@I1296@
+William,French,-1,-1,M,@I1299@,,
+Hannah,French,-1,-1,F,@I1300@,@I1298@,@I1299@
+John,Child,-1,-1,M,@I1301@,,
+Samuel,Smith,-1,1679,M,@I1302@,,
+Elizabeth,Hunter,-1,-1,F,@I1303@,,
+Thomas,Holbrook,-1,1676,M,@I1304@,,
+Jane,Powys,-1,-1,F,@I1305@,,
+John,Holbrook,-1,-1,M,@I1306@,@I1305@,@I1304@
+Elizabeth,Stream,-1,-1,F,@I1307@,,
+Hannah,Holbrook,-1,-1,F,@I1308@,@I1307@,@I1306@
+Ephraim,Pierce,-1,-1,M,@I1309@,,
+Ephraim,Pierce,-1,-1,M,@I1310@,@I1308@,@I1309@
+Mary,Low,-1,-1,F,@I1311@,@I1325@,@I1326@
+Richard,Ravens,1562,1625,M,@I1312@,,
+Elizabeth,Hedge,-1,-1,F,@I1313@,,
+Grace,Ravens,1591,1661,F,@I1314@,@I1313@,@I1312@
+Thomas,Rogers,-1,-1,M,@I1315@,,
+Elizabeth,Rogers,-1,-1,F,@I1316@,@I1314@,@I1315@
+Daniel,Smith,-1,-1,M,@I1317@,,
+Benjamin,Carpenter,1657,1726,M,@I1318@,,
+Renew,Weeks,-1,-1,F,@I1319@,,
+William,Arnold,1586,1674,M,@I1320@,,
+Christian,Peak,-1,-1,F,@I1321@,,
+Stephen,Arnold,-1,-1,M,@I1322@,@I1321@,@I1320@
+Joanna,Arnold,-1,-1,F,@I1323@,@I1321@,@I1320@
+Zachariah,Rhodes,-1,-1,M,@I1324@,,
+Mary,Rhodes,-1,-1,F,@I1325@,@I1323@,@I1324@
+John,Low,-1,-1,M,@I1326@,,
+John,Stanley,-1,-1,M,@I1327@,,
+Susan,Lancock,-1,-1,F,@I1328@,,
+Timothy,Stanley,1599,1647,M,@I1329@,@I1328@,@I1327@
+Elizabeth,_____,-1,-1,F,@I1330@,,
+Elizabeth,Stanley,-1,-1,F,@I1331@,@I1330@,@I1329@
+Mark,St. John,-1,-1,M,@I1332@,,
+Sarah,St. John,-1,-1,F,@I1333@,@I1331@,@I1332@
+Samuel,Keeler,-1,-1,M,@I1334@,,
+Jonathan,Fairbanks,-1,1667,M,@I1335@,,
+Grace,Smith,-1,-1,F,@I1336@,,
+Jonathan,Fairbanks,-1,-1,M,@I1337@,@I1336@,@I1335@
+Deborah,Shepard,-1,-1,F,@I1338@,,
+Jeremiah,Fairbanks,-1,-1,M,@I1339@,@I1338@,@I1337@
+Mary,Penfield,-1,-1,F,@I1340@,,
+Thomas,Davenport,-1,1684,M,@I1341@,,
+Mary,_____,-1,-1,F,@I1342@,,
+Jonathan,Davenport,-1,-1,M,@I1343@,@I1342@,@I1341@
+Hannah,Maynard,-1,-1,F,@I1344@,,
+Experience,Mitchell,-1,1688,M,@I1345@,,
+Jane,Cooke,-1,-1,F,@I1346@,@I1372@,@I1347@
+Francis,Cooke,-1,-1,M,@I1347@,,
+Elizabeth,Mitchell,-1,-1,F,@I1348@,@I1346@,@I1345@
+John,Washburn,-1,-1,M,@I1349@,,
+Mary,Washburn,-1,-1,F,@I1350@,@I1348@,@I1349@
+Samuel,Kingsley,-1,-1,M,@I1351@,,
+Andrew,Phillips,-1,1716,M,@I1352@,,
+Sarah,Smith,-1,-1,F,@I1353@,,
+Thomas,Richards,-1,1649,M,@I1354@,,
+Wealthian,Loring,-1,-1,F,@I1355@,,
+Mary,Richards,-1,-1,F,@I1356@,@I1355@,@I1354@
+Thomas,Hinckley,-1,-1,M,@I1357@,,
+Samuel,Hinckley,-1,-1,M,@I1358@,@I1356@,@I1357@
+Sarah,Pope,-1,-1,F,@I1359@,@I1366@,@I1367@
+Wilhelmus Hendrickse,Beekman,1622,1706,M,@I1360@,,
+Catalina,De Boogh,-1,-1,F,@I1361@,,
+Hendrick Henry,Beekman,-1,-1,M,@I1362@,@I1361@,@I1360@
+Johanna,Lopers,-1,-1,F,@I1363@,,
+John,Jenney,-1,1642,M,@I1364@,,
+Sarah,Carey,-1,-1,F,@I1365@,,
+Sarah,Jenney,-1,-1,F,@I1366@,@I1365@,@I1364@
+Thomas,Pope,-1,-1,M,@I1367@,,
+Abigail,Jenney,-1,-1,F,@I1368@,@I1365@,@I1364@
+Henry,Wood,-1,-1,M,@I1369@,,
+David,Wood,-1,-1,M,@I1370@,@I1368@,@I1369@
+Mary,Barker,-1,-1,F,@I1371@,,
+Hester Le,Mahieu,-1,-1,F,@I1372@,,
+Robert,Millard,-1,1698,M,@I1373@,,
+Elizabeth,Sabin,-1,-1,F,@I1374@,,
+Nathaniel,Millard,-1,-1,M,@I1375@,@I1374@,@I1373@
+Susanna,Gladding,-1,-1,F,@I1376@,,
+Pieter,Tjercks,-1,-1,M,@I1377@,,
+Geertruyt Philips,Van Schuylder,-1,-1,F,@I1378@,,
+Philip Pieterse,Schuyler,1627,1682,M,@I1379@,@I1378@,@I1377@
+Margareta,Van Slichtenhors,-1,-1,F,@I1380@,,
+William Henry,Harrison,1773,1841,M,@I1381@,@I1406@,@I1405@
+Benjamin,Harrison,1833,1901,M,@I1382@,@I1399@,@I1388@
+Anna Tuthill,Symmes,1775,1864,F,@I1383@,@I2302@,@I2303@
+Elizabeth Bassett,Harrison,1796,1846,F,@I1384@,@I1383@,@I1381@
+John Cleves Symmes,Harrison,1798,1830,M,@I1385@,@I1383@,@I1381@
+Lucy Singleton,Harrison,1800,1826,F,@I1386@,@I1383@,@I1381@
+William Henry,Harrison,1802,1838,M,@I1387@,@I1383@,@I1381@
+John Scott,Harrison,1804,1878,M,@I1388@,@I1383@,@I1381@
+Benjamin,Harrison,1806,1840,M,@I1389@,@I1383@,@I1381@
+Mary Symmes,Harrison,1809,1842,F,@I1390@,@I1383@,@I1381@
+Carter Bassett,Harrison,1811,1839,M,@I1391@,@I1383@,@I1381@
+Anna Tuthill,Harrison,1813,1865,F,@I1392@,@I1383@,@I1381@
+James Findlay,Harrison,1814,1819,M,@I1393@,@I1383@,@I1381@
+John Cleves,Short,1792,1864,M,@I1394@,,
+Clarissa,Pike,1803,1837,F,@I1395@,,
+David K,Estes,1786,1876,M,@I1396@,,
+Jane Findlay,Irwin,1804,1846,F,@I1397@,,
+Lucretia Knapp,Johnson,1804,1830,F,@I1398@,,
+Elizabeth Ramsey,Irwin,1810,1850,F,@I1399@,,
+Louisa Smith,Bonner,-1,-1,F,@I1400@,,
+Mary,Raney,-1,1840,F,@I1401@,,
+John Henry Fitzhugh,Thornton,1798,1871,M,@I1402@,,
+Mary Anne,Sutherland,1814,1893,F,@I1403@,,
+William Henry Harrison,Taylor,1813,1894,M,@I1404@,,
+Benjamin,Harrison,1726,1791,M,@I1405@,,
+Elizabeth,Bassett,1730,1792,F,@I1406@,,
+Elizabeth,Bassett,1751,-1,F,@I1407@,@I1406@,@I1405@
+Anne,Bassett,1753,1821,F,@I1408@,@I1406@,@I1405@
+Benjamin,Bassett,1755,1799,M,@I1409@,@I1406@,@I1405@
+Lucy,Bassett,-1,1809,F,@I1410@,@I1406@,@I1405@
+Carter Bassett,Bassett,-1,-1,M,@I1411@,@I1406@,@I1405@
+Sarah,Bassett,1770,1812,F,@I1412@,@I1406@,@I1405@
+William,Rickman,-1,-1,M,@I1413@,,
+_____,Edmonson,-1,-1,M,@I1414@,,
+David,Coupland,-1,-1,M,@I1415@,,
+Anna,Mercer,-1,-1,F,@I1416@,,
+Susan,Randolph,-1,-1,F,@I1417@,,
+Peyton,Randolph,-1,-1,M,@I1418@,,
+Anthony,Singleton,-1,-1,M,@I1419@,,
+Mary Howell,Allen,-1,-1,F,@I1420@,,
+Jane,Byrd,-1,-1,F,@I1421@,,
+John,Minge,-1,-1,M,@I1422@,,
+Caroline Lavinia,Scott,1832,1892,F,@I1423@,@I2273@,@I2274@
+Russell Benjamin,Harrison,1854,1936,M,@I1424@,@I1423@,@I1382@
+Mary Scott,Harrison,1858,1930,F,@I1425@,@I1423@,@I1382@
+_____,Harrison,1861,1861,F,@I1426@,@I1423@,@I1382@
+Mary Scott Dimmick,Lord,1858,1948,F,@I1427@,@I2271@,@I2272@
+Elizabeth,Harrison,1897,1955,F,@I1428@,@I1427@,@I1382@
+Mary Angeline,Saunders,1861,1944,F,@I1429@,,
+James Robert,McKee,1857,1942,M,@I1430@,,
+James Blaine,Walker,1889,1921,M,@I1431@,,
+Anna Symmes,Harrison,1837,1838,F,@I1432@,@I1399@,@I1388@
+Mary Jane,Harrison,1835,1867,F,@I1433@,@I1399@,@I1388@
+Elizabeth Short,Harrison,1825,1904,F,@I1434@,@I1398@,@I1388@
+William Henry,Harrison,1827,1829,M,@I1435@,@I1398@,@I1388@
+Sarah Lucretia,Harrison,1829,-1,F,@I1436@,@I1398@,@I1388@
+George Coleman,Eaton,-1,-1,M,@I1437@,,
+Thomas Jefferson,Devin,-1,-1,M,@I1438@,,
+Archibald Irwin,Harrison,1832,1870,M,@I1439@,@I1399@,@I1388@
+John Irwin,Harrison,1839,1839,M,@I1440@,@I1399@,@I1388@
+Carter Bassett,Harrison,1840,1905,M,@I1441@,@I1399@,@I1388@
+Anna Symmes,Harrison,1842,1926,F,@I1442@,@I1399@,@I1388@
+John Scott,Harrison,1844,1926,M,@I1443@,@I1399@,@I1388@
+James Findlay,Harrison,1847,1848,M,@I1444@,@I1399@,@I1388@
+James Irwin,Harrison,1849,1850,M,@I1445@,@I1399@,@I1388@
+Elizabeth Lawrence,Sheets,-1,-1,F,@I1446@,,
+Samuel Vance,Morris,-1,-1,M,@I1447@,,
+Sophia Ridgely Lytle,Dashiell,-1,-1,F,@I1448@,,
+Marie Sophie Elizabeth,Lytle,-1,-1,F,@I1449@,,
+Andrew,Johnson,1808,1875,M,@I1450@,@I1462@,@I1461@
+Eliza,McCardle,1810,1876,F,@I1451@,@I2157@,@I2158@
+Martha,Johnson,1828,1901,F,@I1452@,@I1451@,@I1450@
+Charles,Johnson,1830,1863,M,@I1453@,@I1451@,@I1450@
+Mary,Johnson,1832,1883,F,@I1454@,@I1451@,@I1450@
+Robert,Johnson,1834,1869,M,@I1455@,@I1451@,@I1450@
+Andrew Franklin,Johnson,1852,1879,M,@I1456@,@I1451@,@I1450@
+David Trotter,Patterson,1818,1891,M,@I1457@,,
+Daniel,Stover,1826,1864,M,@I1458@,@I2181@,@I2180@
+William Ramsay,Brown,-1,1883,M,@I1459@,,
+Kate May Bessie,Rumbough,1857,1930,F,@I1460@,,
+Jacob,Johnson,1778,1812,M,@I1461@,@I2154@,@I2150@
+Mary Polly,McDonough,1782,1856,F,@I1462@,@I2153@,@I2152@
+William Brazelton,Johnson,1804,1865,M,@I1463@,@I1462@,@I1461@
+Elizabeth,Johnson,1806,1806,F,@I1464@,@I1462@,@I1461@
+Turner,Daugherty,-1,-1,M,@I1465@,,
+Theodore,Roosevelt,1858,1919,M,@I1466@,@I1481@,@I1480@
+Alice Hathaway,Lee,1861,1884,F,@I1467@,,
+Alice Lee,Roosevelt,1884,1980,F,@I1468@,@I1467@,@I1466@
+Nicholas,Longworth,1869,1931,M,@I1469@,,
+Edith Kermit,Carow,1861,1948,F,@I1470@,,
+Theodore,Roosevelt,1887,1944,M,@I1471@,@I1470@,@I1466@
+Kermit,Roosevelt,1889,1943,M,@I1472@,@I1470@,@I1466@
+Ethel Carow,Roosevelt,1891,1977,F,@I1473@,@I1470@,@I1466@
+Archibald Bulloch,Roosevelt,1894,1979,M,@I1474@,@I1470@,@I1466@
+Quentin,Roosevelt,1897,1919,M,@I1475@,@I1470@,@I1466@
+Eleanor Butler,Alexander,1889,1960,F,@I1476@,,
+Belle Wyatt,Willard,1892,1968,F,@I1477@,,
+Richard,Derby,1881,1963,M,@I1478@,,
+Grace Stackpole,Lockwood,-1,1971,F,@I1479@,,
+Theodore,Roosevelt,1831,1878,M,@I1480@,@I2227@,@I2228@
+Martha Stewart,Bulloch,1835,1884,F,@I1481@,,
+Anna,Roosevelt,1855,1931,F,@I1482@,@I1481@,@I1480@
+Elliott Bulloch,Roosevelt,1860,1894,M,@I1483@,@I1481@,@I1480@
+Corinne,Roosevelt,1861,1933,F,@I1484@,@I1481@,@I1480@
+William Sheffield,Cowles,-1,-1,M,@I1485@,,
+Anna Rebecca,Hall,1863,1892,F,@I1486@,,
+Douglas,Robinson,-1,-1,M,@I1487@,,
+Dwight David,Eisenhower,1890,1969,M,@I1488@,@I1494@,@I1493@
+Mary Geneva,Doud,1896,1979,F,@I1489@,@I2215@,@I2216@
+Doud Dwight,Eisenhower,1917,1921,M,@I1490@,@I1489@,@I1488@
+John Sheldon Doud,Eisenhower,1922,2013,M,@I1491@,@I1489@,@I1488@
+Barbara Jean,Thompson,1926,-1,F,@I1492@,,
+David Jacob,Eisenhower,1863,1942,M,@I1493@,,
+Ida Elizabeth,Stover,1862,1946,F,@I1494@,,
+Arthur Bradford,Eisenhower,1886,1958,M,@I1495@,@I1494@,@I1493@
+Edgar Newton,Eisenhower,1889,1971,M,@I1496@,@I1494@,@I1493@
+Roy J.,Eisenhower,1892,1942,M,@I1497@,@I1494@,@I1493@
+Paul Dawson,Eisenhower,1894,1895,M,@I1498@,@I1494@,@I1493@
+Earl Dewey,Eisenhower,1898,1968,M,@I1499@,@I1494@,@I1493@
+Milton Stover,Eisenhower,1899,1985,M,@I1500@,@I1494@,@I1493@
+Alida,Bliss,1899,1968,F,@I1501@,,
+Louise Sandra,Grieb,1893,1979,F,@I1502@,,
+Louise,Alexander,-1,-1,F,@I1503@,,
+Bernice,Thompson,-1,-1,F,@I1504@,,
+Lucy,Dawson,-1,-1,F,@I1505@,,
+Edna Alice,Shade,-1,-1,F,@I1506@,,
+Kathryn,Snider,-1,-1,F,@I1507@,,
+Helen Elsie,Eakin,-1,-1,F,@I1508@,,
+John Fitzgerald,Kennedy,1917,1963,M,@I1509@,@I1518@,@I1517@
+Jacqueline Lee,Bouvier,1929,1994,F,@I1510@,@I2217@,@I2218@
+Arabelle,Kennedy,1956,1956,F,@I1511@,@I1510@,@I1509@
+Caroline Bouvier,Kennedy,1957,1993,F,@I1512@,@I1510@,@I1509@
+John Fitzgerald,Kennedy,1960,1999,M,@I1513@,@I1510@,@I1509@
+Patrick Bouvier,Kennedy,1963,1963,M,@I1514@,@I1510@,@I1509@
+Edwin Arthur,Schlossberg,-1,-1,M,@I1515@,,
+Rose,Schlossberg,1988,-1,F,@I1516@,@I1512@,@I1515@
+Joseph Patrick,Kennedy,1888,1969,M,@I1517@,,
+Rose Elizabeth,Fitzgerald,1890,1995,F,@I1518@,,
+Joseph Patrick,Kennedy,1915,1944,M,@I1519@,@I1518@,@I1517@
+Rosemary,Kennedy,1918,2005,F,@I1520@,@I1518@,@I1517@
+Kathleen,Kennedy,1920,1948,F,@I1521@,@I1518@,@I1517@
+Eunice Mary,Kennedy,1921,2009,F,@I1522@,@I1518@,@I1517@
+Patricia,Kennedy,1924,-1,F,@I1523@,@I1518@,@I1517@
+Robert Francis,Kennedy,1925,1968,M,@I1524@,@I1518@,@I1517@
+Jean Ann,Kennedy,1928,-1,F,@I1525@,@I1518@,@I1517@
+Edward Moore,Kennedy,1932,2009,M,@I1526@,@I1518@,@I1517@
+John Robert,Cavendish,1917,1944,M,@I1527@,,
+Robert Sargent,Shriver,1915,2011,M,@I1528@,,
+Peter,Lawford,1923,1984,M,@I1529@,,
+Ethel,Skakel,1928,-1,F,@I1530@,,
+Stephen Edward,Smith,1927,-1,M,@I1531@,,
+Virginia Joan,Bennett,1936,-1,F,@I1532@,,
+Robert Sargent,Shriver,1954,-1,M,@I1533@,@I1522@,@I1528@
+Maria Owings,Shriver,1955,-1,F,@I1534@,@I1522@,@I1528@
+Timothy Perry,Shriver,1959,-1,M,@I1535@,@I1522@,@I1528@
+Mark,Shriver,1964,-1,M,@I1536@,@I1522@,@I1528@
+Anthony Paul,Shriver,1965,-1,M,@I1537@,@I1522@,@I1528@
+Christopher Kennedy,Lawford,1955,-1,M,@I1538@,@I1523@,@I1529@
+Sydney Maleia,Lawford,1956,-1,F,@I1539@,@I1523@,@I1529@
+Victoria Francis,Lawford,1958,-1,F,@I1540@,@I1523@,@I1529@
+Robin Elizabeth,Lawford,1961,-1,F,@I1541@,@I1523@,@I1529@
+Kathleen Hartington,Kennedy,1951,-1,F,@I1542@,@I1530@,@I1524@
+Joseph Patrick,Kennedy,1952,-1,M,@I1543@,@I1530@,@I1524@
+Robert Francis,Kennedy,1954,-1,M,@I1544@,@I1530@,@I1524@
+David Anthony,Kennedy,1955,1984,M,@I1545@,@I1530@,@I1524@
+Mary Courtney,Kennedy,1956,-1,F,@I1546@,@I1530@,@I1524@
+Michael Lemoyne,Kennedy,1958,-1,M,@I1547@,@I1530@,@I1524@
+Mary Kerry,Kennedy,1959,-1,F,@I1548@,@I1530@,@I1524@
+Christopher George,Kennedy,1963,-1,M,@I1549@,@I1530@,@I1524@
+Matthew Maxwell Taylor,Kennedy,1965,-1,M,@I1550@,@I1530@,@I1524@
+Douglas Harriman,Kennedy,1967,-1,M,@I1551@,@I1530@,@I1524@
+Rory Elizabeth Katherine,Kennedy,1968,-1,F,@I1552@,@I1530@,@I1524@
+Stephen,Smith,1957,-1,M,@I1553@,@I1525@,@I1531@
+William Kennedy,Smith,1960,-1,M,@I1554@,@I1525@,@I1531@
+Amanda Mary,Smith,1967,-1,F,@I1555@,@I1525@,@I1531@
+Kym Maria,Smith,1972,-1,F,@I1556@,@I1525@,@I1531@
+Kara Anne,Kennedy,1960,2011,M,@I1557@,@I1532@,@I1526@
+Edward Moore,Kennedy,1961,-1,M,@I1558@,@I1532@,@I1526@
+Patrick Joseph,Kennedy,1967,-1,M,@I1559@,@I1532@,@I1526@
+Gerald Rudolph,Ford,1913,2006,M,@I1560@,@I1567@,@I1566@
+Elizabeth Ann,Bloomer,1918,2011,F,@I1561@,@I2304@,@I2305@
+Michael Gerald,Ford,1950,-1,M,@I1562@,@I1561@,@I1560@
+John Jack Gardner,Ford,1952,-1,M,@I1563@,@I1561@,@I1560@
+Steven Meigs,Ford,1956,-1,M,@I1564@,@I1561@,@I1560@
+Susan Elizabeth,Ford,1957,-1,F,@I1565@,@I1561@,@I1560@
+Leslie Lynch,King,1881,1941,M,@I1566@,,
+Dorothy Ayer,Gardner,1892,1967,F,@I1567@,,
+Margaret,Atwood,1891,-1,F,@I1568@,,
+Marjorie,King,1921,-1,F,@I1569@,@I1568@,@I1566@
+Leslie Henry,King,1923,1976,M,@I1570@,@I1568@,@I1566@
+Patricia,King,1925,-1,F,@I1571@,@I1568@,@I1566@
+Gerald Rudolf,Ford,1890,1962,M,@I1572@,,
+Thomas G,Ford,1918,-1,M,@I1573@,@I1567@,@I1572@
+Richard A.,Ford,-1,-1,M,@I1574@,@I1567@,@I1572@
+James F.,Ford,1927,-1,M,@I1575@,@I1567@,@I1572@
+James Earl,Carter,1924,-1,M,@I1576@,@I1583@,@I1582@
+Rosalynn,Smith,1927,-1,F,@I1577@,@I2213@,@I2214@
+John,Carter,1947,-1,M,@I1578@,@I1577@,@I1576@
+James Earl,Carter,1950,-1,M,@I1579@,@I1577@,@I1576@
+Jeffrey Donnel,Carter,1952,-1,M,@I1580@,@I1577@,@I1576@
+Amy Lynn,Carter,1967,-1,F,@I1581@,@I1577@,@I1576@
+James Earl,Carter,1894,1953,M,@I1582@,,
+Lillian Bessie,Gordy,1898,1983,F,@I1583@,,
+Gloria,Carter,-1,-1,F,@I1584@,@I1583@,@I1582@
+Ruth,Carter,-1,1983,F,@I1585@,@I1583@,@I1582@
+William Alton,Carter,1937,1988,M,@I1586@,@I1583@,@I1582@
+Walter,Spann,-1,-1,M,@I1587@,,
+Robert,Stapleton,-1,-1,M,@I1588@,,
+Sybil,Spires,-1,-1,F,@I1589@,,
+John,Tyler,1790,1862,M,@I1590@,@I1609@,@I1608@
+Letitia,Christian,1790,1842,F,@I1591@,,
+Mary,Tyler,1815,1848,F,@I1592@,@I1591@,@I1590@
+Robert,Tyler,1816,1877,M,@I1593@,@I1591@,@I1590@
+John,Tyler,1819,1896,M,@I1594@,@I1591@,@I1590@
+Letitia Christian,Tyler,1821,1907,F,@I1595@,@I1591@,@I1590@
+Elizabeth,Tyler,1823,1850,F,@I1596@,@I1591@,@I1590@
+Ann Contesse,Tyler,1825,1825,F,@I1597@,@I1591@,@I1590@
+Alice,Tyler,1828,1854,F,@I1598@,@I1591@,@I1590@
+Tazewell,Tyler,1830,1874,M,@I1599@,@I1591@,@I1590@
+Julia,Gardiner,1820,1889,F,@I1600@,@I2328@,@I2329@
+David Gardiner,Tyler,1846,1927,M,@I1601@,@I1600@,@I1590@
+John Alexander,Tyler,1848,1883,M,@I1602@,@I1600@,@I1590@
+Julia Gardiner,Tyler,1849,1871,F,@I1603@,@I1600@,@I1590@
+Lachlan Gardiner,Tyler,1851,1902,M,@I1604@,@I1600@,@I1590@
+Lyon Gardiner,Tyler,1853,1935,M,@I1605@,@I1600@,@I1590@
+Robert Fitzwalter,Tyler,1856,1927,M,@I1606@,@I1600@,@I1590@
+Margaret Pearl,Tyler,1860,1947,F,@I1607@,@I1600@,@I1590@
+John,Tyler,1747,1813,M,@I1608@,,
+Mary Marot,Armistead,1761,1797,F,@I1609@,,
+Anne Contesse,Tyler,1778,1803,F,@I1610@,@I1609@,@I1608@
+Elizabeth Armistead,Tyler,1780,1824,F,@I1611@,@I1609@,@I1608@
+Martha Jefferson,Tyler,1782,1855,F,@I1612@,@I1609@,@I1608@
+Maria Henry,Tyler,1784,1843,F,@I1613@,@I1609@,@I1608@
+Wat Henry,Tyler,1788,1862,M,@I1614@,@I1609@,@I1608@
+William,Tyler,1791,1856,M,@I1615@,@I1609@,@I1608@
+Christiana Booth,Tyler,1795,1842,F,@I1616@,@I1609@,@I1608@
+James,Semple,-1,-1,M,@I1617@,,
+John Clayton,Pryor,-1,-1,M,@I1618@,,
+Thomas Ennalls,Waggaman,-1,-1,M,@I1619@,,
+John Boswell,Seawell,-1,-1,M,@I1620@,,
+Elizabeth Warren,Walker,-1,-1,F,@I1621@,,
+Margaret,Govan,-1,-1,F,@I1622@,,
+Susan Harrison,Walker,-1,-1,F,@I1623@,,
+Henry,Curtis,-1,-1,M,@I1624@,,
+Henry Lightfoot,Jones,1813,-1,M,@I1625@,,
+Priscilla Elizabeth,Cooper,1816,1889,F,@I1626@,,
+Martha Rochelle,,1820,1867,F,@I1627@,,
+James A,Semple,-1,-1,M,@I1628@,,
+William Nevison,Waller,-1,-1,M,@I1629@,,
+Henry Mandeville,Denison,1822,1858,M,@I1630@,,
+Nannie,Brydges,-1,-1,F,@I1631@,,
+Mary Morris,Jones,1865,1931,F,@I1632@,,
+Sarah Griswold,Gardiner,-1,-1,F,@I1633@,,
+William H.,Spencer,-1,-1,M,@I1634@,,
+Georgia,Powell,-1,-1,F,@I1635@,,
+Annie Baker,Tucker,1855,1921,F,@I1636@,,
+Sue,Ruffin,1889,1953,F,@I1637@,,
+Fannie,Glinn,-1,-1,F,@I1638@,,
+William Mumford,Ellis,1846,1921,M,@I1639@,,
+Grover Stephen,Cleveland,1837,1908,M,@I1640@,@I1654@,@I1653@
+Frances,Folsom,1864,1947,F,@I1641@,@I2270@,@I2269@
+Ruth,Cleveland,1891,1904,F,@I1642@,@I1641@,@I1640@
+Esther,Cleveland,1893,1980,F,@I1643@,@I1641@,@I1640@
+Marion,Cleveland,1895,1960,F,@I1644@,@I1641@,@I1640@
+Richard Folsom,Cleveland,1897,1974,M,@I1645@,@I1641@,@I1640@
+Francis Grover,Cleveland,1903,-1,M,@I1646@,@I1641@,@I1640@
+William Sidney Bence,Bosanquet,1893,1966,M,@I1647@,,
+William Stanley,Dell,1894,-1,M,@I1648@,,
+John Harlan,Amen,1898,1960,M,@I1649@,,
+Ellen Douglas,Gailor,1897,1954,F,@I1650@,,
+Jesse Maxwell,Black,1919,-1,F,@I1651@,,
+Alice,Erdman,1904,-1,F,@I1652@,,
+Richard Falley,Cleveland,1804,1853,M,@I1653@,,
+Anne,Neal,1806,1882,F,@I1654@,,
+Anna Neal,Cleveland,1830,1909,F,@I1655@,@I1654@,@I1653@
+William Neal,Cleveland,1832,1906,M,@I1656@,@I1654@,@I1653@
+Mary Allen,Cleveland,1833,1914,F,@I1657@,@I1654@,@I1653@
+Richard Cecil,Cleveland,1835,1872,M,@I1658@,@I1654@,@I1653@
+Margaret Louise Falley,Cleveland,1838,1932,F,@I1659@,@I1654@,@I1653@
+Lewis Frederick,Cleveland,1841,1872,M,@I1660@,@I1654@,@I1653@
+Susan Sophia,Cleveland,1843,-1,F,@I1661@,@I1654@,@I1653@
+Rose Elizabeth,Cleveland,1846,1918,F,@I1662@,@I1654@,@I1653@
+Eurotas Parmalee,Hastings,-1,-1,M,@I1663@,,
+Anita Marie,Thomas,-1,-1,F,@I1664@,,
+William Edward,Hoyt,-1,-1,M,@I1665@,,
+Norval Baldwin,Bacon,-1,-1,M,@I1666@,,
+Lucien Theron,Yeomans,-1,-1,M,@I1667@,,
+Harry S,Truman,1884,1972,M,@I1668@,@I1673@,@I1672@
+Elizabeth Bess Virginia,Wallace,1885,1982,F,@I1669@,@I2225@,@I2226@
+Margaret Mary,Truman,1924,2008,F,@I1670@,@I1669@,@I1668@
+Clifton Elbert,Daniel,1912,-1,M,@I1671@,,
+John Anderson,Truman,1851,1914,M,@I1672@,@I1683@,@I1682@
+Martha Ellen,Young,1852,1947,F,@I1673@,,
+Vivian John,Truman,1886,1965,M,@I1674@,@I1673@,@I1672@
+Mary Jane,Truman,1869,1978,F,@I1675@,@I1673@,@I1672@
+Louella,Campbell,-1,-1,F,@I1676@,,
+Clifton Truman,Daniel,1957,-1,M,@I1677@,@I1670@,@I1671@
+William Wallace,Daniel,1959,-1,M,@I1678@,@I1670@,@I1671@
+Harrison Gates,Daniel,1963,-1,M,@I1679@,@I1670@,@I1671@
+Thomas Washington,Daniel,1966,-1,M,@I1680@,@I1670@,@I1671@
+_____,Truman,1882,1882,M,@I1681@,@I1673@,@I1672@
+Anderson Shipp,Truman,1816,1887,M,@I1682@,,
+Mary Jane,Holmes,1821,1878,F,@I1683@,,
+William Thomas,Truman,1847,1930,M,@I1684@,@I1683@,@I1682@
+Margaret Ellen,Truman,1849,1948,F,@I1685@,@I1683@,@I1682@
+Emily Ricks,Truman,1855,1929,F,@I1686@,@I1683@,@I1682@
+Mary Martha,Truman,1860,1900,F,@I1687@,@I1683@,@I1682@
+Rochester Campbell,Colgan,-1,-1,M,@I1688@,,
+Joseph Tilford,Nolan,-1,-1,M,@I1689@,,
+Henrietta,Strang,-1,-1,F,@I1690@,,
+Susan,Hurst,-1,-1,F,@I1691@,,
+Franklin Delano,Roosevelt,1882,1945,M,@I1692@,@I1722@,@I1719@
+Eleanor Anna,Roosevelt,1884,1962,F,@I1693@,@I1486@,@I1483@
+Anna Eleanor,Roosevelt,1906,1975,F,@I1694@,@I1693@,@I1692@
+James,Roosevelt,1907,1991,M,@I1695@,@I1693@,@I1692@
+Franklin Delano,Roosevelt,1909,1909,M,@I1696@,@I1693@,@I1692@
+Elliott,Roosevelt,1910,1990,M,@I1697@,@I1693@,@I1692@
+Franklin Delano,Roosevelt,1914,1988,M,@I1698@,@I1693@,@I1692@
+John Aspinwall,Roosevelt,1916,1981,M,@I1699@,@I1693@,@I1692@
+Curtis Bean,Dall,-1,-1,M,@I1700@,,
+John,Boettiger,1900,1950,M,@I1701@,,
+James Addison,Halsted,-1,-1,M,@I1702@,,
+Betsey,Cushing,-1,-1,F,@I1703@,,
+Romelle Theresa,Schneider,1916,-1,F,@I1704@,,
+Gladys Irene,Owens,1917,-1,F,@I1705@,,
+Mary Mary Lena,Winskill,1939,-1,F,@I1706@,,
+Elizabeth Browning,Donner,1911,-1,F,@I1707@,,
+Ruth Josephine,Googins,-1,-1,F,@I1708@,,
+Faye Margaret,Emerson,1917,1983,F,@I1709@,,
+Minnewa,Bell,1911,-1,F,@I1710@,,
+Patricia,Whithead,-1,-1,F,@I1711@,,
+Ethel Du,Pont,1915,1965,F,@I1712@,,
+Suzanne,Perrin,-1,-1,F,@I1713@,,
+Felicia,Schiff,-1,-1,F,@I1714@,,
+Patricia Louise,Oakes,1951,-1,F,@I1715@,,
+Lynda,Stevenson,-1,-1,F,@I1716@,,
+Anne Lindsay,Clark,1916,1973,F,@I1717@,,
+Irene E.,Boyd,1931,-1,F,@I1718@,,
+James,Roosevelt,1828,1900,M,@I1719@,@I1000@,@I1001@
+Rebecca Brien,Howland,1831,1876,F,@I1720@,,
+James,Roosevelt,1854,1927,M,@I1721@,@I1720@,@I1719@
+Sara,Delano,1854,1941,F,@I1722@,@I1062@,@I1061@
+Herbert Clark,Hoover,1874,1964,M,@I1723@,@I1730@,@I1729@
+Lou,Henry,1874,1944,F,@I1724@,@I2231@,@I2232@
+Herbert Charles,Hoover,1903,1969,M,@I1725@,@I1724@,@I1723@
+Allan Henry,Hoover,1907,1993,M,@I1726@,@I1724@,@I1723@
+Margaret Eva,Watson,1905,-1,F,@I1727@,,
+Margaret,Coberly,1911,-1,F,@I1728@,,
+Jesse Clark,Hoover,1847,1880,M,@I1729@,,
+Hulda Randall,Minthorn,1848,1883,F,@I1730@,,
+Theodore Jesse,Hoover,1871,1955,M,@I1731@,@I1730@,@I1729@
+Mary,Hoover,1876,-1,F,@I1732@,@I1730@,@I1729@
+Mildred Crew,Brook,-1,-1,F,@I1733@,,
+Cornelius Van Ness,Leavitt,-1,-1,M,@I1734@,,
+Woodrow Thomas,Wilson,1856,1924,M,@I1735@,@I1744@,@I1743@
+Ellen Louise,Axson,1860,1914,F,@I1736@,,
+Margaret Woodrow,Wilson,1886,1944,F,@I1737@,@I1736@,@I1735@
+Jessie Woodrow,Wilson,1887,1933,F,@I1738@,@I1736@,@I1735@
+Eleanor Randolph,Wilson,1889,1967,F,@I1739@,@I1736@,@I1735@
+Edith,Bolling,1885,1961,F,@I1740@,,
+Francis Bowes,Sayre,1885,1972,M,@I1741@,,
+William Gibbs,McAdoo,1863,1941,M,@I1742@,,
+Joseph Ruggles,Wilson,1822,1903,M,@I1743@,,
+Janet Jessie,Woodrow,1826,1888,F,@I1744@,,
+Marion Williamson,Wilson,1851,-1,M,@I1745@,@I1744@,@I1743@
+Annie Josephson,Wilson,1853,1916,F,@I1746@,@I1744@,@I1743@
+Joseph Ruggles,Wilson,1867,-1,M,@I1747@,@I1744@,@I1743@
+George,Howe,-1,-1,M,@I1748@,,
+Calvin John,Coolidge,1872,1933,M,@I1749@,@I1755@,@I1754@
+Grace Anna,Goodhue,1879,1957,F,@I1750@,,
+John,Coolidge,1906,2000,M,@I1751@,@I1750@,@I1749@
+Calvin,Coolidge,1908,1924,M,@I1752@,@I1750@,@I1749@
+Florence,Trumbull,1904,1998,F,@I1753@,,
+John Calvin,Coolidge,1845,1926,M,@I1754@,@I1226@,@I1225@
+Victoria Josephine,Moor,1846,1885,F,@I1755@,,
+Abigail Gratia,Coolidge,1875,1900,F,@I1756@,@I1755@,@I1754@
+Caroline A,Brown,1857,1920,F,@I1757@,,
+James Knox,Polk,1795,1849,M,@I1758@,@I1761@,@I1760@
+Sarah,Childress,1803,1891,F,@I1759@,@I2330@,@I2331@
+Samuel,Polk,1772,1827,M,@I1760@,,
+Jane,Knox,1776,1852,F,@I1761@,,
+Jane Maria,Polk,1798,1876,F,@I1762@,@I1761@,@I1760@
+Franklin Ezekiel,Polk,1802,1831,M,@I1763@,@I1761@,@I1760@
+John Lee,Polk,1807,1831,M,@I1764@,@I1761@,@I1760@
+Ophelia Clarissa,Polk,1812,1851,F,@I1765@,@I1761@,@I1760@
+Samuel Wilson,Polk,1817,1839,M,@I1766@,@I1761@,@I1760@
+Marshall Tate,Polk,1805,1831,M,@I1767@,@I1761@,@I1760@
+Naomi Tate,Polk,1809,1836,F,@I1768@,@I1761@,@I1760@
+William Hawkins,Polk,1815,1862,M,@I1769@,@I1761@,@I1760@
+James,Walker,-1,-1,M,@I1770@,,
+Lydia Eliza,Polk,1800,1864,F,@I1771@,@I1761@,@I1760@
+Silas William,Caldwell,-1,-1,M,@I1772@,,
+Edward,Richmond,-1,-1,M,@I1773@,,
+Laura Teresa,Wilson,-1,-1,F,@I1774@,,
+Adlai O.,Harris,-1,-1,M,@I1775@,,
+Belinda G.,Dickinson,-1,-1,F,@I1776@,,
+Mary L,Corse,-1,-1,F,@I1777@,,
+Lucy Eugenia,Williams,-1,-1,F,@I1778@,,
+Zachary,Taylor,1784,1850,M,@I1779@,@I1793@,@I1792@
+Margaret MacKall,Smith,1788,1852,F,@I1780@,@I2332@,
+Ann Margaret MacKall,Taylor,1811,1875,F,@I1781@,@I1780@,@I1779@
+Sarah Knox,Taylor,1814,1835,F,@I1782@,@I1780@,@I1779@
+Octavia Pannill,Taylor,1816,1820,F,@I1783@,@I1780@,@I1779@
+Margaret Smith,Taylor,1819,1820,F,@I1784@,@I1780@,@I1779@
+Mary Elizabeth,Taylor,1824,1909,F,@I1785@,@I1780@,@I1779@
+Richard,Taylor,1826,1879,M,@I1786@,@I1780@,@I1779@
+Robert Crooke,Wood,1801,1869,M,@I1787@,,
+Jefferson Finis,Davis,1808,1889,M,@I1788@,,
+William Smith,Bliss,1815,1853,M,@I1789@,,
+Philip Pendleton,Dandridge,-1,-1,M,@I1790@,,
+Louise Marie Myrthe,Bringier,-1,1875,F,@I1791@,,
+Richard,Taylor,1744,1829,M,@I1792@,,
+Sarah Dabney,Strother,1760,1822,F,@I1793@,,
+Hancock,Taylor,1781,1841,M,@I1794@,@I1793@,@I1792@
+William Dabney Strother,Taylor,1774,1851,M,@I1795@,@I1793@,@I1792@
+Richard Strother,Taylor,-1,-1,M,@I1796@,@I1793@,@I1792@
+George,Taylor,1790,-1,M,@I1797@,@I1793@,@I1792@
+Elizabeth Lee,Taylor,1792,1845,F,@I1798@,@I1793@,@I1792@
+Joseph Pannill,Taylor,1796,1864,M,@I1799@,@I1793@,@I1792@
+Sarah Bailey,Taylor,1799,-1,F,@I1800@,@I1793@,@I1792@
+Emily Richard,Taylor,1801,-1,F,@I1801@,@I1793@,@I1792@
+Sophia Elizabeth,Hoard,-1,-1,F,@I1802@,,
+Annah Hornsby,Lewis,-1,-1,F,@I1803@,,
+John Gibson,Taylor,1768,1829,M,@I1804@,@I2258@,@I2292@
+Evelyn,McLean,-1,-1,F,@I1805@,,
+French Strother,Grey,-1,-1,M,@I1806@,,
+John S,Allison,-1,-1,M,@I1807@,,
+James,Buchanan,1791,1868,M,@I1808@,@I1810@,@I1809@
+James,Buchanan,1761,1821,M,@I1809@,,
+Elizabeth,Speer,1767,1833,F,@I1810@,,
+Mary,Buchanan,1789,1791,F,@I1811@,@I1810@,@I1809@
+Jane,Buchanan,1793,1839,F,@I1812@,@I1810@,@I1809@
+Maria,Buchanan,1795,1849,F,@I1813@,@I1810@,@I1809@
+Sarah,Buchanan,1798,1825,F,@I1814@,@I1810@,@I1809@
+Elizabeth,Buchanan,1800,1801,F,@I1815@,@I1810@,@I1809@
+Harriet,Buchanan,1802,1840,F,@I1816@,@I1810@,@I1809@
+John,Buchanan,1804,1804,M,@I1817@,@I1810@,@I1809@
+William Speer,Buchanan,1805,1826,M,@I1818@,@I1810@,@I1809@
+George Washington,Buchanan,1808,1832,M,@I1819@,@I1810@,@I1809@
+Edward Young,Buchanan,1811,1895,M,@I1820@,@I1810@,@I1809@
+Elliott Tod,Lane,1790,1840,M,@I1821@,,
+Jesse,Magaw,-1,-1,M,@I1822@,,
+Thomas Samuel,Johnson,-1,-1,M,@I1823@,,
+Charles M,Yates,-1,-1,M,@I1824@,,
+James J,Huston,-1,-1,M,@I1825@,,
+Robert,Henry,-1,-1,M,@I1826@,,
+Ann Eliza,Foster,-1,-1,F,@I1827@,,
+Franklin,Pierce,1804,1869,M,@I1828@,@I1836@,@I1833@
+Jane Means,Appleton,1806,1863,F,@I1829@,@I2293@,@I2294@
+Franklin,Pierce,1836,1836,M,@I1830@,@I1829@,@I1828@
+Frank Robert,Pierce,1839,1843,M,@I1831@,@I1829@,@I1828@
+Benjamin,Pierce,1841,1853,M,@I1832@,@I1829@,@I1828@
+Benjamin,Pierce,1757,1839,M,@I1833@,,
+Elizabeth,Andrews,1768,1788,F,@I1834@,,
+Elizabeth,Pierce,1788,1855,F,@I1835@,@I1834@,@I1833@
+Anna,Kendrick,1768,1838,F,@I1836@,,
+Benjamin Kendrick,Pierce,1790,1850,M,@I1837@,@I1836@,@I1833@
+Nancy,Pierce,1792,1837,F,@I1838@,@I1836@,@I1833@
+John Sullivan,Pierce,1796,1824,M,@I1839@,@I1836@,@I1833@
+Harriet B,Pierce,1800,-1,F,@I1840@,@I1836@,@I1833@
+Charles Grandison,Pierce,1803,1828,M,@I1841@,@I1836@,@I1833@
+Charlotte,Pierce,-1,-1,F,@I1842@,@I1836@,@I1833@
+Henry Dearborn,Pierce,1812,1880,M,@I1843@,@I1836@,@I1833@
+Josephine,La Framboise,-1,-1,F,@I1844@,,
+Solomon,McNeil,-1,-1,M,@I1845@,,
+Marietta O,Putthoff,-1,-1,F,@I1846@,,
+Hugh,Jameson,-1,-1,M,@I1847@,,
+Susan,Tuttle,-1,-1,F,@I1848@,,
+Chester Alan,Arthur,1829,1886,M,@I1849@,@I1858@,@I1857@
+Ellen Lewis,Herndon,1837,1880,F,@I1850@,@I2275@,@I2276@
+William Lewis Herndon,Arthur,1860,1863,M,@I1851@,@I1850@,@I1849@
+Chester Alan,Arthur,1864,1937,M,@I1852@,@I1850@,@I1849@
+Ellen Nell Herndon,Arthur,1871,1915,F,@I1853@,@I1850@,@I1849@
+Myra Townsend Andrews,Fithian,1870,1935,F,@I1854@,,
+Rowena Graves,Dashwood,1894,1937,F,@I1855@,,
+Charles,Pinkerton,1871,1974,M,@I1856@,,
+William,Arthur,1796,1875,M,@I1857@,,
+Malvina,Stone,1802,1869,F,@I1858@,,
+Regina,Arthur,1822,-1,F,@I1859@,@I1858@,@I1857@
+Jane,Arthur,1824,-1,F,@I1860@,@I1858@,@I1857@
+Almeda,Arthur,-1,-1,F,@I1861@,@I1858@,@I1857@
+Ann Eliza,Arthur,-1,-1,F,@I1862@,@I1858@,@I1857@
+Malvina,Arthur,-1,-1,F,@I1863@,@I1858@,@I1857@
+William,Arthur,1834,1915,M,@I1864@,@I1858@,@I1857@
+George,Arthur,1836,-1,M,@I1865@,@I1858@,@I1857@
+Mary,Arthur,-1,1916,F,@I1866@,@I1858@,@I1857@
+Alice Bridge,Jackson,-1,-1,F,@I1867@,,
+John Edward,McElroy,-1,-1,M,@I1868@,,
+Hiram Ulysses Simpson,Grant,1822,1885,M,@I1869@,@I1883@,@I1882@
+Julia Boggs,Dent,1826,1902,F,@I1870@,@I2288@,@I2289@
+Frederick Dent,Grant,1850,1912,M,@I1871@,@I1870@,@I1869@
+Ulysses Simpson,Grant,1852,1929,M,@I1872@,@I1870@,@I1869@
+Ellen Wrenshall,Grant,1855,1922,F,@I1873@,@I1870@,@I1869@
+Jesse Root,Grant,1858,1934,M,@I1874@,@I1870@,@I1869@
+Ida Marie,Honore,1854,1930,F,@I1875@,,
+Fannie Josephine,Chaffee,1857,1909,F,@I1876@,,
+Algernon Charles Frederick,Sartoris,1851,1893,M,@I1878@,,
+Frank Hatch,Jones,-1,1922,M,@I1879@,,
+Elizabeth,Chapman,1858,1945,F,@I1880@,,
+Lillian,Burns,1864,1924,F,@I1881@,,
+Jesse Root,Grant,1794,1873,M,@I1882@,,
+Hannah,Simpson,1798,1883,F,@I1883@,,
+Samuel Simpson,Grant,1825,1861,M,@I1884@,@I1883@,@I1882@
+Clara Rachel,Grant,1828,1865,F,@I1885@,@I1883@,@I1882@
+Virginia Paine,Grant,1832,-1,F,@I1886@,@I1883@,@I1882@
+Orvil Lynch,Grant,1835,1881,M,@I1887@,@I1883@,@I1882@
+Mary Frances,Grant,1839,-1,F,@I1888@,@I1883@,@I1882@
+Abel Rathbone,Corbin,-1,-1,M,@I1889@,,
+Mary,Medary,-1,-1,F,@I1890@,,
+Michael John,Cramer,-1,-1,M,@I1891@,,
+James Abram,Garfield,1831,1881,M,@I1892@,@I1908@,@I1907@
+Lucretia,Rudolph,1832,1918,F,@I1893@,@I2277@,@I2278@
+Eliza Arabella,Garfield,1860,1863,F,@I1894@,@I1893@,@I1892@
+Harry Augustus,Garfield,1863,1942,M,@I1895@,@I1893@,@I1892@
+James Rudolf,Garfield,1865,1950,M,@I1896@,@I1893@,@I1892@
+Mary,Garfield,1867,1947,F,@I1897@,@I1893@,@I1892@
+Irvin McDowell,Garfield,1870,1951,M,@I1898@,@I1893@,@I1892@
+Abram,Garfield,1872,1958,M,@I1899@,@I1893@,@I1892@
+Edward,Garfield,1874,1876,M,@I1900@,@I1893@,@I1892@
+Belle Hartford,Mason,1864,1944,F,@I1901@,,
+Helen Newell,Hills,1866,1930,F,@I1902@,,
+Joseph Stanley,Brown,1858,1941,M,@I1903@,,
+Susan,Emmons,1878,-1,F,@I1904@,,
+Sarah Granger,Williams,1873,1945,F,@I1905@,,
+Helen Grannis,Matthews,1902,1958,F,@I1906@,,
+Abraham,Garfield,1799,1833,M,@I1907@,,
+Eliza,Ballou,1801,1888,F,@I1908@,,
+Mehitabel,Garfield,1821,-1,F,@I1909@,@I1908@,@I1907@
+Thomas,Garfield,1822,-1,M,@I1910@,@I1908@,@I1907@
+Mary,Garfield,1824,1884,F,@I1911@,@I1908@,@I1907@
+James Ballou,Garfield,1826,1829,M,@I1912@,@I1908@,@I1907@
+Stephen D.,Trowbridge,-1,-1,M,@I1913@,,
+Jane,Harper,-1,-1,F,@I1914@,,
+Marenus G.,Larabee,-1,-1,M,@I1915@,,
+Rutherford Birchard,Hayes,1822,1893,M,@I1916@,@I1932@,@I1931@
+Lucy Ware,Webb,1831,1889,F,@I1917@,@I2279@,@I2280@
+Sardis Birchard (Austin),Hayes,1853,1926,M,@I1918@,@I1917@,@I1916@
+James Webb,Hayes,1856,1935,M,@I1919@,@I1917@,@I1916@
+Rutherford Platt,Hayes,1858,1927,M,@I1920@,@I1917@,@I1916@
+Joseph Thompson,Hayes,1861,1863,M,@I1921@,@I1917@,@I1916@
+George Cook,Hayes,1864,1866,M,@I1922@,@I1917@,@I1916@
+Frances Fanny,Hayes,1867,1950,F,@I1923@,@I1917@,@I1916@
+Scott Russell,Hayes,1871,1923,M,@I1924@,@I1917@,@I1916@
+Manning Force,Hayes,1873,1874,M,@I1925@,@I1917@,@I1916@
+Mary Nancy,Sherman,1859,1924,F,@I1926@,,
+Mary Otis,Miller,1856,1935,F,@I1927@,,
+Lucy Hayes,Platt,1868,1939,F,@I1928@,,
+Harry Eaton,Smith,1869,1931,M,@I1929@,,
+Maude,Anderson,1873,1966,F,@I1930@,,
+Rutherford,Hayes,1787,1822,M,@I1931@,,
+Sophia,Birchard,1792,1866,F,@I1932@,,
+_____,Hayes,1814,1814,M,@I1933@,@I1932@,@I1931@
+Lorenzo,Hayes,1815,1825,M,@I1934@,@I1932@,@I1931@
+Sarah Sophia,Hayes,1817,1821,F,@I1935@,@I1932@,@I1931@
+Fanny Arabella,Hayes,1820,1856,F,@I1936@,@I1932@,@I1931@
+William Augustus,Platt,-1,-1,M,@I1937@,,
+William,McKinley,1843,1901,M,@I1938@,@I1943@,@I1942@
+Katherine,McKinley,1871,1876,F,@I1940@,@I2264@,@I1938@
+Ida,McKinley,1872,1873,F,@I1941@,@I2264@,@I1938@
+William,McKinley,1807,1892,M,@I1942@,,
+Nancy Campbell,Allison,1809,1897,F,@I1943@,@I2262@,@I2263@
+David Allison,McKinley,1829,1892,M,@I1944@,@I1943@,@I1942@
+Annie,McKinley,1831,1889,F,@I1945@,@I1943@,@I1942@
+James Rose,McKinley,1833,1889,M,@I1946@,@I1943@,@I1942@
+Mary,McKinley,1835,1868,F,@I1947@,@I1943@,@I1942@
+Helen,McKinley,1839,1924,F,@I1948@,@I1943@,@I1942@
+Sarah Elizabeth,McKinley,1840,1931,F,@I1949@,@I1943@,@I1942@
+Abbie Celia,McKinley,1845,1846,F,@I1950@,@I1943@,@I1942@
+Abner Osborn,McKinley,1847,1904,M,@I1951@,@I1943@,@I1942@
+Nancy Minerva,Scott,-1,-1,F,@I1952@,,
+Eliza Howe,Fuller,-1,-1,F,@I1953@,,
+David,May,-1,-1,M,@I1954@,,
+Andrew Jackson,Duncan,-1,-1,M,@I1955@,,
+Anna E,Endsley,-1,-1,M,@I1956@,,
+William Howard,Taft,1857,1930,M,@I1957@,@I1969@,@I1965@
+Helen Nellie,Herron,1861,1943,F,@I1958@,,
+Robert Alphonso,Taft,1889,1953,M,@I1959@,@I1958@,@I1957@
+Helen Herron,Taft,1891,1987,F,@I1960@,@I1958@,@I1957@
+Charles Phelps,Taft,1897,1983,M,@I1961@,@I1958@,@I1957@
+Eleanor Kellogg,Chase,1891,1961,F,@I1962@,,
+Frederick Johnson,Manning,1894,1966,M,@I1963@,,
+Martha Wheaton,Wheaton-Bowers,1891,1958,F,@I1964@,,
+Alphonso,Taft,1810,1891,M,@I1965@,,
+Fanny,Phelps,1823,1852,F,@I1966@,,
+Charles Phelps,Taft,1843,1923,M,@I1967@,@I1966@,@I1965@
+Peter Rawson,Taft,1845,1889,M,@I1968@,@I1966@,@I1965@
+Louisa Maria,Torrey,1827,1907,F,@I1969@,,
+Samuel Davenport,Taft,1855,1855,M,@I1970@,@I1969@,@I1965@
+Henry Waters,Taft,1859,-1,M,@I1971@,@I1969@,@I1965@
+Horace Dutton,Taft,1861,1943,M,@I1972@,@I1969@,@I1965@
+Frances Louise,Taft,1865,-1,F,@I1973@,@I1969@,@I1965@
+Julia Walbridge,Smith,-1,-1,F,@I1974@,,
+Winifred S.,Thompson,-1,-1,F,@I1975@,,
+William A.,Edwards,-1,-1,M,@I1976@,,
+Warren Gamaliel,Harding,1865,1923,M,@I1977@,@I1980@,@I1979@
+Florence Mabel,Kling,1860,1924,F,@I1978@,,
+George Tyron,Harding,1844,1928,M,@I1979@,,
+Phoebe Elizabeth,Dickerson,1843,1910,F,@I1980@,,
+Charity Malvina,Harding,1867,-1,F,@I1981@,@I1980@,@I1979@
+Mary Clarissa,Harding,1868,1913,F,@I1982@,@I1980@,@I1979@
+Eleanor Persilla,Harding,1872,1878,F,@I1983@,@I1980@,@I1979@
+Charles Alexander,Harding,1874,1878,M,@I1984@,@I1980@,@I1979@
+Abigail Victoria Daisy,Harding,1876,1935,F,@I1985@,@I1980@,@I1979@
+George Tyron,Harding,1878,1934,M,@I1986@,@I1980@,@I1979@
+Phoebe Caroline,Harding,1879,1951,F,@I1987@,@I1980@,@I1979@
+Elton Elsworth,Remsberg,-1,-1,M,@I1988@,,
+Ralph Tobias,Lewis,-1,-1,M,@I1989@,,
+Elsie,Weaver,-1,-1,F,@I1990@,,
+Heber Herbert,Votaw,-1,-1,M,@I1991@,,
+Nanna Popham,Britton,1896,1991,F,@I1992@,@I2233@,@I2234@
+Elizabeth Ann Britton,Harding,1919,2005,F,@I1993@,@I1992@,@I1977@
+Henry El,Blaesing,-1,-1,M,@I1994@,,
+John,Adams,1735,1826,M,@I1995@,@I2009@,@I2008@
+John Quincy,Adams,1767,1848,M,@I1996@,@I1997@,@I1995@
+Abigail,Smith,1744,1818,F,@I1997@,@I2312@,@I2313@
+Abigail Amelia,Adams,1765,1813,F,@I1998@,@I1997@,@I1995@
+Grace Susanna,Adams,1768,1770,F,@I1999@,@I1997@,@I1995@
+Charles,Adams,1770,1800,M,@I2000@,@I1997@,@I1995@
+Thomas Boylston,Adams,1772,1832,M,@I2001@,@I1997@,@I1995@
+William Stephens,Smith,1755,1816,M,@I2002@,,
+Sarah,Smith,1769,1828,F,@I2003@,,
+Ann,Harrod,1774,1846,F,@I2004@,,
+William,Smith,1667,1730,M,@I2005@,@I2007@,@I2006@
+Thomas,Smith,-1,1690,M,@I2006@,,
+Sarah,Boylston,1642,1711,F,@I2007@,@I2015@,@I2014@
+John,Adams,1691,1761,M,@I2008@,,
+Susanna,Boylston,1709,1797,F,@I2009@,@I2011@,@I2010@
+Peter,Boylston,1673,1743,M,@I2010@,@I2013@,@I2012@
+Ann,White,1685,1772,F,@I2011@,,
+Thomas,Boylston,1645,1696,M,@I2012@,@I2015@,@I2014@
+Mary,Gardner,1648,1722,F,@I2013@,,
+Thomas,Boylston,1614,1653,M,@I2014@,,
+Sarah Boylston,Cheney,1618,1704,F,@I2015@,,
+Peter_boylston of Braintree,Adams,1738,1823,M,@I2016@,@I2009@,@I2008@
+Elihu,Adams,1741,1776,M,@I2017@,@I2009@,@I2008@
+Louisa Catherine,Johnson,1775,1852,F,@I2018@,,
+George Washington,Adams,1801,1829,M,@I2019@,@I2018@,@I1996@
+John,Adams,1803,1834,M,@I2020@,@I2018@,@I1996@
+Charles Francis,Adams,1807,1886,M,@I2021@,@I2018@,@I1996@
+Louisa Catherine,Adams,1811,1812,M,@I2022@,@I2018@,@I1996@
+Mary Catherine,Hellen,1806,1870,F,@I2023@,,
+Abigail Brown,Brooks,1808,1889,F,@I2024@,,
+Thomas,Jefferson,1743,1826,M,@I2025@,@I2036@,@I2035@
+Martha Skelton,Wayles,1748,1782,F,@I2026@,@I2319@,@I2318@
+Martha Patsy,Jefferson,1772,1836,F,@I2027@,@I2026@,@I2025@
+Jane Randolph,Jefferson,1774,1775,F,@I2028@,@I2026@,@I2025@
+_____,Jefferson,1777,1777,M,@I2029@,@I2026@,@I2025@
+Mary,Jefferson,1778,1871,F,@I2030@,@I2026@,@I2025@
+Lucy Elizabeth,Jefferson,1780,1804,F,@I2031@,@I2026@,@I2025@
+Lucy Elizabeth,Jefferson,1782,1784,F,@I2032@,@I2026@,@I2025@
+Thomas Mann,Randolph,1768,1828,M,@I2033@,,
+John Wayles,Eppes,1773,1823,M,@I2034@,,
+Peter,Jefferson,1708,1757,M,@I2035@,@I2053@,@I2052@
+Jane,Randolph,1720,1776,F,@I2036@,,
+Jane,Jefferson,1740,1765,F,@I2037@,@I2036@,@I2035@
+Mary,Jefferson,1741,1817,F,@I2038@,@I2036@,@I2035@
+Elizabeth,Jefferson,1744,1773,F,@I2039@,@I2036@,@I2035@
+Martha,Jefferson,1746,1811,F,@I2040@,@I2036@,@I2035@
+Peter Field,Jefferson,1748,1748,M,@I2041@,@I2036@,@I2035@
+_____,Jefferson,1750,1750,M,@I2042@,@I2036@,@I2035@
+Lucy,Jefferson,1752,-1,F,@I2043@,@I2036@,@I2035@
+Anna Scott,Jefferson,1755,1828,F,@I2044@,@I2036@,@I2035@
+Randolph,Jefferson,1755,1815,M,@I2045@,@I2036@,@I2035@
+John,Bolling,1737,-1,M,@I2046@,,
+Dabney,Carr,1743,1773,M,@I2047@,,
+Charles Lilburn,Lewis,-1,-1,M,@I2048@,,
+Hastings,Marks,-1,-1,M,@I2049@,,
+Anna,Lewis,-1,-1,F,@I2050@,,
+Mitchie,Pryor,-1,-1,F,@I2051@,,
+Thomas,Jefferson,1679,1731,M,@I2052@,,
+Mary,Field,1680,1715,F,@I2053@,,
+James,Madison,1751,1836,M,@I2054@,@I2057@,@I2056@
+Dorothea Dolley,Payne,1768,1849,F,@I2055@,@I2320@,@I2321@
+James,Madison,1723,1801,M,@I2056@,,
+Eleanor Nelly Rose,Conway,1731,1829,F,@I2057@,,
+Francis,Madison,1753,1800,M,@I2058@,@I2057@,@I2056@
+Ambrose,Madison,1755,1793,M,@I2059@,@I2057@,@I2056@
+Catlett,Madison,1758,1758,M,@I2060@,@I2057@,@I2056@
+Nelly Conway,Madison,1760,1802,F,@I2061@,@I2057@,@I2056@
+William,Madison,1762,1843,M,@I2062@,@I2057@,@I2056@
+Sarah Catlett,Madison,1764,1843,F,@I2063@,@I2057@,@I2056@
+_____,Madison,1766,-1,M,@I2064@,@I2057@,@I2056@
+Elizabeth,Madison,1768,1775,F,@I2065@,@I2057@,@I2056@
+_____,Madison,1770,1770,M,@I2066@,@I2057@,@I2056@
+Reuben,Madison,1771,1775,M,@I2067@,@I2057@,@I2056@
+Frances Taylor,Madison,1774,1823,F,@I2068@,@I2057@,@I2056@
+John,Todd,1763,1836,M,@I2069@,,
+William Temple,Todd,1793,1793,M,@I2070@,@I2055@,@I2069@
+James,Monroe,1758,1831,M,@I2071@,@I2079@,@I2078@
+Elizabeth,Kortright,1768,1830,F,@I2072@,@I2323@,@I2322@
+Eliza Kortright,Monroe,1787,1840,F,@I2073@,@I2072@,@I2071@
+James Spence,Monroe,1799,1800,M,@I2074@,@I2072@,@I2071@
+Maria Hester,Monroe,1802,1850,F,@I2075@,@I2072@,@I2071@
+George,Hay,1765,1830,M,@I2076@,,
+Samuel,Laurence,1799,1867,M,@I2077@,,
+Spence,Monroe,-1,1774,M,@I2078@,,
+Elizabeth (Eliza),Jones,-1,-1,F,@I2079@,,
+Elizabeth,Monroe,1754,-1,F,@I2080@,@I2079@,@I2078@
+Spence,Monroe,1759,-1,M,@I2081@,@I2079@,@I2078@
+Andrew,Monroe,-1,1836,M,@I2082@,@I2079@,@I2078@
+Joseph Jones,Monroe,1764,1824,M,@I2083@,@I2079@,@I2078@
+William,Buckner,-1,-1,M,@I2084@,,
+Ann,Bell,-1,-1,F,@I2085@,,
+Elizabeth,Kerr,-1,-1,F,@I2086@,,
+Sarah,Gordon,-1,-1,F,@I2087@,,
+Elizabeth,Glasscock,-1,-1,F,@I2088@,,
+Andrew,Jackson,1767,1845,M,@I2089@,@I2092@,@I2091@
+Rachel Donelson,Robards,1767,1828,F,@I2090@,@I2324@,@I2325@
+Andrew,Jackson,1730,1767,M,@I2091@,,
+Elizabeth,Hutchinson,1740,1781,F,@I2092@,,
+Hugh,Jackson,1762,1779,M,@I2093@,@I2092@,@I2091@
+Robert,Jackson,1763,1781,M,@I2094@,@I2092@,@I2091@
+Martin,Van Buren,1782,1862,M,@I2095@,@I2107@,@I2106@
+Hannah,Hoes,1783,1819,F,@I2096@,@I2326@,@I2327@
+Abraham,Van Buren,1807,1873,M,@I2097@,@I2096@,@I2095@
+John,Van Buren,1810,1866,M,@I2098@,@I2096@,@I2095@
+Martin,Van Buren,1812,1855,M,@I2099@,@I2096@,@I2095@
+Winfield Scott,Van Buren,1814,1814,M,@I2100@,@I2096@,@I2095@
+Smith Thompson,Van Buren,1817,1876,M,@I2101@,@I2096@,@I2095@
+Angelica,Singleton,1816,1878,F,@I2102@,,
+Elizabeth,Vanderpoel,1810,1844,F,@I2103@,,
+Ellen King,James,1813,1849,F,@I2104@,,
+Henrietta Eckford,Irving,1821,-1,F,@I2105@,,
+Abraham,Van Buren,1737,1817,M,@I2106@,,
+Maria,Hoes,1748,1817,F,@I2107@,,
+Derike,Van Buren,1777,1865,M,@I2108@,@I2107@,@I2106@
+Hannah,Van Buren,1780,-1,F,@I2109@,@I2107@,@I2106@
+Lawrence,Van Buren,1786,1868,M,@I2110@,@I2107@,@I2106@
+Abraham,Van Buren,1788,1836,M,@I2111@,@I2107@,@I2106@
+Johannes,Van Alen,1744,1773,M,@I2112@,,
+Marytje,Van Alen,1768,1829,F,@I2113@,@I2107@,@I2112@
+Johannes,Van Alen,1770,1805,M,@I2114@,@I2107@,@I2112@
+Jacobus,Van Alen,1773,1822,M,@I2115@,@I2107@,@I2112@
+Barent,Hoes,-1,-1,F,@I2116@,,
+Harriet,Vosburgh,-1,-1,F,@I2117@,,
+Catherine,Hogeboom,-1,-1,F,@I2118@,,
+Benjamin Harrison,McKee,1887,-1,M,@I2120@,@I1425@,@I1430@
+Mary Dodge,McKee,-1,-1,F,@I2121@,@I1425@,@I1430@
+Lyndon Baines,Johnson,1908,1973,M,@I2122@,@I2129@,@I2128@
+Claudia Alta,Taylor,1912,2007,F,@I2123@,@I2219@,@I2220@
+Lynda Bird,Johnson,1944,-1,F,@I2124@,@I2123@,@I2122@
+Lucy (Luci) Baines,Johnson,1947,-1,F,@I2125@,@I2123@,@I2122@
+Charles Spittall,Robb,1940,-1,M,@I2126@,,
+Patrick John,Nugent,1943,-1,M,@I2127@,,
+Samuel Ealy,Johnson,1877,1937,M,@I2128@,,
+Rebekah,Baines,1881,1958,F,@I2129@,,
+Rebekah Luruth,Johnson,1910,-1,F,@I2130@,@I2129@,@I2128@
+Josefa Hermine,Johnson,1912,1961,F,@I2131@,@I2129@,@I2128@
+Sam Houston,Johnson,1914,-1,M,@I2132@,@I2129@,@I2128@
+Lucia Huffman,Johnson,1916,-1,F,@I2133@,@I2129@,@I2128@
+Oscar Price,Bobbit,-1,-1,M,@I2134@,,
+Willard,White,-1,-1,M,@I2135@,,
+James B,Moss,-1,-1,M,@I2136@,,
+Albertine,Summers,-1,-1,F,@I2137@,,
+Mary,Michelson,-1,-1,F,@I2138@,,
+Norman,Galt,-1,-1,M,@I2139@,,
+_____,Dewolfe,-1,-1,M,@I2140@,,
+Millard,Fillmore,1800,1874,M,@I2141@,@I2145@,@I2144@
+Abigail,Powers,1798,1853,F,@I2142@,@I2300@,@I2301@
+Caroline,Carmichael,1813,1881,F,@I2143@,@I2295@,@I2296@
+Nathaniel,Fillmore,1771,1863,M,@I2144@,,
+Phoebe,Millard,1781,1831,F,@I2145@,,
+_____,Cowden,-1,-1,M,@I2146@,,
+Rosa L,Johnson,1851,1931,F,@I2147@,@I1451@,@I1450@
+Lucy Ann,Overton,1714,1795,F,@I2148@,,
+John Robert,Johnston,1713,-1,M,@I2149@,,
+Jordan,Johnson,1735,-1,M,@I2150@,@I2148@,@I2149@
+Andrew,McDonough,1729,1787,M,@I2151@,,
+Andrew C,McDonogh,1759,1846,M,@I2152@,,@I2151@
+Mary Ruth,Lindley,1764,1850,F,@I2153@,@I2163@,@I2166@
+Levina,Wright,1735,-1,F,@I2154@,,
+Sara Lena,Phillips,-1,-1,F,@I2157@,,
+John,McCardell,-1,-1,M,@I2158@,,
+Mary Belle,Patterson,1859,1891,F,@I2159@,@I1452@,@I1457@
+Moses,Johnson,-1,-1,M,@I2160@,@I2154@,@I2150@
+Catherine,Kinkey,1696,1744,F,@I2161@,,
+Willioam,Cox,1692,1767,M,@I2162@,,
+Mary,Cox,1719,1779,F,@I2163@,@I2161@,@I2162@
+Ruth,Hadley,1712,1785,F,@I2164@,,
+Thomas,Lindley,1705,1781,M,@I2165@,,
+James,Lindley,1735,1779,M,@I2166@,@I2164@,@I2165@
+Mattie Bartley,Patterson,1865,-1,F,@I2167@,,
+Andrew Johnson,Paterson,1857,1932,M,@I2168@,@I1452@,@I1457@
+Devolco,Johnson,-1,-1,M,@I2174@,@I2175@,@I1463@
+Sarah,Giddings,-1,-1,F,@I2175@,,
+Margaret J,Petterson,1904,-1,F,@I2176@,@I2167@,@I2168@
+Lillie M,Stover,1855,1892,F,@I2177@,@I1454@,@I1458@
+Eliza Johnson,Stover,1855,-1,M,@I2178@,@I1454@,@I1458@
+Sarah Drake,Bachman,1857,1886,F,@I2179@,@I1454@,@I1458@
+William Lincoln,Stover,1795,1864,M,@I2180@,,
+Sarah Murray,Drake,1795,1874,F,@I2181@,,
+Sarah,Jennings,1660,1744,F,@I2182@,,
+Louiana,Thurman,1818,1867,F,@I2183@,,
+Donald John,Trump,1946,-1,M,@I2185@,,
+Ivana,Zelníčková,-1,-1,F,@I2186@,,
+Donald John,Trump,1977,-1,M,@I2187@,@I2186@,@I2185@
+Ivanka,Trump,1981,-1,F,@I2188@,@I2186@,@I2185@
+Eric,Trump,1984,-1,M,@I2189@,@I2186@,@I2185@
+Marla Ann,Maples,1963,-1,F,@I2190@,,
+Tiffany,Trump,1993,-1,F,@I2191@,@I2190@,@I2185@
+Melania,Knauss,-1,-1,F,@I2192@,,
+Barron,Trump,2006,-1,M,@I2193@,@I2192@,@I2185@
+Barack Hussein,Obama,1961,-1,M,@I2194@,@I2306@,@I2307@
+Michelle LaVaughn,Robinson,1964,-1,F,@I2195@,,
+Malia Ann,Obama,1998,-1,F,@I2196@,@I2195@,@I2194@
+Natasha,Obama,2001,-1,F,@I2197@,@I2195@,@I2194@
+Laura Lane,Welch,1946,-1,F,@I2198@,,
+Barbara Pierce,Bush,1981,-1,F,@I2199@,@I2198@,@I1194@
+Jena Welch,Bush,1981,-1,F,@I2200@,@I2198@,@I1194@
+John Payne,Todd,1792,1852,M,@I2201@,@I2055@,@I2069@
+Thomas,Reade,1649,1716,M,@I2202@,@I416@,@I415@
+Rose,Pierson,1693,1771,F,@I2203@,,
+Aaron,Mendenhall,1690,1765,M,@I2204@,,
+Margret,King,-1,1803,F,@I2205@,,
+William,Farr,-1,1803,M,@I2206@,,
+Hannah,Griggs,1702,1798,F,@I2207@,,
+Harriet Rebecca,Lane,1830,1903,F,@I2208@,@I1812@,@I1821@
+Joseph Stark,Lane,1820,1822,M,@I2209@,@I1812@,@I1821@
+William Edward,Lane,1833,1834,M,@I2210@,@I1812@,@I1821@
+Thomas Newton,Lane,-1,1835,M,@I2211@,@I1812@,@I1821@
+Elliott Eskridge,Lane,1823,1857,M,@I2212@,@I1812@,@I1821@
+Frances Allethea,Murray,1905,2000,F,@I2213@,,
+Wilburn Edgar,Smith,1896,1940,M,@I2214@,,
+Elivera Mathilda,Carlson,1878,1960,F,@I2215@,,
+John Sheldon,Doud,1870,1951,M,@I2216@,,
+Janet Norton,Lee,-1,-1,F,@I2217@,,
+John Vernou,Bouvier,-1,-1,M,@I2218@,,
+Minnie Lee,Patillo,1874,1918,F,@I2219@,,
+Thomas Jefferson,Taylor,1874,1960,M,@I2220@,,
+Katherine,Halberstadt,1879,1926,F,@I2221@,,
+William Martin,Ryan,1866,1930,M,@I2222@,,
+Margaret Elizabeth,Gates,1862,1952,F,@I2225@,,
+David Willock,Wallace,1860,1903,M,@I2226@,,
+Margaret,Barnhill,1799,1861,F,@I2227@,,
+Cornelius Van Schaak,Roosevelt,1794,1871,M,@I2228@,,
+Jacobus James,Roosevelt,1760,1847,M,@I2229@,,
+Maria Eliza,Walton,-1,-1,F,@I2230@,,
+Florence Ida,Weed,1849,1921,F,@I2231@,,
+Charles Delano,Henry,1845,1928,M,@I2232@,,
+Mary Lee,Williams,1871,1950,F,@I2233@,,
+Samuel Herbert,Britton,1859,1913,M,@I2234@,,
+Matilda,Courtney,1822,1915,F,@I2235@,,
+Irene Chloe,Nixon,1874,1901,F,@I2236@,@I189@,@I188@
+Hugh Henry,Nixon,1892,1965,M,@I2237@,@I2242@,@I188@
+Caroline E.,Webber,-1,-1,F,@I2238@,,
+Carrie May,Nixon,1881,1968,F,@I2239@,@I189@,@I188@
+Ernest Leland,Nixon,1883,1969,M,@I2240@,@I189@,@I188@
+Walter Wadsworth,Nixon,1876,1967,M,@I2241@,@I189@,@I188@
+Lutheria,Wyman,1863,1948,F,@I2242@,,
+W V,Marshburn,-1,-1,M,@I2243@,,
+Hannah,Mendenhall,1762,1797,F,@I2244@,@I288@,@I287@
+Lydia,Roberts,-1,-1,F,@I2245@,,
+Benjamin,Mendenhall,-1,-1,M,@I2246@,,
+Sarah,Beaston,1750,1796,F,@I2247@,,@I2248@
+Benjamin,Beeston,-1,-1,M,@I2248@,,
+Margaret,Spencer,-1,-1,F,@I2249@,@I1230@,@I1229@
+Agnes,Spencer,-1,-1,F,@I2250@,@I1230@,@I1229@
+John,Spencer,-1,-1,M,@I2251@,@I1230@,@I1229@
+John,Spencer,1517,1586,M,@I2252@,@I1240@,@I1239@
+Isabel,Spencer,1515,1578,F,@I2253@,@I1240@,@I1239@
+Anne,Spencer,1523,1593,F,@I2255@,@I1240@,@I1239@
+Marie,Spencer,1525,1596,F,@I2256@,@I1240@,@I1239@
+Jane,Spencer,1519,1593,F,@I2257@,@I1240@,@I1239@
+Ann,Pendleton,1740,1792,F,@I2258@,,
+Mildred A.,Kotany,1870,1957,F,@I2259@,@I702@,@I900@
+John Holliday,Wear,1869,1912,M,@I2260@,@I702@,@I900@
+Sandra J,Seemann,1965,-1,F,@I2261@,,
+Ann,Campbell,-1,-1,F,@I2262@,,
+Abner,Allison,-1,-1,M,@I2263@,,
+Ida,Saxon,1847,1908,F,@I2264@,@I2265@,@I2266@
+Katherine A,Dewalt,1827,1873,F,@I2265@,,
+James Asbury,Saxton,1816,1887,M,@I2266@,,
+Oscar,Folsom,1837,1875,M,@I2269@,,
+Emma,Harmon,1840,1915,F,@I2270@,,
+Elizabeth Mayhew,Scott,1828,1889,F,@I2271@,,
+Russell Farnham,Lord,1802,1867,M,@I2272@,,
+Mary Potts,Neal,1811,1876,F,@I2273@,,
+John Witherspoon,Scott,1800,1892,M,@I2274@,,
+Elizabeth H,Hansbough,1817,1878,F,@I2275@,,
+William Lewis,Herndon,1813,1857,M,@I2276@,,
+Arabella,Mason,1810,1879,F,@I2277@,,
+Zebulon,Rudolph,1803,1897,M,@I2278@,,
+Marietta,Cook,1801,1866,F,@I2279@,,
+James,Webb,1795,1833,M,@I2280@,,
+America Rosa,Workman,1878,1942,F,@I2281@,,
+Chaffee,Grant,1883,1940,M,@I2282@,@I1876@,@I1872@
+Fannie C,Grant,1889,1924,F,@I2283@,@I1876@,@I1872@
+Julia Dent,Grant,1885,1964,F,@I2284@,@I1876@,@I1872@
+Miriam,Grant,1881,1940,F,@I2285@,@I1876@,@I1872@
+Ulysses Simpson,Grant,1893,1977,M,@I2286@,@I1876@,@I1872@
+Ellen Bray,Wrenshall,1793,1857,F,@I2288@,,
+Frederick Fayette,Dent,1787,1873,M,@I2289@,,
+Eliza Ann,Parker,1794,1825,F,@I2290@,,
+Robert Smith,Todd,1791,1849,M,@I2291@,,
+James,Taylor,1738,1807,M,@I2292@,,
+Elizabeth,Means,1779,1844,F,@I2293@,,
+Jesse,Appleton,1772,1819,M,@I2294@,,
+Temperance Wickham,Blachley,1780,1818,F,@I2295@,,
+Charles,Carmichael,1779,1824,M,@I2296@,,
+Ezekiel C.,McIntosh,1806,1855,M,@I2297@,,
+Mary Abigail,Fillmore,1832,1854,F,@I2298@,@I2142@,@I2141@
+Millard Powers,Fillmore,1828,1889,M,@I2299@,@I2142@,@I2141@
+Abigail,Newland,1758,1838,F,@I2300@,,
+Lemuel,Powers,-1,-1,M,@I2301@,,
+Anna,Tuthill,1741,1776,F,@I2302@,,
+John Cleves,Symmes,1742,1814,M,@I2303@,,
+Hortense B,Neahr,1884,1948,F,@I2304@,,
+William Stephenson,Bloomer,1876,1934,M,@I2305@,,
+Stanley Ann,Dunham,1942,1995,F,@I2306@,@I2310@,@I2311@
+Barack Hussein,Obama,1936,1982,M,@I2307@,,
+Lolo,Soetoro,-1,-1,M,@I2308@,,
+Kezia,Aoko,-1,-1,F,@I2309@,,
+Madelyn L,Payne,-1,-1,F,@I2310@,,
+Stanley A,Dunham,-1,-1,M,@I2311@,,
+Elizabeth,Quincy,1721,1775,F,@I2312@,,
+William,Smith,1706,1783,M,@I2313@,,
+Frances,Jones,1710,1785,F,@I2314@,,
+John,Dandridge,1700,1756,M,@I2315@,,
+Frances,Park,1685,1714,F,@I2316@,,
+John,Custis,1678,1749,M,@I2317@,,
+John,Wayles,1715,1773,M,@I2318@,,
+Martha,Eppes,1712,1748,F,@I2319@,,
+Mary Winston,Coles,1743,1807,F,@I2320@,,
+John Parish,Payne,1740,1792,M,@I2321@,,
+Lawrence,Kortright,-1,-1,M,@I2322@,,
+Hannah,Aspinwall,-1,-1,F,@I2323@,,
+Rachel,Stockley,1715,1794,F,@I2324@,,
+John,Donelson,1718,1785,M,@I2325@,,
+Maria,Quackenbush,1752,1832,F,@I2326@,,
+Ens John Dirkson,Hoes,1753,1789,M,@I2327@,,
+Juliana,MacLachlan,1799,1864,F,@I2328@,,
+David,Gardiner,1784,1844,M,@I2329@,,
+Elizabeth,Whitsett,1780,1863,F,@I2330@,,
+Joel,Childress,1777,1819,M,@I2331@,,
+Ann,Mackall,-1,-1,F,@I2332@,,
+Martha Caroline,Dees,1825,1873,F,@I2333@,@I48@,@I47@
+Laura,Hensler,1872,1945,F,@I2334@,,
+Albert Clarke,Davis,1865,1938,M,@I2335@,,
+Pearl McElroy,McPhersen,1896,1932,F,@I2337@,,
+Jennie Mar,Munford,1902,1995,F,@I2338@,,
+Urban Joseph,Herzing,1902,1990,M,@I2339@,@I2340@,@I2341@
+Catherine,Schaberl,-1,-1,F,@I2340@,,
+Casper,Herzing,-1,-1,M,@I2341@,,
+Jeanne Eileen,Ripp,1965,-1,F,@I2342@,,
+Arnold Alois,Schwarzenegger,1947,-1,M,@I2343@,,

@@ -145,7 +145,7 @@ Or you can also choose to skip any of them.
 
 image::{img}/neo4j-etl-mapping.png[]
 
-When you're satisfied with your mapping, you can click the "Save Mapping" Button, that gets you to the import screen.
+When you're satisfied with your mapping, you can click the "Save Mapping" Button, that gets you to the import screen.   
 
 ==== Import from RDBMS to Neo4j
 

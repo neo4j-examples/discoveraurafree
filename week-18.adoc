@@ -1,21 +1,69 @@
-== Week 18 - Discover AuraDB Free - Exploring Genealogy/Ancestry data as a graph
+== Week 18 - Discover AuraDB Free - Importing gedcom files and exploring Genealogy/Ancestry data as a graph
 :imagesdir: img
+
+Two weeks ago a colleague asked if I could help him importing his personal ancestry data into Neo4j.
+He sent me a gedcom file and I gave it a try.
+
+If you missed our live-stream, here is the recording:
+
+https://www.youtube.com/watch?v=EWdb16ibgG8
+
+As you can guess Family trees are much better handled as a graph than as a bunch of text fragments.
+
+Here are some examples from history and pop-culture, from the royal family, to Sirius Black family tree in Harry Potter and the complex Game of Thrones relationships and the amazing Netflix Series "Dark" that I just started re-watching my daughters (Spoilers hidden behind the fold).
 
 image::https://www.gannett-cdn.com/-mm-/7ba0f40de50927864efb67b756803d9b604c0637/c=0-58-2877-1684/local/-/media/2018/04/30/USATODAY/USATODAY/636606947695211822-promo-royal-Social-copy.png?width=660&height=374&fit=crop&format=pjpg&auto=webp[]
 
+.Game Of Thrones
+[%collapsible]
+====
 image::https://thumbnails-visually.netdna-ssl.com/hbos-game-of-thrones_50290f9cae135_w1500.png[]
+====
 
+
+.Sirius Black (Harry Potter)
+[%collapsible]
+====
 image::https://static.wikia.nocookie.net/hpw/images/5/5a/Black.jpg/revision/latest?cb=20210220172211&path-prefix=de[]
+====
 
+.Netflix' Dark Family Network
+[%collapsible]
+====
 image::https://www.thisisbarry.com/wp-content/uploads/2020/DARK/Netflix-DARK-Family-Tree-Diagram-Adam-and-Eve-World-2.jpg[]
+====
+
+I looked at the gedcom file format (see below) and was reminded of a COBOL data file format (or formats I used in the long past for storing data myself).
+
+I remembered that my friend and colleague Rik van Bruggen had https://blog.bruggen.com/2014/01/leftovers-from-holidays-genealogy-graphs.html[imported his ancient family history into Neo4j^] 8 years ago (also using gedcom but with some desktop application).
+
+But I wanted to have something simple that I could run on the command line.
+
+First thing I found was a https://pkg.go.dev/github.com/elliotchance/gedcom/q?utm_source=godoc[tool written in go] that was quite intriguing because it allowed to query GEDCOM files with a syntax similar to the JSON tool `jq`.
+You could extract individual attributes of a person as well as relationships to parents, children etc.
+
+[source,shell]
+----
+./gedcom query -format csv -gedcom ~/Downloads/pres2020.ged '.Individuals | { name: .Name | .String, born: .Birth | .String, died: .Death | .String, id: .Identifier, sex:.Sex, parents:.Parents | .Identifier, parentNames:.Parents }' | head -3
+
+born,died,id,name,parentNames,parents,sex
+,,@I2184@,Paul Stobbe,[],[],Male
+19 Aug 1946,,@I1@,William Jefferson Clinton,"[William Jefferson Blythe II (b. 27 Feb 1918, d. 17 May 1946) ⚭ Virginia Dell Cassidy (b. 6 Jun 1923, d. Jan 1994)]",[@F2@],Male
+----
+
+But unfortunately https://github.com/elliotchance/gedcom/issues/321[I couldn't figure out^] how to return the id's of the parents, only their names, which are not unique.
+
+So I looked further and found this really useful https://pypi.org/project/python-gedcom/[python library^] that allows you to parse and query GEDCOM files.
 
 === Datasets
 
-https://webtreeprint.com/tp_famous_gedcoms.php
+[NOTE]
+As I cannot share the person information from my colleague, I found some https://webtreeprint.com/tp_famous_gedcoms.php[public gedcom datasets^] that we can use.
 
-* Royals, US-Presidents, Shakespeare
+There are datasets for the link:data/royal92.ged[British Royals^], link:data/pres2020.ged[US-Presidents^], Shakespeare, Brontë.
+We'll use the first two in our exploration.
 
-Example from the presidents file.
+Here is an example section from the presidents file, as you can see parsing that format would be quite tedious.
 
 [source,gedcom]
 ----
@@ -51,14 +99,65 @@ Example from the presidents file.
 
 === Pre-Processing with Python
 
-https://pypi.org/project/python-gedcom/
+The https://pypi.org/project/python-gedcom/[`python-gedcom`^] library has a parser that reads a file and then allows to inspect it's element and provide methods to provide attributes for each element.
 
-https://gist.github.com/jexp/4d0e56ecd53f5f868eb6dfe9d322ec07#file-gedcom2csv-py
+Elements can be `IndividualElement`, `FamilyElement`, `FileElement` or `ObjectElement`, here we're interested in the `IndividualElement` and its attributes.
 
+Our our python script, we iterate over the elements of the file and for the people (individuals), we get the
 
+* first
+* last-name
+* year of birth
+* year of dath
+* sex
+* id (`pointer`)
+
+There is much more data available, but for our model these attributes are good enough.
+
+For the *parental* information `mother` and `father` we get the parent's entries for this individual from the parser and filter them by gender and get their ids to constitute the relationships later.
+
+In the datasets we're looking at here, there are only male and female as genders and binary parents, for real data we can extend this.
+
+We'll put all that data into a list and output it as comma separated lines, in a real tool, we'd use dataframes for that.
+
+link:code/gedcom/gedcom2csv.py[]
 [source,python]
 ----
+ifndef::env-github[]
 include::code/gedcom/gedcom2csv.py[]
+endif::[]
+ifdef::env-github[]
+#!/usr/bin/python3
+# usage: ./gedcom2csv.py file.ged > file.csv
+# https://pypi.org/project/python-gedcom/
+import sys
+from gedcom.element.individual import IndividualElement
+from gedcom.parser import Parser
+
+file_path = sys.argv[1]
+gedcom_parser = Parser()
+gedcom_parser.parse_file(file_path)
+
+root_child_elements = gedcom_parser.get_root_child_elements()
+
+print("first,last,birth,death,gender,id,mother,father")
+root_child_elements = gedcom_parser.get_root_child_elements()
+for e in root_child_elements:
+    if isinstance(e, IndividualElement):
+        (first,last) = e.get_name()
+        data = [first, last, str(e.get_birth_year()),str(e.get_death_year()),e.get_gender(),e.get_pointer()]
+        parents = gedcom_parser.get_parents(e)
+        data = data + ([p.get_pointer() for p in parents if p.get_gender() == 'F'] or [''])
+        data = data + ([p.get_pointer() for p in parents if p.get_gender() == 'M'] or [''])
+        print(",".join(data))
+endif::[]
+----
+
+You pass the gedcom file as the argument to the script and redirect the output into a csv file.
+
+[source,shell]
+----
+python3 gedcom2csv.py pres2020.ged > presidents.csv
 ----
 
 Example output from presidents file.
@@ -76,6 +175,9 @@ Donald,Clark,-1,-1,M,@I6@,,
 Jeff,Dwire,-1,1974,M,@I7@,,
 Dick,Kelley,-1,-1,M,@I8@,,
 ,===
+
+Now we can take these CSV files and import them into Neo4j.
+
 === Datamodel
 
 image::gedcom-model.png[]

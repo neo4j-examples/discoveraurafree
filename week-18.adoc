@@ -1,0 +1,105 @@
+== Week 18 - Discover AuraDB Free - Exploring Genealogy/Ancestry data as a graph
+:imagesdir: img
+
+image::https://www.gannett-cdn.com/-mm-/7ba0f40de50927864efb67b756803d9b604c0637/c=0-58-2877-1684/local/-/media/2018/04/30/USATODAY/USATODAY/636606947695211822-promo-royal-Social-copy.png?width=660&height=374&fit=crop&format=pjpg&auto=webp[]
+
+image::https://thumbnails-visually.netdna-ssl.com/hbos-game-of-thrones_50290f9cae135_w1500.png[]
+
+image::https://static.wikia.nocookie.net/hpw/images/5/5a/Black.jpg/revision/latest?cb=20210220172211&path-prefix=de[]
+
+image::https://www.thisisbarry.com/wp-content/uploads/2020/DARK/Netflix-DARK-Family-Tree-Diagram-Adam-and-Eve-World-2.jpg[]
+
+=== Datasets
+
+https://webtreeprint.com/tp_famous_gedcoms.php
+
+* Royals, US-Presidents, Shakespeare
+
+Example from the presidents file.
+
+[source,gedcom]
+----
+1 NAME Barack Hussein /Obama/ II
+2 SOUR @S48@
+3 PAGE Gale Research Company; Detroit, Michigan; Accession Number: 922392
+3 DATA
+4 TEXT Record for Dr. Barack Hussein Obama
+3 _LINK https://search.ancestry.com/cgi-bin/sse.dll?db=4394&h=10717780&indiv=try
+1 SEX M
+1 BIRT
+2 DATE 4 AUG 1961
+2 PLAC Honolulu, Honolulu, Hawaii, USA
+3 MAP
+4 LATI N21.3069
+4 LONG W157.8583
+2 SOUR @S48@
+3 PAGE Gale Research Company; Detroit, Michigan; Accession Number: 922392
+3 DATA
+4 TEXT Record for Dr. Barack Hussein Obama
+3 _LINK https://search.ancestry.com/cgi-bin/sse.dll?db=4394&h=10717780&indiv=try
+1 OCCU US President No. 44, Democratic
+2 DATE 20 JAN 2009
+2 PLAC Washington, District of Columbia, USA
+3 MAP
+4 LATI N38.895
+4 LONG W77.0367
+1 _PHOTO @M26@
+1 OBJE @M26@
+1 FAMS @F1061@
+1 FAMC @F1105@
+----
+
+=== Pre-Processing with Python
+
+https://pypi.org/project/python-gedcom/
+
+https://gist.github.com/jexp/4d0e56ecd53f5f868eb6dfe9d322ec07#file-gedcom2csv-py
+
+
+[source,python]
+----
+include::code/gedcom/gedcom2csv.py[]
+----
+
+Example output from presidents file.
+
+[%autowidth,opts=header]
+,===
+first,last,birth,death,gender,id,mother,father
+Paul,Stobbe,-1,-1,M,@I2184@,,
+William Jefferson,Clinton,1946,-1,M,@I1@,@I4@,@I3@
+Hillary,Rodham,1947,-1,F,@I2@,@I12@,@I11@
+William Jefferson,Blythe,1918,1946,M,@I3@,@I10@,@I9@
+Virginia Dell,Cassidy,1923,1994,F,@I4@,@I14@,@I13@
+Roger,Clinton,1909,1967,M,@I5@,,
+Donald,Clark,-1,-1,M,@I6@,,
+Jeff,Dwire,-1,1974,M,@I7@,,
+Dick,Kelley,-1,-1,M,@I8@,,
+,===
+=== Datamodel
+
+image::gedcom-model.png[]
+
+=== Import
+
+image::gedcom-data-importer.png[]
+
+=== Exploration
+
+
+=== Data 
+
+
+=== Visualization
+
+
+=== Direct Import with Python Driver
+
+https://pypi.org/project/neo4j/
+
+https://gist.github.com/jexp/4d0e56ecd53f5f868eb6dfe9d322ec07#file-gedcom2neo4j-py
+
+[source,python]
+----
+include::https://gist.githubusercontent.com/jexp/4d0e56ecd53f5f868eb6dfe9d322ec07/raw/d9995180d4e1ecbf35dcbcb6d9e6a0d602e67435/gedcom2neo4j.py[]
+----

@@ -247,15 +247,136 @@ image::gedcom-browser-kennedy.png[]
 
 === Visualization with Neo4j Bloom
 
+Neo4j Browser is more a developer tool, for writing, executing Cypher queries and visualizing their results.
+
+Neo4j Bloom is a no-code visualization and exploration tool.
+You can just start typing in Graph patterns into the search bar or if you have indexes (like ours on `Person(name)`) just type the name, hit return and see a beautiful graph visualization that you then can explore further.
+
+You can layout the graph data both as force graph and hierarchical layouts, the latter is especially interesting wiht hierarchical data like our ancestry.
+
+So let's try it, open Neo4j Bloom from your AuraDB Open Button and log in with username (neo4j) and your password.
+
+Enter: "Abraham Lincoln Person Person" into the search bar, select the graph pattern and hit return.
+
+You should see something like this:
+
+image::gedcom-bloom-lincoln.png[]
+
+If you want to see all the data, just 
+
+1. enter: "Person" into the search bar
+2. select all nodes with `ctrl/cmd+a`
+3. right click on a node and choose `Expand->All`
+
+What was surprising to me, was the long chains of parental relationships going all the way through the presidential data and not a lot of isolated islands of subgraphs.
+
+Perhaps the US is not so far from a inheritance of power after all :)
+
+I styled the relationship by color, but you could also style the nodes with icons, color them by unique values (e.g. male / female) or size them by the year people were born in (more recent->bigger) or the number of children/ancestors (currently would need a property on the node for the styling).
+
+Here is an example for a styled graph.
+
+image::gedcom-bloom-styling.png[]
+
 === Adding new Relationships
 
+Of course we can add new, inferred relationships to our data, either from itself or by integrating it with external data.
 
+In our example we want to:
+
+* add a "global" family by name
+* add a core-family to it's members
+* add sibling relationships
+
+The "global family" is not 100% correct, as we create a global ancestral Family node just by *last-name* and connect every person with the same last name to it (think "Smith").
+
+[source,cypher]
+----
+MATCH (p:Person)
+MERGE (fam:Family {name:p.last})
+MERGE (p)-[:FAMILY]->(fam);
+----
+
+But we can spot use it to spot a common family that we're sure of.
+
+Another option is to create a `CoreFamily` for each parents-children family, so we would create the CoreFamily node in context of (one of) the parents.
+
+As either parent could be not existing, we would use a fallback mechanism to create that core-family for a person.
+
+[source,cypher]
+----
+MATCH (p:Person)
+// parents might not be there
+OPTIONAL MATCH (p)-[:FATHER]->(f)
+OPTIONAL MATCH (p)-[:MOTHER]->(m)
+WITH p, coalesce(f,m,p) as root, 
+ // non-null members
+ [member in [f,m,p] WHERE NOT member IS NULL] as members
+// create family in context of root person
+MERGE (root)-[:CORE_FAMILY]->(fam:CoreFamily)
+SET fam.name = root.last
+WITH members, fam
+UNWIND members as member
+MERGE (member)-[:CORE_FAMILY]->(fam);
+----
+
+What we could then do is to connect the core-families from one generation to the next:
+
+[source,cypher]
+----
+MATCH (curr:CoreFamily)<-[:CORE_FAMILY]-
+      (member)-[:CORE_FAMILY]->(ancestors:CoreFamily)
+WHERE exists { 
+      (parent)-[:CORE_FAMILY]->(ancestors:CoreFamily), (member)-[:FATHER|:MOTHER]->(parent)
+}
+MERGE (curr)-[:ANCESTORS]->(ancestors);
+----
+
+Family ancestry for the Kennedy family in Neo4j Browser
+
+image::gedcom-family-ancestors.png[]
+
+Family ancestry in hierarchical layout in Bloom
+
+image::gedcom-bloom-core-families.png[]
+
+We can derive siblings from two people having a joint parent, in our case one joint parent is enough, we could also change the query where both parents need to be the same.
+
+.Siblings with single shared parent
+[source,cypher]
+----
+// from person to parents
+MATCH (p:Person)-[:MOTHER|FATHER]->(parent)
+// other person that shares a parent
+MATCH (sib:Person)-[:MOTHER|FATHER]->(parent)
+// not the same person
+WHERE p <> sib
+// create a sibling relationship (undirected)
+MERGE (p)-[:SIBLING]-(sib);
+----
+
+.Siblings with two shared parents
+[source,cypher]
+----
+// from person to parents
+MATCH (dad)<-[:FATHER]-(p:Person)-[:MOTHER]->(mom)
+// other person that shares a parent
+MATCH (dad)<-[:FATHER]-(sib:Person)-[:MOTHER]->(mom)
+// not the same person
+WHERE p <> sib
+// create a sibling relationship (undirected)
+MERGE (p)-[:SIBLING]-(sib);
+----
+
+If we look at some of them we see binary to 7 sided sibling clusters.
+
+image::gedcom-siblings.png[]
 
 === Direct Import with Python Driver
 
 Instead of exporting a CSV file we can also directly write the data to Neo4j.
 
-In a copy of our script, we install the `neo4j` driver dependency and add the import for `GraphDatabase`.
+In a copy of our script, we install the https://pypi.org/project/neo4j/[`neo4j` driver dependency^] and add the import for `GraphDatabase`.
 
 The information for the `NEO4J_URI` and `NEO4J_PASSWORD` comes from environment variables that we need to set to our connection details from Neo4j Aura.
 We use that information to create our driver.
@@ -272,9 +393,7 @@ So either we could:
 * add a conditional subquery to add the relationship
 * default to an "unknown" Parent and clean up after
 
-https://pypi.org/project/neo4j/
-
-code/file-gedcom2neo4j-py
+link:code/file-gedcom2neo4j-py[]
 
 [source,python]
 ----

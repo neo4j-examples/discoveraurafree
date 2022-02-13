@@ -34,7 +34,7 @@ image::https://static.wikia.nocookie.net/hpw/images/5/5a/Black.jpg/revision/late
 image::https://www.thisisbarry.com/wp-content/uploads/2020/DARK/Netflix-DARK-Family-Tree-Diagram-Adam-and-Eve-World-2.jpg[]
 ====
 
-I looked at the gedcom file format (see below) and was reminded of a COBOL data file format (or formats I used in the long past for storing data myself).
+I looked at the https://en.wikipedia.org/wiki/GEDCOM[GEDCOM file format^] (see below) and was reminded of a COBOL data file format (or formats I used in the long past for storing data myself).
 
 I remembered that my friend and colleague Rik van Bruggen had https://blog.bruggen.com/2014/01/leftovers-from-holidays-genealogy-graphs.html[imported his ancient family history into Neo4j^] 8 years ago (also using gedcom but with some desktop application).
 

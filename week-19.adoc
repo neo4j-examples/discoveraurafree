@@ -1,0 +1,627 @@
+== Week 19 - Discover AuraDB Free - The Wordle Graph
+:imagesdir: img
+
+I know I'm late to the game as https://www.powerlanguage.co.uk/wordle/[Wordle^] was sold to the New York Times last week.
+
+I haven't played it much myself just saw it popping up on my twitter stream a lot.
+
+If you haven't played *https://en.wikipedia.org/wiki/Wordle[wordle^]* yourself, it is a guessing game similar to mastermind, only with (5-letter) english words (there are now many clones in other languages).
+Correctly guessed letters in the right position appear green, wrong position yellow and incorrect letters gray.
+The goal is to guess the word in 6 attempts, i.e. make all 5 letters green.
+
+Our creative folks even created a Neo4j version of it, see if you can spot the mistake.
+
+image::wordle_neo4j.gif[]
+
+So I thought one late night that it would be fun to represent the wordle world as a graph. And here we go.
+
+https://twitter.com/mesirii/status/1488657605799321600
+
+If you missed our live-stream here is the recording, we had a lot of fun both playing the game but also exploring the graph version of it:
+
+https://www.youtube.com/watch?v=S1rb05Ix4ag
+
+That wordle of the day was "elder", which got got to in attempt 3, after someone from the stream hinting at it.
+
+You can find https://neo4j.com/video/discover-aura-free-with-fun-datasets/[past live sessions^] and https://medium.com/neo4j/search?q=week+1[deep dive blog write-ups^].
+
+All the Cypher statements and the source CSV can be found in this GitHub repository: 
+
+https://github.com/jexp/wordle-graph
+
+But let's create our database instance first, so that you can follow the modeling and import.
+
+include::connect-aura.adoc[leveloffset=+1]
+
+=== Dataset
+
+I found a scraped wordle list in this https://github.com/coolbutuseless/wordle/blob/main/R/words.R[repository of an R solver^], which I turned into a CSV with 12k entries.
+
+Here are the first few words, none of which I would have associated with English :)
+
+----
+aahed
+aalii
+aargh
+aarti
+abaca
+----
+
+The https://raw.githubusercontent.com/jexp/wordle-graph/main/wordle.csv[CSV is available on GitHub^], it doesn't have a header and only a single column.
+
+=== Import
+
+We can load the CSV data directly with LOAD CSV into `Word` nodes, first we create a constraint to make this and future lookups fast and the import repeatable.
+
+[source,cypher]
+----
+// create constraint
+CREATE CONSTRAINT word_name IF NOT EXISTS ON (w:Word) ASSERT w.name IS UNIQUE;
+
+// load csv and turn each row into a Word node
+
+LOAD CSV FROM "https://raw.githubusercontent.com/jexp/wordle-graph/main/wordle.csv" AS row
+MERGE (:Word {name:row[0]});
+----
+
+That's a lot of 5-letter words (12k) nodes.
+
+image::wordle-bloom.png[]
+
+I also put a dump file on s3: https://data.neo4j.com/wordle.dump that you can load into your AuraDB or Neo4j Desktop.
+
+=== Tale of 2 Models
+
+The idea is to split the words into their constituent letters and represent those "character positions" in the graph, sharing letters and positions as needed.
+
+That will allow us to later query things like
+
+* character frequency
+* follow frequencies
+* top-starter words
+* possible solution words if we have already some positive and negative clues
+
+==== Model 1 - Letter Positions as Nodes
+
+Initially I represented characters at positions with dedicated nodes labeled `CharAtPos` with a `char` and an `idx` property connected to the word via `HAS` and to each other with an `NEXT` relationship and the first node (idx=0) having an extra `STARTS` relationship.
+
+As it turns out the model might have been a bit overengineered :)
+
+Here is the code to split the words into characters and then create the first `CharAt` pos and subsequent (1..4) nodes and connect them.
+
+To make it work with memory constrained environments I wrapped it in a `CALL {} IN TRANSACTIONS` subquery, but even in AuraDB Free that was actually not necessary.
+
+[source,cypher]
+----
+MATCH (w:Word) 
+CALL { WITH w 
+WITH w, split(w.name,"") AS chars
+MERGE (start:CharAtPos {idx:0, char:chars[0]})
+MERGE (w)-[:STARTS]->(start)
+MERGE (w)-[:HAS]->(start)
+WITH *
+UNWIND range(1,size(chars)-1) AS idx
+MERGE (next:CharAtPos {idx:idx, char:chars[idx]})
+MERGE (w)-[:HAS]->(next)
+WITH *
+MATCH (prev:CharAtPos {idx:idx-1, char:chars[idx-1]})
+MERGE (prev)-[:NEXT]->(next)
+} IN TRANSACTIONS OF 1000 ROWS;
+----
+
+IF we query a word like `crash` now based on our model:
+
+
+[source,cypher]
+----
+match p=(:Word {name:"crash"})--()
+return p
+----
+
+image::wordle-crash.png[]
+
+==== Wordle Solver (v1)
+
+To solve a word, you pass in the letters you know with their positions and the letters that you don't have the right position for and match any words that fit this pattern.
+
+[source,cypher]
+----
+MATCH (c1:CharAtPos {idx:0, char:'c'}), 
+      (c5:CharAtPos {idx:4, char:'h'}),
+      (c:CharAtPos {char:'a'})
+match (w:Word)-[:HAS]->(c1),
+      (w)-[:HAS]->(c5),
+      (w)-[:HAS]->(c)
+return w.name;
+----
+
+----
+╒════════╕
+│"w.name"│
+╞════════╡
+│"clach" │
+├────────┤
+│"clash" │
+├────────┤
+│"caneh" │
+├────────┤
+│"coach" │
+├────────┤
+│"catch" │
+├────────┤
+│"crash" │
+└────────┘
+----
+
+image::wordle-solver.png[]
+
+If we have more information, then we can extend the query by excluding letters or positions and get a smaller result set.
+It takes a bit longer to query due to the exclusions.
+
+[source,cypher]
+----
+match (c1:CharAtPos {idx:0, char:'c'}), // correct 
+      (c2:CharAtPos {idx:1, char:'a'}), // wrong pos     
+      (c3:CharAtPos {char:'l'}),  // incorrect    
+      (c4:CharAtPos {char:'i'}),  // incorrect
+      (c5:CharAtPos {idx:4, char:'h'}), // correct
+      (c:CharAtPos {char:'a'})
+match (w:Word)-[h1:HAS]->(c1),
+      (w)-[h2:HAS]->(c5), (w)-[h3:HAS]->(c)
+WHERE not exists { (w)-[:HAS]->(c2) } and not exists { (w)-[:HAS]->(c3) } and not exists { (w)-[:HAS]->(c4) }
+return *
+----
+
+==== Model 2 Positions in Relationships
+
+An alternative model represents just the 26 characters and puts the position onto the relationship either as a property or as the rel-type.
+
+Because we know we have 5 letters we can just spell it out.
+
+[source,cypher]
+----
+MATCH (w:Word) 
+WITH w, split(w.name,"") AS chars
+MERGE (c0:Char {char:chars[0]})
+MERGE (w)-[p0:POS0]->(c0) SET p0.idx = 0
+MERGE (c1:Char {char:chars[1]})
+MERGE (w)-[p1:POS1]->(c1) SET p1.idx = 1
+MERGE (c2:Char {char:chars[2]})
+MERGE (w)-[p2:POS2]->(c2) SET p2.idx = 2
+MERGE (c3:Char {char:chars[3]})
+MERGE (w)-[p3:POS3]->(c3) SET p3.idx = 3
+MERGE (c4:Char {char:chars[4]})
+MERGE (w)-[p4:POS4]->(c4) SET p4.idx = 4;
+----
+
+==== Model 2 Explorations
+
+We can first look at the representation of a word ("diver") in this model.
+
+[source,cypher]
+----
+match (w:Word {name:"diver"})-[r]->(c:Char)
+return *;
+----
+
+image::wordle-diver.png[]
+
+Then see how shared characters between two words ("diver" and "elder") look like, here `c` are the shared letters and c1, c2 the other letters respectively.
+
+[source,cypher]
+----
+match path = (c1:Char)<--(:Word {name:"diver"})-->(c:Char)
+match path2 = (c:Char)<--(:Word {name:"elder"})-->(c2:Char)
+return path, path2;
+----
+
+image::wordle-shared-letters2.png[]
+
+Looking at that frequent suffix of `er`, we wanted to see what the letter frequencies look like.
+
+==== Letter Frequencies
+
+With this model we can also easy look at character frequencies and follow probabilities.
+
+For the letter frequencies we just count the number of relationships pointing to a character node (aka the in-degree).
+
+[source,cypher]
+----
+MATCH (c:Char)
+RETURN c.char, size((c)<--()) as deg
+ORDER BY deg DESC;
+----
+
+As expected for the English language the vowels, and `R`,`S`,`T` are pretty high up.
+
+----
+╒════════╤═════╕
+│"c.char"│"deg"│
+╞════════╪═════╡
+│"s"     │6665 │
+├────────┼─────┤
+│"e"     │6662 │
+├────────┼─────┤
+│"a"     │5990 │
+├────────┼─────┤
+│"o"     │4438 │
+├────────┼─────┤
+│"r"     │4158 │
+├────────┼─────┤
+│"i"     │3759 │
+├────────┼─────┤
+│"l"     │3371 │
+├────────┼─────┤
+│"t"     │3295 │
+├────────┼─────┤
+│"n"     │2952 │
+├────────┼─────┤
+│"u"     │2511 │
+├────────┼─────┤
+│"d"     │2453 │
+├────────┼─────┤
+│"y"     │2074 │
+├────────┼─────┤
+│"c"     │2028 │
+├────────┼─────┤
+│"p"     │2019 │
+├────────┼─────┤
+│"m"     │1976 │
+├────────┼─────┤
+│"h"     │1760 │
+├────────┼─────┤
+│"g"     │1644 │
+├────────┼─────┤
+│"b"     │1627 │
+├────────┼─────┤
+│"k"     │1505 │
+├────────┼─────┤
+│"f"     │1115 │
+├────────┼─────┤
+│"w"     │1039 │
+├────────┼─────┤
+│"v"     │694  │
+├────────┼─────┤
+│"z"     │434  │
+├────────┼─────┤
+│"j"     │291  │
+├────────┼─────┤
+│"x"     │288  │
+├────────┼─────┤
+│"q"     │112  │
+└────────┴─────┘
+----
+
+We can now use that information to find good starting words, by summing up the character frequencies for each word.
+
+[source,cypher]
+----
+MATCH (w:Word)
+MATCH (w)-->(c:Char)
+RETURN w.name, sum(size((c)<--())) as total
+ORDER BY total DESC LIMIT 5;
+----
+
+We see there are quite a lot of "cheater" words which contain the high frequency characters multiple times.
+
+----
+╒════════╤═══════╕
+│"w.name"│"total"│
+╞════════╪═══════╡
+│"esses" │33319  │
+├────────┼───────┤
+│"sasse" │32647  │
+├────────┼───────┤
+│"sessa" │32647  │
+├────────┼───────┤
+│"asses" │32647  │
+├────────┼───────┤
+│"eases" │32644  │
+└────────┴───────┘
+----
+
+If we want to avoid that we can state, that we want to only look at words with 5 distinct characters.
+
+[source,cypher]
+----
+MATCH (w:Word)
+MATCH (w)-->(c:Char)
+RETURN w.name, sum(size((c)<--())) as total, count(distinct c) = 5 as uniques
+ORDER BY uniques DESC, total DESC LIMIT 10;
+----
+
+----
+╒════════╤═══════╤═════════╕
+│"w.name"│"total"│"uniques"│
+╞════════╪═══════╪═════════╡
+│"arose" │27913  │true     │
+├────────┼───────┼─────────┤
+│"soare" │27913  │true     │
+├────────┼───────┼─────────┤
+│"aeros" │27913  │true     │
+├────────┼───────┼─────────┤
+│"serai" │27234  │true     │
+├────────┼───────┼─────────┤
+│"arise" │27234  │true     │
+├────────┼───────┼─────────┤
+│"reais" │27234  │true     │
+├────────┼───────┼─────────┤
+│"aesir" │27234  │true     │
+├────────┼───────┼─────────┤
+│"raise" │27234  │true     │
+├────────┼───────┼─────────┤
+│"aloes" │27126  │true     │
+├────────┼───────┼─────────┤
+│"stoae" │27050  │true     │
+└────────┴───────┴─────────┘
+----
+
+Still not perfect, most of these are just variations of the same set of letters.
+Let's group them by the sorted set of letters and show the first few.
+
+[source,cypher]
+----
+MATCH (w:Word)
+MATCH (w)-->(c:Char)
+RETURN apoc.coll.sort(split(w.name,'')) as letters, sum(size((c)<--())) as total, count(distinct c) = 5 as uniques, collect(w.name)[0..2] as words
+ORDER BY uniques DESC, total DESC LIMIT 10;
+----
+
+----
+╒═════════════════════╤═══════╤═════════╤═════════════════╕
+│"letters"            │"total"│"uniques"│"words"          │
+╞═════════════════════╪═══════╪═════════╪═════════════════╡
+│["a","e","r","s","t"]│348010 │true     │["aster","arets"]│
+├─────────────────────┼───────┼─────────┼─────────────────┤
+│["a","e","p","r","s"]│331422 │true     │["apres","apers"]│
+├─────────────────────┼───────┼─────────┼─────────────────┤
+│["a","e","l","s","t"]│311796 │true     │["salet","taels"]│
+├─────────────────────┼───────┼─────────┼─────────────────┤
+│["a","e","l","p","s"]│247070 │true     │["pales","lapse"]│
+├─────────────────────┼───────┼─────────┼─────────────────┤
+│["d","e","o","r","s"]│243760 │true     │["doser","deros"]│
+├─────────────────────┼───────┼─────────┼─────────────────┤
+│["a","e","l","r","s"]│241614 │true     │["arles","earls"]│
+├─────────────────────┼───────┼─────────┼─────────────────┤
+│["a","c","e","r","s"]│229527 │true     │["acres","acers"]│
+├─────────────────────┼───────┼─────────┼─────────────────┤
+│["d","e","i","l","s"]│229100 │true     │["delis","diels"]│
+├─────────────────────┼───────┼─────────┼─────────────────┤
+│["a","i","r","s","t"]│214803 │true     │["artis","astir"]│
+├─────────────────────┼───────┼─────────┼─────────────────┤
+│["a","e","l","s","v"]│210438 │true     │["avels","valse"]│
+└─────────────────────┴───────┴─────────┴─────────────────┘
+----
+
+==== Follow Frequencies
+
+E.g. on position 1 we can use this for the follow frequency
+
+[source,cypher]
+----
+MATCH (c1:Char)<-[:POS0]-(w)-[:POS1]->(c2:Char)
+RETURN c1.char, c2.char, count(*) as freq
+ORDER BY freq DESC LIMIT 5;
+----
+
+----
+╒═════════╤═════════╤══════╕
+│"c1.char"│"c2.char"│"freq"│
+╞═════════╪═════════╪══════╡
+│"c"      │"o"      │220   │
+├─────────┼─────────┼──────┤
+│"m"      │"a"      │193   │
+├─────────┼─────────┼──────┤
+│"r"      │"e"      │187   │
+├─────────┼─────────┼──────┤
+│"s"      │"t"      │183   │
+├─────────┼─────────┼──────┤
+│"b"      │"o"      │175   │
+└─────────┴─────────┴──────┘
+----
+
+Globally we can either do a big union and sum them up as we did on the stream.
+Or with the positions on the relationships, we can also generalize our statement from above.
+
+[source,cypher]
+----
+MATCH (c1:Char)<-[p1]-(w)-[p2]->(c2:Char)
+WHERE p1.idx +1 = p2.idx
+RETURN c1.char, c2.char, count(*) as freq
+ORDER BY freq DESC LIMIT 10;
+----
+
+----
+╒═════════╤═════════╤══════╕
+│"c1.char"│"c2.char"│"freq"│
+╞═════════╪═════════╪══════╡
+│"e"      │"s"      │867   │
+├─────────┼─────────┼──────┤
+│"e"      │"r"      │765   │
+├─────────┼─────────┼──────┤
+│"a"      │"r"      │659   │
+├─────────┼─────────┼──────┤
+│"r"      │"e"      │646   │
+├─────────┼─────────┼──────┤
+│"e"      │"d"      │642   │
+├─────────┼─────────┼──────┤
+│"r"      │"a"      │562   │
+├─────────┼─────────┼──────┤
+│"i"      │"n"      │556   │
+├─────────┼─────────┼──────┤
+│"a"      │"n"      │544   │
+├─────────┼─────────┼──────┤
+│"a"      │"l"      │536   │
+├─────────┼─────────┼──────┤
+│"a"      │"s"      │532   │
+└─────────┴─────────┴──────┘
+----
+
+These can help us finding that missing letter, but I guess you have internalized it already from your language knowledge, except for some rare combinations.
+
+One interesting question we wanted to answer is, which letters appear frequently in succession as double-letters.
+
+[source,cypher]
+----
+MATCH (c:Char)<-[r1]-(w:Word)-[r2]->(c)
+WHERE r1.idx = r2.idx +1
+RETURN c.char, count(*) as freq
+ORDER BY freq DESC LIMIT 8
+----
+
+As expected `o` and `e` lead the pack, `l` was a bit surprising to me.
+
+----
+╒════════╤══════╕
+│"c.char"│"freq"│
+╞════════╪══════╡
+│"o"     │328   │
+├────────┼──────┤
+│"e"     │308   │
+├────────┼──────┤
+│"l"     │209   │
+├────────┼──────┤
+│"t"     │114   │
+├────────┼──────┤
+│"f"     │111   │
+├────────┼──────┤
+│"r"     │108   │
+├────────┼──────┤
+│"s"     │105   │
+├────────┼──────┤
+│"n"     │91    │
+└────────┴──────┘
+----
+
+For generic, repeats and re-occurrences one could generalize that to
+
+[source,cypher]
+----
+
+----
+
+==== Solver v2
+
+For resolving our wordle puzzle (v1) we could use this Cypher using this time the relationships as structuring means.
+
+[source,cypher]
+----
+MATCH (c:Char {char:'c'}), 
+      (h:Char {char:'h'}),
+      (a:Char {char:'a'})
+MATCH (wordle:Word)-[p0:POS0]->(c),
+      (wordle)-[p4:POS4]->(h),
+      (wordle)-[px]->(a)
+WHERE not exists { (wordle)-[:POS1]->(a) } 
+  AND not exists { (wordle)-[:POS2]->(:Char {char:'l'}) } 
+  AND not exists { (wordle)-[:POS3]->(:Char {char:'i'}) }
+RETURN *;
+----
+
+image::wordle-rel-model.png[]
+
+If we have more information, then we can extend the query by excluding letters or positions and get a smaller result set.
+
+[source,cypher]
+----
+MATCH (c:Char {char:'c'}), 
+      (h:Char {char:'h'}),
+      (a:Char {char:'a'})
+MATCH (wordle:Word)-[p0:POS0]->(c),
+      (wordle)-[p4:POS4]->(h),
+      (wordle)-[px]->(a)
+WHERE not exists { (wordle)-[:POS1]->(a) } 
+  AND not exists { (wordle)-[:POS2]->(:Char {char:'l'}) } 
+  AND not exists { (wordle)-[:POS3]->(:Char {char:'i'}) }
+RETURN *;
+----
+image::wordle-rel-model-exclusions.png[]
+
+We can even go so far as to implement a *generic solver*, that takes an structured input (we could also split an parse a marked up word as shown in the 2nd statement) and for each position, includes or excludes the letter (at position) as needed.
+
+[source,cypher]
+----
+// Laser 🟩🟨⬜🟩⬜
+WITH [{char:'l',match:true},{char:'a'},{char:'s',match:false},{char:'e',match:true},{char:'r',match:false}] as input
+MATCH (w:Word)
+CALL {
+    WITH w, input
+    UNWIND range(0,size(input)-1) as idx
+    WITH size(input) as total, idx, w, input[idx].match as m, input[idx].char as char
+    // for matching must match position
+    WHERE (m AND exists { (w)-[{idx:idx}]->(:Char {char:char}) })
+    // for non-matching must not contain  
+      OR (m = false AND NOT exists { (w)-->(:Char {char:char}) })
+    // existing must contain somewhere
+      OR (m IS NULL AND exists { (w)-->(:Char {char:char}) })
+    // all conditions need to match for this word
+    WITH total, count(*) as count WHERE count = total
+    RETURN true AS found
+}
+RETURN w.name;
+----
+
+For 'laser' this returns 9 suggestions for the next word: label, laced, lacet, lacey, laded, laden, laked, lamed, lapel, lated, laten, latex, laved, lawed, laxed, layed, lazed, lutea, lycea.
+
+We could now rank them by the information gain, i.e. which of those have high frequency new characters or reduce most of the uncertainty.
+
+I leave that for you valued reader for now, so that we can have a look at (the much simpler) wordle game implemented using Cypher.
+
+=== Playing wordle in your Terminal
+
+If you just want to play, run `./wordle-neo4j.sh` in your terminal, it sends a Cypher query to a wordle database in demo.neo4j.labs.com (username, password, database = wordle) to see if your guesses were right.
+
+[source,shell]
+----
+./wordle-neo4j.sh 12972
+Guess 1: graph
+⬜⬜⬜⬜⬜
+Guess 2: bloom
+⬜⬜🟩🟨⬜
+Guess 3: scale
+⬜⬜⬜⬜🟨
+Guess 4: nodes
+🟩🟨⬜🟨⬜
+Guess 5: edges
+🟨⬜⬜🟨⬜
+Guess 6: neo4j
+🟩🟩🟩🟩🟩
+Guessed "neo4j" resulting in 🟩🟩🟩🟩🟩 in 6 rounds.
+----
+
+The statement that's running is:
+
+[source,cypher]
+----
+match (w:Word) 
+with w skip $word limit 1 
+// turn guess and word into lists
+with split($guess,'') as guessed, split(w.name,'') as letters, w.name as name 
+// iterate and combine for each position
+return reduce(res='', idx in range(0,size(letters)-1) | res + 
+  // when correct
+  case when guessed[idx] = letters[idx] then '🟩' 
+  // when contained
+  when name contains guessed[idx] then '🟨'
+  // otherwise  
+  else '⬜' end) as res
+----
+
+*_Happy guessing and playing with the wordle data!_*
+
+Let us know if you have more ideas / suggestions on how to have more fun with this or other datasets on AuraDB Free.
+
+////
+=== Ideas
+
+* explain two models
+* loading
+* post-processing
+* look at char frequencies
+* recommend starting words (based on top frequencies)
+* rarest words
+* solve word
+* visualize solver
+* input word so far, e.g. `C a l! i! H` and have a generic cypher-statement to run with this word
+* implement wordle -> split input + match
+////

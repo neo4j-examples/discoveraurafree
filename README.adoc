@@ -18,8 +18,13 @@ Got a data set you'd like us to explore? Provided it's a public data set and can
 
 == Join us live for the stream!
 
-Every Monday: 8am UTC | 9am BST | 10am CEST | 1:30pm IST | 4pm SGT
-https://twitch.tv/neo4j[On Twitch^]
+Every Monday alternating between 
+
+* a "morning session" 8am UTC | 10am CET | 2:30pm IST | 5pm SGT
+* an "afternoon session" 10am ET | 3pm UTC | 4pm CET | 8:30pm IST | 7am PT (sorry)
+
+* https://twitch.tv/neo4j[On Twitch^]
+* https://youtube.com/neo4j/live[On YouTube^]
 
 Following along? Don't forget to get your https://dev.neo4j.com/discover-aura[*Free* Neo4j Aura instance^] up and running.
 
@@ -42,8 +47,12 @@ ifdef::env-github[]
 * link:week-14.adoc[Week 14 - Consumer Complaints Database]
 * link:week-15.adoc[Week 15 - Hamilton Musical Graph]
 * link:week-16.adoc[Week 16 - CSV Data Importer Tool]
+* link:week-17.adoc[Week 17 - Analysing NFT Trades]
+* link:week-18.adoc[Week 18 - Week 18 - Importing gedcom files and exploring Genealogy/Ancestry data as a graph]
+* link:week-19.adoc[Week 19 - The Wordle Graph]
 endif::[]
 
+////
 ifndef::env-github[]
 toc::[]
 :leveloffset: +1
@@ -64,21 +73,9 @@ include::week-13.adoc[Week 13 - Exploring a Kaggle HR Attrition Dataset]
 include::week-14.adoc[Week 14 - Consumer Complaints Database]
 include::week-15.adoc[Week 15 - Hamilton Musical Graph]
 include::week-16.adoc[Week 16 - CSV Data Importer Tool]
+include::week-17.adoc[Week 17 - Analysing NFT Trades]
+include::week-18.adoc[Week 18 - Week 18 - Importing gedcom files and exploring Genealogy/Ancestry data as a graph]
+include::week-19.adoc[Week 19 - The Wordle Graph]
+
 endif::[]
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+////

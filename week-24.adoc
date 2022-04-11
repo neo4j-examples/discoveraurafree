@@ -166,27 +166,25 @@ return article.id, article.title, article.published_date, article.byline, articl
 ----
 
 ----
-╒════════════╤════════════╤════════════╤════════════╤════════════╤════════════╕
-│"article.id"│"article.tit│"article.pub│"article.byl│"article.geo│"article.des│
-│            │le"         │lished_date"│ine"        │_facet"     │_facet"     │
-╞════════════╪════════════╪════════════╪════════════╪════════════╪════════════╡
-│100000008287│"Satellite i│"2022-04-04"│"By Malachy │["Ukraine","│["Russian In│
-│402         │mages show b│            │Browne, Davi│Russia","Buc│vasion of Uk│
-│            │odies lay in│            │d Botti and │ha (Ukraine)│raine (2022)│
-│            │ Bucha for w│            │Haley Willis│","Kyiv (Ukr│","Civilian │
-│            │eeks, despit│            │"           │aine)"]     │Casualties"]│
-│            │e Russian cl│            │            │            │            │
-│            │aims."      │            │            │            │            │
-├────────────┼────────────┼────────────┼────────────┼────────────┼────────────┤
-│100000008090│"Grammys 202│"2022-04-03"│"By Shivani │[]          │["Grammy Awa│
-│218         │2 Winners: T│            │Gonzalez"   │            │rds","Gospel│
-│            │he Complete │            │            │            │ Music","Fol│
-│            │List"       │            │            │            │k Music","Cl│
-│            │            │            │            │            │assical Musi│
-│            │            │            │            │            │c","Pop and │
-│            │            │            │            │            │Rock Music",│
-│            │            │            │            │            │"Blues Music│
-│            │            │            │            │            │","Jazz"]   │
+╒════════════╤════════════╤════════════╤════════════╤════════════╕
+│"title"     │"article.pub│"article.byl│"article.geo│"article.des│
+│            │lished_date"│ine"        │_facet"     │_facet"     │
+╞════════════╪════════════╪════════════╪════════════╪════════════╡
+│"Satellite i│"2022-04-04"│"By Malachy │["Ukraine","│["Russian In│
+│mage"       │            │Browne, Davi│Russia","Buc│vasion of Uk│
+│            │            │d Botti and │ha (Ukraine)│raine (2022)│
+│            │            │Haley Willis│","Kyiv (Ukr│","Civilian │
+│            │            │"           │aine)"]     │Casualties"]│
+├────────────┼────────────┼────────────┼────────────┼────────────┤
+│"Grammys 202│"2022-04-03"│"By Shivani │[]          │["Grammy Awa│
+│2 Wi"       │            │Gonzalez"   │            │rds","Gospel│
+│            │            │            │            │ Music","Fol│
+│            │            │            │            │k Music","Cl│
+│            │            │            │            │assical Musi│
+│            │            │            │            │c","Pop and │
+│            │            │            │            │Rock Music",│
+│            │            │            │            │"Blues Music│
+│            │            │            │            │","Jazz"]   │
 ----
 
 This is now the data that we can use to create our article nodes.
@@ -281,27 +279,19 @@ ORDER BY overlap DESC limit 5;
 ----
 
 ----
-╒══════════════════════════════════════╤══════════════════════════════════════╤═════════╕
-│"a1.title"                            │"a2.title"                            │"overlap"│
-╞══════════════════════════════════════╪══════════════════════════════════════╪═════════╡
-│"A New Wave of Covid-19 Is Coming. Her│"A New Covid Mystery"                 │4        │
-│e’s How to Prepare."                  │                                      │         │
-├──────────────────────────────────────┼──────────────────────────────────────┼─────────┤
-│"Russia Asked China for Military and E│"U.S. Officials Say Superyacht Could b│3        │
-│conomic Aid for Ukraine War, U.S. Offi│e Putin’s"                            │         │
-│cials Say"                            │                                      │         │
-├──────────────────────────────────────┼──────────────────────────────────────┼─────────┤
-│"Satellite images show bodies lay in B│"A makeup artist recognized this Bucha│2        │
-│ucha for weeks, despite Russian claims│ victim’s picture by her manicure."   │         │
-│."                                    │                                      │         │
-├──────────────────────────────────────┼──────────────────────────────────────┼─────────┤
-│"Satellite images show bodies lay in B│"Russian soldiers opened fire on a cyc│2        │
-│ucha for weeks, despite Russian claims│list in Bucha, new video shows."      │         │
-│."                                    │                                      │         │
-├──────────────────────────────────────┼──────────────────────────────────────┼─────────┤
-│"New York Judge Dies by Suicide After │"Sarah Lawrence Cult Leader Convicted │2        │
-│Authorities Search His Home"          │of Trafficking and Extortion"         │         │
-└──────────────────────────────────────┴──────────────────────────────────────┴─────────┘
+╒══════════════════════╤══════════════════════╤═════════╕
+│"title1"              │"title2"              │"overlap"│
+╞══════════════════════╪══════════════════════╪═════════╡
+│"A New Wave of Covid-"│"A New Covid Mystery" │4        │
+├──────────────────────┼──────────────────────┼─────────┤
+│"Russia Asked China f"│"U.S. Officials Say S"│3        │
+├──────────────────────┼──────────────────────┼─────────┤
+│"Satellite images sho"│"A makeup artist reco"│2        │
+├──────────────────────┼──────────────────────┼─────────┤
+│"Satellite images sho"│"Russian soldiers ope"│2        │
+├──────────────────────┼──────────────────────┼─────────┤
+│"New York Judge Dies "│"Sarah Lawrence Cult "│2        │
+└──────────────────────┴──────────────────────┴─────────┘
 ----
 
 If you anchor the starting article, e.g. as the one currently being read, you can recommend (similar) articles based on that topic overlap.
@@ -318,30 +308,22 @@ ORDER BY overlap DESC limit 5;
 ----
 
 ----
-╒═════════════════╤═════════════════╤═══════╤══════════════════════════╕
-│"t1"             │"t2"             │"score"│"topics"                  │
-╞═════════════════╪═════════════════╪═══════╪══════════════════════════╡
-│"A New Wave of C"│"A New Covid Mys"│4      │["Coronavirus (2019-nCoV)"│
-│                 │                 │       │,"Disease Rates","Tests (M│
-│                 │                 │       │edical)","Coronavirus Omic│
-│                 │                 │       │ron Variant"]             │
-├─────────────────┼─────────────────┼───────┼──────────────────────────┤
-│"Russia Asked Ch"│"U.S. Officials "│3      │["Embargoes and Sanctions"│
-│                 │                 │       │,"Russian Invasion of Ukra│
-│                 │                 │       │ine (2022)","United States│
-│                 │                 │       │ International Relations"]│
-├─────────────────┼─────────────────┼───────┼──────────────────────────┤
-│"Satellite image"│"A makeup artist"│2      │["Civilian Casualties","Ru│
-│                 │                 │       │ssian Invasion of Ukraine │
-│                 │                 │       │(2022)"]                  │
-├─────────────────┼─────────────────┼───────┼──────────────────────────┤
-│"Satellite image"│"Russian soldier"│2      │["Civilian Casualties","Ru│
-│                 │                 │       │ssian Invasion of Ukraine │
-│                 │                 │       │(2022)"]                  │
-├─────────────────┼─────────────────┼───────┼──────────────────────────┤
-│"New York Judge "│"Sarah Lawrence "│2      │["Human Trafficking","Sex │
-│                 │                 │       │Crimes"]                  │
-└─────────────────┴─────────────────┴───────┴──────────────────────────┘
+╒══════════════════╤══════════════════╤═════════╤══════════════════╕
+│"title1"          │"title2"          │"overlap"│"topics"          │
+╞══════════════════╪══════════════════╪═════════╪══════════════════╡
+│"A New Wave of Cov│"A New Covid Myste│4        │["Coronavirus (201│
+│id-"              │ry"               │         │9-nCoV)","Disease │
+│                  │                  │         │Rates","Tests (Med│
+│                  │                  │         │ical)","Coronaviru│
+│                  │                  │         │s Omicron Variant"│
+│                  │                  │         │]                 │
+├──────────────────┼──────────────────┼─────────┼──────────────────┤
+│"Russia Asked Chin│"U.S. Officials Sa│3        │["Embargoes and Sa│
+│a f"              │y S"              │         │nctions","Russian │
+│                  │                  │         │Invasion of Ukrain│
+│                  │                  │         │e (2022)","United │
+│                  │                  │         │States Internation│
+│                  │                  │         │al Relations"]    │
 ----
 
 
@@ -415,28 +397,19 @@ ORDER BY score DESC limit 5;
 ----
 
 ----
-╒═════════════════════════════════╤═════════════════════════════════╤═══════╕
-│"a1.title"                       │"a2.title"                       │"score"│
-╞═════════════════════════════════╪═════════════════════════════════╪═══════╡
-│"A New Wave of Covid-19 Is Coming│"A New Covid Mystery"            │22.0   │
-│. Here’s How to Prepare."        │                                 │       │
-├─────────────────────────────────┼─────────────────────────────────┼───────┤
-│"Russia Asked China for Military │"U.S. Officials Say Superyacht Co│18.5   │
-│and Economic Aid for Ukraine War,│uld be Putin’s"                  │       │
-│ U.S. Officials Say"             │                                 │       │
-├─────────────────────────────────┼─────────────────────────────────┼───────┤
-│"Satellite images show bodies lay│"A makeup artist recognized this │16.0   │
-│ in Bucha for weeks, despite Russ│Bucha victim’s picture by her man│       │
-│ian claims."                     │icure."                          │       │
-├─────────────────────────────────┼─────────────────────────────────┼───────┤
-│"Russian Blunders in Chernobyl: ‘│"They Died by a Bridge in Ukraine│16.0   │
-│They Came and Did Whatever They W│. This Is Their Story."          │       │
-│anted’"                          │                                 │       │
-├─────────────────────────────────┼─────────────────────────────────┼───────┤
-│"Satellite images show bodies lay│"They Died by a Bridge in Ukraine│16.0   │
-│ in Bucha for weeks, despite Russ│. This Is Their Story."          │       │
-│ian claims."                     │                                 │       │
-└─────────────────────────────────┴─────────────────────────────────┴───────┘
+╒══════════════════════╤══════════════════════╤═══════╕
+│"title1"              │"title2"              │"score"│
+╞══════════════════════╪══════════════════════╪═══════╡
+│"A New Wave of Covid-"│"A New Covid Mystery" │22.0   │
+├──────────────────────┼──────────────────────┼───────┤
+│"Russia Asked China f"│"U.S. Officials Say S"│18.5   │
+├──────────────────────┼──────────────────────┼───────┤
+│"Satellite images sho"│"A makeup artist reco"│16.0   │
+├──────────────────────┼──────────────────────┼───────┤
+│"Russian Blunders in "│"They Died by a Bridg"│16.0   │
+├──────────────────────┼──────────────────────┼───────┤
+│"Satellite images sho"│"They Died by a Bridg"│16.0   │
+└──────────────────────┴──────────────────────┴───────┘
 ----
 
 Imagine again, that article 1, is tied to an article id or URL `MATCH (a1:Article {id:$articleId})` that the user is currently reading, then the list of articles returned would be recommendations.
@@ -474,12 +447,12 @@ Those photos could now be further analyzed with image reconition APIs to add mor
 
 The authors are unfortunately not available as metadata, but just in the `byline` attribute, which is a string like, `"By Malachy Browne, David Botti and Haley Willis"``
 
-Fortunately in Cypher we have a number of string, operations.
+Fortunately in Cypher we have a number of string operations.
 We skip the first 3 letters, replace `and` with comma and split the string by comma to get a list of authors.
 
 Then we create a node for each of them and connect the articles, this doesn't save us from duplicate Author names, but it's better than not having them at all.
 
-We can either do that as part of the import or as a post-processsing step, which is shown here.
+We can either do that as part of the import or as a post-processing step, which is shown here.
 
 [source,cypher]
 ----

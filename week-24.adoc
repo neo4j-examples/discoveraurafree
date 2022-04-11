@@ -1,0 +1,551 @@
+== Week 24 - NYTimes Article Knowledge Graph
+:imagesdir: ../img
+
+The role of journalists in current times can't be overstated.
+We all rely on critical and honest journalism of all the perils of mankind.
+
+But news are much more than just the articles on the front pages, a lot of the detail is hidden behind metadata that's not immediately visible.
+
+If you look at the https://www.nytimes.com/[Front-Page of the New York Times^] you see a lot of moving articles and images.
+
+Today we want to look behind the scenes, using the NYTimes API to access some of the article metadata.
+
+If you rather want to watch the livestream video, have fun, otherwise follow the article.
+
+https://www.youtube.com/watch?v=bByJQl-RXJk
+
+Our colleague https://twitter.com/lyonwj[Will Lyon^] has prepared a repository with data model, import script for the API of popular articles and even a Neo4j Browser guide.
+He originally created the data exploration for an investigative journalism conference (NICAR).
+
+You can go there to follow along.
+
+https://github.com/johnymontana/news-graph[NYTimes Article Repository^]
+
+Let's first create our AuraDB Free instance to get you going.
+Please pick the "blank database".
+
+include::connect-aura.adoc[leveloffset=+1]
+
+=== API
+
+First sign up to the https://developer.nytimes.com/get-started[NYTimes developer API^], and add an app to get your API Key.
+
+They provide a https://developer.nytimes.com/[lot of different APIs^], including book and movie reviews, semantic categories, article archive metadata and popular articles.
+
+To keep things simple we're looking at the straightforward "popular articles" API, which is just a JSON endpoint that provides the most popular articles for the last 7 or 30 days (just change the number in the URL).
+
+https://api.nytimes.com/svc/mostpopular/v2/viewed/7.json?api-key=<api-key>
+
+Here you can see what a part of the response looks like.
+
+[source]
+----
+{
+	"status": "OK",
+	"copyright": "Copyright (c) 2022 The New York Times Company.  All Rights Reserved.",
+	"num_results": 20,
+	"results": [{
+			"uri": "nyt://article/8428defe-c56e-5177-8798-ea2fbc3ef715",
+			"url": "https://www.nytimes.com/2022/04/06/us/politics/us-russia-malware-cyberattacks.html",
+			"id": 100000008282002,
+			"asset_id": 100000008282002,
+			"source": "New York Times",
+			"published_date": "2022-04-06",
+			"updated": "2022-04-07 10:45:47",
+			"section": "U.S.",
+			"subsection": "Politics",
+			"nytdsection": "u.s.",
+			"adx_keywords": "Russian Invasion of Ukraine (2022);Cyberwarfare and Defense;United States International Relations;Espionage and Intelligence Services;Biden, Joseph R Jr;Justice Department;Federal Bureau of Investigation;GRU (Russia);Russia;Ukraine",
+			"column": null,
+			"byline": "By Kate Conger and David E. Sanger",
+			"type": "Article",
+			"title": "U.S. Says It Secretly Removed Malware Worldwide, Pre-empting Russian Cyberattacks",
+			"abstract": "The operation is the latest effort by the Biden administration to thwart actions by Russia by making them public before Moscow can strike.",
+			"des_facet": [
+				"Russian Invasion of Ukraine (2022)",
+				"Cyberwarfare and Defense",
+				"United States International Relations",
+				"Espionage and Intelligence Services"
+			],
+			"org_facet": [
+				"Justice Department",
+				"Federal Bureau of Investigation",
+				"GRU (Russia)"
+			],
+			"per_facet": [
+				"Biden, Joseph R Jr"
+			],
+			"geo_facet": [
+				"Russia",
+				"Ukraine"
+			],
+			"media": [{
+				"type": "image",
+				"subtype": "photo",
+				"caption": "Some American officials fear that President Vladimir V. Putin of Russia may be biding his time in launching a major cyberoperation that could strike a blow at the American economy.",
+				"copyright": "Mikhail Klimentyev/Sputnik",
+				"approved_for_syndication": 0,
+				"media-metadata": [
+					{
+						"url": "https://static01.nyt.com/images/2022/04/06/us/politics/06dc-russia-hacks-1/merlin_204742779_ca6a0b7b-3630-426c-9ee7-77628e11521b-mediumThreeByTwo440.jpg",
+						"format": "mediumThreeByTwo440",
+						"height": 293,
+						"width": 440
+					}
+				]
+			}],
+			"eta_id": 0
+		},
+----
+
+This is the article data and metadata that we will import/turn into a graph and explore.
+
+=== Data Model
+
+The data model is based on the data that we get back from the API.
+
+We have the main `Article` node with properties like
+
+* title
+* id
+* url
+* byline (Authors)
+* source
+* published_date
+* abstract
+
+There are also others like the sections that we ignore for now. 
+
+Additionally we get metadata for each article:
+
+* Topics (des_facet)
+* Organizations (org_facet)
+* People (per_facet)
+* Locations (geo_facet)
+* Photos (media)
+
+Those metadata entries can be turned into their own nodes and connected to the article via relationships (see the model diagram).
+Via those nodes we can then correlate and relate articles.
+
+image::https://raw.githubusercontent.com/johnymontana/news-graph/main/img/datamodel.png[width=800]
+
+
+=== Import
+
+We've seen the direct response from the JSON API in our browser.
+To load the data into Neo4j we can utilize `apoc.load.json` a custom procedure that provides the response of the API as Cypher datastructures.
+
+It is one of the procedures that are also available in AuraDB.
+
+https://neo4j.com/docs/aura/current/getting-started/apoc/#_apoc_load
+
+Let's start by just fetching the data.
+
+[source,cypher]
+----
+call apoc.load.json("https://api.nytimes.com/svc/mostpopular/v2/viewed/7.json?api-key=<api-key>")
+----
+
+In Neo4j Browser, we can actually set the API key as a parameter with `:param key=>'<api-key>'`. Then we can use `$key` in our query and don't have to expose our key.
+
+[source,cypher]
+----
+call apoc.load.json("https://api.nytimes.com/svc/mostpopular/v2/viewed/7.json?api-key="+$key)
+----
+
+You'll see it looks the same as before, what we need to do now is to take the `value` result and iterate over the `results` array.
+
+Let's do that with `UNWIND` (that turns lists into rows) and instead of the full entry return it's individual parts.
+
+[source,cypher]
+----
+call apoc.load.json("https://api.nytimes.com/svc/mostpopular/v2/viewed/7.json?api-key="+$key)
+yield value
+unwind value.results as article
+return article.id, article.title, article.published_date, article.byline, article.geo_facet, article.des_facet;
+----
+
+----
+╒════════════╤════════════╤════════════╤════════════╤════════════╤════════════╕
+│"article.id"│"article.tit│"article.pub│"article.byl│"article.geo│"article.des│
+│            │le"         │lished_date"│ine"        │_facet"     │_facet"     │
+╞════════════╪════════════╪════════════╪════════════╪════════════╪════════════╡
+│100000008287│"Satellite i│"2022-04-04"│"By Malachy │["Ukraine","│["Russian In│
+│402         │mages show b│            │Browne, Davi│Russia","Buc│vasion of Uk│
+│            │odies lay in│            │d Botti and │ha (Ukraine)│raine (2022)│
+│            │ Bucha for w│            │Haley Willis│","Kyiv (Ukr│","Civilian │
+│            │eeks, despit│            │"           │aine)"]     │Casualties"]│
+│            │e Russian cl│            │            │            │            │
+│            │aims."      │            │            │            │            │
+├────────────┼────────────┼────────────┼────────────┼────────────┼────────────┤
+│100000008090│"Grammys 202│"2022-04-03"│"By Shivani │[]          │["Grammy Awa│
+│218         │2 Winners: T│            │Gonzalez"   │            │rds","Gospel│
+│            │he Complete │            │            │            │ Music","Fol│
+│            │List"       │            │            │            │k Music","Cl│
+│            │            │            │            │            │assical Musi│
+│            │            │            │            │            │c","Pop and │
+│            │            │            │            │            │Rock Music",│
+│            │            │            │            │            │"Blues Music│
+│            │            │            │            │            │","Jazz"]   │
+----
+
+This is now the data that we can use to create our article nodes.
+
+We will use `MERGE` which is an get-or-create (or upsert), so if the data already exists in our graph it's not added again but just provided to our statement.
+
+Our key to merge the article is it's URL which should be globally unique and then `SET` the remaining attributes.
+
+(For larger data volumes and consistency we'd also create a constraint but we're skipping that here.)
+
+[source,cypher]
+----
+call apoc.load.json("https://api.nytimes.com/svc/mostpopular/v2/viewed/7.json?api-key="+$key) yield value
+unwind value.results as article
+  MERGE (a:Article {url: article.url})
+    SET a.title     = article.title,
+        a.abstract  = article.abstract,
+        a.published = datetime(article.published_date),
+        a.byline    = article.byline,
+        a.id = article.id 
+        a.source = article.source;
+----
+
+So if we now go to the left sidebar and click on the `Article` label, we can see a number of lonely article nodes floating in space. You can push them around and query them by attributes, but not yet follow their relationships.
+
+[source,cypher]
+----
+// find some articles
+MATCH (n:Article) RETURN n LIMIT 25;
+
+// find articles by date
+MATCH (n:Article) 
+WHERE n.published = datetime("2022-04-08") 
+RETURN n LIMIT 25;
+
+// find articles with matching (case sensitive) title contents
+MATCH (n:Article) 
+WHERE n.title contains 'Bucha' 
+RETURN n.title, n.byline 
+LIMIT 25;
+----
+
+image::nytimes-articles.png[]
+
+In the next step we're starting to add relationships, first for the `Topic` nodes which are contained in the `des_facet` array of the article response.
+
+A `FOREACH` iterates over that array, creates the nodes and connects them to the current article.
+
+We also change the `SET` to `ON CREATE SET` so the properties are only added the first time a node is created.
+
+[source,cypher]
+----
+call apoc.load.json("https://api.nytimes.com/svc/mostpopular/v2/viewed/7.json?api-key="+$key) yield value
+unwind value.results as article
+  MERGE (a:Article {url: article.url})
+  ON CREATE SET a.title     = article.title,
+        a.abstract  = article.abstract,
+        a.published = datetime(article.published_date),
+        a.byline    = article.byline,
+        a.id = article.id, 
+        a.source = article.source
+
+  FOREACH (desc IN article.des_facet | 
+    MERGE (d:Topic {name: desc})
+    MERGE (a)-[:HAS_TOPIC]->(d)
+  )
+----
+
+=== Topic Overlap & Recommendation
+
+This now already opens up some interesting, aspects, for once we already see clusters appearing, of articles that share one or more topic but are totally unrelated to other sets of articles.
+
+If you click on the `HAS_TOPIC` relationship in the left sidebar and remove the limit you should see something like this. You can go into full-screen mode and zoom out for a good overview.
+
+image::nytimes-topics.png[]
+
+This also gives us our first way of not just correlating articles for similarity but also using that "content based" similarity for recommendations.
+
+If we draw out the pattern of `+(a1:Article)-[:HAS_TOPIC]->(topic)<-[:HAS_TOPIC]-(a2:Article)+`, that represents our shared topics between articles.
+
+We can use that to either find clusters visually like seen before or to compute how many topics a pair of articles shares.
+
+We just prefix the pattern with `MATCH` and then count the number of topics per pair of articles.
+
+[source,cypher]
+----
+MATCH (a1:Article)-[:HAS_TOPIC]->(topic)<-[:HAS_TOPIC]-(a2:Article)
+// exclude opposite pair
+WHERE id(a1)<id(a2)
+RETURN a1.title, a2.title, count(topic) as overlap
+ORDER BY overlap DESC limit 5;
+----
+
+----
+╒══════════════════════════════════════╤══════════════════════════════════════╤═════════╕
+│"a1.title"                            │"a2.title"                            │"overlap"│
+╞══════════════════════════════════════╪══════════════════════════════════════╪═════════╡
+│"A New Wave of Covid-19 Is Coming. Her│"A New Covid Mystery"                 │4        │
+│e’s How to Prepare."                  │                                      │         │
+├──────────────────────────────────────┼──────────────────────────────────────┼─────────┤
+│"Russia Asked China for Military and E│"U.S. Officials Say Superyacht Could b│3        │
+│conomic Aid for Ukraine War, U.S. Offi│e Putin’s"                            │         │
+│cials Say"                            │                                      │         │
+├──────────────────────────────────────┼──────────────────────────────────────┼─────────┤
+│"Satellite images show bodies lay in B│"A makeup artist recognized this Bucha│2        │
+│ucha for weeks, despite Russian claims│ victim’s picture by her manicure."   │         │
+│."                                    │                                      │         │
+├──────────────────────────────────────┼──────────────────────────────────────┼─────────┤
+│"Satellite images show bodies lay in B│"Russian soldiers opened fire on a cyc│2        │
+│ucha for weeks, despite Russian claims│list in Bucha, new video shows."      │         │
+│."                                    │                                      │         │
+├──────────────────────────────────────┼──────────────────────────────────────┼─────────┤
+│"New York Judge Dies by Suicide After │"Sarah Lawrence Cult Leader Convicted │2        │
+│Authorities Search His Home"          │of Trafficking and Extortion"         │         │
+└──────────────────────────────────────┴──────────────────────────────────────┴─────────┘
+----
+
+If you anchor the starting article, e.g. as the one currently being read, you can recommend (similar) articles based on that topic overlap.
+
+If you want to see which topics the articles overlap on, you can `collect` the names (aggregation function) into a list too.
+
+[source,cypher]
+----
+MATCH (a1:Article)-[:HAS_TOPIC]->(topic)<-[:HAS_TOPIC]-(a2:Article)
+// exclude opposite pair
+WHERE id(a1)<id(a2)
+RETURN a1.title, a2.title, count(topic) as score, collect(topic.name) as topics
+ORDER BY overlap DESC limit 5;
+----
+
+----
+╒═════════════════╤═════════════════╤═══════╤══════════════════════════╕
+│"t1"             │"t2"             │"score"│"topics"                  │
+╞═════════════════╪═════════════════╪═══════╪══════════════════════════╡
+│"A New Wave of C"│"A New Covid Mys"│4      │["Coronavirus (2019-nCoV)"│
+│                 │                 │       │,"Disease Rates","Tests (M│
+│                 │                 │       │edical)","Coronavirus Omic│
+│                 │                 │       │ron Variant"]             │
+├─────────────────┼─────────────────┼───────┼──────────────────────────┤
+│"Russia Asked Ch"│"U.S. Officials "│3      │["Embargoes and Sanctions"│
+│                 │                 │       │,"Russian Invasion of Ukra│
+│                 │                 │       │ine (2022)","United States│
+│                 │                 │       │ International Relations"]│
+├─────────────────┼─────────────────┼───────┼──────────────────────────┤
+│"Satellite image"│"A makeup artist"│2      │["Civilian Casualties","Ru│
+│                 │                 │       │ssian Invasion of Ukraine │
+│                 │                 │       │(2022)"]                  │
+├─────────────────┼─────────────────┼───────┼──────────────────────────┤
+│"Satellite image"│"Russian soldier"│2      │["Civilian Casualties","Ru│
+│                 │                 │       │ssian Invasion of Ukraine │
+│                 │                 │       │(2022)"]                  │
+├─────────────────┼─────────────────┼───────┼──────────────────────────┤
+│"New York Judge "│"Sarah Lawrence "│2      │["Human Trafficking","Sex │
+│                 │                 │       │Crimes"]                  │
+└─────────────────┴─────────────────┴───────┴──────────────────────────┘
+----
+
+
+=== Other Metadata
+
+Similarly the other metadata turns into `Geo`, `Person`, `Organization` nodes with their appropriate relationships.
+
+
+[source,cypher]
+----
+call apoc.load.json("https://api.nytimes.com/svc/mostpopular/v2/viewed/7.json?api-key="+$key) yield value
+unwind value.results as article
+  MERGE (a:Article {url: article.url})
+  ON CREATE SET a.title     = article.title,
+        a.abstract  = article.abstract,
+        a.published = datetime(article.published_date),
+        a.byline    = article.byline,
+        a.id = article.id, 
+        a.source = article.source
+
+  FOREACH (desc IN article.des_facet | 
+    MERGE (d:Topic {name: desc})
+    MERGE (a)-[:HAS_TOPIC]->(d)
+  )
+  FOREACH (per IN article.per_facet |
+    MERGE (p:Person {name: per})
+    MERGE (a)-[:ABOUT_PERSON]->(p)
+  )
+
+  FOREACH (org IN article.org_facet |
+    MERGE (o:Organization {name: org})
+    MERGE (a)-[:ABOUT_ORGANIZATION]->(o)
+  )
+
+  FOREACH (geo IN article.geo_facet |
+    MERGE (g:Geo {name: geo})
+    MERGE (a)-[:ABOUT_GEO]->(g)
+  )
+----
+
+With `MERGE` our statement becomes idempotent, we can run it as often as we want and only new data gets added.
+
+Our graph is also now more colorful with the new metadata nodes leading to new correlations.
+
+image::nytimes-metadata.png[]
+
+Again, we can use this to improve our recommendation. 
+
+You can think of the overlap count as a score, that can be weighted but also computed per metadata item, depending on reader preferences or importance.
+
+Here is an example
+
+[source,cypher]
+----
+MATCH (a1:Article)-[:HAS_TOPIC]->(topic)<-[:HAS_TOPIC]-(a2:Article)
+WHERE id(a1)<id(a2)
+// score for topic overlap
+WITH a1,a2, count(topic) as topicScore
+
+// score for geo overlap
+OPTIONAL MATCH (a1:Article)-[:ABOUT_GEO]->(geo)<-[:ABOUT_GEO]-(a2:Article)
+WITH a1,a2, topicScore, count(geo) as geoScore
+
+// score for people overlap
+OPTIONAL MATCH (a1:Article)-[:ABOUT_PERSON]->(person)<-[:ABOUT_PERSON]-(a2:Article)
+WITH a1,a2, topicScore, geoScore, count(person) as personScore
+
+// compute total score with weights
+RETURN a1.title, a2.title, topicScore*5+geoScore*2+personScore*1.5 as score
+ORDER BY score DESC limit 5;
+----
+
+----
+╒═════════════════════════════════╤═════════════════════════════════╤═══════╕
+│"a1.title"                       │"a2.title"                       │"score"│
+╞═════════════════════════════════╪═════════════════════════════════╪═══════╡
+│"A New Wave of Covid-19 Is Coming│"A New Covid Mystery"            │22.0   │
+│. Here’s How to Prepare."        │                                 │       │
+├─────────────────────────────────┼─────────────────────────────────┼───────┤
+│"Russia Asked China for Military │"U.S. Officials Say Superyacht Co│18.5   │
+│and Economic Aid for Ukraine War,│uld be Putin’s"                  │       │
+│ U.S. Officials Say"             │                                 │       │
+├─────────────────────────────────┼─────────────────────────────────┼───────┤
+│"Satellite images show bodies lay│"A makeup artist recognized this │16.0   │
+│ in Bucha for weeks, despite Russ│Bucha victim’s picture by her man│       │
+│ian claims."                     │icure."                          │       │
+├─────────────────────────────────┼─────────────────────────────────┼───────┤
+│"Russian Blunders in Chernobyl: ‘│"They Died by a Bridge in Ukraine│16.0   │
+│They Came and Did Whatever They W│. This Is Their Story."          │       │
+│anted’"                          │                                 │       │
+├─────────────────────────────────┼─────────────────────────────────┼───────┤
+│"Satellite images show bodies lay│"They Died by a Bridge in Ukraine│16.0   │
+│ in Bucha for weeks, despite Russ│. This Is Their Story."          │       │
+│ian claims."                     │                                 │       │
+└─────────────────────────────────┴─────────────────────────────────┴───────┘
+----
+
+Imagine again, that article 1, is tied to an article id or URL `MATCH (a1:Article {id:$articleId})` that the user is currently reading, then the list of articles returned would be recommendations.
+
+=== Photos and Media
+
+The Photos are in a bit of a nested structure, and different resolutions of the same picture, so we can pull them it by iterating over the `media` list and grabbing the caption and the 3rd image URL.
+
+In Neo4j Browser's property pane for the nodes you can click the URLs for the pictures to see them.
+
+[source,cypher]
+----
+call apoc.load.json("https://api.nytimes.com/svc/mostpopular/v2/viewed/30.json?api-key="+$key) yield value
+unwind value.results as article
+  MERGE (a:Article {url: article.url})
+  ON CREATE SET a.title     = article.title,
+        a.abstract  = article.abstract,
+        a.published = datetime(article.published_date),
+        a.byline    = article.byline,
+        a.id = article.id, 
+        a.source = article.source
+
+...
+
+  FOREACH (media in article.media |
+    MERGE (p:Photo {url: media.`media-metadata`[2].url})
+      ON CREATE SET p.caption = media.caption
+    MERGE (a)-[:HAS_PHOTO]->(p)
+  )
+----
+
+Those photos could now be further analyzed with image reconition APIs to add more metadata.
+
+=== Authors
+
+The authors are unfortunately not available as metadata, but just in the `byline` attribute, which is a string like, `"By Malachy Browne, David Botti and Haley Willis"``
+
+Fortunately in Cypher we have a number of string, operations.
+We skip the first 3 letters, replace `and` with comma and split the string by comma to get a list of authors.
+
+Then we create a node for each of them and connect the articles, this doesn't save us from duplicate Author names, but it's better than not having them at all.
+
+We can either do that as part of the import or as a post-processsing step, which is shown here.
+
+[source,cypher]
+----
+MATCH (a:Article)
+// string operation to turn string into array of names
+WITH a, split(replace(substring(a.byline, 3), " and ", ","), ",") AS authors
+UNWIND authors AS author
+
+// uniquely create author node
+MERGE (auth:Author {name: trim(author)})
+MERGE (a)-[:BYLINE]->(auth);
+----
+
+image::nytimes-authors.png[]
+
+To import more data we can change the time-range from 7 to 30 days to get all the popular articles for the last month.
+
+=== Geodistance
+
+We use another apoc procedure call for geo coding (lat, lon) of our Location metadata.
+This uses public geocoding APIs to resolve names to locations (openstreetmap).
+
+[source,cypher]
+----
+MATCH (g:Geo)
+CALL apoc.spatial.geocodeOnce(g.name) YIELD location
+SET g.location = point({latitude: location.latitude, longitude: location.longitude})
+----
+
+Then we can e.g. determine how close they are to each other, or how close the reported articles are to our current location, that could also be used for ranking them for a viewer.
+
+Here we use Berlin's location as a starting point to compute distances to compute the distance in Kilometers.
+
+[source,cypher]
+----
+WITH point({latitude:52.5065133, longitude:13.1445557}) as berlin
+MATCH (g:Geo)
+RETURN g.name, round(point.distance(berlin, g.location)/1000) as dist
+ORDER BY dist ASC
+----
+
+
+----
+╒═══════════════════════════════╤═══════╕
+│"g.name"                       │"dist" │
+╞═══════════════════════════════╪═══════╡
+│"Italy"                        │1099.0 │
+├───────────────────────────────┼───────┤
+│"Ukraine"                      │1310.0 │
+├───────────────────────────────┼───────┤
+│"Russia"                       │4689.0 │
+├───────────────────────────────┼───────┤
+│"China"                        │7120.0 │
+----
+
+
+=== Next steps
+
+Other extension points for the data would be additional entity extraction from the abstract, or pulling the actual article text and analysing that.
+
+Furthermore we could add comments, data from other publications and sources like opencorporates, wikidata, gdelt and more.
+
+If you follow Wills repository there are three other angles:
+
+1. He's building a [News GraphQL API] on top of the data
+2. Using Cloudflare Edge Workers to serve location aware data
+3. Extending GitHub's https://next.github.com/projects/flat-data/[FlatData^] approach with a https://github.com/marketplace/actions/flat-graph[FlatGraph^] that gathers source data from websites and APIs and writes them to Neo4j using GitHub Actions.
+
+Hope you enjoyed this expedition in the world of news metadata and it gives you a few ideas on how to start your own Graph Journey on AuraDB Free.

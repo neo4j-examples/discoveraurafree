@@ -1,0 +1,117 @@
+== Week 21 - Gas Pipelines in Europe
+
+Our partners from Graphileon shared a tweet last week, demonstrating the European Gas Pipeline network in a graph.
+
+image::https://pbs.twimg.com/media/FNJPh5kXwAggOs8.jpg[]
+
+As this topic is very current with the massive dependency of Europe of (Russian) fossil fuels, we thought it would be good to reproduce parts of their example on AuraDB Free while using Neodash the amazing Neo4j Dashboarding tool to query and visualize some of the data.
+
+If you missed our live session, here is the recording:
+
+https://www.youtube.com/watch?t=923&v=nKApOdFmGLc&feature=youtu.be
+
+
+=== Dataset
+
+The data comes from the German Space Agency (DLR) which has a project for extracting actual data for pipelines and consumers, producer and junctions from published PDF documents.
+
+* Paper
+* Datasets
+
+The datasets contain much more and more detailed data than we're looking at today, there is information on power plants, well, LNG terminals, refineries and much more.
+
+Our subset of 2000 pipeline segments across Europe is a good fit to demonstrate the data model, use the geospatial support in Neo4j and demonstrate map visualizations.
+
+Our colleague Niels de Jong who is also the Author of Neodash provided a subset of the
+
+
+=== Data Import
+
+[source,cypher]
+----
+LOAD CSV WITH HEADERS from 'https://gist.githubusercontent.com/nielsdejong/dd8bdfb34d970c7392212aa4bb785478/raw/09412079f0a3982dd89cbe06a36edc428b05e01e/gistfile1.txt' as row
+FIELDTERMINATOR ';'
+WITH row.id as id, 
+     row.name as name, 
+     apoc.convert.fromJsonList(row.node_id) as nodes, 
+     apoc.convert.fromJsonList(row.lat) as lats, 
+     apoc.convert.fromJsonList(row.long) as longs,
+     apoc.convert.fromJsonList(row.country_code) as countries,
+     apoc.convert.fromJsonMap(replace(row.param,'None','null')) as params
+
+MERGE (s:Junction {id:nodes[0]}) ON CREATE SET s.loc=point({latitude:lats[0], longitude: longs[0]}), s.country = countries[0]
+MERGE (e:Junction {id:nodes[1]}) ON CREATE SET e.loc=point({latitude:lats[1], longitude: longs[1]}), e.country = countries[1]
+MERGE (s)-[p:PIPE {id:id}]->(e)
+ON CREATE SET p.name = name
+SET p += params
+----
+
+=== Querying
+
+
+=== Dashboarding
+
+This is where the fun starts, we can take some of our existing queries and put them easily into a dashboard.
+
+. Go to https://neodash.graphapp.io and create a new dashboard
+. Add your connection URL, username (neo4j) and password
+. Then you can hit the (+) sign to add new reports on the dashboard
+
+We're starting with a simple table that just shows our query results:
+
+[source,cypher]
+----
+MATCH (start:Junction)-[pipe:PIPE]->(end:Junction)
+RETURN start.id, start.country, end.id, end.country, pipe.id, pipe.start_year, pipe.length_km, pipe.capacity ...;
+ORDER BY pipe.length_km DESC;
+----
+
+
+Our next dashboard is a bar chart, that aggregate some pipe information that end up in a country, we use this query:
+
+[source,cypher]
+----
+MATCH (start:Junction)-[pipe:PIPE]->(end:Junction)
+RETURN end.country, count(*) as pipes, sum(pipe.length_km) as length, sum(pipe.capacot) as cap;
+ORDER BY pipes DESC;
+----
+
+image::[]
+
+
+The final dashboard is a map, that puts our data on a map of the European countries.
+
+As the total volume of 2000 datapoints is a bit too much for the map visualization it would be cut off at 1000.
+
+So we could either add a limit which would then give us a subset of the whole data, or alternatively we could limit the data to a single country, by using the parameters field `{"country":"DE"}`.
+
+As our nodes have the location data, they are automatically correctly rendered on the map and the pipes in between them.
+
+[source,cypher]
+----
+MATCH (start:Junction)-[pipe:PIPE]->(end:Junction)
+WHERE start.country = $country OR end.country = $country
+RETURN start, pipe, end
+----
+
+What's nice is that we can select a label for the markers on the map dynamically from the properties of the nodes returned.
+
+image::[]
+
+A really neat feature is the parameter selector, if you pick that report type, you can select a node-label and property to be shown in a drop-down and then provided to all reports on the page, in our case we want to pick the country, so we choose `Junction` and `country`.
+
+image::[]
+
+Now we can use `$neodash_junction_country` as parameter in all our dashboards with a where clause like: `WHERE n.country = $neodash_junction_country`.
+
+And now whenever we pick a different country from the drop down, all our reports and even the map visualization are re-drawn for that country.
+
+=== Conclusion
+
+
+=== References
+
+* https://neo4j.com/aura[Neo4j AuraDB Free^]
+* https://neo4j.com/video/discover-aura-free-with-fun-datasets/[Discover AuraDB Free with Fun Datasets Videos^]
+* https://github.com/neo4j-examples/discoveraurafree[GitHub Repository^]
+* 

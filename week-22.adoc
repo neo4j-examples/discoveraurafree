@@ -1,0 +1,136 @@
+== Week 22 - Opencorporates
+
+OpenCorporates is a World registry of corporations (200M) and their officiers
+
+
+It also offers an API, some of which is accessible without API-Keys, for other parts you need an API key.
+
+=== Data Model
+
+
+=== Data Import
+
+[source,cypher]
+----
+call apoc.load.json("https://api.opencorporates.com/companies/us_az/23128533") yield value
+with value.results.company as c
+return c { .company_number, .jurisdiction_code, .name, .current_status, .incorporation_date, .opencorporates_url, .company_type, .alternative_names, .registered_address, .registered_address_in_full, .number_of_employees, officers: [o2 IN [o IN c.officers | o.officer] | o2 { .name, .position, .id}], industries: [ic in c.industry_codes | ic.description] }
+----
+
+
+
+
+call apoc.load.json("https://api.opencorporates.com/v0.4/companies/search?q=exxon+mobil&current_status=Active&api_token=crzQoOUbuYdltKxV4nxJ") yield value
+unwind value.results.companies as result
+with result.company as c
+return c { .company_number, .jurisdiction_code, .name, .current_status, .incorporation_date, .opencorporates_url, .company_type, .alternative_names, .registered_address, .registered_address_in_full, .number_of_employees, officers: [o2 IN [o IN c.officers | o.officer] | o2 { .name, .position, .id}], industries: [ic in c.industry_codes | ic.description] }
+
+
+
+match (comp:Company) where comp.id = 202031010244
+
+call apoc.load.json("https://api.opencorporates.com/companies/"+comp.jurisdiction_code+"/"+comp.company_number) yield value
+with value.results.company as c
+
+with c { .company_number, .jurisdiction_code, .name, .current_status, .incorporation_date, .opencorporates_url, .company_type, .alternative_names, .registered_address, .registered_address_in_full, .number_of_employees, officers: [o2 IN [o IN c.officers | o.officer] | o2 { .name, .position, .id}], industries: [ic in c.industry_codes | ic.description] } as data
+
+MERGE (c:Company { company_number: data.company_number, jurisdiction_code: data.jurisdiction_code })
+ON CREATE SET c += data { .name, .current_status, .incorporation_date, .opencorporates_url, .company_type, .alternative_names, .number_of_employees }
+
+FOREACH (d in data.officers |
+    MERGE (o:Officer { id: d.id })
+    ON CREATE SET o.name = d.name
+    MERGE (c)-[:OFFICER {position:d.position}]->(o)
+)
+
+FOREACH (name in data.industries |
+    MERGE (i:Industry { name: name})
+    MERGE (c)-[:INDUSTRY]->(i)
+)
+
+WITH * WHERE NOT data.registered_address_in_full IS null
+MERGE (a:Address {address: data.registered_address_in_full})
+MERGE (c)-[:REGISTERED]->(a)
+
+// apoc.text.join([data.registered_address.street_address, data.registered_address.locality, data.registered_address..region, data.registered_address.postal_code],', ')
+
+
+https://neo4j.com/labs/apoc/4.1/graph-updates/graph-refactoring/merge-nodes/
+
+match (o:Officer)
+WITH o.name as name, collect(o) as nodes
+WHERE size(nodes) > 1
+call apoc.refactor.mergeNodes(nodes, {mergeRels:false, properties: {
+    name:'discard',
+    id:'combine',
+    position:'combine'}, singleElementAsArray:true}) yield node
+return node;
+
+
+
+match (comp:Company) where comp.id = 202031010244
+
+call apoc.load.json("https://api.opencorporates.com/companies/"+comp.jurisdiction_code+"/"+comp.company_number) yield value
+with value.results.company as c
+return c { .company_number, .jurisdiction_code, .name, .current_status, .incorporation_date, .opencorporates_url, .company_type, .alternative_names, .registered_address, .registered_address_in_full, .number_of_employees, officers: [o2 IN [o IN c.officers | o.officer] | o2 { .name, .position, .id}], industries: [ic in c.industry_codes | ic.description] }
+
+=== Exploration
+
+
+call apoc.load.json("https://api.opencorporates.com/v0.4/companies/search?q=Petrobras&current_status=Active&api_token=crzQoOUbuYdltKxV4nxJ") yield value
+unwind value.results.companies as c1
+with c1.company as c
+
+MERGE (comp:Company {company_number: c.company_number, jurisdiction_code: c.jurisdiction_code})
+ON CREATE SET comp += c {.company_type,  .name, .current_status, .incorporation_date} 
+
+WITH * WHERE NOT c.registered_address_in_full IS NULL
+
+MERGE (a:Address {address:c.registered_address_in_full})
+ON CREATE SET a += c.registered_address
+MERGE (comp)-[:REGISTERED]->(a)
+/*
+UNWIND c.officers as o
+MERGE (off:Officer {id:o.officer.id})
+ON CREATE SET off.name = o.officer.name
+
+MERGE (comp)-[:OFFICER {position:o.officer.position}]->(off)
+*/
+
+// also example for enriching existing graph data with new 
+
+MATCH (comp:Company) 
+WHERE not exists { (comp)-[:OFFICER]->() }
+WITH comp LIMIT 5
+
+call apoc.load.json("https://api.opencorporates.com/companies/"+comp.jurisdiction_code+"/"+comp.company_number) yield value
+with comp, value.results.company as c
+
+UNWIND c.officers as o
+MERGE (off:Officer {id:o.officer.id})
+ON CREATE SET off.name = o.officer.name
+
+MERGE (comp)-[:OFFICER {position:coalesce(o.officer.position,"unknown")}]->(off)
+
+// spacex https://api.opencorporates.com/companies/us_az/23128533
+https://opencorporates.com/companies/us_az/23128533
+
+API docs https://api.opencorporates.com/documentation/API-Reference
+
+
+
+// exxon https://api.opencorporates.com/companies/us_or/1175827
+blowout: http://www.rachelmaddow.com/blowout-by-rachel-maddow/
+
+// company search
+https://api.opencorporates.com/v0.4/companies/search?q=exxon+mobil
+
+
+oil companies: https://en.wikipedia.org/wiki/List_of_largest_oil_and_gas_companies_by_revenue
+
+sanctions https://en.wikipedia.org/wiki/List_of_people_and_organizations_sanctioned_during_the_Russo-Ukrainian_War
+
+== Graph Refactoring
+
+merge nodes:
+https://neo4j.com/labs/apoc/4.1/graph-updates/graph-refactoring/merge-nodes/

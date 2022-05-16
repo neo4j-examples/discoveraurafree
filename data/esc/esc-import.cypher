@@ -34,7 +34,7 @@ sum(case row.vote when 'J' then toInteger(row.points) else 0 end) as jury,
 sum(case row.vote when 'T' then toInteger(row.points) else 0 end) as public
 WHERE public+jury > 0
 MERGE (from:Country {name: fromCountry})
-MERGE (to:Country {code: toCountry})
+MERGE (to:Country {name: toCountry})
 WITH *
 CALL apoc.create.relationship(from, 'VOTES_'+year, {jury:jury, public:public, total:public+jury}, to) yield rel
 RETURN count(*);

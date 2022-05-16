@@ -1,0 +1,15 @@
+== Week 25 European Song Contest 2022
+:imagesdir: img
+
+Winner of the hearts of Europeans - Stefania - Ukraine
+
+https://www.youtube.com/watch?v=UiEGVYOruLk
+
+
+source: https://www.kaggle.com/datasets/datagraver/eurovision-song-contest-scores-19752019
+source 2021, 2022: https://eurovisionworld.com/eurovision/2021
+-> https://pix.eurovisionworld.com/scripts/js/voting/130.js
+-> https://static.eurovisionworld.com/js/voting/140.js
+
+
+image::esc-2022-gt15.png[]

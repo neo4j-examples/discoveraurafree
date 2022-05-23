@@ -8,8 +8,7 @@ image::books-goodreads.png[]
 
 If you rather watch the recording of our livestream, enjoy it here, otherwise keep on reading.
 
-https://youtu.be/-MhcmKNV6cU?t=721
-
+https://youtu.be/-MhcmKNV6cU
 
 === The Data Set
 
@@ -66,7 +65,7 @@ image::books-import.png[]
 
 The CSV files turn incrasingly green as you progress.
 
-Then hit the `Run Import` button to start the import, and provide the password that you hopefulls saved!
+Then hit the `Run Import` button to start the import, and provide the password that you hopefully saved!
 
 Unfortunately not all data fits into our free database but it's only 4k users and 12k ratings that are left behind, so not too much to worry.
 

@@ -1,0 +1,338 @@
+== Week 26 Goodreads Books and Recommendations
+:imagesdir: img
+
+This week we want to explore book recommendation data as a graph.
+And what better source for that than goodreads.
+
+image::books-goodreads.png[]
+
+If you rather watch the recording of our livestream, enjoy it here, otherwise keep on reading.
+
+https://youtu.be/-MhcmKNV6cU?t=721
+
+
+=== The Data Set
+
+I found a well https://www.kaggle.com/datasets/zygmunt/goodbooks-10k[sized dataset on Kaggle^] that has the following files
+
+* books.csv (10k books and authors)
+* tags.csv (230k tags)
+* book_tags.csv (1M tags for books)
+* ratings.csv (53k ratings)
+* to_read.csv (53k to read intentions)
+
+// https://www.kaggle.com/datasets/zygmunt/goodbooks-10k?select=books.csv
+
+This should pretty well into our free database limits on AuraDB, except for the tags.
+
+Frankly those tags are also a mess, so many have been used only a few times, so we can limit our data to those that have at least 100 uses, which leaves us with 2081 tags.
+
+As so often I use https://github.com/BurntSushi/xsv[`xsv`^] as a nice command line tool for CSV processing.
+
+Here we join the data from the two tag-files together (by `tag_id`) and only keep rows where the `count` column has at least 3 digits (regexp).
+
+[source]
+----
+xsv join tag_id tags.csv tag_id book_tags.csv | \
+xsv search -s count "\d{3,}" | xsv count
+
+xsv join tag_id tags.csv tag_id book_tags.csv | \
+xsv search -s count "\d{3,}" | \
+xsv select tag_id,goodreads_book_id,count \
+> book_tags_reduced.csv
+----
+
+For the actual `tags_reduced.csv` file we do the same but then have to de-duplciate ourselves.
+We can use `sort` and `uniq` on a header-less tags file to de-duplicate the tags.
+
+include::connect-aura.adoc[]
+
+=== Data Modeling and Import
+
+After our database is running, we can use the `Import` button to open `Data Importer`.
+
+.TLDR;
+If you don't want to do the steps manually you can click on the three dots `...` and load the model with data https://github.com/neo4j-examples/discoveraurafree/raw/main/data/data-importer-goodreads-small.zip[zip file from here^].
+
+There we add our 5 CSV files to the left side and start drawing our model, follow the video for the individual steps.
+
+1. create the nodes and relationships (drag from halo of the node)
+2. name them and sometimes reverse the relationships
+3. select a csv file for each element and map the columns from the file
+4. rename / provide types for some fields (like ratings, year, count)
+5. select an id field for nodes
+
+image::books-import.png[]
+
+The CSV files turn incrasingly green as you progress.
+
+Then hit the `Run Import` button to start the import, and provide the password that you hopefulls saved!
+
+Unfortunately not all data fits into our free database but it's only 4k users and 12k ratings that are left behind, so not too much to worry.
+
+As the authors are only provided as comma separated list in our data, we can run the following statement to post-process them and split them into individual nodes.
+
+.Post Processing to individualize Authors
+[source,cypher]
+----
+// find authors and books
+MATCH (n:Author)-[:WROTE]->(b)
+// split author name by comma
+WITH b, n, split(n.author,', ') as names
+// turn list of names in to rows of name
+UNWIND names as name
+// get-or-create an author with that name
+MERGE (a:Author {name:name})
+// if it's a new author node, then the previous one was a a combined author
+WITH * WHERE n <> a
+// get rid of the combined author and it's relationships
+DETACH DELETE n
+// create a new relationship to the book
+MERGE (a)-[:WROTE]->(b);
+
+// Added 5841 labels, created 5841 nodes, deleted 4664 nodes, set 5841 properties, deleted 10000 relationships, created 13209 relationships, completed after 1152 ms.
+----
+
+You see our free database is now pretty full, close to 100% of the node and relationship limits.
+
+image::books-aura.png[]
+
+=== Initial Queries
+
+Now that we have our data in the database click the `Explore data in browser` button, which takes you to our database UI.
+
+Here we can run exploratory queries on the data.
+
+The query language is Cypher which is like SQL for graphs, it's centered all around expressing visual patterns of your data (plus the regular filters, aggregation, pagination etc.).
+
+You can learn all about it in the https://graphacademy.neo4j.com/courses/cypher-fundamentals/[short graphacademy course^].
+
+.Overview
+[source,cypher]
+----
+match (n) return labels(n) as label, count(*)
+----
+
+These are the counts that we have in the database now:
+
+----
+╒══════════╤══════════╕
+│"label"   │"count(*)"│
+╞══════════╪══════════╡
+│["Book"]  │10000     │
+├──────────┼──────────┤
+│["Tag"]   │2081      │
+├──────────┼──────────┤
+│["User"]  │31071     │
+├──────────┼──────────┤
+│["Author"]│5841      │
+└──────────┴──────────┘
+----
+
+
+.Book With Data
+[source,cypher]
+----
+MATCH (n:Book) RETURN n LIMIT 25
+----
+
+image::books-data.png[]
+
+.Prolific Authors
+[source,cypher]
+----
+MATCH (n:Author)
+RETURN n, size( (n)-[:WROTE]->()) as books 
+order by books desc limit 20
+----
+
+We knew that Terry Pratchett was really prolific, but I was blown away by Stephen Kings 97 books.
+
+----
+╒═════════════════╤═══════╕
+│"n.name"         │"books"│
+╞═════════════════╪═══════╡
+│"James Patterson"│98     │
+├─────────────────┼───────┤
+│"Stephen King"   │97     │
+├─────────────────┼───────┤
+│"Nora Roberts"   │65     │
+├─────────────────┼───────┤
+│"Dean Koontz"    │64     │
+├─────────────────┼───────┤
+│"Terry Pratchett"│50     │
+├─────────────────┼───────┤
+│"Agatha Christie"│43     │
+├─────────────────┼───────┤
+│"J.D. Robb"      │41     │
+├─────────────────┼───────┤
+│"Neil Gaiman"    │41     │
+├─────────────────┼───────┤
+│"Meg Cabot"      │38     │
+├─────────────────┼───────┤
+│"Janet Evanovich"│37     │
+└─────────────────┴───────┘
+----
+
+.Books with many Authors
+[source,cypher]
+----
+MATCH (n:Book)
+RETURN n, size( (n)<-[:WROTE]-()) as authors 
+order by authors desc limit 20
+----
+
+.Tags
+[source,cypher]
+----
+match (t:Tag {name:"sherlock-holmes"})<-[r:TAGGED]-(b:Book)<-[w:WROTE]-(a)
+return *
+----
+
+image::books-tag-sherlock.png[]
+
+.Related Tags
+[source,cypher]
+----
+match (t:Tag)<-[r:TAGGED]-(b:Book)-[:TAGGED]->(other:Tag)
+where t.name contains 'dystop' and not other.name contains 'dystop'
+return other.name, count(*) as freq order by freq desc skip 20 limit 20
+----
+
+Here are tags related to `dystopia`, you can already see that it mixes structural (ownership, intent to read, type of book) with genere tags and that the nomenclature is all over the place.
+
+,===
+other.name,freq
+ebook,263
+adventure,243
+scifi,241
+audiobooks,236
+read-in-2014,233
+teen,218
+ebooks,211
+sci-fi-fantasy,205
+read-in-2015,199
+my-books,189
+audio,187
+i-own,184
+wish-list,182
+book-club,179
+read-in-2013,171
+favorite-books,163
+ya-fiction,163
+read-in-2016,161
+read-in-2012,144
+default,139
+,===
+
+We can also look at our users, and how they rated books, to visualize it, we can put the rating on each relationship from the detail pane on the right.
+
+.A user's ratings
+[source,cypher]
+----
+match (u:User {user_id:'314'})-[r:RATED]->(b) return *
+----
+
+image::books-user-ratings.png[]
+
+Let's compute some recommendations for our users `314`.
+
+=== Recommendation - Content Based by Author
+
+First we start with content based recommendations, usually via genre or authors. 
+As the tags are not well structured for genres, let's go with the authors.
+
+So we expand from the highly rated (>= 4) books from our user, to their authors and which other books they've written.
+
+Then we use those book's average rating to sort the results and exclude the books from recommendations that the user has already rated (no matter how) i.e. read.
+
+[source,cypher]
+----
+MATCH (u:User {user_id:'314'})-[r:RATED]->(b)<-[w1:WROTE]-(author)-[w2:WROTE]->(reco) 
+WHERE r.rating >= 4
+AND NOT (u)-[:RATED]->(reco) 
+AND NOT reco.title contains 'Harry'
+RETURN DISTINCT reco.title, author.name, reco.average_rating
+ORDER BY reco.average_rating DESC SKIP 20 LIMIT 10
+----
+
+Here is the 2nd page of recommendations, after the first one had a few too obvious ones.
+
+One drawback is that there is no information which books are the same (just in a different edition or language) or contained in which box set, that's why we excluded `Harry` books manually.
+
+,===
+reco.title,author.name,reco.average_rating
+"The Silkworm (Cormoran Strike, #2)",J.K. Rowling,4.03
+Strange Pilgrims,Gabriel García Márquez,4.02
+Starship Troopers,Robert A. Heinlein,3.99
+Of Love and Other Demons,Gabriel García Márquez,3.98
+Methuselah's Children,Robert A. Heinlein,3.98
+Time Enough for Love,Robert A. Heinlein,3.96
+Fantastic Beasts and Where to Find Them,J.K. Rowling,3.95
+Chronicle of a Death Foretold,Gabriel García Márquez,3.95
+The Children of Húrin,J.R.R. Tolkien,3.94
+Unfinished Tales of Númenor and Middle-Earth,J.R.R. Tolkien,3.93
+,===
+
+
+=== Recommendation - Collaborative Filtering by Peers
+
+In a collaborative filtering or peer recommendation, you try to find the people that are most similar to yourself (have rated most closely) and then look what else they rated favorably.
+
+That is the "people also bought" recommendation you often see on all kinds of sites.
+
+We can return the frequency a recommeded book showed up in this peer group, and use that for sorting our data, or combine/multiply it with it's average rating.
+
+So our full recommendation query is only those 3 lines
+
+1. find peers via similar rating
+2. find their their highly rated books
+3. compute frequency of recommendations
+
+[source,cypher]
+----
+MATCH (u:User {user_id:'314'})-[r:RATED]->(book)<-[r2:RATED]-(peer)-[r3:RATED]->(reco)
+// exclude already read books
+WHERE NOT (u)-[:RATED]->(reco) 
+// peers show similar rating behavior
+AND abs(r.rating-r2.rating) <= 1 
+// highly rated books from peers
+AND r3.rating >= 4
+
+// count how frequently the recommend book shows up
+WITH reco, count(*) as freq
+// find the authors for our books
+MATCH (reco)<-[:WROTE]-(author)
+
+RETURN reco.title, freq, reco.average_rating, freq*reco.average_rating as score, collect(author.name) as authors
+
+ORDER BY score DESC SKIP 10 LIMIT 10
+----
+
+Here is the result from page 2, so enough to read for our user `314`.
+
+,===
+reco.title,freq,reco.average_rating,score,authors
+"The Hitchhiker's Guide to the Galaxy (Hitchhiker's Guide to the Galaxy, #1)",249,4.2,1045.8,[Douglas Adams]
+The Ultimate Hitchhiker's Guide to the Galaxy,233,4.37,1018.21,[Douglas Adams]
+"The Lord of the Rings (The Lord of the Rings, #1-3)",213,4.47,952.1099999999999,[J.R.R. Tolkien]
+A Short History of Nearly Everything,218,4.19,913.4200000000001,[Bill Bryson]
+In a Sunburned Country,218,4.05,882.9,[Bill Bryson]
+Neither Here nor There: Travels in Europe,219,3.88,849.72,[Bill Bryson]
+"Hatchet (Brian's Saga, #1)",222,3.68,816.96,[Gary Paulsen]
+I'm a Stranger Here Myself: Notes on Returning to America after Twenty Years Away,205,3.89,797.45,[Bill Bryson]
+Heidi,196,3.97,778.12,"[Beverly Cleary,Johanna Spyri,Angelo  Rinaldi]"
+The Lord of the Rings: The Art of The Fellowship of the Ring,160,4.59,734.4,[Gary Russell]
+,===
+
+=== Conclusion
+
+This was a really fun episode, we got a lot of runway out of the data.
+
+Here are some ways on how to go further:
+* You can export your own https://help.goodreads.com/s/article/How-do-I-import-or-export-my-books-1553870934590[GoodReads Data^] and combine it with this dataset
+* There are many, larger datasets of goodreads data on Kaggle or elsewhere e.g. from our colleague https://github.com/JMHReif/graph-demo-datasets/tree/main/goodreadsUCSD[Jennifer Reif^]
+* Classification (structural, generes, behavioral) and deduplication of Tags
+* Connect similar books, like translations, book-sets etc. to allow to exclude them from recommendations
+* Develop multi-score recommendations, with weights 
+* Built an api, web- or mobile app on top of this data, e.g. with GraphQL or Spring Data

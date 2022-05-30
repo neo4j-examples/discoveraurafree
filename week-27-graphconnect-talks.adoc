@@ -1,0 +1,289 @@
+= Discover Aura Free - Week 27 - GraphConnect Talks
+:imagesdir: img
+
+This week we're looking at at a sneak preview of our conference sessions at GraphConnect 2022, which happens next week, June 5-7 in Austin, Texas.
+
+https://graphconnect.com
+
+If you haven't decided to come, now is your chance, if you drop us an email to michael@neo4j.com, we are give away 10 free conference tickets for our viewers / readers.
+
+TLDR;
+video
+
+include::connect-aura.adoc[]
+
+== The Data
+
+The conference agenda is available at the website, but we just snug it from the conference planning :)
+
+So here are the two CSV's one with the talk details, and one with the schedule.
+
+We put them in google sheets to clean them up and could have loaded them from there (by publishing the sheets to the web: https://docs.google.com/spreadsheets/d/e/2PACX-1vQWM9hhgE1Zf0nzka2ZLD9aBDXnjQ4R-oNE0zHMLMirgNLcPIvVUCLK-545ZhncYOOp0ZRq96aCAZC0/pub?gid=725171116&single=true&output=csv[Sessions^], https://docs.google.com/spreadsheets/d/e/2PACX-1vQWM9hhgE1Zf0nzka2ZLD9aBDXnjQ4R-oNE0zHMLMirgNLcPIvVUCLK-545ZhncYOOp0ZRq96aCAZC0/pub?gid=2144227917&single=true&output=csv[Schedule^]) using `LOAD CSV`, but we wanted to use our built-in data importer for modeling and loading.
+
+image::gc-sessions-spreadsheet.png[]
+
+The basic structure of the sessions is:
+
+* ID
+* Company
+* Industry
+* Topic
+* Audience
+* Type
+* UseCase
+* Title
+* Abstract
+* Experience
+* FirstName
+* LastName
+* FullName
+* JobTitle
+* Biography
+
+In the schedule we have:
+
+* Date
+* Title
+* StartTime
+* EndTime
+* Type
+* Start
+* End
+
+== The Data Model
+
+We want to extract the `Session` and the `Presenter`, and Attributes like: `UseCase`, `Audience`, `Experience`, `Topic`, `Company` into their own nodes.
+
+The data importer allows us to load the CSV's and map them to our graph model, one by one. 
+
+image::gc-schedule-model.png[]
+
+Mapping each attribute requires each time to create the extra node with a singluar attribute and the link it to the session via that attribute and the session's title.
+
+To save you the work we've provided a https://github.com/neo4j-examples/discoveraurafree/raw/main/data/data-importer-gc-schedule.zip[zip file with model and data^] that you can load into the data importer directly.
+
+We can use a trick for merging the additional CSV, by declaring a separate node with the same label `Session`, and mapping the CSV file to it, while using the matching value for `Title` as the ID.
+
+== Data Import
+
+image::gc-schedule-data-importer.png[]
+
+We now just have to click `Run Import` and supply our password to get the data imported in a five seconds.
+
+If we head over to `Query`, i.e. Neo4j Browser, we can look at all our data here:
+
+image::gc-schedule-browser-all.png[]
+
+The final bit of data import is some post-processing:
+
+For once we can 
+
+[source,cypher]
+----
+MATCH (s:Session)
+UNWIND split(s.UseCase,', ') AS uc
+WITH * WHERE trim(uc) <> ''
+MERGE (u:UseCase {name:uc})
+MERGE (s)-[:FOR_USECASE]->(u)
+----
+
+We also want turn the `Date` and the `Start` and `End` properties into proper datetime values instead of strings.
+
+[source,cypher]
+----
+MATCH (s:Session)
+SET s.Date = date(s.Date)
+SET s.Start = localdatetime(s.Start)
+SET s.End = localdatetime(s.End)
+----
+
+// Todo localdatetime to datetime with -05 timezone
+
+== Data Exploration
+
+We can see single session with it related context.
+
+[source,cypher]
+----
+MATCH (s:Session)
+WITH s LIMIT 1
+MATCH path = (s)--()
+RETURN path
+----
+
+image::gc-schedule-session.png[]
+
+We can now start to look at some breakdowns.
+
+E.g. which Use-Case has the most sessions.
+
+[source,cypher]
+----
+MATCH (uc:UseCase)<-[:FOR_USECASE]-()
+RETURN uc.name, count(*) as c
+ORDER BY c DESC
+----
+
+Data Science is Leading with App Development a close second.
+Note that a single session, can have multiple use-cases.
+
+----
+╒═════════════════════╤═══╕
+│"uc.name"            │"c"│
+╞═════════════════════╪═══╡
+│"Data Science"       │44 │
+├─────────────────────┼───┤
+│"Apps & APIs"        │39 │
+├─────────────────────┼───┤
+│"Cypher"             │28 │
+├─────────────────────┼───┤
+│"Best Practices"     │28 │
+├─────────────────────┼───┤
+│"Language-specific"  │26 │
+├─────────────────────┼───┤
+│"Graph Visualization"│23 │
+├─────────────────────┼───┤
+│"Cloud"              │22 │
+├─────────────────────┼───┤
+│"Aura"               │19 │
+├─────────────────────┼───┤
+│"Knowledge Graphs"   │17 │
+├─────────────────────┼───┤
+│"Operations"         │16 │
+├─────────────────────┼───┤
+│"Security"           │15 │
+├─────────────────────┼───┤
+│"Full Stack"         │12 │
+├─────────────────────┼───┤
+│"GraphQL"            │5  │
+├─────────────────────┼───┤
+│"Use Case"           │4  │
+├─────────────────────┼───┤
+│"Telecom Networks"   │1  │
+├─────────────────────┼───┤
+│"Digital Twin"       │1  │
+├─────────────────────┼───┤
+│"Fraud detection"    │1  │
+├─────────────────────┼───┤
+│"Knowledge Graph"    │1  │
+└─────────────────────┴───┘
+----
+
+Or what is the overlap between use-cases and industries:
+
+[source,cypher]
+----
+MATCH (uc:UseCase)<-[:FOR_USECASE]-(s)-[:FOR_INDUSTRY]->(i:Industry)
+WHERE NOT i.Industry in ['General']
+RETURN uc.name, i.Industry, count(*) as c
+ORDER BY c DESC
+LIMIT 5
+----
+
+Great to see that there are a lot of data-science and healthcare related talks.
+
+----
+╒══════════════════╤═══════════════════════╤═══╕
+│"uc.name"         │"i.Industry"           │"c"│
+╞══════════════════╪═══════════════════════╪═══╡
+│"Data Science"    │"Healthcare"           │7  │
+├──────────────────┼───────────────────────┼───┤
+│"Data Science"    │"Financial"            │4  │
+├──────────────────┼───────────────────────┼───┤
+│"Data Science"    │"Biotechnology"        │3  │
+├──────────────────┼───────────────────────┼───┤
+│"Knowledge Graphs"│"Healthcare"           │3  │
+├──────────────────┼───────────────────────┼───┤
+│"Data Science"    │"Aerospace and Defense"│3  │
+└──────────────────┴───────────────────────┴───┘
+----
+
+
+We can also look at the schedule for each day, e.g. 
+
+[source,cypher]
+----
+MATCH (s:Session)
+WHERE date(s.Start) = date('2022-06-06')
+RETURN localtime(s.Start) as start, collect(s.Title) as titles
+ORDER BY start ASC
+----
+
+Optionally we could create Nodes for Times and Rooms, if we wanted to represent them in our graph model.
+
+We can also just see if we can fill our day with talks from specific use-cases.
+
+[source,cypher]
+----
+MATCH (s:Session)-[:FOR_USECASE]->(uc)
+WHERE uc.name IN ['Best Practices','Aura']
+WITH distinct s
+WHERE date(s.Start) = date('2022-06-06')
+RETURN localtime(s.Start) as start, collect(s.Title) as titles
+ORDER BY start ASC
+----
+
+Ah, nice that is our day:
+
+----
+╒══════════╤═══════════════════════════════════════════════╕
+│"start"   │"titles"                                       │
+╞══════════╪═══════════════════════════════════════════════╡
+│"10:00:00"│["Accelerating ML Ops with Graphs and Ontology-│
+│          │Driven Design"]                                │
+├──────────┼───────────────────────────────────────────────┤
+│"10:50:00"│["Introduction to Neo4j AuraDB: Your Fastest Pa│
+│          │th to Graph"]                                  │
+├──────────┼───────────────────────────────────────────────┤
+│"11:10:00"│["Node Art","Taming Large Databases"]          │
+├──────────┼───────────────────────────────────────────────┤
+│"11:30:00"│["Tracking Data Sources of Fused Entities in La│
+│          │w Enforcement Graphs"]                         │
+├──────────┼───────────────────────────────────────────────┤
+│"13:00:00"│["Discovery and Insights with Graph Visualizati│
+│          │on Using Neo4j Bloom","New! Monitoring and Admi│
+│          │nistration with Neo4j Ops Manager"]            │
+├──────────┼───────────────────────────────────────────────┤
+│"13:45:00"│["Introducing Workspaces, a New Experience for │
+│          │Neo4j Developer Tools","Trucks on a Graph: How │
+│          │JB Hunt Uses Neo4j"]                           │
+├──────────┼───────────────────────────────────────────────┤
+│"14:30:00"│["The Inside Scoop on Neo4j: Meet the Builders"│
+│          │,"Knowledge Graphs for Pharma: Powered by Data │
+│          │& AI Using KG4P","Getting the Most From Today's│
+│          │ Java Tooling With Neo4j"]                     │
+├──────────┼───────────────────────────────────────────────┤
+│"15:15:00"│["Neo4j Drivers Best Practices"]               │
+└──────────┴───────────────────────────────────────────────┘
+----
+
+== Recommendation
+
+Now we could look at recommending talks by shared attributes, so the more attributes a talk shares with a talk I like, the more similar it is (of course we can also do the opposite, sorting ASC) to get least overlap and more diversity.
+
+Or we fix any attribute we like to stay the same.
+
+[source,cypher]
+----
+MATCH (s:Session {Title:'Using Graph Analytics to Solve Cloud Security Problems'})
+MATCH (s)--(attr)--(s2:Session)
+WHERE date(s.Start) <> date(s2.Start) 
+      OR localtime(s.Start) <> localtime(s2.Start)
+WITH s2, count(*) as freq, collect(attr) as overlap
+MATCH (s2)<-[:PRESENTS]-(sp:Speaker)
+ORDER BY freq DESC
+RETURN s2.Title, s2.Start, sp.Fullname freq, overlap
+----
+
+image::gc-schedule-recommendation.png[]
+
+== Visualization
+
+For Visualization we can look at `Explore`, aka Neo4j Bloom.
+
+We open it from our Aura Console and generate a perspective to be used.
+
+The we can e.g. query all the `Data Science` sessions, their speakers and companies.
+
+image::gc-schedule-bloom.png[]
+

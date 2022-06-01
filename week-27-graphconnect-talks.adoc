@@ -1,18 +1,31 @@
-= Discover Aura Free - Week 27 - GraphConnect Talks
+== Discover Aura Free - Week 27 - GraphConnect Talks
 :imagesdir: img
+:db-name: graphconnect
 
-This week we're looking at at a sneak preview of our conference sessions at GraphConnect 2022, which happens next week, June 5-7 in Austin, Texas.
+This week we're looking at at a sneak preview of our conference sessions at GraphConnect 2022, which happens *next week*, June 5-7 in Austin, Texas.
 
 https://graphconnect.com
 
-If you haven't decided to come, now is your chance, if you drop us an email to michael@neo4j.com, we are give away 10 free conference tickets for our viewers / readers.
+> If you haven't decided to come, now is your chance, if you drop us an email to michael@neo4j.com, *we are give away 10 free conference tickets for our viewers / readers*.
 
-TLDR;
-video
+I sometimes remnisce about past GraphConnects all the way since 2012 with our Neo4j Flickr foto albums.
+
+https://www.flickr.com/photos/neotechnology/albums/with/72157631944455302
+
+
+=== TLDR
+
+If you rather want to watch our live-stream, it is right here, otherwise follow the blog post for all the details.
+
+https://www.youtube.com/watch?v=xlHc7B_zN84
+
+You can find our data and write-ups on our https://github.com/neo4j-examples/discoveraurafree/tree/main/data[GitHub repository^] and https://neo4j.com/video/discover-aura-free-with-fun-datasets/[all videos on the Neo4j Website^]
+
+But let's get started, by setting up our AuraDB Free database.
 
 include::connect-aura.adoc[]
 
-== The Data
+=== The Data
 
 The conference agenda is available at the website, but we just snug it from the conference planning :)
 
@@ -50,7 +63,7 @@ In the schedule we have:
 * Start
 * End
 
-== The Data Model
+=== The Data Model
 
 We want to extract the `Session` and the `Presenter`, and Attributes like: `UseCase`, `Audience`, `Experience`, `Topic`, `Company` into their own nodes.
 
@@ -64,7 +77,7 @@ To save you the work we've provided a https://github.com/neo4j-examples/discover
 
 We can use a trick for merging the additional CSV, by declaring a separate node with the same label `Session`, and mapping the CSV file to it, while using the matching value for `Title` as the ID.
 
-== Data Import
+=== Data Import
 
 image::gc-schedule-data-importer.png[]
 
@@ -76,7 +89,8 @@ image::gc-schedule-browser-all.png[]
 
 The final bit of data import is some post-processing:
 
-For once we can 
+As the `UseCase` data is stored as a comma separated string property, we need to split that into a list and then turn the list into rows with `UNWIND`.
+Then we can create `UseCase` node for each entry uniquely with `MERGE` and connect them to our `Session`.
 
 [source,cypher]
 ----
@@ -87,7 +101,7 @@ MERGE (u:UseCase {name:uc})
 MERGE (s)-[:FOR_USECASE]->(u)
 ----
 
-We also want turn the `Date` and the `Start` and `End` properties into proper datetime values instead of strings.
+We also want to turn the `Date` and the `Start`, `End`, `StartTime`, `EndTime` properties into proper datetime values instead of strings.
 
 [source,cypher]
 ----
@@ -95,13 +109,15 @@ MATCH (s:Session)
 SET s.Date = date(s.Date)
 SET s.Start = localdatetime(s.Start)
 SET s.End = localdatetime(s.End)
+SET s.StartTime = localtime(s.StartTime)
+SET s.EndTime = localtime(s.EndTime)
 ----
 
 // Todo localdatetime to datetime with -05 timezone
 
-== Data Exploration
+=== Data Exploration
 
-We can see single session with it related context.
+We can see single a session with it related context.
 
 [source,cypher]
 ----
@@ -113,7 +129,7 @@ RETURN path
 
 image::gc-schedule-session.png[]
 
-We can now start to look at some breakdowns.
+Let's look at some breakdowns across the attributes.
 
 E.g. which Use-Case has the most sessions.
 
@@ -169,7 +185,7 @@ Note that a single session, can have multiple use-cases.
 └─────────────────────┴───┘
 ----
 
-Or what is the overlap between use-cases and industries:
+Or what is the overlap between use-cases and industries (we need to exclude `General` as industry):
 
 [source,cypher]
 ----
@@ -198,8 +214,66 @@ Great to see that there are a lot of data-science and healthcare related talks.
 └──────────────────┴───────────────────────┴───┘
 ----
 
+We can also compute percentages of all talks for a given use-case, per industry:
 
-We can also look at the schedule for each day, e.g. 
+[source,cypher]
+----
+MATCH ()-[:FOR_INDUSTRY]->(i:Industry)
+WITH i, count(*) as totalIndustry
+MATCH (n:UseCase)<-[:FOR_USECASE]-(session)-[:FOR_INDUSTRY]->(i)
+WHERE NOT i.Industry IN ['General']
+RETURN n.name as useCase, i.Industry, count(*) as count, count(*)*100/totalIndustry as percent, totalIndustry
+ORDER BY count DESC LIMIT 10
+----
+
+Which gives us a better understanding of focus areas than the absolute numbers.
+
+----
+╒═════════════════════╤═══════════════════════╤═══════╤═════════╤═══════════════╕
+│"useCase"            │"i.Industry"           │"count"│"percent"│"totalIndustry"│
+╞═════════════════════╪═══════════════════════╪═══════╪═════════╪═══════════════╡
+│"Data Science"       │"Healthcare"           │7      │77       │9              │
+├─────────────────────┼───────────────────────┼───────┼─────────┼───────────────┤
+│"Data Science"       │"Financial"            │4      │100      │4              │
+├─────────────────────┼───────────────────────┼───────┼─────────┼───────────────┤
+│"Data Science"       │"Biotechnology"        │3      │100      │3              │
+├─────────────────────┼───────────────────────┼───────┼─────────┼───────────────┤
+│"Knowledge Graphs"   │"Healthcare"           │3      │33       │9              │
+├─────────────────────┼───────────────────────┼───────┼─────────┼───────────────┤
+│"Data Science"       │"Aerospace and Defense"│3      │100      │3              │
+----
+
+Or between Topic and Industry:
+
+[source,cypher]
+----
+MATCH (t:Topic)<-[:ON_TOPIC]-(session)-[:FOR_INDUSTRY]->(i:Industry)
+WHERE NOT i.Industry IN ['General']
+RETURN t.Topic, i.Industry, count(*) as count
+ORDER BY count DESC LIMIT 5
+----
+
+Which allows to see us the healthcare applications.
+
+----
+╒═════════════════╤═══════════════════════╤═══════╕
+│"t.Topic"        │"i.Industry"           │"count"│
+╞═════════════════╪═══════════════════════╪═══════╡
+│"Knowledge Graph"│"Healthcare"           │3      │
+├─────────────────┼───────────────────────┼───────┤
+│"Knowledge Graph"│"Aerospace and Defense"│2      │
+├─────────────────┼───────────────────────┼───────┤
+│"GDS-UC"         │"Telecom"              │2      │
+├─────────────────┼───────────────────────┼───────┤
+│"GDS-UC"         │"Healthcare"           │2      │
+├─────────────────┼───────────────────────┼───────┤
+│"GDS-UC"         │"Financial"            │2      │
+└─────────────────┴───────────────────────┴───────┘
+----
+
+=== Schedule
+
+We can also look at the schedule for one day, e.g. by sorting by start time and aggregating the titles into a list.
 
 [source,cypher]
 ----
@@ -209,7 +283,7 @@ RETURN localtime(s.Start) as start, collect(s.Title) as titles
 ORDER BY start ASC
 ----
 
-Optionally we could create Nodes for Times and Rooms, if we wanted to represent them in our graph model.
+> Optionally we could create Nodes for Times and Rooms, if we wanted to represent them in our graph model.
 
 We can also just see if we can fill our day with talks from specific use-cases.
 
@@ -257,11 +331,15 @@ Ah, nice that is our day:
 └──────────┴───────────────────────────────────────────────┘
 ----
 
-== Recommendation
+=== Recommendation
 
-Now we could look at recommending talks by shared attributes, so the more attributes a talk shares with a talk I like, the more similar it is (of course we can also do the opposite, sorting ASC) to get least overlap and more diversity.
+Now we could look at recommending talks by *shared attributes*, so the more attributes a talk shares with a talk I like, the more similar it is (of course we can also do the opposite, sorting `ASC`) to get least overlap and more diversity.
 
-Or we fix any attribute we like to stay the same.
+Or we fix any attribute we like to stay the same, by adding or excluding relationship-types.
+
+We also don't want the recommended talk to overlap in terms of start time, so we add this as an exclusion.
+
+After finding our top 5 recommendations, we can fetch the speaker and their company as additional information to return.
 
 [source,cypher]
 ----
@@ -270,14 +348,14 @@ MATCH (s)--(attr)--(s2:Session)
 WHERE date(s.Start) <> date(s2.Start) 
       OR localtime(s.Start) <> localtime(s2.Start)
 WITH s2, count(*) as freq, collect(attr) as overlap
-MATCH (s2)<-[:PRESENTS]-(sp:Speaker)
-ORDER BY freq DESC
-RETURN s2.Title, s2.Start, sp.Fullname freq, overlap
+ORDER BY freq DESC LIMIT 5
+MATCH (s2)<-[:PRESENTS]-(sp:Speaker)-[:WORKS_AT]->(c:Company)
+RETURN s2.Title, s2.Start, sp.FullName, c.Company, freq, overlap
 ----
 
 image::gc-schedule-recommendation.png[]
 
-== Visualization
+=== Visualization
 
 For Visualization we can look at `Explore`, aka Neo4j Bloom.
 
@@ -287,3 +365,14 @@ The we can e.g. query all the `Data Science` sessions, their speakers and compan
 
 image::gc-schedule-bloom.png[]
 
+We can also take our recommendation query from above and turn into into a saved search phrase in Bloom, so that we can visualize each recommendation.
+We can pick the parameter from suggestions from the actual title data and return paths instead of scalar data.
+
+image::gc-schedule-bloom-recommendation.png[]
+image::gc-schedule-bloom-saved-query.png[]
+
+I hope you're coming to graphconnect, don't forget our 10 free ticket offer (email to michael@neo4j.com). 
+
+If not you can use similar graph structures for other conferences, or curriculum schedules.
+
+Happy Graphing

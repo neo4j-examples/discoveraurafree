@@ -1,0 +1,136 @@
+Date,Title,StartTime,EndTime,Type,Start,End
+2022-06-05,3 Ways You Can Use Ontologies in Neo4j,14:30,16:00,Workshop,2022-06-05T14:30:00,2022-06-05T16:00:00
+2022-06-05,"99.9999% (Seriously, that Many 9's) Uptime at Adobe: How We Got There with Neo4j",15:15,16:00,Full Length Session,2022-06-05T15:15:00,2022-06-05T16:00:00
+2022-06-05,A Fusion of Machine Learning and Graph Analysis for Free-Form Data Entry Clustering,11:15,12:00,Full Length Session,2022-06-05T11:15:00,2022-06-05T12:00:00
+2022-06-05,A Real World Case Study for Implementing an Enterprise Scale Data Fabric,16:00,16:45,Full Length Session,2022-06-05T16:00:00,2022-06-05T16:45:00
+2022-06-05,A Schema Migration Tool for the Neo4j Database,11:10,11:30,Lightning Talks,2022-06-05T11:10:00,2022-06-05T11:30:00
+2022-06-05,A Universe of Knowledge Graphs,10:30,11:15,Full Length Session,2022-06-05T10:30:00,2022-06-05T11:15:00
+2022-06-06,Accelerating ML Ops with Graphs and Ontology-Driven Design,10:00,10:45,Full Length Session,2022-06-06T10:00:00,2022-06-06T10:45:00
+2022-06-05,Achieve Blazing-Fast Ingest Speeds with Apache Arrow,16:00,16:45,Full Length Session,2022-06-05T16:00:00,2022-06-05T16:45:00
+2022-06-05,Adeo DiY Knowledge Graph,15:15,16:00,Full Length Session,2022-06-05T15:15:00,2022-06-05T16:00:00
+2022-06-05,Adversarial Risk Analysis Using Knowledge Graphs,15:15,16:00,Full Length Session,2022-06-05T15:15:00,2022-06-05T16:00:00
+2022-06-05,Application of Graph Analytics for Identification of Risk Signature Profiles in Health Care Claims,11:15,12:00,Full Length Session,2022-06-05T11:15:00,2022-06-05T12:00:00
+2022-06-05,Applying Network Analytics in KYC,13:40,14:00,Lightning Talks,2022-06-05T13:40:00,2022-06-05T14:00:00
+2022-06-05,Are Economists Right or Wrong? Connecting Patent Data in Neo4j,14:20,14:40,Lightning Talks,2022-06-05T14:20:00,2022-06-05T14:40:00
+2022-06-04,Basic Cypher Querying,08:00,12:00,Training,2022-06-04T08:00:00,2022-06-04T12:00:00
+2022-06-04,Basic Neo4j Admin,08:00,17:00,Training,2022-06-04T08:00:00,2022-06-04T17:00:00
+2022-06-05,Boost Your Neo4j with User-Defined Procedures,14:30,15:15,Full Length Session,2022-06-05T14:30:00,2022-06-05T15:15:00
+2022-06-05,Bootstrapping Your Graph Project with Neo4j Data Importer and Browser,13:45,14:30,Full Length Session,2022-06-05T13:45:00,2022-06-05T14:30:00
+2022-06-05,Build a Better Healthcare Chatbot with a Neo4j Knowledge Graph,14:40,15:00,Lightning Talks,2022-06-05T14:40:00,2022-06-05T15:00:00
+2022-06-06,Build a Knowledge Graph Using NLP and Ontologies,13:00,14:30,Workshop,2022-06-06T13:00:00,2022-06-06T14:30:00
+2022-06-05,Building a Graph-Based Full-Stack Solution for Repository-Scale Searching of Biosynthetic Gene Clusters,16:00,16:45,Full Length Session,2022-06-05T16:00:00,2022-06-05T16:45:00
+2022-06-05,Building a Micro ORM for Neo4j in .NET,10:50,11:10,Lightning Talks,2022-06-05T10:50:00,2022-06-05T11:10:00
+2022-06-04,Building An Application,13:00,17:00,Training,2022-06-04T13:00:00,2022-06-04T17:00:00
+2022-06-05,Building an Authorization Solution for Microservices Using Neo4j and OPA,13:00,13:45,Full Length Session,2022-06-05T13:00:00,2022-06-05T13:45:00
+2022-06-05,Building Digital Twins with GCP and Neo4j,13:45,14:30,Full Length Session,2022-06-05T13:45:00,2022-06-05T14:30:00
+2022-06-06,Building the Rail Network Digital Twin at CSX,13:00,13:20,Lightning Talks,2022-06-06T13:00:00,2022-06-06T13:20:00
+2022-06-05,Combining the Best Cloud Technologies with Innovative Engineering: How We Built Neo4j Aura,16:00,16:45,Full Length Session,2022-06-05T16:00:00,2022-06-05T16:45:00
+2022-06-05,Communicating Complex Results to Customers Using Graph Data Science… When You Don't Have a Front-End Developer on Your Team,16:45,17:30,Full Length Session,2022-06-05T16:45:00,2022-06-05T17:30:00
+2022-06-05,Connecting Neo4j Graph Data Science into Your Data Ecosystem and Workflows,13:00,13:45,Full Length Session,2022-06-05T13:00:00,2022-06-05T13:45:00
+2022-06-05,Creating a Clinical Knowledge Graph: Pharmaceutical Collaboration With OpenStudyBuilder,14:40,15:00,Lightning Talks,2022-06-05T14:40:00,2022-06-05T15:00:00
+2022-06-05,Cybersecurity Automation with OSCAL and Neo4J,14:30,15:15,Full Length Session,2022-06-05T14:30:00,2022-06-05T15:15:00
+2022-06-04,Cypher Query Training,08:00,17:00,Training,2022-06-04T08:00:00,2022-06-04T17:00:00
+2022-06-04,Data Management Import & Governance,13:00,17:00,Training,2022-06-04T13:00:00,2022-06-04T17:00:00
+2022-06-04,Data Management with Cypher,08:00,12:00,Training,2022-06-04T08:00:00,2022-06-04T12:00:00
+2022-06-06,"Delegate, Automate, Dominate: Putting Graph Tech to Work for You to Unlock Hidden Insights and Opportunities",10:00,10:45,Full Length Session,2022-06-06T10:00:00,2022-06-06T10:45:00
+2022-06-05,"Demystifying Environmental, Social, and Governance (ESG) Reporting With Graphs",14:00,14:20,Lightning Talks,2022-06-05T14:00:00,2022-06-05T14:20:00
+2022-06-05,Design Thinking for Graph Data: The Secret to Successful Graph-Powered Apps,14:20,14:40,Lightning Talks,2022-06-05T14:20:00,2022-06-05T14:40:00
+2022-06-06,Discovery and Insights with Graph Visualization Using Neo4j Bloom,13:00,14:30,Workshop,2022-06-06T13:00:00,2022-06-06T14:30:00
+2022-06-05,Empowering Employees With Graph Technology,13:45,14:30,Full Length Session,2022-06-05T13:45:00,2022-06-05T14:30:00
+2022-06-05,Enabling Patient-Driven Medicine Using Graph Database,14:30,15:15,Full Length Session,2022-06-05T14:30:00,2022-06-05T15:15:00
+2022-06-06,Encrypting and Protecting Your Data in Neo4j,11:30,12:15,Full Length Session,2022-06-06T11:30:00,2022-06-06T12:15:00
+2022-06-05,"Endless Possibilities: Building a Customer360 with Neo4j, Structr, and Vendor APIs",14:30,15:15,Full Length Session,2022-06-05T14:30:00,2022-06-05T15:15:00
+2022-06-05,ETL and Supervised ML using Python,16:00,16:45,Full Length Session,2022-06-05T16:00:00,2022-06-05T16:45:00
+2022-06-06,Evaluating Drug Safety Using Graph Databases,11:50,12:10,Lightning Talks,2022-06-06T11:50:00,2022-06-06T12:10:00
+2022-06-05,Expanding Your Knowledge Graph Through NLP,14:30,15:15,Full Length Session,2022-06-05T14:30:00,2022-06-05T15:15:00
+2022-06-05,Exploiting a Feature Store for Graphs on Neo4j,15:15,16:00,Full Length Session,2022-06-05T15:15:00,2022-06-05T16:00:00
+2022-06-05,Exploring the GraphConnect 2022 Audience as a Graph,10:50,11:10,Lightning Talks,2022-06-05T10:50:00,2022-06-05T11:10:00
+2022-06-06,Fighting a Multi-armed Monster With Graph: Master Data Management in Neo4j,13:45,14:30,Full Length Session,2022-06-06T13:45:00,2022-06-06T14:30:00
+2022-06-05,Fighting Fraud with Neo4j Graph Data Science,15:00,15:20,Lightning Talks,2022-06-05T15:00:00,2022-06-05T15:20:00
+2022-06-05,From Idea to Implementation: Introducing Neo4j Into a Forensic Analytics team,15:20,15:40,Lightning Talks,2022-06-05T15:20:00,2022-06-05T15:40:00
+2022-06-06,From Relational to Graph: How Going Graph Revealed the Unknown,15:15,16:00,Full Length Session,2022-06-06T15:15:00,2022-06-06T16:00:00
+2022-06-06,Full-Stack Visualization: Build a React App with a Sankey Diagram,10:00,11:30,Workshop,2022-06-06T10:00:00,2022-06-06T11:30:00
+2022-06-05,Fun with Fabric in 15,15:20,15:40,Lightning Talks,2022-06-05T15:20:00,2022-06-05T15:40:00
+2022-06-05,General Session,09:00,10:30,General Session,2022-06-05T09:00:00,2022-06-05T10:30:00
+2022-06-05,Get Started with the Most Advanced Edition Yet of Neo4j Graph Data Science,14:30,15:15,Full Length Session,2022-06-05T14:30:00,2022-06-05T15:15:00
+2022-06-05,Getting Medications to Patients With Graphs,11:30,11:50,Lightning Talks,2022-06-05T11:30:00,2022-06-05T11:50:00
+2022-06-05,Getting Started with Neo4j on AWS,16:45,17:30,Full Length Session,2022-06-05T16:45:00,2022-06-05T17:30:00
+2022-06-06,Getting the Most From Today's Java Tooling With Neo4j,14:30,15:15,Full Length Session,2022-06-06T14:30:00,2022-06-06T15:15:00
+2022-06-05,Graph Application for AI Tutor: Knowledge Tracing Prediction and Learner Patterns,13:00,13:45,Full Length Session,2022-06-05T13:00:00,2022-06-05T13:45:00
+2022-06-04,Graph Data Modeling,08:00,12:00,Training,2022-06-04T08:00:00,2022-06-04T12:00:00
+2022-06-05,Graph Data Modeling Best Practices,15:40,16:00,Lightning Talks,2022-06-05T15:40:00,2022-06-05T16:00:00
+2022-06-06,Graph-Based Analytics in Telcos - A Crucial Component for 5G enablement,15:15,16:00,Full Length Session,2022-06-06T15:15:00,2022-06-06T16:00:00
+2022-06-06,Graph-Based Network Topology Analysis for Telecom Operators,10:45,11:30,Full Length Session,2022-06-06T10:45:00,2022-06-06T11:30:00
+2022-06-05,Graph-Based Process Mining and Its Applications to Digital Twins,16:00,16:45,Full Length Session,2022-06-05T16:00:00,2022-06-05T16:45:00
+2022-06-04,Graphs & Graph Databases,13:00,17:00,Training,2022-06-04T13:00:00,2022-06-04T17:00:00
+2022-06-05,Graphs for Genealogists,16:45,17:30,Full Length Session,2022-06-05T16:45:00,2022-06-05T17:30:00
+2022-06-05,Guiding Future Doctors With a Graph,13:45,14:30,Full Length Session,2022-06-05T13:45:00,2022-06-05T14:30:00
+2022-06-06,Hands-On Graph Drawing and Modeling with Arrows.app,10:00,11:30,Workshop,2022-06-06T10:00:00,2022-06-06T11:30:00
+2022-06-05,Hands-On Neo4j for Python Developers,13:00,14:30,Workshop,2022-06-05T13:00:00,2022-06-05T14:30:00
+2022-06-05,"Hands-On with SwiftUI, GraphQL, and Neo4j AuraDB",13:00,14:30,Workshop,2022-06-05T13:00:00,2022-06-05T14:30:00
+2022-06-05,How Dell Used Neo4j Graph Database to Redesign Their Pricing-as-a-Service Platform,16:45,17:30,Full Length Session,2022-06-05T16:45:00,2022-06-05T17:30:00
+2022-06-05,How Expedia’s Entity Graph Powers Global Travel,13:00,13:45,Full Length Session,2022-06-05T13:00:00,2022-06-05T13:45:00
+2022-06-06,How to Import JSON Using Cypher and APOC,13:00,13:20,Lightning Talks,2022-06-06T13:00:00,2022-06-06T13:20:00
+2022-06-04,Implementing Graph Models,13:00,17:00,Training,2022-06-04T13:00:00,2022-06-04T17:00:00
+2022-06-06,Incident Root Cause Analysis with Graph,11:30,12:15,Full Length Session,2022-06-06T11:30:00,2022-06-06T12:15:00
+2022-06-05,Integrated Graph Machine Learning with GDS 2.0 and Python,15:00,15:20,Lightning Talks,2022-06-05T15:00:00,2022-06-05T15:20:00
+2022-06-04,Intermediate Cypher Querying,08:00,12:00,Training,2022-06-04T08:00:00,2022-06-04T12:00:00
+2022-06-06,Interpreting the Results of Community Detection Algorithms,11:30,12:15,Full Length Session,2022-06-06T11:30:00,2022-06-06T12:15:00
+2022-06-06,"Introducing Workspaces, a New Experience for Neo4j Developer Tools",13:45,14:30,Full Length Session,2022-06-06T13:45:00,2022-06-06T14:30:00
+2022-06-06,Introduction to Neo4j AuraDB: Your Fastest Path to Graph,10:50,11:10,Lightning Talks,2022-06-06T10:50:00,2022-06-06T11:10:00
+2022-06-06,Knowledge Graph Representation for Disease Risk Estimation in Crops,10:30,10:50,Lightning Talks,2022-06-06T10:30:00,2022-06-06T10:50:00
+2022-06-06,Knowledge Graphs for Pharma: Powered by Data & AI Using KG4P,14:30,15:15,Full Length Session,2022-06-06T14:30:00,2022-06-06T15:15:00
+2022-06-05,Leveraging Graph Analytics for Entity Resolution,14:00,14:20,Lightning Talks,2022-06-05T14:00:00,2022-06-05T14:20:00
+2022-06-05,Leveraging Neo4j to Create a Sustainable Partnership-Based Metagenomic Supply Chain,13:40,14:00,Lightning Talks,2022-06-05T13:40:00,2022-06-05T14:00:00
+2022-06-05,Leveraging Neo4j With Apache Spark,11:00,12:30,Workshop,2022-06-05T11:00:00,2022-06-05T12:30:00
+2022-06-05,Live Migration Between the Labs Helm Chart and the New Helm Chart,11:50,12:10,Lightning Talks,2022-06-05T11:50:00,2022-06-05T12:10:00
+2022-06-05,Lobbygraph: Delving Into the Graph of Germany's New Lobby Register,16:00,16:45,Full Length Session,2022-06-05T16:00:00,2022-06-05T16:45:00
+2022-06-05,Making the Connection Between GraphQL and Your Neo4j Graph Database,13:00,13:20,Lightning Talks,2022-06-05T13:00:00,2022-06-05T13:20:00
+2022-06-05,Master Real-Time Streams With Neo4j and Apache Kafka,14:30,16:00,Workshop,2022-06-05T14:30:00,2022-06-05T16:00:00
+2022-06-05,Mastering Neo4j with Go and GoGM,11:00,12:30,Workshop,2022-06-05T11:00:00,2022-06-05T12:30:00
+2022-06-05,Maximizing Your Product Portfolio Exploration With Graph Data Science,15:15,16:00,Full Length Session,2022-06-05T15:15:00,2022-06-05T16:00:00
+2022-06-05,Modeling Physical Systems in the Metaverse Easily with Graphs (WAS Analyzing a 5B-Entity Graph: Combinatorial Complexity and Business Decisions),13:00,13:45,Full Length Session,2022-06-05T13:00:00,2022-06-05T13:45:00
+2022-06-04,Neo4j and Vertex AI Hands On Labs,13:00,17:00,Training,2022-06-04T13:00:00,2022-06-04T17:00:00
+2022-06-05,Neo4j Bloom: What’s New with Neo4j's Data Visualization Tool,13:00,13:45,Full Length Session,2022-06-05T13:00:00,2022-06-05T13:45:00
+2022-06-06,Neo4j Drivers Best Practices,15:15,16:00,Full Length Session,2022-06-06T15:15:00,2022-06-06T16:00:00
+2022-06-05,Neo4j Graph Database Key Features Hands-On Lab,16:00,17:30,Workshop,2022-06-05T16:00:00,2022-06-05T17:30:00
+2022-06-05,Neo4j in a Microsoft Shop,11:10,11:30,Lightning Talks,2022-06-05T11:10:00,2022-06-05T11:30:00
+2022-06-05,Neo4j Ops: Monitoring,16:00,17:30,Workshop,2022-06-05T16:00:00,2022-06-05T17:30:00
+2022-06-06,NeoDash - Building Neo4j Dashboards In Minutes,14:30,15:15,Full Length Session,2022-06-06T14:30:00,2022-06-06T15:15:00
+2022-06-06,New! Monitoring and Administration with Neo4j Ops Manager,13:00,13:45,Full Length Session,2022-06-06T13:00:00,2022-06-06T13:45:00
+2022-06-05,New! Neo4j AuraDS: The Fastest Way to Get Started with Data Science in the Cloud,16:45,17:30,Full Length Session,2022-06-05T16:45:00,2022-06-05T17:30:00
+2022-06-06,Node Art,11:10,11:30,Lightning Talks,2022-06-06T11:10:00,2022-06-06T11:30:00
+2022-06-05,Novel Graph Modeling Framework for Feature Importance Determination in Unsupervised Learning,13:45,14:30,Full Length Session,2022-06-05T13:45:00,2022-06-05T14:30:00
+2022-06-05,Operating Neo4j Fabric in Multi-Zone Kubernetes Cluster,13:00,13:20,Lightning Talks,2022-06-05T13:00:00,2022-06-05T13:20:00
+2022-06-05,Pouring Coffee Into the Matrix: Building Java Applications on Neo4j,10:30,11:15,Full Length Session,2022-06-05T10:30:00,2022-06-05T11:15:00
+2022-06-05,Queries to Insights: How Healthcare Research Can Create Connections with Knowledge Graphs,13:45,14:30,Full Length Session,2022-06-05T13:45:00,2022-06-05T14:30:00
+2022-06-06,Real-time Data Updates for Neo4j using GraphQL Subscriptions,13:00,13:45,Full Length Session,2022-06-06T13:00:00,2022-06-06T13:45:00
+2022-06-05,Real-World Graphs in Manufacturing and Automotive,16:45,17:30,Full Length Session,2022-06-05T16:45:00,2022-06-05T17:30:00
+2022-06-05,Revolutionizing the Energy Industry with Graphs,13:00,13:45,Full Length Session,2022-06-05T13:00:00,2022-06-05T13:45:00
+2022-06-06,Role-Based Access Control (RBAC) in Neo4j,10:30,10:50,Lightning Talks,2022-06-06T10:30:00,2022-06-06T10:50:00
+2022-06-05,Scale Your Mission-Critical Applications With Neo4j Fabric and Clustering Architecture,11:15,12:00,Full Length Session,2022-06-05T11:15:00,2022-06-05T12:00:00
+2022-06-06,Scaling into Billions of Nodes and Relationships with Neo4j Graph Data Science,10:00,10:45,Full Length Session,2022-06-06T10:00:00,2022-06-06T10:45:00
+2022-06-05,Starbase:  Graph-Based Security Analysis for Everyone,11:30,11:50,Lightning Talks,2022-06-05T11:30:00,2022-06-05T11:50:00
+2022-06-05,Synthesizing a Logical Digital Twin to Avert Jurassic Disasters,10:30,11:15,Full Length Session,2022-06-05T10:30:00,2022-06-05T11:15:00
+2022-06-06,Synthetic Graphs for Privacy: Lessons Learned and Key Takeaways,13:20,13:40,Lightning Talks,2022-06-06T13:20:00,2022-06-06T13:40:00
+2022-06-06,Taming Large Databases,11:10,11:30,Lightning Talks,2022-06-06T11:10:00,2022-06-06T11:30:00
+2022-06-05,Telecomms Service Assurance & Service Fulfilment with Neo4j Graph Database,15:15,16:00,Full Length Session,2022-06-05T15:15:00,2022-06-05T16:00:00
+2022-06-06,The Customer Journey Is a Graph,10:45,11:30,Full Length Session,2022-06-06T10:45:00,2022-06-06T11:30:00
+2022-06-06,The Inside Scoop on Neo4j: Meet the Builders,14:30,15:15,Full Length Session,2022-06-06T14:30:00,2022-06-06T15:15:00
+2022-06-05,The Streaming Graph: Integration Strategies With Kafka and Neo4j for Near Real-Time Insights,14:30,15:15,Full Length Session,2022-06-05T14:30:00,2022-06-05T15:15:00
+2022-06-06,Toolbelt Trifecta: Connecting to Neo4j with Java and AWS Lambda,13:00,13:45,Full Length Session,2022-06-06T13:00:00,2022-06-06T13:45:00
+2022-06-06,Top 10 Cypher Tuning Tips & Tricks,10:00,10:45,Full Length Session,2022-06-06T10:00:00,2022-06-06T10:45:00
+2022-06-05,Towards GQL 1 — A Property Graph Query Language Standard,13:20,13:40,Lightning Talks,2022-06-05T13:20:00,2022-06-05T13:40:00
+2022-06-06,Tracking Data Sources of Fused Entities in Law Enforcement Graphs,11:30,12:15,Full Length Session,2022-06-06T11:30:00,2022-06-06T12:15:00
+2022-06-05,Tracking Pandemic Recovery Using Graphs,11:15,12:00,Full Length Session,2022-06-05T11:15:00,2022-06-05T12:00:00
+2022-06-06,Trucks on a Graph: How JB Hunt Uses Neo4j,13:45,14:30,Full Length Session,2022-06-06T13:45:00,2022-06-06T14:30:00
+2022-06-06,"Uncharted Waters: Fraud, the Fortune 500, and Latin America",13:00,13:45,Full Length Session,2022-06-06T13:00:00,2022-06-06T13:45:00
+2022-06-06,Using Connected Data and Graph Technology to Enhance Machine Learning and Artificial Intelligence,11:50,12:10,Lightning Talks,2022-06-06T11:50:00,2022-06-06T12:10:00
+2022-06-06,Using Graph Analytics to Solve Cloud Security Problems,10:50,11:10,Lightning Talks,2022-06-06T10:50:00,2022-06-06T11:10:00
+2022-06-05,Using Graphs to Take Down Fraudsters in Real Time,13:20,13:40,Lightning Talks,2022-06-05T13:20:00,2022-06-05T13:40:00
+2022-06-05,Visualizing CI/CD - An Attacker's Perspective,13:45,14:30,Full Length Session,2022-06-05T13:45:00,2022-06-05T14:30:00
+2022-06-06,Visualizing Insights with Bloom and Graph Data Science,11:30,11:50,Lightning Talks,2022-06-06T11:30:00,2022-06-06T11:50:00
+2022-06-05,Weaving Tangled Webs: Using Graphs to Author Content (And Other Unconventional Use Cases),15:15,16:00,Full Length Session,2022-06-05T15:15:00,2022-06-05T16:00:00
+2022-06-05,Why We Decided on Transforming Our Operational Database from Firebase to Neo4j AuraDB,11:50,12:10,Lightning Talks,2022-06-05T11:50:00,2022-06-05T12:10:00
+2022-06-06,XRP Ledger Blockchain ETL with Neo4j,13:45,14:30,Full Length Session,2022-06-06T13:45:00,2022-06-06T14:30:00
+2022-06-06,You Are What You Search: How to Create Richer Profiles with a Knowledge Graph,10:45,11:30,Full Length Session,2022-06-06T10:45:00,2022-06-06T11:30:00

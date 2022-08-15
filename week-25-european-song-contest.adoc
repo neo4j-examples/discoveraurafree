@@ -10,7 +10,11 @@ https://www.youtube.com/watch?v=UiEGVYOruLk
 
 
 source: https://www.kaggle.com/datasets/datagraver/eurovision-song-contest-scores-19752019
-source 2021, 2022: https://eurovisionworld.com/eurovision/2021
+
+source 2021, 2022: 
+https://eurovisionworld.com/eurovision/2021
+https://eurovisionworld.com/eurovision/2022
+
 -> https://pix.eurovisionworld.com/scripts/js/voting/130.js
 -> https://static.eurovisionworld.com/js/voting/140.js
 

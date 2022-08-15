@@ -1,4 +1,4 @@
-== Week 32 - Mavel API Data
+== Week 32 - Marvel API Data
 :imagesdir: img
 
 On the weekend I was watching first few (very short) episodes of the https://www.marvel.com/tv-shows/i-am-groot/1[new Groot series^] with my daughter and thought we could revisit the Marvel Data API in our livestream.
@@ -11,8 +11,7 @@ If you rather watch the stream recording than reading the article, here you go:
 
 https://www.youtube.com/watch?v=5Yvv8rEW3jk
 
-If you want to see our past episodes, https://neo4j.com/video/discover-aura-free-with-fun-datasets/
-[check out the recordings^].
+If you want to see our past episodes, https://neo4j.com/video/discover-aura-free-with-fun-datasets/[check out the recordings^].
 
 We already had an https://vimeopro.com/neo4j/videos-2013/video/79399404?[awesome presentation of the Marvel Data Model^] and all it's complex challenges that required to treat it as a graph by Peter Olson (VP Web & App Dev at Marvel) presented at GraphConnect in 2013.
 

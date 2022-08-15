@@ -12,16 +12,17 @@ Choose the "blank database" option as we want to import our data ourselves.
 
 image::aura-create-free.png[]
 
-On the Credentials popup, make sure to save the password somewhere safe. 
+On the Credentials popup, make sure to save the password somewhere safe, best is to download the credentials file, which you can also use for your app development.
+
 The default username is always `neo4j`.
 
 image::aura-credentials.png[]
 
-Then wait 3-5 minutes for your instance to be created.
+Then wait 2-3 minutes for your instance to be created.
 
 Afterwards you can connect via the `Query` Button with Neo4j Browser (you'll need the password), or `Import` to Data Importer and `Explore` with Neo4j Bloom
 
-Then also the connection URL: `neo4j+s://xxx.databases.neo4j.io` is available and you can copy it to your credentials as you might need it later.
+Then also the connection URL: `neo4j+s://xxx.databases.neo4j.io` is available (it is also contained in your credentials env file).
 
 image::aura-browser.png[]
 

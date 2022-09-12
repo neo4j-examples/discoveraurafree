@@ -22,7 +22,7 @@ Then wait 2-3 minutes for your instance to be created.
 
 Afterwards you can connect via the `Query` Button with Neo4j Browser (you'll need the password), or `Import` to Data Importer and `Explore` with Neo4j Bloom
 
-Then also the connection URL: `neo4j+s://xxx.databases.neo4j.io` is available (it is also contained in your credentials env file).
+On the database tile you can also find the connection URL: `neo4j+s://xxx.databases.neo4j.io` (it is also contained in your credentials env file).
 
 image::aura-browser.png[]
 

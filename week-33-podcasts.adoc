@@ -1,0 +1,33 @@
+== Week 33 - Discover Aura Free - Podcasts from Player.FM
+
+youtube part 1: https://www.youtube.com/watch?v=mElVtSx1960
+youtube part 2: https://www.youtube.com/watch?v=Ck1zHMqu6M4
+
+https://player.fm/#
+
+https://99percentinvisible.org/episode/bleep/
+
+
+https://player.fm/series/99-invisible-1536616/what-roman-mars-can-learn-about-con-law-the-longest-week
+
+
+https://player.fm/series/the-naked-scientists-podcast-96514
+
+https://player.fm/campaigns/active.json
+
+
+https://player.fm/series/99-invisible.json
+
+html to parse out:
+https://player.fm/en/featured/architecture/episodes?active=true&limit=50&offset=0&order=newest&query=undefined&style=list&container=false
+
+data for architecture and in general csvs
+https://gist.github.com/jexp/5c37d7df05ae76a27207e7402520fe1f
+
+architecture.tsv raw: https://gist.githubusercontent.com/jexp/5c37d7df05ae76a27207e7402520fe1f/raw/architecture.tsv
+
+podcast-urls raw: https://gist.githubusercontent.com/jexp/5c37d7df05ae76a27207e7402520fe1f/raw/podcast-urls.txt
+
+
+https://player.fm/series/99-invisible.json?detail=full&episode_detail=full&episode_offset=0&episode_order=newest&episode_limit=1000&at=1618384123&experiment_detail=full
+

@@ -1,0 +1,76 @@
+== Week 34 - Discover Aura Free - Citations 
+:imagesdir: img
+
+Tweet OpenCitations
+https://twitter.com/cthoyt/status/1565972892642320386
+
+Download - Unfortunately Too Large
+http://opencitations.net/download#ccc
+
+Citation data (CSV)	ZIP	221.8 GB (34.81 GB zipped)
+
+Search https://opencitations.net/search?text=database&rule=any_text
+
+image::opencitations-search.png[]
+
+image::opencitations-single.png[]
+
+Health Ecco Paper:
+https://healthecco.org/
+
+
+Remembered Citations Network from Graph Algorithms Book
+
+https://www.oreilly.com/library/view/graph-algorithms/9781492047674/
+
+TODO book image:
+
+see also Link Prediction Data Science Guides
+
+https://neo4j.com/developer/graph-data-science/link-prediction/scikit-learn/
+
+image::https://neo4j.com/developer/graph-data-science/_images/citation-graph.png[]
+
+
+Import there is form DBLP JSON
+
+> In this guide, we’re going to use data from the DBLP Citation Network, which includes citation data from various academic sources. The full dataset is very large, but we’re going to use a subset that contains data from a few Software Development Conferences.
+
+https://neo4j.com/developer/graph-data-science/link-prediction/scikit-learn/#citation-graph
+
+https://github.com/neo4j-examples/link-prediction/blob/master/notebooks/01_DataLoading.ipynb
+
+Source: https://www.aminer.org/citation
+
+.Citation Network
+image::https://neo4j.com/developer/graph-data-science/_images/citation-graph-imported.svg[]
+
+.Co-Authors
+image::https://neo4j.com/developer/graph-data-science/_images/co-author-graph.svg[]
+
+== Nature Co-Cited Graphs
+
+Video: https://www.youtube.com/watch?v=GW4s58u8PZo
+
+Visualization: https://www.nature.com/immersive/d41586-019-03165-4/index.html
+
+image::citations-nature-visualization.png[]
+
+Data Download: https://www.nature.com/immersive/d41586-019-03165-4/dat/data.zip
+
+Gist For Loading via APOC: https://gist.github.com/jexp/54500b691a5f9a13e024b9a7aeaa3f5f
+
+Data Importer
+
+
+image::citations-nature-data-importer.png[]
+
+Explore 
+
+image::citations-nature-explore.png[]
+
+Query:
+
+image::citations-nature-query.png[]
+
+3d-force graph: https://github.com/jexp/neo4j-3d-force-graph

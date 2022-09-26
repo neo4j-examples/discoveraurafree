@@ -1,0 +1,278 @@
+{
+  "title": "NODES 2022",
+  "version": "2.1",
+  "settings": {
+    "pagenumber": 1,
+    "editable": true,
+    "fullscreenEnabled": true,
+    "parameters": {}
+  },
+  "pages": [
+    {
+      "title": "Main Page",
+      "reports": [
+        {
+          "x": 6,
+          "y": 0,
+          "title": "Topics",
+          "query": "MATCH (s:Session)-[:TOPIC]->(t:Topic)\nRETURN t.name as name, count(*) as c\nORDER BY name asc",
+          "width": 4,
+          "type": "bar",
+          "height": 2,
+          "selection": {
+            "index": "name",
+            "value": "c",
+            "key": "(none)"
+          },
+          "settings": {
+            "nodePositions": {}
+          }
+        },
+        {
+          "title": "Levels",
+          "query": "MATCH (s:Session)-[:LEVEL]->(t:Level)\nRETURN t.name as name, count(*) as c\nORDER BY name asc\n\n\n",
+          "width": 3,
+          "height": 2,
+          "x": 0,
+          "y": 0,
+          "type": "pie",
+          "selection": {
+            "index": "name",
+            "value": "c",
+            "key": "(none)"
+          },
+          "settings": {}
+        },
+        {
+          "title": "Use-Cases",
+          "query": "MATCH (s:Session)-[:TOPIC]->(t:Topic)\nRETURN t.name as name, count(*) as c\nORDER BY name asc\n\n\n",
+          "width": 3,
+          "height": 2,
+          "x": 3,
+          "y": 0,
+          "type": "bar",
+          "selection": {
+            "index": "name",
+            "value": "c",
+            "key": "(none)"
+          },
+          "settings": {}
+        },
+        {
+          "title": "Countries",
+          "query": "MATCH (s:Session)-[:TIMEZONE]->(t:Timezone)\nRETURN t.country as country, count(*) as c\nORDER BY c desc\n\n\n",
+          "width": 3,
+          "height": 2,
+          "x": 0,
+          "y": 4,
+          "type": "table",
+          "selection": {},
+          "settings": {}
+        },
+        {
+          "title": "Timezones",
+          "query": "MATCH (s:Speaker)-[:TIMEZONE]->(t:Timezone)\nWHERE t.tzLoc is not null\nRETURN t { label:\"Timezone\", id:id(t), .timezone, .tzLoc} as tz",
+          "width": 3,
+          "height": 2,
+          "x": 3,
+          "y": 2,
+          "type": "map",
+          "selection": {
+            "Timezone": "name"
+          },
+          "settings": {
+            "layerType": "heatmap",
+            "clusterMarkers": true,
+            "defaultNodeSize": "medium"
+          }
+        },
+        {
+          "title": "Speakers",
+          "query": "MATCH (sp:Speaker)\nRETURN sp.fullName, sp.tagLine, sp.company, size((sp)-[:PRESENTS]->()) as sessions\norder by sessions desc\n\n",
+          "width": 3,
+          "height": 2,
+          "x": 9,
+          "y": 2,
+          "type": "table",
+          "selection": {},
+          "settings": {}
+        },
+        {
+          "title": "Talks",
+          "query": "MATCH (s:Session)\nRETURn s.title, [(s)-[:LEVEL]->(l) |l.name] as levels, [(s)-[:TOPIC]->(l) |l.name] as topics\n\n",
+          "width": 3,
+          "height": 2,
+          "x": 6,
+          "y": 2,
+          "type": "table",
+          "selection": {},
+          "settings": {}
+        },
+        {
+          "title": "Submissions",
+          "query": "MATCH (n:Session)\nRETURN count(*)\n\n",
+          "width": 2,
+          "height": 1,
+          "x": 10,
+          "y": 0,
+          "type": "value",
+          "selection": {},
+          "settings": {}
+        },
+        {
+          "title": "Speakers",
+          "query": "MATCH (:Speaker)\nRETURN count(*)\n\n",
+          "width": 2,
+          "height": 1,
+          "x": 10,
+          "y": 1,
+          "type": "value",
+          "selection": {},
+          "settings": {}
+        },
+        {
+          "title": "Type",
+          "query": "MATCH (s:Session)-[:FORMAT]->(f:Format)\nRETURN f.name, count(*)\n\n",
+          "width": 3,
+          "height": 2,
+          "x": 0,
+          "y": 2,
+          "type": "pie",
+          "selection": {
+            "index": "f.name",
+            "value": "count(*)",
+            "key": "(none)"
+          },
+          "settings": {}
+        },
+        {
+          "title": "Timezones",
+          "query": "MATCH (t:Timezone)\nWITH t.offset as off, t.timezone as tz, count(*) as c\nWHERE c > 0\nWITH *\nORDER BY off ASC\nRETURN tz, c\n\n\n",
+          "width": 3,
+          "height": 2,
+          "x": 3,
+          "y": 4,
+          "type": "bar",
+          "selection": {
+            "index": "tz",
+            "value": "c",
+            "key": "(none)"
+          },
+          "settings": {}
+        }
+      ]
+    },
+    {
+      "title": "Discover NODES",
+      "reports": [
+        {
+          "title": "Session Count",
+          "query": "MATCH (:Session)\nRETURN count(*)\n\n\n",
+          "width": 2,
+          "height": 1,
+          "x": 0,
+          "y": 0,
+          "type": "value",
+          "selection": {},
+          "settings": {
+            "nodePositions": {}
+          }
+        },
+        {
+          "title": "Session Titles and Speakers",
+          "query": "MATCH (s:Session)<-[:PRESENTS]-(sp:Speaker)\nRETURn s.Title as session, collect(sp.FirstName + \" \" + sp.LastName) as speakers\n\n\n",
+          "width": 3,
+          "height": 2,
+          "x": 2,
+          "y": 0,
+          "type": "table",
+          "selection": {},
+          "settings": {
+            "nodePositions": {}
+          }
+        },
+        {
+          "title": "Topics",
+          "query": "MATCH (t:Topic)<-[:HAS_TOPIC]-(s:Session)\nRETURN t.name as name, count(*) as c\nORDER BY c DESC\n\n\n",
+          "width": 3,
+          "height": 2,
+          "x": 5,
+          "y": 0,
+          "type": "bar",
+          "selection": {
+            "index": "name",
+            "value": "c",
+            "key": "(none)"
+          },
+          "settings": {
+            "nodePositions": {}
+          }
+        },
+        {
+          "title": "Levels",
+          "query": "MATCH (s:Session)-[:OF_LEVEL]->(l:Level)\nRETURN l.name, count(*)\n\n",
+          "width": 3,
+          "height": 2,
+          "x": 8,
+          "y": 0,
+          "type": "pie",
+          "selection": {
+            "index": "l.name",
+            "value": "count(*)",
+            "key": "(none)"
+          },
+          "settings": {
+            "nodePositions": {}
+          }
+        },
+        {
+          "title": "Map of Speakers",
+          "query": "MATCH (sp:Speaker)\nWHERE sp.location is not null\nRETURN sp\n\n\n",
+          "width": 3,
+          "height": 2,
+          "x": 0,
+          "y": 2,
+          "type": "map",
+          "selection": {
+            "Speaker": "FirstName"
+          },
+          "settings": {
+            "nodePositions": {}
+          }
+        },
+        {
+          "title": "Description",
+          "query": "This is a Dashboard of the accepted NODES sessions.\n\n\n",
+          "width": 2,
+          "height": 1,
+          "x": 0,
+          "y": 1,
+          "type": "text",
+          "selection": {},
+          "settings": {
+            "nodePositions": {}
+          }
+        },
+        {
+          "title": "",
+          "query": "match p=()-->() return p limit 100",
+          "width": 3,
+          "height": 2,
+          "x": 3,
+          "y": 2,
+          "type": "graph",
+          "selection": {
+            "Session": "(label)",
+            "Topic": "name",
+            "UseCase": "name",
+            "Level": "name"
+          },
+          "settings": {
+            "nodePositions": {}
+          }
+        }
+      ]
+    }
+  ],
+  "parameters": {}
+}

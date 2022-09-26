@@ -1,0 +1,300 @@
+== Week 35 - Discover AuraDB Free - NODES Sessions
+:imagesdir: img
+:db-name: Nodes Sessions
+
+We're really excited and looking forward to our annual online developer conference NODES 2022 on Nov 16/17.
+
+The event will run around the Globe with talks in all timezones.
+
+You can https://neo4j.com/nodes-2022[save your spot now^], by registering to be early for some of the cool goodies that are coming your way.
+
+image::nodes-promo.png[link=https://neo4j.com/nodes-2022]
+
+We ran our Call for Papers in August and got 150 really great submissions by 130 speakers.
+
+We selected 90 for the event, which was really not easy. 
+Some of the sessions that didn't make it for the conference will be run in later live streams.
+
+Today, let's look at the NODES data model and import the data for sessions and speakers into Neo4j from CSV.
+
+If you rather want to watch the video of the live stream, here you go:
+
+https://www.youtube.com/watch?v=NYYRmLmlO2M
+
+Next time we'll import the data from a REST API, look at the schedule and session recommendations.
+
+Let's start by creating and connecting to our AuraDB Free instance.
+
+If you want to try out the *Workspace Beta* too and provide feedback, please go to https://neo4j.com/product/workspace and sign up. 
+
+include::connect-aura.adoc[]
+
+=== Source Data from Sessionize
+
+Sessionize offers both an JSON REST API to fetch the data as well as export as CSV/XLS.
+
+We saved the CSV for sessions and speakers locally and can use it with Data Importer in Workspace.
+
+image::nodes-sessionize-export-csv.png[]
+
+The fields in our Session CSV are
+
+* Session Id
+* Title
+* Description
+* Speakers
+* Session format
+* Level
+* Pre-requisites for attendees?
+* Topic of your presentation
+* Neo4j Use-Case
+* Your Timezone
+* Status
+* Date Submitted
+* Speaker Ids
+
+The fields for our Speakers:
+
+* Speaker Id
+* FirstName
+* LastName
+* TagLine
+* Bio
+* timezone
+* City
+* Country
+* Ninja
+* LinkedIn
+* Blog
+* Twitter
+* Company Website
+* Profile Picture
+
+// https://docs.google.com/spreadsheets/d/11lXuDfrgBPY9_nmmZjZ1zv0bDK0ZiKr941_mJc37yV0/edit#gid=660067223
+
+=== Data Modeling and Import
+
+TL;DR if you want to shortcut the modeling you can grab the `nodes-sessions-data-importer-2022-09-26.zip` File from the https://github.com/neo4j-examples/discoveraurafree/tree/main/data[GitHub repository^] and load it via the "Open model (with data)" menu entry in the three dots `...`.
+
+If we open Workspace on our blank database (or Data Importer directly) we can add our CSV files on the left side.
+
+image::nodes-data-importer.png[]
+
+Then we start mapping our data by 
+
+1. adding the session node
+2. setting it's label to Session
+3. selecting the sessions csv in the mapping view
+4. and adding all relevant fields to the mapping from the file
+5. the `Session Id` is automatically selected as id field
+
+Then we do the same for the `Speaker` node just with the speaker's CSV.
+
+To connect both, we drag out a relationship from speaker to session from the speaker node's halo.
+
+Give it the name `PRESENTS` and use the fields `Session Id` and `Speaker Ids` for the mapping.
+
+Unfortunately the comma separated Speaker Ids are not handled by data importer yet, so this will only connect sessions which have a single speaker.
+
+But fear not, we will connect the rest with a bit of post-processing.
+
+In _Preview_ we see how our data will look like in the graph both the properties as well as relationships.
+
+image::nodes-data-importer-preview.png[]
+
+If we're satisfied, we can click "Run Import" and it will take roughly a second to import the data.
+
+If you click on the `Show query` links in the import report you'll see the constraints and import query that data importer is running.
+
+There you also see that for the relationships it tries to match the existing nodes for session and speaker based on `Sessiond Id` and `Speaker Ids` to connect them, which only works if there's a single speaker for a session.
+
+After running the importer we can open the "Query" tab by htting "Run Queries". 
+
+Or just click on it on top.
+
+== Querying
+
+A single pre-populated query shows us our graph, which should look very similar to the preview.
+
+[source,cypher]
+----
+MATCH p=()-[:PRESENTS]->() RETURN p LIMIT 25;
+----
+
+We can also look for Speakers that have more than one session, like Anton, but not yet for sessions with more than one speaker.
+
+Let's first find sessions that have no speakers yet.
+
+[source,cypher]
+----
+match (s:Session) where not exists { (s)<-[:PRESENTS]-() } 
+return s.`Session Id` as session, s.`Speaker Ids` as speakers
+----
+
+These are the ones we want to fix in our post-processing.
+
+== Post Processing
+
+The approach we take for all these operations is the same.
+
+Find the sessions to update, split a field by comma+space `, ` into a list of values.
+
+Then turn (`UNWIND`) this list of values into rows of values, `MATCH` or `MERGE` (get-or-create) nodes for the values and connect the session to them via a relationship.
+
+
+.List of speaker ids
+[source,cypher]
+----
+MATCH (s:Session) WHERE NOT EXISTS { (s)<-[:PRESENTS]-() } 
+RETURN s.`Session Id` as session, split(s.`Speaker Ids`,', ') as speakers
+----
+
+.List to rows
+[source,cypher]
+----
+MATCH (s:Session) WHERE NOT EXISTS { (s)<-[:PRESENTS]-() } 
+WITH s, split(s.`Speaker Ids`,', ') as speakers
+UNWIND speakers as speakerId
+RETURN s.`Session Id` as session, speakerId
+----
+
+.MATCH speakers and connect them
+[source,cypher]
+----
+MATCH (s:Session) WHERE NOT EXISTS { (s)<-[:PRESENTS]-() } 
+WITH  s, split(s.`Speaker Ids`,', ') as speakers
+UNWIND speakers as speakerId
+MATCH (sp:Speaker {`Speaker Id`:speakerId})
+MERGE (sp)-[r:PRESENTS]->(s)
+RETURN *
+----
+
+We can now do the same for the other comma separated fields.
+
+* Level
+* Topic
+* Neo4j Usecase
+
+Here we generally call the list `names`, an value `name` and the node `n` so keep the editing needed to a minimum.
+
+.Level
+[source,cypher]
+----
+MATCH (s:Session) 
+WITH  s, split(s.Level,', ') as names
+UNWIND names as name
+MERGE (n:Level {name:name})
+MERGE (s)-[r:OF_LEVEL]->(n)
+RETURN *
+----
+
+.Use Cases
+[source,cypher]
+----
+MATCH (s:Session) 
+WITH  s, split(s.`Neo4j Use-Case`,', ') as names
+UNWIND names as name
+MERGE (n:UseCase {name:name})
+MERGE (s)-[r:USECASE]->(n)
+RETURN *
+----
+
+.Topics
+[source,cypher]
+----
+match (s:Session) 
+WITH  s, split(s.`Topic of your presentation`,', ') as names
+UNWIND names as name
+MERGE (n:Topic {name:name})
+MERGE (s)-[r:HAS_TOPIC]->(n)
+RETURN *
+----
+
+Now we have a beautiful graph with different nodes for
+
+* Session
+* Speaker
+* Level
+* Topic
+* UseCase
+
+and their relationships.
+
+=== Exploring the Results
+
+We can open "Explore" to visualize our data a bit.
+
+First we set the correct captions for `Session` (`Title`) and `Speaker` (`FirstName` and `LastName`) as well as some icons.
+
+Then we can pic `Show me A Graph` from the drop down to quickly show a graph and explore a bit.
+
+image::nodes-explore-show-graph.png[]
+
+Then we can use our extracted topics and see which Sessions share topics by entering: `Session<tab>Topic<tab>Session<tab>` into the search bar and hitting return.
+
+image::nodes-explore-session.png[]
+
+=== Dashboard
+
+We're using https://neo4j.com/labs/neodash/[NeoDash, a Neo4j Labs project^] for creating quick dashboards.
+
+You can open it via https://tools.neo4jlabs.com and add your connection URL (from the aura console or your credentials download) to the form and click on the Open button for NeoDash.
+
+You still need to provide the password, for security reasons it shouldn't be passed through the URL.
+
+In the video we go through the charts and queries for the dashboar, we'll list them quickly here only.
+
+[%autowidth,opts=headers,cols="a,a,m"]
+|===
+| Item | Chart Type | Query
+| Sessions | Number | MATCH (:Session) RETURN count(*)
+| Description | Markdown | This is a dashboard for Neo4j NODES 2022
+| Titles | Table | MATCH (s:Session)<-[:PRESENTS]-(sp:Speaker) RETURn s.title as session, collect(sp.FirstName+" "+sp.LastName) as speakers
+| Topics | Bar Chart | MATCH (t:Topic)<-[:HAS_TOPIC]-(s:Session)
+RETURN t.name as name, count(*) as c
+ORDER BY c DESC
+| Levels | Pie Chart | MATCH (s:Session)-[:OF_LEVEL]->(l:Level)
+RETURN l.name, count(*)
+| Graph | Graph | MATCH p=()-->() RETURN p LIMIT 100
+| Speaker Locations | Map | MATCH (sp:Speaker)
+WHERE sp.location is not null
+RETURN sp
+|===
+
+image::nodes-dashboard.png[]
+
+For the speaker locations we first have to compute the geolocation from their city and country.
+
+=== Add geolocation for Speaker Cities
+
+Let's check it for a single speaker, we need to see if the city is actually empty or has some characters.
+
+Then we can call https://neo4j.com/labs/apoc/4.3/overview/apoc.spatial/apoc.spatial.geocodeOnce/[`apoc.spatial.geocodeOnce`^] to geocode the city and country and look at the results.
+
+[source,cypher]
+----
+match (sp:Speaker) 
+where size(sp.City) > 1
+with sp limit 1
+call apoc.spatial.geocodeOnce(sp.City+" "+sp.Country) yield location, data, latitude, longitude
+return *
+----
+
+We can use the `latitude` and `longitude` from the result directly to create spatial point `location` properties in our speakers. 
+
+[source,cypher]
+----
+match (sp:Speaker) 
+where size(sp.City) > 1
+call apoc.spatial.geocodeOnce(sp.City+" "+sp.Country) yield location, data, latitude, longitude
+set sp.location = point({latitude:latitude, longitude:longitude})
+----
+
+Which we then can put on a Map-Chart in the Dashboar by just selecting the speakers that have a location property.
+
+
+== Conclusion
+
+We hope this was a fun and useful sessions and you got excited for https://neo4j.com/nodes-2022[NODES 2022^].
+
+Stay tuned for the next time when we look at importing REST APIs, Schedule Modeling and computing recommendations.

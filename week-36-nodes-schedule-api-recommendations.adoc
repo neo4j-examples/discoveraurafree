@@ -1,0 +1,11 @@
+=== REST API Import & Recommendations
+
+URI
+
+https://sessionize.com/api/v2/9jmqg4no/view/Sessions
+
+https://sessionize.com/api/v2/9jmqg4no/view/Speakers
+
+scripts for loading
+
+https://gist.github.com/jexp/f20ff11f4da9278ddf741a1258e04154

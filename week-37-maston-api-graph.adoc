@@ -1,0 +1,13 @@
+== Week 37 - Discover Aura Free - Maston as a Graph
+:imagesdir: img
+
+Twitter has been one of our favorite social networks to model, import and query, because it is a rich, multi-layered social graph with followship, posts, replies, mentions, hashtags, URLs and more.
+
+The Twitter API is although limited, very rich in data and you can easily turn it into an insightful graph as we did, e.g. for [Twitter Trolls^], or the [Community Graph^]
+
+With the exodus from Twitter, Mastodon and the Fediverse became much more interesting for a lot of people.
+Also the underlying ActivityPub API and infrastructure that powers much more than just Mastodon got more attention.
+
+
+
+You can see and join our upcoming livestreams on Twitch, YouTube and https://neo4j.com/events/list/?tribe_eventcategory%5B0%5D=26929[elsewhere here^] and watch all the https://neo4j.com/video/discover-aura-free-with-fun-datasets/[Discover AuraDB Free Videos^].

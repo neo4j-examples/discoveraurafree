@@ -1,19 +1,36 @@
-MATCH ()<--(n:Host)-->() RETURN n LIMIT 25;
-
-MATCH (n:Host) RETURN n LIMIT 25;
-
 MATCH path=(n:Tag)<--(p:Podcast)-->(m:Tag) 
+WHERE id(n)>id(m)
 RETURN n.name, m.name, count(*) as freq
 order by freq desc 
-LIMIT 25;
+LIMIT 10;
 
-MATCH path=(n:Tag)<--(p:Podcast) RETURN path LIMIT 25;
+╒══════════════════════════╤══════════════════════╤══════╕
+│"n.name"                  │"m.name"              │"freq"│
+╞══════════════════════════╪══════════════════════╪══════╡
+│"History"                 │"Society"             │322   │
+├──────────────────────────┼──────────────────────┼──────┤
+│"Society"                 │"Arts"                │241   │
+├──────────────────────────┼──────────────────────┼──────┤
+│"Self-Improvement"        │"Podcasting Education"│239   │
+├──────────────────────────┼──────────────────────┼──────┤
+│"Society"                 │"Podcasting Education"│227   │
+├──────────────────────────┼──────────────────────┼──────┤
+│"Business"                │"Podcasting Education"│211   │
+├──────────────────────────┼──────────────────────┼──────┤
+│"News"                    │"Society"             │203   │
+├──────────────────────────┼──────────────────────┼──────┤
+│"Binge-Worthy Documentary"│"Society"             │188   │
+├──────────────────────────┼──────────────────────┼──────┤
+│"Graphic Design"          │"Arts"                │185   │
+├──────────────────────────┼──────────────────────┼──────┤
+│"Storytelling"            │"True Crime"          │177   │
+├──────────────────────────┼──────────────────────┼──────┤
+│"Entrepreneur"            │"Business"            │176   │
+└──────────────────────────┴──────────────────────┴──────┘
 
 MATCH path=(n:Tag)-->(p:Podcast) RETURN path LIMIT 25;
 
-MATCH (n:Tag) RETURN n LIMIT 25;
 
-MATCH (n:Podcast) RETURN n LIMIT 25;
 
 :auto match (p:Podcast) 
 call { with p

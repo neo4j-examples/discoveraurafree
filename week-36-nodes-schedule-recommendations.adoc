@@ -1,0 +1,43 @@
+match (:Slot {`Scheduled At`:datetime("2022-11-17T08:30:00Z")})-[:NEXT*0..5]->(slot2)<-[:IN_SLOT]-(s:Session)-[:HAS_TOPIC]->(t:Topic) WHERE t.name IN ['Graph Data Science','Cypher'] return slot2.`Scheduled At`, s.Title
+
+match (a:Attendee {id:1})
+call { with a match (a)-[:STARRED]->()-[:IN_SLOT]->(slot) return collect(distinct slot) as slots }
+match (a)-[:STARRED]->(s)<-[:STARRED]-(peers)-[:STARRED]->(reco)
+where not exists { (a)-[:STARRED]->(reco) } and none(slot in slots where (reco)-[:IN_SLOT]->(slot))
+return reco.Title, count(*) as freq
+order by freq desc limit 5
+
+unwind range(1,1000) as id
+merge (a:Attendee {id:id})
+with *
+unwind range(1,8) as dummy
+call { with a
+  match (s:Session) 
+  with a, collect(s) as sessions
+  with a, sessions[toInteger(rand()*size(sessions))] as s
+  merge (a)-[:STARRED]->(s)
+}
+
+match (s:Session {Title:"CloudScreen: A Graph-Based Drug Repurposing Platform Empowered by Machine Learning"})
+match (reco:Session)--(x)--(s)
+where not x:Room and not x:Slot
+with reco, count(*) as count, labels(x)[0] as type, x.name as name
+RETURN reco.Title, collect([type, name, count]) as overlap, sum(count) as freq
+order by freq desc limit 5
+
+bloom scene action
+
+match (s:Session) where id(s) in $nodes
+call { with s 
+match p=(reco:Session)--(x)--(s)
+where not x:Room and not x:Slot
+return reco, collect(p) as slots, count(*) as freq
+order by freq desc limit 5
+} 
+return *
+
+
+match (s:Session) where id(s) in $nodes
+match p=(reco:Session)--(x)--(s)
+where not x:Room and not x:Slot
+return reco, collect(p) as slots, count(*) as freq

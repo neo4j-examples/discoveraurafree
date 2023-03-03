@@ -1,0 +1,158 @@
+== Week 39 - Discover Aura Free - Nobel Prize
+:imagesdir: img
+
+As the Nobel Prizes in Physics, Chemistry, Medicine, Literature and the Nobel Peace Prize were awarded in the last weeks, we thought that this is a nice dataset to import and query as a graph as there are a few dimensions to it.
+And you can use it to create a knowledge graph if you also connect it to papers, authors, publications and research data.
+
+If you missed our livestream, here is the recording:
+
+https://www.youtube.com/watch?v=gMYu6OaGUOc&list=PL9Hl4pk2FsvVZaoIpfsfpdzEXxyUJlAYw&index=1
+
+// https://youtu.be/gMYu6OaGUOc
+
+
+First I found a https://www.kaggle.com/datasets/imdevskp/nobel-prize?resource=download[Kaggle Dataset^] with some CSV and JSON data, but that ended in 2019, fortunately I spotted a link to the original data source with API links to https://nobelprize.org.
+
+image::https://www.nobelprize.org/images/58219-hero-tablet-2x.jpg[link=https://www.nobelprize.org/all-nobel-prizes-2022/]
+
+So I went there, looked at https://www.nobelprize.org/all-nobel-prizes-2022/[this year's Prizes^] and some https://www.nobelprize.org/prizes/facts/nobel-prize-facts/[Lesser Known Facts^], which we can also use for our queries:
+
+* people that got more than one prize awareded
+* age of laureates
+* most common affiliations with institutions and their impact
+* breakdown by country
+* years without awards
+* sadly the low percentage (10%) of non-white-male recipients of Nobel Prizes
+
+=== Data Source
+In the footer of the page there actually a link to a https://www.nobelprize.org/about/developer-zone-2/[developer page^], which is great.
+
+They have a new v2.1 REST API with an https://app.swaggerhub.com/apis/NobelMedia/NobelMasterData/2.1[OpenAPI specification^], so you can grab prizes (664) and laureates (981) with a lot of detail and pagination.
+The developer page also links to a Linked Data (RDF) API with a SPARQL endpoint.
+
+There is also an https://nobelprize.readme.io/reference/getting-started[older v1 API^] which provides both JSON and CSV outputs based on the same data (I checked the id's), that's also what the code-example on the developer page talks about.
+
+To make it easy to start I just used the option of getting the v1 API responses as CSV for prizes and laureates.
+
+We can later add to the data in the graph by querying select parts of the data as JSON from the new v2 API and merge them into our graph.
+
+=== Data Model
+
+We developed the data model incrementally based on the data in the CSV, our understanding and the questions we wanted to ask.
+
+image::nobel-prize-model.png[]
+
+So we got as nodes:
+
+* Prize (Nobel Prize)
+* Person who received the Prize
+* Year for the Prize
+* Category for the Prize
+* Institution the person is affiliated with
+* Country for birth, death of the Person and the Institution
+
+
+:db-name: Nobel Prize
+
+include::connect-aura.adoc[]
+
+=== Data Import
+
+Unfortunately the prize itself has no real unique id, in places where they refer to it they use a combination of category and year.
+
+So I used `xsv select 1-8,category,year prize.csv > prize2.csv` to duplicate the two columns at the end.
+And then ran a regular expression replacement in VS Code to replace the comma between last two elements with a dash, so this is now our id column, called `categoryYear` with entries like `chemistry-2022`.
+
+The other bit that we had to fix was to replace dates like `0000-00-00` with nothing in the laureates CSV (i.e. a `null` value) and also replace the `-00-00` suffix from some dates with nothing as well, so that just the year remained (but the column can still be imported as datetime) as Cypher's date functions don't like the zero value months and days.
+
+Then we mapped out the different fields to nodes and relationships - thankfully data importer often pre-filled the mapping for us for the relationships and ids.
+
+One particular aspect where we changed the mapping in the model was to extract 3 `Country` meta-nodes to represent the countries coming from the 3 different sources (born, died, institution) and create the right entries and relationships, each of those 3 country mappings has the same property name that the different source column names are mapped to.
+
+image::nobel-prize-data-importer.png[]
+
+After finishing the mapping we could run the preview, see that we mapped our data correctly and then click "Import".
+
+image::nobel-prize-data-importer-preview.png[]
+
+=== Explore
+
+After import we're sent directly to the Explore tab which gives us an initial view of our data _"Show me a graph"_, we can now style our data picking right captions and icons in the right side legend.
+
+image::nobel-prize-explore-show-graph.png[]
+
+We can also explore our data starting from a node, here `Harvard Medical School` and thene expanding the pattern to people, their prizes and years.
+After getting the results we can select all (`Cmd+A/Ctrl-A`) and chose "Expand All" from the context menu, so we get a more complete picture of the context of that institution.
+
+image::nobel-prize-explore-harvard-medical.png[]
+
+=== Query
+
+To answer some of the initial questions from the facts section, we moved to the "Query" tab.
+
+First looking at Laureates with more than one prize, we can express that as a pattern, of people having received two prizes.
+
+Most that show up here are organizations, it gets interesting when looking at people who got prizes in different categories with a `WHERE p1.category <> p2.category`, which are actually just two "Marie Curie" and "Linus Pauling".
+
+[source,cypher]
+----
+match (p1:Prize)<-[:RECEIVED]-(p)-[:RECEIVED]->(p2:Prize)
+where id(p1)<id(p2)
+return p1.category, p1.year, p.firstname + p.surname as name, p2.category, p2.year
+order by p1.category asc
+----
+
+image::nobel-prize-query-multiple-prizes.png[]
+
+Alternatively you can also query for the base pattern and then aggregate per person on how many and which prizes they got and filter for ones that had more than one.
+
+[source,cypher]
+----
+match (p:Person)-[:RECEIVED]->(pr:Prize)
+with p, collect(pr) as prizes
+where size(prizes) > 1
+return p.surname, p.firstname, size(prizes) as count, 
+       [pr in prizes | pr {.category, .year}] as prizes
+----
+
+Affiliations with instituations have a big impact on the nobel prize, as you can see in the following query, with institutions from the US being overindexed.
+
+[source,cypher]
+----
+match (i:Institution)<-[:AFFILIATED_WITH]-()-[:RECEIVED]->(pr:Prize)
+return i.name, i.country, i.city, count(*) as count order by count desc limit 20
+----
+
+image::nobel-prize-query-institutions.png[]
+
+To compute the age, we turn the year of the prize into a date (`date({year:prize.year})`) and the born and died datetimes from the data importer into dates (`date(p.born)`), then we can compute the age difference by using `duration.beetween(date1, date2).years` and sort accordingly.
+
+[source,cypher]
+----
+match (p:Person)-[:RECEIVED]->(pr:Prize)
+return p.firstname, p.surname, p.born, pr.year, duration.between(p.born, pr.year).years as years 
+order by years asc
+limit 10
+----
+
+image::nobel-prize-query-youngest.png[]
+
+=== Nominations
+
+There is also https://www.nobelprize.org/nomination/archive/[data on nominations^] available, actually quite a lot with 20424 nomiations.
+
+Unfortunately you cannot access it through the API just through a crude PHP search interface with HTML output.
+
+So to get that data you'd have to scrape it from the web.
+
+There is also a https://www.nobelprize.org/nomination/map1/nominees.php[visualization page^] available, perhaps that's an easier way to get to the data. (It seems it is via https://www.nobelprize.org/nomination/api/getNomineesInfo.php[this URL^] which returns JSON).
+
+We also learned that nomination data is kept secret for 50 years, so the latest data available is by 1971.
+Probably to keep feuds, bribery and similar research vengeance until after the laureates and nominators are dead.
+
+=== Conclusion
+
+As mentioned in the introduction this dataset can be nicely combined with citation datasets and perhaps research grants and projects in general.
+So you could see how influence of nobel laureates spreads over the research networks and which institutions are perhaps more privileged than others.
+
+Definitely a good starting point for a research knowledge graph, let us know in the comments if you have more ideas or found this useful.

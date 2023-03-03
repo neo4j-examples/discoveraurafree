@@ -1,0 +1,30 @@
+with date() - duration("P1D") as date
+match (start:City {name:"Berlin"}) 
+match (c:City)
+where point.distance(c.location, start.location) < 1000000
+WITH date, c skip 5 limit 1
+call apoc.load.json("https://api.brightsky.dev/weather?date="+toString(date)+"&lat="+c.latitude+"&lon="+c.longitude,null, {failOnError:false}) yield value
+with c, value.weather[0] as w, value.sources as stations
+foreach (s in stations | MERGE (stat:Station {id:s.id}) ON CREATE SET stat.name = s.station_name)
+MERGE (c)-[:WEATHER]->(d:Day {date:date(datetime(w.timestamp))})
+ON CREATE SET d += w {.pressure_msl, .visibility, .icon, .wind_direction, .precipitation, .condition, .temperature, .wind_speed, .wind_direction, .cloud_cover}
+WITH * 
+MATCH (s:Station {id:w.source_id})
+MERGE (s)-[:MEASURED]->(d);
+
+
+match (d:Day)
+where not d.condition is null
+merge (c:Condition {name:d.condition})
+merge (d)-[:HAS]->(c);
+
+match (c:City) set c.location = point(properties(c))
+
+create point index city_location for (c:City) on (c.location)
+
+
+match (c:City {name:"Berlin"}) 
+match (c2:City)
+where point.distance(c.location, c2.location) < 1000000
+return c2
+

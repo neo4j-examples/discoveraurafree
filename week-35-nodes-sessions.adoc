@@ -169,6 +169,18 @@ MERGE (sp)-[r:PRESENTS]->(s)
 RETURN *
 ----
 
+As sessionize exported all speakers not just the ones with the accepted sessions, we now how to remove our orphans.
+
+.Delete orphan speakers
+[source,cypher]
+----
+MATCH (sp:Speaker) 
+WHERE NOT EXISTS { (sp)-[:PRESENTS]->() }
+DELETE sp
+----
+
+=== Categorize other fields
+
 We can now do the same for the other comma separated fields.
 
 * Level
@@ -244,12 +256,12 @@ You still need to provide the password, for security reasons it shouldn't be pas
 
 In the video we go through the charts and queries for the dashboar, we'll list them quickly here only.
 
-[%autowidth,opts=headers,cols="a,a,m"]
+[opts=header,cols="a,a,5m"]
 |===
 | Item | Chart Type | Query
 | Sessions | Number | MATCH (:Session) RETURN count(*)
 | Description | Markdown | This is a dashboard for Neo4j NODES 2022
-| Titles | Table | MATCH (s:Session)<-[:PRESENTS]-(sp:Speaker) RETURn s.title as session, collect(sp.FirstName+" "+sp.LastName) as speakers
+| Titles | Table | MATCH (s:Session)<-[:PRESENTS]-(sp:Speaker) RETURN s.title as session, collect(sp.FirstName+" "+sp.LastName) as speakers
 | Topics | Bar Chart | MATCH (t:Topic)<-[:HAS_TOPIC]-(s:Session)
 RETURN t.name as name, count(*) as c
 ORDER BY c DESC

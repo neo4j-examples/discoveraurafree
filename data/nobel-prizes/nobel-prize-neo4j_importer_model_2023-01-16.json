@@ -1,0 +1,821 @@
+{
+  "version": "0.8.0",
+  "graph": {
+    "nodes": [
+      {
+        "id": "n0",
+        "position": {
+          "x": -115,
+          "y": 0
+        },
+        "caption": "Prize"
+      },
+      {
+        "id": "n1",
+        "position": {
+          "x": 216.5188450168921,
+          "y": 0
+        },
+        "caption": "Person"
+      },
+      {
+        "id": "n2",
+        "position": {
+          "x": 81.8075380067568,
+          "y": -200.5
+        },
+        "caption": "Category"
+      },
+      {
+        "id": "n3",
+        "position": {
+          "x": -161.1924619932432,
+          "y": -200.5
+        },
+        "caption": "Year"
+      },
+      {
+        "id": "n4",
+        "position": {
+          "x": 464.81088958659427,
+          "y": -200.5
+        },
+        "caption": "Country"
+      },
+      {
+        "id": "n5",
+        "position": {
+          "x": 216.5188450168921,
+          "y": -200.5
+        },
+        "caption": "Institution"
+      },
+      {
+        "id": "n6",
+        "position": {
+          "x": 464.81088958659427,
+          "y": 0
+        },
+        "caption": "Country"
+      },
+      {
+        "id": "n7",
+        "position": {
+          "x": 464.81088958659427,
+          "y": 169.67691836448367
+        },
+        "caption": "Country"
+      }
+    ],
+    "relationships": [
+      {
+        "id": "n0",
+        "type": "RECEIVED",
+        "fromId": "n1",
+        "toId": "n0"
+      },
+      {
+        "id": "n1",
+        "type": "IN_CATEGORY",
+        "fromId": "n0",
+        "toId": "n2"
+      },
+      {
+        "id": "n2",
+        "type": "IN_YEAR",
+        "fromId": "n0",
+        "toId": "n3"
+      },
+      {
+        "id": "n5",
+        "type": "AFFILIATED_WITH",
+        "fromId": "n1",
+        "toId": "n5"
+      },
+      {
+        "id": "n6",
+        "type": "IN_COUNTRY",
+        "fromId": "n5",
+        "toId": "n4"
+      },
+      {
+        "id": "n7",
+        "type": "BORN_IN",
+        "fromId": "n1",
+        "toId": "n6"
+      },
+      {
+        "id": "n8",
+        "type": "DIED_IN",
+        "fromId": "n1",
+        "toId": "n7"
+      }
+    ]
+  },
+  "dataModel": {
+    "configurations": {
+      "idsToIgnore": []
+    },
+    "fileModel": {
+      "fileSchemas": {
+        "prize2.csv": {
+          "expanded": true,
+          "fields": [
+            {
+              "name": "year",
+              "type": "integer",
+              "sample": "2022",
+              "include": true
+            },
+            {
+              "name": "category",
+              "type": "string",
+              "sample": "chemistry",
+              "include": true
+            },
+            {
+              "name": "overallMotivation",
+              "type": "string",
+              "sample": "",
+              "include": true
+            },
+            {
+              "name": "id",
+              "type": "integer",
+              "sample": "1015",
+              "include": true
+            },
+            {
+              "name": "firstname",
+              "type": "string",
+              "sample": "Carolyn",
+              "include": true
+            },
+            {
+              "name": "surname",
+              "type": "string",
+              "sample": "Bertozzi",
+              "include": true
+            },
+            {
+              "name": "motivation",
+              "type": "string",
+              "sample": "\"for the development of click chemistry and bioorthogonal chemistry\"",
+              "include": true
+            },
+            {
+              "name": "share",
+              "type": "integer",
+              "sample": "3",
+              "include": true
+            },
+            {
+              "name": "categoryYear",
+              "type": "string",
+              "sample": "chemistry-2022",
+              "include": true
+            }
+          ]
+        },
+        "laureate.csv": {
+          "expanded": true,
+          "fields": [
+            {
+              "name": "id",
+              "type": "integer",
+              "sample": "1",
+              "include": true
+            },
+            {
+              "name": "firstname",
+              "type": "string",
+              "sample": "Wilhelm Conrad",
+              "include": true
+            },
+            {
+              "name": "surname",
+              "type": "string",
+              "sample": "Röntgen",
+              "include": true
+            },
+            {
+              "name": "born",
+              "type": "datetime",
+              "sample": "1845-03-27",
+              "include": true
+            },
+            {
+              "name": "died",
+              "type": "datetime",
+              "sample": "1923-02-10",
+              "include": true
+            },
+            {
+              "name": "bornCountry",
+              "type": "string",
+              "sample": "Prussia (now Germany)",
+              "include": true
+            },
+            {
+              "name": "bornCountryCode",
+              "type": "string",
+              "sample": "DE",
+              "include": true
+            },
+            {
+              "name": "bornCity",
+              "type": "string",
+              "sample": "Lennep (now Remscheid)",
+              "include": true
+            },
+            {
+              "name": "diedCountry",
+              "type": "string",
+              "sample": "Germany",
+              "include": true
+            },
+            {
+              "name": "diedCountryCode",
+              "type": "string",
+              "sample": "DE",
+              "include": true
+            },
+            {
+              "name": "diedCity",
+              "type": "string",
+              "sample": "Munich",
+              "include": true
+            },
+            {
+              "name": "gender",
+              "type": "string",
+              "sample": "male",
+              "include": true
+            },
+            {
+              "name": "year",
+              "type": "integer",
+              "sample": "1901",
+              "include": true
+            },
+            {
+              "name": "category",
+              "type": "string",
+              "sample": "physics",
+              "include": true
+            },
+            {
+              "name": "overallMotivation",
+              "type": "string",
+              "sample": "",
+              "include": true
+            },
+            {
+              "name": "share",
+              "type": "integer",
+              "sample": "1",
+              "include": true
+            },
+            {
+              "name": "motivation",
+              "type": "string",
+              "sample": "\"in recognition of the extraordinary services he has rendered by the discovery of the remarkable rays subsequently named after him\"",
+              "include": true
+            },
+            {
+              "name": "name",
+              "type": "string",
+              "sample": "Munich University",
+              "include": true
+            },
+            {
+              "name": "city",
+              "type": "string",
+              "sample": "Munich",
+              "include": true
+            },
+            {
+              "name": "country",
+              "type": "string",
+              "sample": "Germany",
+              "include": true
+            }
+          ]
+        }
+      }
+    },
+    "graphModel": {
+      "nodeSchemas": {
+        "n0": {
+          "label": "Prize",
+          "additionLabels": [],
+          "labelProperties": [],
+          "properties": [
+            {
+              "property": "year",
+              "type": "integer",
+              "identifier": "2NUaCYcuxE0_q9foQiJRM"
+            },
+            {
+              "property": "category",
+              "type": "string",
+              "identifier": "q2CKBhDzNPbIp8dBGKnzd"
+            },
+            {
+              "property": "overallMotivation",
+              "type": "string",
+              "identifier": "Rld7XfbHi2T-5dHXKGg_1"
+            },
+            {
+              "property": "motivation",
+              "type": "string",
+              "identifier": "0bm4cNHPjmUjegsXCJmP-"
+            },
+            {
+              "property": "categoryYear",
+              "type": "string",
+              "identifier": "1nJX-bSYFDQY_qlG7XCZO"
+            }
+          ],
+          "key": {
+            "properties": [
+              "1nJX-bSYFDQY_qlG7XCZO"
+            ]
+          }
+        },
+        "n1": {
+          "label": "Person",
+          "additionLabels": [],
+          "labelProperties": [],
+          "properties": [
+            {
+              "property": "id",
+              "type": "integer",
+              "identifier": "vQheiy2YV8XVdHp-W7cjx"
+            },
+            {
+              "property": "firstname",
+              "type": "string",
+              "identifier": "Blgzc-ZTJjz0zPxr9ljT1"
+            },
+            {
+              "property": "surname",
+              "type": "string",
+              "identifier": "mqJWmcNBmIA9ahxo5GnwI"
+            },
+            {
+              "property": "born",
+              "type": "datetime",
+              "identifier": "_s-glr-uMzmOjKoFPrIPv"
+            },
+            {
+              "property": "died",
+              "type": "datetime",
+              "identifier": "cDxp6Ng14fjL0eZpC96Ag"
+            },
+            {
+              "property": "bornCountry",
+              "type": "string",
+              "identifier": "okbCuxIP_nSmbknA5AXG4"
+            },
+            {
+              "property": "bornCountryCode",
+              "type": "string",
+              "identifier": "8C-N2jpKYDwkmsiOVuzHs"
+            },
+            {
+              "property": "bornCity",
+              "type": "string",
+              "identifier": "n76p4SyQWqWUjPsTJDzur"
+            },
+            {
+              "property": "diedCountry",
+              "type": "string",
+              "identifier": "O8kFi7t2pIqb5KmTZ4pGJ"
+            },
+            {
+              "property": "diedCountryCode",
+              "type": "string",
+              "identifier": "OG0rVISsF4-qjDgVOCl_6"
+            },
+            {
+              "property": "diedCity",
+              "type": "string",
+              "identifier": "AVdmImKlO1K0fiUgjfwv-"
+            },
+            {
+              "property": "gender",
+              "type": "string",
+              "identifier": "CKaPOAUgoSwtzxBW7Aa2W"
+            }
+          ],
+          "key": {
+            "properties": [
+              "vQheiy2YV8XVdHp-W7cjx"
+            ]
+          }
+        },
+        "n2": {
+          "label": "Category",
+          "additionLabels": [],
+          "labelProperties": [],
+          "properties": [
+            {
+              "property": "category",
+              "type": "string",
+              "identifier": "c14IfYJ0hphL_rdQtO5UU"
+            }
+          ],
+          "key": {
+            "properties": [
+              "c14IfYJ0hphL_rdQtO5UU"
+            ]
+          }
+        },
+        "n3": {
+          "label": "Year",
+          "additionLabels": [],
+          "labelProperties": [],
+          "properties": [
+            {
+              "property": "year",
+              "type": "integer",
+              "identifier": "nk0YmBilmOg2zbiWta_Jy"
+            }
+          ],
+          "key": {
+            "properties": [
+              "nk0YmBilmOg2zbiWta_Jy"
+            ]
+          }
+        },
+        "n4": {
+          "label": "Country",
+          "additionLabels": [],
+          "labelProperties": [],
+          "properties": [
+            {
+              "property": "country",
+              "type": "string",
+              "identifier": "IILgc1Hai1ULTGElRGaI7"
+            }
+          ],
+          "key": {
+            "properties": [
+              "IILgc1Hai1ULTGElRGaI7"
+            ]
+          }
+        },
+        "n5": {
+          "label": "Institution",
+          "additionLabels": [],
+          "labelProperties": [],
+          "properties": [
+            {
+              "property": "name",
+              "type": "string",
+              "identifier": "5vvrrGa0PxYmQFwwDfTi-"
+            },
+            {
+              "property": "city",
+              "type": "string",
+              "identifier": "s83fTFzBisLBY7UtNU7-Z"
+            },
+            {
+              "property": "country",
+              "type": "string",
+              "identifier": "GA4XsifWkK6DiNqtbo8lO"
+            }
+          ],
+          "key": {
+            "properties": [
+              "5vvrrGa0PxYmQFwwDfTi-"
+            ]
+          }
+        },
+        "n6": {
+          "label": "Country",
+          "additionLabels": [],
+          "labelProperties": [],
+          "properties": [
+            {
+              "property": "country",
+              "type": "string",
+              "identifier": "rEtuybsuG5hsYXNSs1IUC"
+            }
+          ],
+          "key": {
+            "properties": [
+              "rEtuybsuG5hsYXNSs1IUC"
+            ]
+          }
+        },
+        "n7": {
+          "label": "Country",
+          "additionLabels": [],
+          "labelProperties": [],
+          "properties": [
+            {
+              "property": "country",
+              "type": "string",
+              "identifier": "MmLEVGXq95wf-ACA1x316"
+            }
+          ],
+          "key": {
+            "properties": [
+              "MmLEVGXq95wf-ACA1x316"
+            ]
+          }
+        }
+      },
+      "relationshipSchemas": {
+        "n0": {
+          "type": "RECEIVED",
+          "sourceNodeSchema": "n1",
+          "targetNodeSchema": "n0",
+          "properties": [
+            {
+              "property": "share",
+              "type": "integer",
+              "identifier": "gs-vRbgTSvCiqTIsitzM8"
+            }
+          ]
+        },
+        "n1": {
+          "type": "IN_CATEGORY",
+          "sourceNodeSchema": "n0",
+          "targetNodeSchema": "n2",
+          "properties": []
+        },
+        "n2": {
+          "type": "IN_YEAR",
+          "sourceNodeSchema": "n0",
+          "targetNodeSchema": "n3",
+          "properties": []
+        },
+        "n5": {
+          "type": "AFFILIATED_WITH",
+          "sourceNodeSchema": "n1",
+          "targetNodeSchema": "n5",
+          "properties": []
+        },
+        "n6": {
+          "type": "IN_COUNTRY",
+          "sourceNodeSchema": "n5",
+          "targetNodeSchema": "n4",
+          "properties": []
+        },
+        "n7": {
+          "type": "BORN_IN",
+          "sourceNodeSchema": "n1",
+          "targetNodeSchema": "n6",
+          "properties": []
+        },
+        "n8": {
+          "type": "DIED_IN",
+          "sourceNodeSchema": "n1",
+          "targetNodeSchema": "n7",
+          "properties": []
+        }
+      }
+    },
+    "mappingModel": {
+      "nodeMappings": {
+        "n0": {
+          "nodeSchema": "n0",
+          "fileSchema": "prize2.csv",
+          "mappings": [
+            {
+              "field": "year"
+            },
+            {
+              "field": "category"
+            },
+            {
+              "field": "overallMotivation"
+            },
+            {
+              "field": "motivation"
+            },
+            {
+              "field": "categoryYear"
+            }
+          ]
+        },
+        "n1": {
+          "nodeSchema": "n1",
+          "fileSchema": "laureate.csv",
+          "mappings": [
+            {
+              "field": "id"
+            },
+            {
+              "field": "firstname"
+            },
+            {
+              "field": "surname"
+            },
+            {
+              "field": "born"
+            },
+            {
+              "field": "died"
+            },
+            {
+              "field": "bornCountry"
+            },
+            {
+              "field": "bornCountryCode"
+            },
+            {
+              "field": "bornCity"
+            },
+            {
+              "field": "diedCountry"
+            },
+            {
+              "field": "diedCountryCode"
+            },
+            {
+              "field": "diedCity"
+            },
+            {
+              "field": "gender"
+            }
+          ]
+        },
+        "n2": {
+          "nodeSchema": "n2",
+          "fileSchema": "prize2.csv",
+          "mappings": [
+            {
+              "field": "category"
+            }
+          ]
+        },
+        "n3": {
+          "nodeSchema": "n3",
+          "fileSchema": "prize2.csv",
+          "mappings": [
+            {
+              "field": "year"
+            }
+          ]
+        },
+        "n4": {
+          "nodeSchema": "n4",
+          "fileSchema": "laureate.csv",
+          "mappings": [
+            {
+              "field": "country"
+            }
+          ]
+        },
+        "n5": {
+          "nodeSchema": "n5",
+          "fileSchema": "laureate.csv",
+          "mappings": [
+            {
+              "field": "name"
+            },
+            {
+              "field": "city"
+            },
+            {
+              "field": "country"
+            }
+          ]
+        },
+        "n6": {
+          "nodeSchema": "n6",
+          "fileSchema": "laureate.csv",
+          "mappings": [
+            {
+              "field": "bornCountry"
+            }
+          ]
+        },
+        "n7": {
+          "nodeSchema": "n7",
+          "fileSchema": "laureate.csv",
+          "mappings": [
+            {
+              "field": "diedCountry"
+            }
+          ]
+        }
+      },
+      "relationshipMappings": {
+        "n0": {
+          "relationshipSchema": "n0",
+          "mappings": [
+            {
+              "field": "share"
+            }
+          ],
+          "sourceMappings": [
+            {
+              "field": "id"
+            }
+          ],
+          "targetMappings": [
+            {
+              "field": "categoryYear"
+            }
+          ],
+          "fileSchema": "prize2.csv"
+        },
+        "n1": {
+          "relationshipSchema": "n1",
+          "mappings": [],
+          "sourceMappings": [
+            {
+              "field": "categoryYear"
+            }
+          ],
+          "targetMappings": [
+            {
+              "field": "category"
+            }
+          ],
+          "fileSchema": "prize2.csv"
+        },
+        "n2": {
+          "relationshipSchema": "n2",
+          "mappings": [],
+          "sourceMappings": [
+            {
+              "field": "categoryYear"
+            }
+          ],
+          "targetMappings": [
+            {
+              "field": "year"
+            }
+          ],
+          "fileSchema": "prize2.csv"
+        },
+        "n5": {
+          "relationshipSchema": "n5",
+          "mappings": [],
+          "sourceMappings": [
+            {
+              "field": "id"
+            }
+          ],
+          "targetMappings": [
+            {
+              "field": "name"
+            }
+          ],
+          "fileSchema": "laureate.csv"
+        },
+        "n6": {
+          "relationshipSchema": "n6",
+          "mappings": [],
+          "sourceMappings": [
+            {
+              "field": "name"
+            }
+          ],
+          "targetMappings": [
+            {
+              "field": "country"
+            }
+          ],
+          "fileSchema": "laureate.csv"
+        },
+        "n7": {
+          "relationshipSchema": "n7",
+          "mappings": [],
+          "sourceMappings": [
+            {
+              "field": "id"
+            }
+          ],
+          "targetMappings": [
+            {
+              "field": "bornCountry"
+            }
+          ],
+          "fileSchema": "laureate.csv"
+        },
+        "n8": {
+          "relationshipSchema": "n8",
+          "mappings": [],
+          "sourceMappings": [
+            {
+              "field": "id"
+            }
+          ],
+          "targetMappings": [
+            {
+              "field": "diedCountry"
+            }
+          ],
+          "fileSchema": "laureate.csv"
+        }
+      }
+    }
+  }
+}

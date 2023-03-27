@@ -1,0 +1,25 @@
+== Week 43 - Hotel Reviews and Spatial Layout in Bloom
+
+
+https://www.kaggle.com/datasets/jiashenliu/515k-hotel-reviews-data-in-europe
+
+
+1020  xsv cat columns ids.csv Hotel_Reviews.csv > hotels.csv
+ 1021  xsv head hotels.csv
+ 1022  xsv sample 10 hotels.csv
+ 1023  xsv sample 10000 hotels.csv > hotels_10k.csv
+ 1024  xsv sample 100000 hotels.csv > hotels_100k.csv
+ 1025  ls
+ 1026  xsv sample Hotel_Reviews.csv
+ 1027  xsv sample 10 Hotel_Reviews.csv
+ 1028  xsv sample 5 hotels.csv
+ 1029  xsv sample 5 hotels.csv
+ 1030  mv hotels_10k.csv hotels_10k.csv.save
+ 1031  mv hotels_100k.csv hotels_10k.csv
+
+https://neo4j.com/docs/apoc/current/overview/apoc.convert/apoc.convert.fromJsonList/
+
+
+TODO Bloom screenshots
+
+Data Importer Screenshots

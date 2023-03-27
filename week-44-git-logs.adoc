@@ -186,20 +186,20 @@ RETURN a.author, commits
 
 Which gives us these folks:
 
-[%autowidth, opts=header]
-,===
-a.author,commits
-Mattias Persson,6592
-Anders Nawroth,4106
-Pontus Melke,4030
-MishaDemianenko,3989
-Andres Taylor,3640
-Chris Vest,2983
-Jacob Hansson,2521
-Anton Persson,2212
-Mattias Finné,2148
-Davide Grohmann,1987
-,===
+[%autowidth, opts=header, format="tsv"]
+|===
+a.author	commits
+Mattias Persson	6592
+Anders Nawroth	4106
+Pontus Melke	4030
+MishaDemianenko	3989
+Andres Taylor	3640
+Chris Vest	2983
+Jacob Hansson	2521
+Anton Persson	2212
+Mattias Finné	2148
+Davide Grohmann	1987
+|===
 
 The usual suspects :)
 
@@ -219,20 +219,20 @@ RETURN count(*);
 
 So that should fix the results:
 
-[%autowidth, opts=header]
-,===
-a.author,commits
-Mattias Finné,8740
-Anders Nawroth,4106
-Pontus Melke,4030
-MishaDemianenko,3989
-Andres Taylor,3640
-Chris Vest,2983
-Jacob Hansson,2521
-Anton Persson,2212
-Davide Grohmann,1987
-Satia Herfert,1896
-,===
+[%autowidth, opts=header, format="tsv"]
+|===
+a.author	commits
+Mattias Finné	8740
+Anders Nawroth	4106
+Pontus Melke	4030
+MishaDemianenko	3989
+Andres Taylor	3640
+Chris Vest	2983
+Jacob Hansson	2521
+Anton Persson	2212
+Davide Grohmann	1987
+Satia Herfert	1896
+|===
 
 
 If we wanted to limit the people by commit-date, so we see who has been more active recently, we can do that too:
@@ -247,20 +247,20 @@ RETURN a.author, commits
 
 Now we have a smaller set of people:
 
-[%autowidth, opts=header]
-,===
-a.author,commits
-MishaDemianenko,1892
-Pontus Melke,1570
-Mattias Finné,1284
-Satia Herfert,1126
-Anton Persson,920
-Chris Vest,746
-Louise Söderström,578
-Tobias Johansson,463
-Therese Magnusson,439
-Georgiy Kargapolov,415
-,===
+[%autowidth, opts=header, format="tsv"]
+|===
+a.author	commits
+MishaDemianenko	1892
+Pontus Melke	1570
+Mattias Finné	1284
+Satia Herfert	1126
+Anton Persson	920
+Chris Vest	746
+Louise Söderström	578
+Tobias Johansson	463
+Therese Magnusson	439
+Georgiy Kargapolov	415
+|===
 
 === Fixing Parents
 
@@ -314,7 +314,7 @@ RETURN path LIMIT 1
 
 Which gives us this beautiful long, flowery chain of commits
 
-image::git-long-path.png[]
+image::git-query-long-path.png[]
 
 
 We can also look at "root" commits and see which ones have the most children.
